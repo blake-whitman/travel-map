@@ -1,42 +1,116 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blake's Travel Map</title>
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
-<link rel="stylesheet" href="style.css"/>
-</head>
-<body>
+/* Reset some basics */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
 
-<header>
-  <div class="header-left">
-    <h1>Blake’s Travel Map</h1>
-    <p>Tracking my travels across the USA</p>
-  </div>
-  <div class="header-right">
-    <img src="profile.jpg" alt="Blake Whitman">
-  </div>
-</header>
+/* Body */
+body {
+  background: #f5f5f5;
+  color: #333;
+}
 
-<section class="stats">
-  <div class="stat"><span id="statesVisited">0</span> States Visited</div>
-  <div class="stat"><span id="citiesVisited">0</span> Cities Visited</div>
-  <div class="stat"><span id="parksVisited">0</span> National Parks</div>
-  <div class="stat"><span id="sportsVisited">0</span> Sports Visited</div>
-</section>
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
-<section class="filters">
-  Filter:
-  <label><input type="checkbox" class="filter" value="city" checked> Cities</label>
-  <label><input type="checkbox" class="filter" value="national" checked> National Parks</label>
-  <label><input type="checkbox" class="filter" value="airport" checked> Airports</label>
-  <label><input type="checkbox" class="filter" value="sports" checked> Sports</label>
-</section>
+header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
 
-<div id="map"></div>
+header p {
+  font-size: 0.9rem;
+  color: #666;
+}
 
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script src="map.js"></script>
-</body>
-</html>
+header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 20px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat span {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1e90ff;
+}
+
+/* Filters */
+.filters {
+  padding: 10px 20px;
+  background: #fff;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 70px; /* below stats */
+  z-index: 1000;
+  flex-wrap: wrap;
+}
+
+.filters label {
+  font-size: 0.9rem;
+}
+
+/* Map */
+#map {
+  height: 80vh;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Custom Marker */
+.custom-marker {
+  font-size: 28px;
+  text-align: center;
+  line-height: 28px;
+}
+
+/* Popup styling */
+.leaflet-popup-content {
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .stats {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .filters {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
