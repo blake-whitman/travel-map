@@ -85,11 +85,10 @@ toggleBtn.addEventListener("click", () => {
 
   panel.classList.toggle("collapsed");
 
-  // Move button depending on panel state
-  if (panel.classList.contains("collapsed")) {
-    toggleBtn.style.left = "20px";
+  if(panel.classList.contains("collapsed")){
+    toggleBtn.style.left = "20px";   // collapsed position
   } else {
-    toggleBtn.style.left = "280px";
+    toggleBtn.style.left = "260px";  // top-right of panel
   }
 
 });
