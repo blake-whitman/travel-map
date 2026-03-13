@@ -1,8 +1,13 @@
+/* ========================
+   Base Styles
+======================== */
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   background: #1a1a1a;
   color: #f0f0f0;
+  height: 100vh;
+  overflow: hidden; /* prevent scrolling, map fills screen */
 }
 
 header {
@@ -10,11 +15,18 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(26,26,26,0.9);
+  backdrop-filter: blur(5px);
 }
 
 header h1 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 header p {
@@ -23,59 +35,21 @@ header p {
 }
 
 header img {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
 }
 
-.stats{
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  padding:20px;
-}
-
-.stat-card{
-  background:#111;
-  border-radius:12px;
-  padding:18px 26px;
-  min-width:120px;
-  text-align:center;
-
-  box-shadow:
-  0 0 0 1px rgba(255,255,255,0.05),
-  0 10px 25px rgba(0,0,0,0.5);
-
-  transition:transform .2s ease, box-shadow .2s ease;
-}
-
-.stat-card:hover{
-  transform:translateY(-3px);
-  box-shadow:
-  0 0 0 1px rgba(255,255,255,0.1),
-  0 15px 30px rgba(0,0,0,0.7);
-}
-
-.stat-number{
-  font-size:32px;
-  font-weight:700;
-  color:#4da3ff;
-}
-
-.stat-label{
-  font-size:13px;
-  letter-spacing:1px;
-  color:#aaa;
-}
-
-.stat-sub{
-  font-size:11px;
-  color:#777;
-  margin-top:4px;
-}
-
-.filters {
-  padding: 0.5rem 1rem;
+/* ========================
+   Map
+======================== */
+#map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
 }
 
 .emoji-marker {
@@ -83,106 +57,172 @@ header img {
   text-align: center;
 }
 
-#map{
-  height:calc(100vh - 80px);
-  width:100%;
+/* ========================
+   Floating Panel (Stats + Filters + Progress)
+======================== */
+#control-panel {
+  position: absolute;
+  top: 80px;         /* below header */
+  left: 20px;
+  width: 260px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  background: rgba(17,17,17,0.95);
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.05),
+              0 15px 40px rgba(0,0,0,0.7);
+  z-index: 1000;
+  backdrop-filter: blur(5px);
 }
 
-.progress-section{
-  max-width:900px;
-  margin:20px auto 40px auto;
-  display:flex;
-  flex-direction:column;
-  gap:14px;
+/* Scrollbar styling */
+#control-panel::-webkit-scrollbar {
+  width: 6px;
 }
 
-.progress-card{
-  background:#111;
-  border-radius:12px;
-  padding:14px 18px;
-  box-shadow:
-  0 0 0 1px rgba(255,255,255,0.05),
-  0 10px 25px rgba(0,0,0,0.5);
+#control-panel::-webkit-scrollbar-thumb {
+  background: rgba(77,163,255,0.5);
+  border-radius: 3px;
 }
 
-.progress-title{
-  font-size:14px;
-  color:#aaa;
-  margin-bottom:6px;
-  letter-spacing:.5px;
+.panel-section {
+  margin-bottom: 18px;
 }
 
-.progress-bar{
-  width:100%;
-  height:10px;
-  background:#2a2a2a;
-  border-radius:6px;
-  overflow:hidden;
+.panel-title {
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
 }
 
-.progress-fill{
-  height:100%;
-  width:0%;
-  background:#4da3ff;
-  border-radius:6px;
-  transition:width 1s ease;
+#control-panel .stat {
+  font-size: 13px;
+  margin-bottom: 6px;
 }
 
-.progress-label{
-  font-size:12px;
-  color:#888;
-  margin-top:6px;
+/* ========================
+   Filters
+======================== */
+.filter-pill {
+  display: block;
+  margin-bottom: 8px;
+  cursor: pointer;
 }
 
-#control-panel{
-  position:absolute;
-  top:120px;
-  left:20px;
-  width:200px;
-
-  background:#111;
-  border-radius:12px;
-  padding:16px;
-
-  box-shadow:
-  0 0 0 1px rgba(255,255,255,0.05),
-  0 15px 40px rgba(0,0,0,0.7);
-
-  z-index:1000;
+.filter-pill input {
+  display: none;
 }
 
-.panel-title{
-  font-size:13px;
-  color:#aaa;
-  margin-bottom:10px;
-  letter-spacing:.5px;
+.filter-pill span {
+  display: block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #1e1e1e;
+  color: #bbb;
+  font-size: 13px;
+  transition: 0.2s;
 }
 
-.filter-pill{
-  display:block;
-  margin-bottom:8px;
-  cursor:pointer;
+.filter-pill input:checked + span {
+  background: #4da3ff;
+  color: white;
 }
 
-.filter-pill input{
-  display:none;
+.filter-pill span:hover {
+  background: #2a2a2a;
 }
 
-.filter-pill span{
-  display:block;
-  padding:8px 12px;
-  border-radius:8px;
-  background:#1e1e1e;
-  color:#bbb;
-  font-size:13px;
-  transition:.2s;
+/* ========================
+   Progress Bars
+======================== */
+.progress-card {
+  background: #1b1b1b;
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.05), 0 8px 20px rgba(0,0,0,0.5);
 }
 
-.filter-pill input:checked + span{
-  background:#4da3ff;
-  color:white;
+.progress-title {
+  font-size: 12px;
+  color: #aaa;
+  margin-bottom: 4px;
 }
 
-.filter-pill span:hover{
-  background:#2a2a2a;
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #2a2a2a;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: #4da3ff;
+  border-radius: 6px;
+  transition: width 1s ease;
+}
+
+.progress-label {
+  font-size: 11px;
+  color: #888;
+  margin-top: 4px;
+}
+
+/* ========================
+   Stats Cards (Optional Hover)
+======================== */
+.stat-card {
+  background: #111;
+  border-radius: 12px;
+  padding: 18px 26px;
+  min-width: 120px;
+  text-align: center;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.05), 0 10px 25px rgba(0,0,0,0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 15px 30px rgba(0,0,0,0.7);
+}
+
+.stat-number {
+  font-size: 32px;
+  font-weight: 700;
+  color: #4da3ff;
+}
+
+.stat-label {
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #aaa;
+}
+
+.stat-sub {
+  font-size: 11px;
+  color: #777;
+  margin-top: 4px;
+}
+
+/* ========================
+   Responsive
+======================== */
+@media (max-width: 768px) {
+  #control-panel {
+    width: 200px;
+    top: 70px;
+  }
+
+  .stat-number {
+    font-size: 24px;
+  }
+
+  .progress-card {
+    padding: 8px 10px;
+  }
 }
