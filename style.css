@@ -83,9 +83,9 @@ header img {
   text-align: center;
 }
 
-#map {
-  height: 80vh;
-  width: 100%;
+#map{
+  height:calc(100vh - 80px);
+  width:100%;
 }
 
 .progress-section{
@@ -132,4 +132,57 @@ header img {
   font-size:12px;
   color:#888;
   margin-top:6px;
+}
+
+#control-panel{
+  position:absolute;
+  top:120px;
+  left:20px;
+  width:200px;
+
+  background:#111;
+  border-radius:12px;
+  padding:16px;
+
+  box-shadow:
+  0 0 0 1px rgba(255,255,255,0.05),
+  0 15px 40px rgba(0,0,0,0.7);
+
+  z-index:1000;
+}
+
+.panel-title{
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:10px;
+  letter-spacing:.5px;
+}
+
+.filter-pill{
+  display:block;
+  margin-bottom:8px;
+  cursor:pointer;
+}
+
+.filter-pill input{
+  display:none;
+}
+
+.filter-pill span{
+  display:block;
+  padding:8px 12px;
+  border-radius:8px;
+  background:#1e1e1e;
+  color:#bbb;
+  font-size:13px;
+  transition:.2s;
+}
+
+.filter-pill input:checked + span{
+  background:#4da3ff;
+  color:white;
+}
+
+.filter-pill span:hover{
+  background:#2a2a2a;
 }
