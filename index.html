@@ -36,87 +36,57 @@
   </div>
 </header>
 
-<section class="stats">
+<!-- Map container -->
+<div id="map"></div>
 
-  <div class="stat-card">
-    <div class="stat-number" id="statesVisited">0</div>
-    <div class="stat-label">States</div>
-    <div class="stat-sub" id="statesPercent">0% of USA</div>
-  </div>
-
-  <div class="stat-card">
-    <div class="stat-number" id="citiesVisited">0</div>
-    <div class="stat-label">Cities</div>
-  </div>
-
-  <div class="stat-card">
-    <div class="stat-number" id="parksVisited">0</div>
-    <div class="stat-label">National Parks</div>
-  </div>
-
-  <div class="stat-card">
-    <div class="stat-number" id="sportsVisited">0</div>
-    <div class="stat-label">Sports Venues</div>
-  </div>
-
-</section>
-
-<section class="progress-section">
-
-  <div class="progress-card">
-    <div class="progress-title">USA States</div>
-    <div class="progress-bar">
-      <div id="statesBar" class="progress-fill"></div>
-    </div>
-    <div class="progress-label">
-      <span id="statesCount">0</span> / 50
-    </div>
-  </div>
-
-  <div class="progress-card">
-    <div class="progress-title">MLB Stadiums</div>
-    <div class="progress-bar">
-      <div id="mlbBar" class="progress-fill"></div>
-    </div>
-    <div class="progress-label">
-      <span id="mlbCount">0</span> / 30
-    </div>
-  </div>
-
-  <div class="progress-card">
-    <div class="progress-title">NFL Stadiums</div>
-    <div class="progress-bar">
-      <div id="nflBar" class="progress-fill"></div>
-    </div>
-    <div class="progress-label">
-      <span id="nflCount">0</span> / 32
-    </div>
-  </div>
-
-  <div class="progress-card">
-    <div class="progress-title">NBA Arenas</div>
-    <div class="progress-bar">
-      <div id="nbaBar" class="progress-fill"></div>
-    </div>
-    <div class="progress-label">
-      <span id="nbaCount">0</span> / 30
-    </div>
-  </div>
-
-  <div class="progress-card">
-    <div class="progress-title">NHL Arenas</div>
-    <div class="progress-bar">
-      <div id="nhlBar" class="progress-fill"></div>
-    </div>
-    <div class="progress-label">
-      <span id="nhlCount">0</span> / 32
-    </div>
-  </div>
-
-</section>
-
+<!-- Floating control panel -->
 <div id="control-panel">
 
+  <!-- Stats -->
+  <div class="panel-section">
+    <div class="panel-title">Stats</div>
+    <div class="stat"><span id="statesVisited">0</span> States Visited</div>
+    <div class="stat"><span id="citiesVisited">0</span> Cities</div>
+    <div class="stat"><span id="parksVisited">0</span> Parks</div>
+    <div class="stat"><span id="sportsVisited">0</span> Sports Venues</div>
+  </div>
+
+  <!-- Progress bars -->
+  <div class="panel-section">
+    <div class="panel-title">Completion</div>
+
+    <div class="progress-card">
+      <div class="progress-title">USA States</div>
+      <div class="progress-bar"><div id="statesBar" class="progress-fill"></div></div>
+      <div class="progress-label"><span id="statesCount">0</span>/50</div>
+    </div>
+
+    <div class="progress-card">
+      <div class="progress-title">MLB Stadiums</div>
+      <div class="progress-bar"><div id="mlbBar" class="progress-fill"></div></div>
+      <div class="progress-label"><span id="mlbCount">0</span>/30</div>
+    </div>
+
+    <div class="progress-card">
+      <div class="progress-title">NFL Stadiums</div>
+      <div class="progress-bar"><div id="nflBar" class="progress-fill"></div></div>
+      <div class="progress-label"><span id="nflCount">0</span>/30</div>
+    </div>
+
+    <div class="progress-card">
+      <div class="progress-title">NBA Arenas</div>
+      <div class="progress-bar"><div id="nbaBar" class="progress-fill"></div></div>
+      <div class="progress-label"><span id="nbaCount">0</span>/30</div>
+    </div>
+
+    <div class="progress-card">
+      <div class="progress-title">NHL Arenas</div>
+      <div class="progress-bar"><div id="nhlBar" class="progress-fill"></div></div>
+      <div class="progress-label"><span id="nhlCount">0</span>/32</div>
+    </div>
+  </div>
+
+  <!-- Filters -->
   <div class="panel-section">
     <div class="panel-title">Filters</div>
 
@@ -143,8 +113,6 @@
   </div>
 
 </div>
-
-<div id="map"></div>
 
 <!-- Leaflet JS -->
 
