@@ -1,19 +1,28 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Blake's Travel Map</title>
+
+<!-- Leaflet CSS -->
+
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+<!-- MarkerCluster CSS -->
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css"/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css"/>
+
+<!-- Your styles -->
+
 <link rel="stylesheet" href="style.css"/>
-<link rel="stylesheet"
- href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css"/>
 
-<link rel="stylesheet"
- href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css"/>
-
-<script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
 </head>
+
 <body>
 
 <header>
@@ -21,34 +30,17 @@
     <h1>Blake’s Travel Map</h1>
     <p>Tracking my travels across the USA</p>
   </div>
+
   <div class="header-right">
     <img src="images/profile.jpg" alt="Blake Whitman">
   </div>
 </header>
- <div id="stats-dashboard">
-
-<div class="stat">
-<span id="citiesVisited">0</span>
-Cities
-</div>
-
-<div class="stat">
-<span id="parksVisited">0</span>
-Parks
-</div>
-
-<div class="stat">
-<span id="sportsVisited">0</span>
-Sports
-</div>
-
-</div>
 
 <section class="stats">
   <div class="stat"><span id="statesVisited">0</span> States Visited</div>
   <div class="stat"><span id="citiesVisited">0</span> Cities Visited</div>
   <div class="stat"><span id="parksVisited">0</span> National Parks</div>
-  <div class="stat"><span id="sportsVisited">0</span> Sports Visited</div>
+  <div class="stat"><span id="sportsVisited">0</span> Sports Venues</div>
 </section>
 
 <section class="filters">
@@ -61,7 +53,17 @@ Sports
 
 <div id="map"></div>
 
+<!-- Leaflet JS -->
+
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<!-- MarkerCluster JS -->
+
+<script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+
+<!-- Your map logic -->
+
 <script src="map.js"></script>
+
 </body>
 </html>
