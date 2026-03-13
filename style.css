@@ -1,62 +1,53 @@
-html, body {
-  height: 100%;
+body {
   margin: 0;
-  font-family: 'Helvetica Neue', sans-serif;
-  background: #f2f2f2;
+  font-family: 'Arial', sans-serif;
+  background: #1a1a1a;
+  color: #f0f0f0;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #4a90e2;
-  color: white;
-  padding: 15px 30px;
+  padding: 1rem;
 }
 
 header h1 {
   margin: 0;
+  font-size: 2rem;
 }
 
 header p {
   margin: 0;
-  font-size: 0.9em;
-  opacity: 0.85;
+  font-size: 1rem;
 }
 
-.header-right img {
-  width: 80px;
-  height: 80px;
+header img {
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid white;
 }
 
 .stats {
   display: flex;
   justify-content: space-around;
-  padding: 15px 0;
-  background: white;
-  border-bottom: 1px solid #ddd;
+  padding: 1rem;
 }
 
 .stat {
-  font-weight: bold;
-  font-size: 1.1em;
-  color: #333;
+  font-size: 1rem;
 }
 
 .filters {
-  padding: 10px 30px;
-  background: white;
-  display: flex;
-  gap: 15px;
-  align-items: center;
-  border-bottom: 1px solid #ddd;
+  padding: 0.5rem 1rem;
+}
+
+.emoji-marker {
+  font-size: 22px;
+  text-align: center;
 }
 
 #map {
-  height: 75vh;
+  height: 80vh;
   width: 100%;
-  margin: 0;
 }
