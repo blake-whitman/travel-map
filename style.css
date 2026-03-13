@@ -198,6 +198,6 @@ header img {
 
 /* Collapsed panel state */
 #control-panel.collapsed {
-  transform: translateX(-260px);
+  transform: translateX(-240px);
   transition: transform .3s ease;
 }
