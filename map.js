@@ -82,13 +82,5 @@ const toggleBtn = document.getElementById("panel-toggle");
 const panel = document.getElementById("control-panel");
 
 toggleBtn.addEventListener("click", () => {
-
   panel.classList.toggle("collapsed");
-
-  if(panel.classList.contains("collapsed")){
-    toggleBtn.style.left = "20px";   // collapsed position
-  } else {
-    toggleBtn.style.left = "260px";  // top-right of panel
-  }
-
 });
