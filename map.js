@@ -1,7 +1,8 @@
 // Initialize map
 const map = L.map('map', {
-  zoomSnap: 0.25,
-  zoomDelta: 0.5
+  zoomSnap: 0.5,
+  zoomDelta: 0.75,
+  wheelPxPerZoomLevel: 120
 }).setView([39.8283, -98.5795], 4);
 // Dark map style
 L.tileLayer(
