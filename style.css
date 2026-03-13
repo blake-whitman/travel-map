@@ -207,17 +207,18 @@ header img {
 
 .stats-top {
   display: flex;
+  flex-wrap: wrap;       /* allow cards to wrap instead of overflowing */
   justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 16px;
+  gap: 8px;              /* slightly tighter gap */
+  margin-bottom: 12px;
 }
 
 .stats-top .stat-card {
-  background: rgba(30, 30, 30, 0.6);
-  padding: 12px 16px;
+  flex: 1 1 45%;         /* flexible: min 45% width, can shrink */
+  background: rgba(30,30,30,0.6);
+  padding: 10px 12px;    /* slightly smaller padding */
   border-radius: 10px;
   text-align: center;
-  flex: 1; /* evenly spaced */
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -228,7 +229,7 @@ header img {
 }
 
 .stats-top .stat-number {
-  font-size: 24px;
+  font-size: 22px;       /* slightly smaller to fit better */
   font-weight: 700;
   color: #4da3ff;
 }
