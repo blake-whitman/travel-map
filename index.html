@@ -1,48 +1,18 @@
-<!DOCTYPE html>
-
-<html lang="en">
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Blake's Travel Map</title>
-
-<!-- Leaflet CSS -->
-
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
-
-<!-- MarkerCluster CSS -->
-
-<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css"/>
-<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css"/>
-
-<!-- Your styles -->
-
-<link rel="stylesheet" href="style.css"/>
-
-</head>
-
-<body>
-
 <header>
   <div class="header-left">
     <h1>Blake’s Travel Map</h1>
     <p>Tracking my travels across the USA</p>
   </div>
-
   <div class="header-right">
     <img src="images/profile.jpg" alt="Blake Whitman">
   </div>
 </header>
 
-<!-- Map container -->
+<button id="panel-toggle">Stats</button>
+
 <div id="map"></div>
 
-<!-- Floating control panel -->
 <div id="control-panel">
-
-  <!-- Stats -->
   <div class="panel-section">
     <div class="panel-title">Stats</div>
     <div class="stat"><span id="statesVisited">0</span> States Visited</div>
@@ -51,7 +21,6 @@
     <div class="stat"><span id="sportsVisited">0</span> Sports Venues</div>
   </div>
 
-  <!-- Progress bars -->
   <div class="panel-section">
     <div class="panel-title">Completion</div>
 
@@ -70,7 +39,7 @@
     <div class="progress-card">
       <div class="progress-title">NFL Stadiums</div>
       <div class="progress-bar"><div id="nflBar" class="progress-fill"></div></div>
-      <div class="progress-label"><span id="nflCount">0</span>/30</div>
+      <div class="progress-label"><span id="nflCount">0</span>/32</div>
     </div>
 
     <div class="progress-card">
@@ -86,45 +55,23 @@
     </div>
   </div>
 
-  <!-- Filters -->
   <div class="panel-section">
     <div class="panel-title">Filters</div>
-
     <label class="filter-pill">
       <input type="checkbox" class="filter" value="city" checked>
       <span>🏙 Cities</span>
     </label>
-
     <label class="filter-pill">
       <input type="checkbox" class="filter" value="national" checked>
       <span>🌲 Parks</span>
     </label>
-
     <label class="filter-pill">
       <input type="checkbox" class="filter" value="sports" checked>
       <span>🏟 Sports</span>
     </label>
-
     <label class="filter-pill">
       <input type="checkbox" class="filter" value="airport" checked>
       <span>✈ Airports</span>
     </label>
-
   </div>
-
 </div>
-
-<!-- Leaflet JS -->
-
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
-<!-- MarkerCluster JS -->
-
-<script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
-
-<!-- Your map logic -->
-<script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
-<script src="map.js"></script>
-
-</body>
-</html>
