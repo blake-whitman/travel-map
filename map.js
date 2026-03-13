@@ -21,11 +21,19 @@ function getCategory(style) {
 
   if (!style) return "other";
 
-  if (style.includes("1720")) return "national";   // parks
-  if (style.includes("1739")) return "sports";     // sports
-  if (style.includes("airport")) return "airport";
-  
-  return "city";
+  const categories = {
+
+    "#icon-1720-0288D1": "national",   // national parks
+    "#icon-1519-0288D1": "baseball",
+    "#icon-1520-0288D1": "basketball",
+    "#icon-1579-0288D1": "football",
+    "#icon-1805-0288D1": "hockey",
+    "#icon-1696-0288D1": "soccer",
+    "#icon-1707-0288D1": "tennis"
+
+  };
+
+  return categories[style] || "city";
 }
 
 // Emoji icons
