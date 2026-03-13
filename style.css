@@ -174,3 +174,32 @@ header img {
 .filter-pill span:hover {
   background: #2a2a2a;
 }
+
+/* Panel toggle button */
+#panel-toggle {
+  position: absolute;
+  top: 130px;
+  left: 20px;
+  z-index: 1100;
+
+  background: #111;
+  color: #4da3ff;
+  border: 1px solid #333;
+  border-radius: 8px;
+
+  padding: 6px 10px;
+  font-size: 16px;
+  cursor: pointer;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+#panel-toggle:hover {
+  background: #1e1e1e;
+}
+
+/* Collapsed panel state */
+#control-panel.collapsed {
+  transform: translateX(-260px);
+  transition: transform .3s ease;
+}
