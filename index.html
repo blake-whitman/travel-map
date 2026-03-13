@@ -115,13 +115,34 @@
 
 </section>
 
-<section class="filters">
-  Filter:
-  <label><input type="checkbox" class="filter" value="city" checked> Cities</label>
-  <label><input type="checkbox" class="filter" value="national" checked> National Parks</label>
-  <label><input type="checkbox" class="filter" value="airport" checked> Airports</label>
-  <label><input type="checkbox" class="filter" value="sports" checked> Sports</label>
-</section>
+<div id="control-panel">
+
+  <div class="panel-section">
+    <div class="panel-title">Filters</div>
+
+    <label class="filter-pill">
+      <input type="checkbox" class="filter" value="city" checked>
+      <span>🏙 Cities</span>
+    </label>
+
+    <label class="filter-pill">
+      <input type="checkbox" class="filter" value="national" checked>
+      <span>🌲 Parks</span>
+    </label>
+
+    <label class="filter-pill">
+      <input type="checkbox" class="filter" value="sports" checked>
+      <span>🏟 Sports</span>
+    </label>
+
+    <label class="filter-pill">
+      <input type="checkbox" class="filter" value="airport" checked>
+      <span>✈ Airports</span>
+    </label>
+
+  </div>
+
+</div>
 
 <div id="map"></div>
 
