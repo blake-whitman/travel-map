@@ -10,7 +10,11 @@ L.tileLayer(
 ).addTo(map);
 
 // Marker layer
-const markers = L.layerGroup().addTo(map);
+const markers = L.markerClusterGroup({
+  maxClusterRadius: 40
+});
+
+map.addLayer(markers);
 
 // Determine category from styleUrl
 function getCategory(style) {
