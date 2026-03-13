@@ -200,7 +200,11 @@ document.getElementById("sportsVisited").innerText = sports;
     const active = Array.from(checkboxes)
       .filter(c => c.checked)
       .map(c => c.value);
-
+    
+    let parks = 0;
+    let cities = 0;
+    let sports = 0;
+    
     locations.features.forEach(feature => {
 
       const coords = feature.geometry.coordinates;
@@ -209,6 +213,10 @@ document.getElementById("sportsVisited").innerText = sports;
       const props = feature.properties;
 
       const category = getCategory(props.styleUrl);
+
+      if(category === "national") parks++;
+      else if(category === "city") cities++;
+      else sports++;
 
       if(!active.includes(category) && !(category !== "city" && category !== "national" && active.includes("sports")))
         return;
@@ -233,7 +241,11 @@ document.getElementById("sportsVisited").innerText = sports;
 
 });
 
-  // Update stats
-  //document.getElementById("parksVisited").innerText = parks;
-  //document.getElementById("citiesVisited").innerText = cities;
-//  document.getElementById("sportsVisited").innerText = sports;
+document.getElementById("parksVisited").innerText = parks;
+document.getElementById("citiesVisited").innerText = cities;
+document.getElementById("sportsVisited").innerText = sports;
+
+const percent = Math.round((visitedStates.size / 50) * 100);
+
+document.getElementById("statesVisited").innerText = visitedStates.size;
+document.getElementById("statesPercent").innerText = percent + "% of USA";
