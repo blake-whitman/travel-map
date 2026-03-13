@@ -79,28 +79,24 @@ checkboxes.forEach(cb=>{ cb.addEventListener("change", ()=>{
 ======================== */
 
 const toggleBtn = document.getElementById("panel-toggle");
-const panel = document.getElementById("control-panel");
+const panelWrapper = document.getElementById("control-panel-wrapper");
 
 toggleBtn.addEventListener("click", () => {
-
-  const collapsed = panel.classList.toggle("collapsed");
+  const collapsed = panelWrapper.classList.toggle("collapsed");
 
   if (collapsed) {
-    // Move button to screen corner
+    // move toggle button out of panel
     document.body.appendChild(toggleBtn);
-
     toggleBtn.style.position = "fixed";
     toggleBtn.style.top = "130px";
     toggleBtn.style.left = "10px";
     toggleBtn.style.right = "auto";
   } else {
-    // Put button back in the panel
-    panel.appendChild(toggleBtn);
-
+    // move toggle button back inside panel
+    document.getElementById("control-panel").appendChild(toggleBtn);
     toggleBtn.style.position = "absolute";
     toggleBtn.style.top = "10px";
     toggleBtn.style.right = "10px";
     toggleBtn.style.left = "auto";
   }
-
 });
