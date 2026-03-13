@@ -1,106 +1,122 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blake's Travel Map</title>
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
-<style>
-  body, html { margin:0; padding:0; height:100%; font-family:sans-serif; }
-  #map { height: 100%; width: 100%; }
-  .filter-panel {
-    position: absolute; top: 10px; left: 10px; z-index: 1000;
-    background: rgba(255,255,255,0.9); padding: 10px; border-radius: 8px;
+// Create map
+const map = L.map('map').setView([39.8283, -98.5795], 4);
+
+// Dark basemap (closer to the mockup design)
+L.tileLayer(
+  'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
+  {
+    attribution: '&copy; OpenStreetMap & Carto'
   }
-  .filter-panel label { display: block; margin-bottom: 5px; }
-  .leaflet-popup-content img { display: block; margin: 5px 0; max-width: 150px; }
-</style>
-</head>
-<body>
+).addTo(map);
 
-<div class="filter-panel">
-  <label><input type="checkbox" value="national" checked> National Parks</label>
-  <label><input type="checkbox" value="sports" checked> Sports</label>
-  <label><input type="checkbox" value="stadium" checked> Stadiums</label>
-  <label><input type="checkbox" value="city" checked> City Venues</label>
-</div>
+// Marker layer
+const markers = L.layerGroup().addTo(map);
 
-<div id="map"></div>
+// Determine category from styleUrl
+function getCategory(style) {
 
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  if (!style) return "other";
 
-<script>
-// --- Load your GeoJSON data ---
-const geojsonData = {/* PASTE YOUR GEOJSON HERE */};
-
-// --- Map initialization ---
-const map = L.map('map').setView([40.7, -74], 4);
-
-// OpenStreetMap base layer
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '&copy; OpenStreetMap contributors'
-}).addTo(map);
-
-// --- Dynamic category mapping ---
-function getCategoryFromFeature(feature) {
-  const icon = feature.properties.icon || "";
-  if (icon.includes("icon-1")) return "national";
-  if (icon.includes("icon-2")) return "sports";
-  if (icon.includes("icon-3")) return "city";
-  if (icon.includes("icon-4")) return "stadium";
-  return "other";
+  if (style.includes("1720")) return "national";   // parks
+  if (style.includes("1739")) return "sports";     // sports
+  if (style.includes("airport")) return "airport";
+  
+  return "city";
 }
 
-// --- Dynamic image for popup ---
-function getFeatureImage(feature) {
-  if (feature.properties.gx_media_links) {
-    return feature.properties.gx_media_links.split(" ")[0];
-  }
-  return feature.properties.icon || "";
+// Emoji icons
+function iconByCategory(cat) {
+
+  const icons = {
+    city: "🏙",
+    national: "🌲",
+    sports: "🏟",
+    airport: "✈",
+    other: "📍"
+  };
+
+  return L.divIcon({
+    html: icons[cat],
+    className: "emoji-marker",
+    iconSize: [30,30]
+  });
 }
 
-// --- Create markers ---
-let markers = [];
-geojsonData.features.forEach(feature => {
-  const category = getCategoryFromFeature(feature);
-  const iconUrl = feature.properties.icon || "";
+// Load GeoJSON
+fetch("locations.geojson")
+.then(res => res.json())
+.then(data => {
 
-  const leafletIcon = L.icon({
-    iconUrl: iconUrl,
-    iconSize: [30, 30],
-    iconAnchor: [15, 30],
-    popupAnchor: [0, -28]
+  let parksVisited = 0;
+  let sportsVisited = 0;
+  let citiesVisited = 0;
+
+  const statesVisited = new Set();
+
+  function drawMarkers(activeCats) {
+
+    markers.clearLayers();
+
+    data.features.forEach(feature => {
+
+      const coords = feature.geometry.coordinates;
+
+      const lat = coords[1];
+      const lng = coords[0];
+
+      const props = feature.properties;
+
+      const category = getCategory(props.styleUrl);
+
+      if (!activeCats.includes(category)) return;
+
+      const marker = L.marker(
+        [lat,lng],
+        {icon: iconByCategory(category)}
+      ).addTo(markers);
+
+      const popup = `
+        <b>${props.name}</b><br>
+        ${props.description || ""}
+      `;
+
+      marker.bindPopup(popup);
+    });
+  }
+
+  // Count stats
+  data.features.forEach(feature => {
+
+    const cat = getCategory(feature.properties.styleUrl);
+
+    if (cat === "national") parksVisited++;
+    if (cat === "sports") sportsVisited++;
+    if (cat === "city") citiesVisited++;
+
   });
 
-  const marker = L.marker(
-    [feature.geometry.coordinates[1], feature.geometry.coordinates[0]],
-    { icon: leafletIcon }
-  );
+  document.getElementById("parksVisited").innerText = parksVisited;
+  document.getElementById("sportsVisited").innerText = sportsVisited;
+  document.getElementById("citiesVisited").innerText = citiesVisited;
 
-  const img = getFeatureImage(feature);
-  const description = feature.properties.description?.value || feature.properties.description || "";
-  marker.bindPopup(`<b>${feature.properties.name}</b><br><img src="${img}" width="120"><br>${description}`);
-  marker.featureCategory = category; // attach category for filtering
-  marker.addTo(map);
+  // Initial draw
+  drawMarkers(["city","national","sports","airport"]);
 
-  markers.push(marker);
+  // Filters
+  const checkboxes = document.querySelectorAll(".filter");
+
+  checkboxes.forEach(cb => {
+
+    cb.addEventListener("change", () => {
+
+      const active = Array.from(checkboxes)
+        .filter(c => c.checked)
+        .map(c => c.value);
+
+      drawMarkers(active);
+
+    });
+
+  });
+
 });
-
-// --- Filter logic ---
-const checkboxes = document.querySelectorAll('.filter-panel input[type=checkbox]');
-checkboxes.forEach(cb => cb.addEventListener('change', updateFilters));
-
-function updateFilters() {
-  const checked = Array.from(checkboxes).filter(cb => cb.checked).map(cb => cb.value);
-  markers.forEach(marker => {
-    if (checked.includes(marker.featureCategory)) {
-      marker.addTo(map);
-    } else {
-      map.removeLayer(marker);
-    }
-  });
-}
-</script>
-
-</body>
-</html>
