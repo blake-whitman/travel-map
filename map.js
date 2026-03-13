@@ -30,16 +30,37 @@ function iconByCategory(cat) {
   const icons = {
     city: "🏙",
     national: "🌲",
-    sports: "🏟",
+    baseball: "⚾",
+    basketball: "🏀",
+    football: "🏈",
+    hockey: "🏒",
+    soccer: "⚽",
+    tennis: "🎾",
     airport: "✈",
     other: "📍"
   };
 
   return L.divIcon({
-    html: icons[cat],
+    html: icons[cat] || "📍",
     className: "emoji-marker",
-    iconSize: [30,30]
+    iconSize: [28,28]
   });
+}
+
+function formatDescription(desc) {
+
+  if (!desc) return "";
+
+  if (typeof desc === "string") return desc;
+
+  if (typeof desc === "object") {
+
+    if (desc.value) return desc.value;
+
+    return JSON.stringify(desc);
+  }
+
+  return "";
 }
 
 // Load GeoJSON
@@ -76,9 +97,9 @@ fetch("locations.geojson")
       ).addTo(markers);
 
       const popup = `
-        <b>${props.name}</b><br>
-        ${props.description || ""}
-      `;
+<b>${props.name}</b><br>
+${formatDescription(props.description)}
+`;
 
       marker.bindPopup(popup);
     });
