@@ -89,6 +89,25 @@ function formatDescription(desc){
 
 const checkboxes = document.querySelectorAll(".filter");
 
+const visitedStates = new Set();
+
+async function getStateFromCoords(lat, lng){
+
+  const url = `https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lng}&format=json`;
+
+  try{
+
+    const res = await fetch(url);
+    const data = await res.json();
+
+    return data.address.state;
+
+  }catch{
+    return null;
+  }
+
+}
+
 // Load data
 fetch("locations.geojson")
 .then(res => res.json())
@@ -101,9 +120,9 @@ fetch("locations.geojson")
   data.features.forEach(feature => {
 
   const coords = feature.geometry.coordinates;
-
   const lng = coords[0];
   const lat = coords[1];
+  visitedStates.add(getStateFromCoords(lat, lng));
 
   const props = feature.properties;
 
@@ -132,9 +151,42 @@ fetch("locations.geojson")
 
 });
 
+  fetch("us-states.geojson")
+.then(res => res.json())
+.then(states => {
+
+  const stateLayer = L.geoJSON(states, {
+
+    style: function(feature){
+
+      const stateName = feature.properties.NAME;
+
+      if(visitedStates.has(stateName)){
+        return {
+          fillColor: "#4da3ff",
+          fillOpacity: 0.35,
+          color: "#4da3ff",
+          weight: 1
+        };
+      }
+
+      return {
+        fillColor: "#444",
+        fillOpacity: 0.1,
+        color: "#555",
+        weight: 1
+      };
+
+    }
+
+  }).addTo(map);
+
+});
+
 document.getElementById("parksVisited").innerText = parks;
 document.getElementById("citiesVisited").innerText = cities;
 document.getElementById("sportsVisited").innerText = sports;
+document.getElementById("statesVisited").innerText = visitedStates.size;
 
   checkboxes.forEach(cb => {
 
