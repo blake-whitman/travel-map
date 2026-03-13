@@ -7,7 +7,7 @@ body {
   background: #1a1a1a;
   color: #f0f0f0;
   height: 100vh;
-  overflow: hidden; /* prevent scrolling, map fills screen */
+  overflow: hidden;
 }
 
 header {
@@ -15,7 +15,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  position: fixed;       /* fix it at top */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -24,20 +24,14 @@ header {
   backdrop-filter: blur(5px);
 }
 
-header h1 {
-  margin: 0;
-  font-size: 1.8rem;
-}
-
-header p {
-  margin: 0;
-  font-size: 1rem;
-}
+header h1 { margin: 0; font-size: 1.8rem; }
+header p { margin: 0; font-size: 1rem; }
 
 header img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 /* ========================
@@ -45,7 +39,7 @@ header img {
 ======================== */
 #map {
   position: absolute;
-  top: 70px;    /* leave space for header */
+  top: 70px; 
   left: 0;
   width: 100%;
   height: calc(100vh - 70px);
@@ -58,11 +52,11 @@ header img {
 }
 
 /* ========================
-   Floating Panel (Stats + Filters + Progress)
+   Floating Panel
 ======================== */
 #control-panel {
   position: absolute;
-  top: 80px;         /* below header */
+  top: 80px;
   left: 20px;
   width: 260px;
   max-height: calc(100vh - 100px);
@@ -74,47 +68,52 @@ header img {
               0 15px 40px rgba(0,0,0,0.7);
   z-index: 1000;
   backdrop-filter: blur(5px);
+  transition: width 0.3s ease, padding 0.3s ease;
+}
+
+/* Panel toggle button */
+#togglePanel {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #4da3ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 14px;
+  z-index: 1100;
+}
+
+/* Collapsed panel */
+#control-panel.collapsed {
+  width: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 /* Scrollbar styling */
 #control-panel::-webkit-scrollbar {
   width: 6px;
 }
-
 #control-panel::-webkit-scrollbar-thumb {
   background: rgba(77,163,255,0.5);
   border-radius: 3px;
 }
 
-.panel-section {
-  margin-bottom: 18px;
-}
+/* Panel sections */
+.panel-section { margin-bottom: 18px; }
+.panel-title { font-size: 13px; color: #aaa; margin-bottom: 10px; letter-spacing: 0.5px; }
+#control-panel .stat { font-size: 13px; margin-bottom: 6px; }
 
-.panel-title {
-  font-size: 13px;
-  color: #aaa;
-  margin-bottom: 10px;
-  letter-spacing: 0.5px;
-}
-
-#control-panel .stat {
-  font-size: 13px;
-  margin-bottom: 6px;
-}
-
-/* ========================
-   Filters
-======================== */
+/* Filters */
 .filter-pill {
   display: block;
   margin-bottom: 8px;
   cursor: pointer;
 }
-
-.filter-pill input {
-  display: none;
-}
-
+.filter-pill input { display: none; }
 .filter-pill span {
   display: block;
   padding: 8px 12px;
@@ -124,19 +123,13 @@ header img {
   font-size: 13px;
   transition: 0.2s;
 }
-
 .filter-pill input:checked + span {
   background: #4da3ff;
   color: white;
 }
+.filter-pill span:hover { background: #2a2a2a; }
 
-.filter-pill span:hover {
-  background: #2a2a2a;
-}
-
-/* ========================
-   Progress Bars
-======================== */
+/* Progress bars */
 .progress-card {
   background: #1b1b1b;
   border-radius: 10px;
@@ -144,38 +137,12 @@ header img {
   margin-bottom: 8px;
   box-shadow: 0 0 0 1px rgba(255,255,255,0.05), 0 8px 20px rgba(0,0,0,0.5);
 }
+.progress-title { font-size: 12px; color: #aaa; margin-bottom: 4px; }
+.progress-bar { width: 100%; height: 8px; background: #2a2a2a; border-radius: 6px; overflow: hidden; }
+.progress-fill { height: 100%; width: 0%; background: #4da3ff; border-radius: 6px; transition: width 1s ease; }
+.progress-label { font-size: 11px; color: #888; margin-top: 4px; }
 
-.progress-title {
-  font-size: 12px;
-  color: #aaa;
-  margin-bottom: 4px;
-}
-
-.progress-bar {
-  width: 100%;
-  height: 8px;
-  background: #2a2a2a;
-  border-radius: 6px;
-  overflow: hidden;
-}
-
-.progress-fill {
-  height: 100%;
-  width: 0%;
-  background: #4da3ff;
-  border-radius: 6px;
-  transition: width 1s ease;
-}
-
-.progress-label {
-  font-size: 11px;
-  color: #888;
-  margin-top: 4px;
-}
-
-/* ========================
-   Stats Cards (Optional Hover)
-======================== */
+/* Stats Cards (Optional Hover) */
 .stat-card {
   background: #111;
   border-radius: 12px;
@@ -185,44 +152,17 @@ header img {
   box-shadow: 0 0 0 1px rgba(255,255,255,0.05), 0 10px 25px rgba(0,0,0,0.5);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-
 .stat-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 15px 30px rgba(0,0,0,0.7);
 }
+.stat-number { font-size: 32px; font-weight: 700; color: #4da3ff; }
+.stat-label { font-size: 13px; letter-spacing: 1px; color: #aaa; }
+.stat-sub { font-size: 11px; color: #777; margin-top: 4px; }
 
-.stat-number {
-  font-size: 32px;
-  font-weight: 700;
-  color: #4da3ff;
-}
-
-.stat-label {
-  font-size: 13px;
-  letter-spacing: 1px;
-  color: #aaa;
-}
-
-.stat-sub {
-  font-size: 11px;
-  color: #777;
-  margin-top: 4px;
-}
-
-/* ========================
-   Responsive
-======================== */
+/* Responsive */
 @media (max-width: 768px) {
-  #control-panel {
-    width: 200px;
-    top: 70px;
-  }
-
-  .stat-number {
-    font-size: 24px;
-  }
-
-  .progress-card {
-    padding: 8px 10px;
-  }
+  #control-panel { width: 200px; top: 70px; }
+  .stat-number { font-size: 24px; }
+  .progress-card { padding: 8px 10px; }
 }
