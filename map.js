@@ -89,8 +89,6 @@ function formatDescription(desc){
 
 const checkboxes = document.querySelectorAll(".filter");
 
-const visitedStates = new Set();
-
 async function getStateFromCoords(lat, lng){
 
   const url = `https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lng}&format=json`;
@@ -203,7 +201,7 @@ document.getElementById("sportsVisited").innerText = sports;
       .filter(c => c.checked)
       .map(c => c.value);
 
-    data.features.forEach(feature => {
+    locations.features.forEach(feature => {
 
       const coords = feature.geometry.coordinates;
       const lng = coords[0];
@@ -236,8 +234,6 @@ document.getElementById("sportsVisited").innerText = sports;
 });
 
   // Update stats
-  document.getElementById("parksVisited").innerText = parks;
-  document.getElementById("citiesVisited").innerText = cities;
-  document.getElementById("sportsVisited").innerText = sports;
-
-});
+  //document.getElementById("parksVisited").innerText = parks;
+  //document.getElementById("citiesVisited").innerText = cities;
+//  document.getElementById("sportsVisited").innerText = sports;
