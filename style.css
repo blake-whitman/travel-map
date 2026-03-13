@@ -132,13 +132,25 @@ header img {
   top: 120px;
   left: 20px;
   width: 200px;
-  background: #111;
+  background: rgba(17,17,17,0.85);
+  backdrop-filter: blur(8px);
   border-radius: 12px;
   padding: 16px;
   box-shadow: 0 0 0 1px rgba(255,255,255,0.05), 0 15px 40px rgba(0,0,0,0.7);
   z-index: 1000;
 
   transition: transform .3s ease;
+}
+
+#control-panel.collapsed {
+  transform: translateX(-260px);
+}
+
+#control-panel.collapsed #panel-toggle {
+  position: fixed;
+  top: 140px;
+  left: 10px;
+  right: auto;
 }
 
 .panel-title {
@@ -180,7 +192,7 @@ header img {
 #panel-toggle {
   position: absolute;
   top: 10px;
-  right: -38px;   /* sits outside the panel */
+  right: 10px;
 
   background: #111;
   color: #4da3ff;
@@ -192,13 +204,5 @@ header img {
   cursor: pointer;
 
   box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-}
-
-#panel-toggle:hover {
-  background: #1e1e1e;
-}
-
-/* Collapsed panel state */
-#control-panel.collapsed {
-  transform: translateX(-220px);
+  z-index: 2000;
 }
