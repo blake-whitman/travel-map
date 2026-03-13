@@ -131,18 +131,24 @@ header img {
   position: absolute;
   top: 120px;
   left: 20px;
-  width: 200px;
-  background: #111;
-  border-radius: 12px;
+  width: 220px;
+  background: rgba(17,17,17,0.75);      /* semi-transparent */
+  border-radius: 14px;
   padding: 16px;
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.05), 0 15px 40px rgba(0,0,0,0.7);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);          /* adds the frosted glass blur */
+  border: 1px solid rgba(77,163,255,0.2); /* subtle border to define edges */
   z-index: 1000;
-
-  transition: transform .3s ease;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 #control-panel.collapsed {
   transform: translateX(-240px);
+}
+
+#control-panel:hover {
+  background: rgba(17,17,17,0.85);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.6);
 }
 
 .panel-title {
