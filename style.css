@@ -143,7 +143,8 @@ header img {
 }
 
 #control-panel.collapsed {
-  transform: translateX(-240px);
+  transform: translateX(-100%);  /* slide entire panel fully offscreen */
+  transition: transform 0.3s ease;
 }
 
 #control-panel:hover {
