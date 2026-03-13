@@ -93,7 +93,11 @@ Promise.all([
   locationsData = locations;
 
   const visitedStates = new Set();
-
+  
+  let mlb = 0;
+  let nfl = 0;
+  let nba = 0;
+  let nhl = 0;
   let parks = 0;
   let cities = 0;
   let sports = 0;
@@ -112,6 +116,11 @@ Promise.all([
     if(category === "national") parks++;
     else if(category === "city") cities++;
     else sports++;
+
+    if(category === "baseball") mlb++;
+    if(category === "football") nfl++;
+    if(category === "basketball") nba++;
+    if(category === "hockey") nhl++;
 
     const marker = L.marker(
       [lat,lng],
@@ -171,6 +180,31 @@ Promise.all([
 
   document.getElementById("statesVisited").innerText = visitedStates.size;
   document.getElementById("statesPercent").innerText = percent + "% of USA";
+
+  // STATE BAR
+  document.getElementById("statesCount").innerText = visitedStates.size;
+  document.getElementById("statesBar").style.width =
+    (visitedStates.size/50*100) + "%";
+
+  // MLB
+  document.getElementById("mlbCount").innerText = mlb;
+  document.getElementById("mlbBar").style.width =
+    (mlb/30*100) + "%";
+
+  // NFL
+  document.getElementById("nflCount").innerText = nfl;
+  document.getElementById("nflBar").style.width =
+    (nfl/32*100) + "%";
+
+  // NBA
+  document.getElementById("nbaCount").innerText = nba;
+  document.getElementById("nbaBar").style.width =
+    (nba/30*100) + "%";
+
+  // NHL
+  document.getElementById("nhlCount").innerText = nhl;
+  document.getElementById("nhlBar").style.width =
+    (nhl/32*100) + "%";
 
 });
 
