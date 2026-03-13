@@ -15,12 +15,12 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  position: absolute;
+  position: fixed;       /* fix it at top */
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: rgba(26,26,26,0.9);
+  background: rgba(26,26,26,0.95);
   backdrop-filter: blur(5px);
 }
 
@@ -45,10 +45,10 @@ header img {
 ======================== */
 #map {
   position: absolute;
-  top: 0;
+  top: 70px;    /* leave space for header */
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 70px);
   z-index: 0;
 }
 
