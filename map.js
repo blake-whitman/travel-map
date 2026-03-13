@@ -82,5 +82,25 @@ const toggleBtn = document.getElementById("panel-toggle");
 const panel = document.getElementById("control-panel");
 
 toggleBtn.addEventListener("click", () => {
-  panel.classList.toggle("collapsed");
+
+  const collapsed = panel.classList.toggle("collapsed");
+
+  if (collapsed) {
+    // Move button to screen corner
+    document.body.appendChild(toggleBtn);
+
+    toggleBtn.style.position = "fixed";
+    toggleBtn.style.top = "130px";
+    toggleBtn.style.left = "10px";
+    toggleBtn.style.right = "auto";
+  } else {
+    // Put button back in the panel
+    panel.appendChild(toggleBtn);
+
+    toggleBtn.style.position = "absolute";
+    toggleBtn.style.top = "10px";
+    toggleBtn.style.right = "10px";
+    toggleBtn.style.left = "auto";
+  }
+
 });
