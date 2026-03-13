@@ -74,3 +74,22 @@ checkboxes.forEach(cb=>{ cb.addEventListener("change", ()=>{
     markers.addLayer(m);
   });
 }); });
+/* ========================
+   Panel Toggle
+======================== */
+
+const toggleBtn = document.getElementById("panel-toggle");
+const panel = document.getElementById("control-panel");
+
+toggleBtn.addEventListener("click", () => {
+
+  panel.classList.toggle("collapsed");
+
+  // Move button depending on panel state
+  if (panel.classList.contains("collapsed")) {
+    toggleBtn.style.left = "20px";
+  } else {
+    toggleBtn.style.left = "280px";
+  }
+
+});
