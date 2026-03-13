@@ -1,6 +1,8 @@
 // Initialize map
-const map = L.map('map').setView([39.8283, -98.5795], 4);
-
+const map = L.map('map', {
+  zoomSnap: 0.25,
+  zoomDelta: 0.5
+}).setView([39.8283, -98.5795], 4);
 // Dark map style
 L.tileLayer(
 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
@@ -9,8 +11,15 @@ L.tileLayer(
 
 // Cluster group
 const markers = L.markerClusterGroup({
+
   maxClusterRadius: 25,
-  disableClusteringAtZoom: 7
+
+  disableClusteringAtZoom: 8,
+
+  zoomToBoundsOnClick: true,
+
+  spiderfyOnMaxZoom: false
+
 });
 
 map.addLayer(markers);
@@ -99,6 +108,11 @@ fetch("locations.geojson")
 
   const category = getCategory(props.styleUrl);
 
+  // stats counting
+  if(category === "national") parks++;
+  else if(category === "city") cities++;
+  else sports++;
+
   const marker = L.marker(
     [lat,lng],
     { icon: iconByCategory(category) }
@@ -116,6 +130,10 @@ fetch("locations.geojson")
   markers.addLayer(marker);
 
 });
+
+document.getElementById("parksVisited").innerText = parks;
+document.getElementById("citiesVisited").innerText = cities;
+document.getElementById("sportsVisited").innerText = sports;
 
   checkboxes.forEach(cb => {
 
