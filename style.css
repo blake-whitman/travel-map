@@ -175,11 +175,10 @@ header img {
   background: #2a2a2a;
 }
 
-/* Panel toggle button */
 #panel-toggle {
   position: absolute;
-  top: 130px;
-  left: 20px;
+  top: 90px;          /* aligned with top of panel */
+  left: 260px;        /* right edge of panel */
   z-index: 1100;
 
   background: #111;
@@ -192,6 +191,7 @@ header img {
   cursor: pointer;
 
   box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  transition: left .3s ease;
 }
 
 #panel-toggle:hover {
