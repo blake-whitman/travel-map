@@ -137,6 +137,7 @@ header img {
   padding: 16px;
   box-shadow: 0 0 0 1px rgba(255,255,255,0.05), 0 15px 40px rgba(0,0,0,0.7);
   z-index: 1000;
+
   transition: transform .3s ease;
 }
 
@@ -199,5 +200,5 @@ header img {
 
 /* Collapsed panel state */
 #control-panel.collapsed {
-  transform: translateX(-180px);
+  transform: translateX(-220px);
 }
