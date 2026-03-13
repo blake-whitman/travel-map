@@ -1,22 +1,20 @@
-// Create map
+// Initialize map
 const map = L.map('map').setView([39.8283, -98.5795], 4);
 
-// Dark basemap (closer to the mockup design)
+// Dark map style
 L.tileLayer(
-  'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
-  {
-    attribution: '&copy; OpenStreetMap & Carto'
-  }
+'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
+{ attribution: '&copy; OpenStreetMap & Carto' }
 ).addTo(map);
 
-// Marker layer
+// Cluster group
 const markers = L.markerClusterGroup({
   maxClusterRadius: 40
 });
 
 map.addLayer(markers);
 
-// Determine category from styleUrl
+// Category detection
 function getCategory(style) {
 
   if (!style) return "other";
@@ -36,8 +34,8 @@ function getCategory(style) {
   return categories[style] || "city";
 }
 
-// Emoji icons
-function iconByCategory(cat) {
+// Icons
+function iconByCategory(cat){
 
   const icons = {
     city: "🏙",
@@ -48,108 +46,79 @@ function iconByCategory(cat) {
     hockey: "🏒",
     soccer: "⚽",
     tennis: "🎾",
-    airport: "✈",
-    other: "📍"
+    airport: "✈"
   };
 
   return L.divIcon({
     html: icons[cat] || "📍",
     className: "emoji-marker",
-    iconSize: [28,28]
+    iconSize: [26,26]
   });
+
 }
 
-function formatDescription(desc) {
+// Fix description formatting
+function formatDescription(desc){
 
-  if (!desc) return "";
+  if(!desc) return "";
 
-  if (typeof desc === "string") return desc;
+  if(typeof desc === "string") return desc;
 
-  if (typeof desc === "object") {
+  if(typeof desc === "object"){
 
-    if (desc.value) return desc.value;
+    if(desc.value) return desc.value;
 
     return JSON.stringify(desc);
+
   }
 
   return "";
+
 }
 
-// Load GeoJSON
+// Load data
 fetch("locations.geojson")
 .then(res => res.json())
 .then(data => {
 
-  let parksVisited = 0;
-  let sportsVisited = 0;
-  let citiesVisited = 0;
+  let parks = 0;
+  let cities = 0;
+  let sports = 0;
 
-  const statesVisited = new Set();
-
-  function drawMarkers(activeCats) {
-
-    markers.clearLayers();
-
-    data.features.forEach(feature => {
-
-      const coords = feature.geometry.coordinates;
-
-      const lat = coords[1];
-      const lng = coords[0];
-
-      const props = feature.properties;
-
-      const category = getCategory(props.styleUrl);
-
-      if (!activeCats.includes(category)) return;
-
-      const marker = L.marker(
-        [lat,lng],
-        {icon: iconByCategory(category)}
-      ).addTo(markers);
-
-      const popup = `
-<b>${props.name}</b><br>
-${formatDescription(props.description)}
-`;
-
-      marker.bindPopup(popup);
-    });
-  }
-
-  // Count stats
   data.features.forEach(feature => {
 
-    const cat = getCategory(feature.properties.styleUrl);
+    const coords = feature.geometry.coordinates;
 
-    if (cat === "national") parksVisited++;
-    if (cat === "sports") sportsVisited++;
-    if (cat === "city") citiesVisited++;
+    const lng = coords[0];
+    const lat = coords[1];
 
-  });
+    const props = feature.properties;
 
-  document.getElementById("parksVisited").innerText = parksVisited;
-  document.getElementById("sportsVisited").innerText = sportsVisited;
-  document.getElementById("citiesVisited").innerText = citiesVisited;
+    const category = getCategory(props.name);
 
-  // Initial draw
-  drawMarkers(["city","national","sports","airport"]);
+    if(category === "national") parks++;
+    if(category === "city") cities++;
+    if(category !== "city" && category !== "national") sports++;
 
-  // Filters
-  const checkboxes = document.querySelectorAll(".filter");
+    const marker = L.marker(
+      [lat,lng],
+      { icon: iconByCategory(category) }
+    );
 
-  checkboxes.forEach(cb => {
+    const popup = `
+      <b>${props.name}</b><br>
+      ${formatDescription(props.description)}
+    `;
 
-    cb.addEventListener("change", () => {
+    marker.bindPopup(popup);
 
-      const active = Array.from(checkboxes)
-        .filter(c => c.checked)
-        .map(c => c.value);
-
-      drawMarkers(active);
-
-    });
+    markers.addLayer(marker);
 
   });
+
+  // Update stats
+  document.getElementById("parksVisited").innerText = parks;
+  document.getElementById("citiesVisited").innerText = cities;
+  document.getElementById("sportsVisited").innerText = sports;
 
 });
