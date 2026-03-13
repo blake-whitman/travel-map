@@ -9,7 +9,8 @@ L.tileLayer(
 
 // Cluster group
 const markers = L.markerClusterGroup({
-  maxClusterRadius: 40
+  maxClusterRadius: 25,
+  disableClusteringAtZoom: 7
 });
 
 map.addLayer(markers);
@@ -76,6 +77,8 @@ function formatDescription(desc){
 
 }
 
+const checkboxes = document.querySelectorAll(".filter");
+
 // Load data
 fetch("locations.geojson")
 .then(res => res.json())
@@ -87,34 +90,74 @@ fetch("locations.geojson")
 
   data.features.forEach(feature => {
 
-    const coords = feature.geometry.coordinates;
+  const coords = feature.geometry.coordinates;
 
-    const lng = coords[0];
-    const lat = coords[1];
+  const lng = coords[0];
+  const lat = coords[1];
 
-    const props = feature.properties;
+  const props = feature.properties;
 
-    const category = getCategory(props.name);
+  const category = getCategory(props.styleUrl);
 
-    if(category === "national") parks++;
-    if(category === "city") cities++;
-    if(category !== "city" && category !== "national") sports++;
+  const marker = L.marker(
+    [lat,lng],
+    { icon: iconByCategory(category) }
+  );
 
-    const marker = L.marker(
-      [lat,lng],
-      { icon: iconByCategory(category) }
-    );
+  marker.category = category;
 
-    const popup = `
-      <b>${props.name}</b><br>
-      ${formatDescription(props.description)}
-    `;
+  const popup = `
+    <b>${props.name}</b><br>
+    ${formatDescription(props.description)}
+  `;
 
-    marker.bindPopup(popup);
+  marker.bindPopup(popup);
 
-    markers.addLayer(marker);
+  markers.addLayer(marker);
+
+});
+
+  checkboxes.forEach(cb => {
+
+  cb.addEventListener("change", () => {
+
+    markers.clearLayers();
+
+    const active = Array.from(checkboxes)
+      .filter(c => c.checked)
+      .map(c => c.value);
+
+    data.features.forEach(feature => {
+
+      const coords = feature.geometry.coordinates;
+      const lng = coords[0];
+      const lat = coords[1];
+      const props = feature.properties;
+
+      const category = getCategory(props.styleUrl);
+
+      if(!active.includes(category) && !(category !== "city" && category !== "national" && active.includes("sports")))
+        return;
+
+      const marker = L.marker(
+        [lat,lng],
+        { icon: iconByCategory(category) }
+      );
+
+      const popup = `
+        <b>${props.name}</b><br>
+        ${formatDescription(props.description)}
+      `;
+
+      marker.bindPopup(popup);
+
+      markers.addLayer(marker);
+
+    });
 
   });
+
+});
 
   // Update stats
   document.getElementById("parksVisited").innerText = parks;
