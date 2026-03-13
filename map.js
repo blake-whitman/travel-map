@@ -109,65 +109,68 @@ async function getStateFromCoords(lat, lng){
 }
 
 // Load data
-fetch("locations.geojson")
-.then(res => res.json())
-.then(data => {
+Promise.all([
+  fetch("locations.geojson").then(res => res.json()),
+  fetch("us-states.geojson").then(res => res.json())
+]).then(([locations, states]) => {
 
-  let parks = 0;
-  let cities = 0;
-  let sports = 0;
+  const visitedStates = new Set();
 
-  data.features.forEach(feature => {
+  locations.features.forEach(feature => {
 
-  const coords = feature.geometry.coordinates;
-  const lng = coords[0];
-  const lat = coords[1];
-  visitedStates.add(getStateFromCoords(lat, lng));
+    const coords = feature.geometry.coordinates;
+    const lng = coords[0];
+    const lat = coords[1];
 
-  const props = feature.properties;
+    const props = feature.properties;
 
-  const category = getCategory(props.styleUrl);
+    const category = getCategory(props.styleUrl);
 
-  // stats counting
-  if(category === "national") parks++;
-  else if(category === "city") cities++;
-  else sports++;
+    const marker = L.marker(
+      [lat,lng],
+      { icon: iconByCategory(category) }
+    );
 
-  const marker = L.marker(
-    [lat,lng],
-    { icon: iconByCategory(category) }
-  );
+    const popup = `
+      <b>${props.name}</b><br>
+      ${formatDescription(props.description)}
+    `;
 
-  marker.category = category;
+    marker.bindPopup(popup);
 
-  const popup = `
-    <b>${props.name}</b><br>
-    ${formatDescription(props.description)}
-  `;
+    markers.addLayer(marker);
 
-  marker.bindPopup(popup);
+    // Create point for turf
+    const point = turf.point([lng, lat]);
 
-  markers.addLayer(marker);
+    states.features.forEach(state => {
 
-});
+      if(turf.booleanPointInPolygon(point, state)){
 
-  fetch("us-states.geojson")
-.then(res => res.json())
-.then(states => {
+        visitedStates.add(state.properties.NAME);
 
-  const stateLayer = L.geoJSON(states, {
+      }
+
+    });
+
+  });
+
+  // Draw states layer
+  L.geoJSON(states, {
 
     style: function(feature){
 
-      const stateName = feature.properties.NAME;
+      const name = feature.properties.NAME;
 
-      if(visitedStates.has(stateName)){
+      if(visitedStates.has(name)){
+
         return {
           fillColor: "#4da3ff",
-          fillOpacity: 0.35,
+          fillOpacity: 0.5,
           color: "#4da3ff",
           weight: 1
         };
+
       }
 
       return {
@@ -181,12 +184,14 @@ fetch("locations.geojson")
 
   }).addTo(map);
 
+  // Update stat
+  document.getElementById("statesVisited").innerText = visitedStates.size;
+
 });
 
 document.getElementById("parksVisited").innerText = parks;
 document.getElementById("citiesVisited").innerText = cities;
 document.getElementById("sportsVisited").innerText = sports;
-document.getElementById("statesVisited").innerText = visitedStates.size;
 
   checkboxes.forEach(cb => {
 
