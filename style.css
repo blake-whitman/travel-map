@@ -127,24 +127,28 @@ header img {
   margin-top: 6px;
 }
 
-#control-panel {
+#control-panel-wrapper {
   position: absolute;
   top: 120px;
-  left: 20px;
-  width: 220px;
-  background: rgba(17,17,17,0.75);      /* semi-transparent */
+  left: 0;          /* start fully left */
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+#control-panel-wrapper.collapsed {
+  transform: translateX(-100%); /* moves wrapper fully offscreen */
+}
+
+#control-panel {
+  width: 220px;             /* same as before */
+  margin-left: 20px;        /* spacing from left edge */
+  background: rgba(17,17,17,0.75);
   border-radius: 14px;
   padding: 16px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-  backdrop-filter: blur(10px);          /* adds the frosted glass blur */
-  border: 1px solid rgba(77,163,255,0.2); /* subtle border to define edges */
-  z-index: 1000;
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-
-#control-panel.collapsed {
-  transform: translateX(-100%);  /* slide entire panel fully offscreen */
-  transition: transform 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(77,163,255,0.2);
+  position: relative;       /* keep toggle inside panel */
 }
 
 #control-panel:hover {
