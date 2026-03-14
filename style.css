@@ -111,6 +111,7 @@ header img {
   background: #2a2a2a;
   border-radius: 6px;
   overflow: hidden;
+  transition: width .6s ease;
 }
 
 .progress-fill {
