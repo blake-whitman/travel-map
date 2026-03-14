@@ -141,3 +141,24 @@ checkboxes.forEach(cb => {
     });
   });
 });
+
+// ===============================
+// Stats panel toggle
+// ===============================
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const toggleBtn = document.getElementById("panel-toggle");
+  const panelWrapper = document.getElementById("control-panel-wrapper");
+
+  if (!toggleBtn || !panelWrapper) {
+    console.warn("Stats toggle elements not found.");
+    return;
+  }
+
+  toggleBtn.addEventListener("click", () => {
+    panelWrapper.classList.toggle("collapsed");
+  });
+
+});
+
