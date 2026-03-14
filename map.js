@@ -86,13 +86,8 @@ Promise.all([
     });
 
     // Track visited countries
-    const point = turf.point([lng, lat]);
-
-    countries.features.forEach(country => {
-      if(turf.booleanPointInPolygon(point, country)) {
-        visitedCountries.add(country.properties.ADMIN);
-      }
-    });
+    const countryName = f.properties.country || f.properties.name || "Unknown";
+    visitedCountries.add(countryName);
   });
 
   // Draw US states
