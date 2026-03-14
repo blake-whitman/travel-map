@@ -92,14 +92,26 @@ Promise.all([
 
   // Draw US states
   L.geoJSON(states, {
-  filter: f => f.properties.NAME !== "United States of America",
+  style: f => {
 
-  style: f => visitedStates.has(f.properties.NAME) ?
-    { fillColor: "#4da3ff", fillOpacity: 0.5, color: "#4da3ff", weight: 1 } :
-    { fillColor: "#444", fillOpacity: 0.1, color: "#555", weight: 1 }
+    if (visitedStates.has(f.properties.NAME)) {
+      return {
+        fillColor: "#4da3ff",
+        fillOpacity: 0.5,
+        color: "transparent",
+        weight: 0
+      };
+    }
 
+    return {
+      fillColor: "#444",
+      fillOpacity: 0.1,
+      color: "#555",
+      weight: 1
+    };
+
+  }
 }).addTo(map);
-
 
   // Draw countries (including US territories)
   L.geoJSON(countries, {
