@@ -86,32 +86,21 @@ Promise.all([
     });
 
     // Track visited countries
-    const countryName = f.properties.country || f.properties.name || "Unknown";
-    visitedCountries.add(countryName);
+    const point = turf.point([lng, lat]);
+
+    countries.features.forEach(country => {
+      if(turf.booleanPointInPolygon(point, country)) {
+        visitedCountries.add(country.properties.ADMIN);
+      }
+    });
   });
 
   // Draw US states
   L.geoJSON(states, {
-  style: f => {
-
-    if (visitedStates.has(f.properties.NAME)) {
-      return {
-        fillColor: "#4da3ff",
-        fillOpacity: 0.55,
-        stroke: false
-      };
-    }
-
-    return {
-      fillColor: "#444",
-      fillOpacity: 0.08,
-      color: "#555",
-      weight: 0.5
-    };
-
-  }
+  style: f => visitedStates.has(f.properties.NAME) ?
+    { fillColor: "#4da3ff", fillOpacity: 0.5, color: "#4da3ff", weight: 1 } :
+    { fillColor: "#444", fillOpacity: 0.1, color: "#555", weight: 1 }
 }).addTo(map);
-
 
   // Draw countries (including US territories)
   L.geoJSON(countries, {
@@ -191,6 +180,3 @@ toggleBtn.addEventListener("click", () => {
   }
 
 });
-
-
-
