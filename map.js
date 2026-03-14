@@ -97,21 +97,21 @@ Promise.all([
     if (visitedStates.has(f.properties.NAME)) {
       return {
         fillColor: "#4da3ff",
-        fillOpacity: 0.5,
-        color: "transparent",
-        weight: 0
+        fillOpacity: 0.55,
+        stroke: false
       };
     }
 
     return {
       fillColor: "#444",
-      fillOpacity: 0.1,
+      fillOpacity: 0.08,
       color: "#555",
-      weight: 1
+      weight: 0.5
     };
 
   }
 }).addTo(map);
+
 
   // Draw countries (including US territories)
   L.geoJSON(countries, {
