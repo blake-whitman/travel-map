@@ -118,7 +118,7 @@ Promise.all([
     style: f => {
       const cname = f.properties.ADMIN || f.properties.name;
       if(cname === "United States of America") {
-        return { fillOpacity: 0 }; // USA transparent
+        return { fillOpacity: 0, stroke:false };
       } else if(territories.includes(cname)) {
         return { fillColor: "#ff8c42", fillOpacity: 0.5, color: "#ff8c42", weight: 1 }; // orange for territories
       } else if(visitedCountries.has(cname)) {
