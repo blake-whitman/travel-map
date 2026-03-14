@@ -148,13 +148,14 @@ checkboxes.forEach(cb => {
 
 const toggleBtn = document.getElementById("panel-toggle");
 const panel = document.getElementById("control-panel");
+const wrapper = document.getElementById("control-panel-wrapper");
 
 toggleBtn.addEventListener("click", () => {
 
-  const collapsed = panel.classList.toggle("collapsed");
+  const collapsed = wrapper.classList.toggle("collapsed");
 
   if (collapsed) {
-    // Move button to screen corner so it remains clickable
+    // Move button to screen corner
     document.body.appendChild(toggleBtn);
 
     toggleBtn.style.position = "fixed";
@@ -164,7 +165,7 @@ toggleBtn.addEventListener("click", () => {
     toggleBtn.style.zIndex = "2000";
 
   } else {
-    // Put button back in the panel
+    // Return button to panel
     panel.appendChild(toggleBtn);
 
     toggleBtn.style.position = "absolute";
@@ -174,5 +175,6 @@ toggleBtn.addEventListener("click", () => {
   }
 
 });
+
 
 
