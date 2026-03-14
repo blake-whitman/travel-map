@@ -146,19 +146,33 @@ checkboxes.forEach(cb => {
 // Stats panel toggle
 // ===============================
 
-document.addEventListener("DOMContentLoaded", () => {
+const toggleBtn = document.getElementById("panel-toggle");
+const panel = document.getElementById("control-panel");
 
-  const toggleBtn = document.getElementById("panel-toggle");
-  const panelWrapper = document.getElementById("control-panel-wrapper");
+toggleBtn.addEventListener("click", () => {
 
-  if (!toggleBtn || !panelWrapper) {
-    console.warn("Stats toggle elements not found.");
-    return;
+  const collapsed = panel.classList.toggle("collapsed");
+
+  if (collapsed) {
+    // Move button to screen corner so it remains clickable
+    document.body.appendChild(toggleBtn);
+
+    toggleBtn.style.position = "fixed";
+    toggleBtn.style.top = "130px";
+    toggleBtn.style.left = "10px";
+    toggleBtn.style.right = "auto";
+    toggleBtn.style.zIndex = "2000";
+
+  } else {
+    // Put button back in the panel
+    panel.appendChild(toggleBtn);
+
+    toggleBtn.style.position = "absolute";
+    toggleBtn.style.top = "10px";
+    toggleBtn.style.right = "10px";
+    toggleBtn.style.left = "auto";
   }
 
-  toggleBtn.addEventListener("click", () => {
-    panelWrapper.classList.toggle("collapsed");
-  });
-
 });
+
 
