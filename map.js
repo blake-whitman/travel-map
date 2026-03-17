@@ -55,8 +55,8 @@ Promise.all([
 
   const visitedStates = new Set();
   const visitedCountries = new Set();
-  let mlb=0, nfl=0, nba=0, nhl=0, parks=0, cities=0, sports=0;
-
+  let mlb=0, nfl=0, nba=0, nhl=0, mls=0, atp=0, parks=0, cities=0, sports=0;
+  
   // Process locations
   locations.features.forEach(f => {
     const [lng, lat] = f.geometry.coordinates;
@@ -71,6 +71,8 @@ Promise.all([
     if(cat==="football") nfl++;
     if(cat==="basketball") nba++;
     if(cat==="hockey") nhl++;
+    if(cat==="soccer") mls++;
+    if(cat==="tennis") atp++;
 
     // Add marker
     const m = L.marker([lat, lng], { icon: iconByCategory(cat) });
@@ -124,6 +126,9 @@ Promise.all([
   document.getElementById("nflCount").innerText = nfl; document.getElementById("nflBar").style.width = (nfl/32*100)+"%";
   document.getElementById("nbaCount").innerText = nba; document.getElementById("nbaBar").style.width = (nba/30*100)+"%";
   document.getElementById("nhlCount").innerText = nhl; document.getElementById("nhlBar").style.width = (nhl/32*100)+"%";
+  document.getElementById("mlsCount").innerText = mls; document.getElementById("mlsBar").style.width = (mls/31*100) + "%";
+  document.getElementById("atpCount").innerText = atp; document.getElementById("atpBar").style.width = (atp/59*100) + "%";
+
 });
 
 // Filter behavior
