@@ -247,6 +247,14 @@ header img {
   margin-top: 2px;
 }
 
+.league-logo {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  margin-right: 6px;
+  vertical-align: -2px;
+}
+
 /* League colors (no layout risk) */
 #nflBar { background: #4da3ff; }
 #mlbBar { background: #ff4d4d; }
