@@ -246,3 +246,11 @@ header img {
   letter-spacing: 0.5px;
   margin-top: 2px;
 }
+
+/* League colors (no layout risk) */
+#nflBar { background: #4da3ff; }
+#mlbBar { background: #ff4d4d; }
+#nbaBar { background: #ff9f43; }
+#nhlBar { background: #9b59b6; }
+#mlsBar { background: #27ae60; }
+#atpBar { background: #f1c40f; }
