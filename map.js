@@ -55,6 +55,7 @@ Promise.all([
 
   const visitedStates = new Set();
   const visitedCountries = new Set();
+  const visitedTerritories = new Set();
   let mlb=0, nfl=0, nba=0, nhl=0, mls=0, atp=0, parks=0, cities=0, sports=0;
   
   // Process locations
@@ -87,9 +88,14 @@ Promise.all([
       }
     });
 
-    // Track visited countries
+    // Track visited countries, territories
     const countryName = f.properties.country || f.properties.name || "Unknown";
+
+  if (territories.includes(countryName)) {
+    visitedTerritories.add(countryName);
+  } else {
     visitedCountries.add(countryName);
+  }
   });
 
   // Draw US states
@@ -116,12 +122,16 @@ Promise.all([
   }).addTo(map);
 
   // Update progress bars
-  document.getElementById("parksVisited").innerText = parks;
   document.getElementById("citiesVisited").innerText = cities;
   document.getElementById("sportsVisited").innerText = sports;
   document.getElementById("statesVisited").innerText = visitedStates.size;
-  document.getElementById("statesCount").innerText = visitedStates.size;
-  document.getElementById("statesBar").style.width = (visitedStates.size/50*100) + "%";
+  document.getElementById("countriesVisited").innerText = visitedCountries.size;
+  document.getElementById("territoriesVisited").innerText = visitedTerritories.size;
+
+// National Parks progress
+  document.getElementById("parksCount").innerText = parks;
+  document.getElementById("parksBar").style.width = (parks/63*100) + "%";
+  // Sports progress
   document.getElementById("mlbCount").innerText = mlb; document.getElementById("mlbBar").style.width = (mlb/30*100)+"%";
   document.getElementById("nflCount").innerText = nfl; document.getElementById("nflBar").style.width = (nfl/32*100)+"%";
   document.getElementById("nbaCount").innerText = nba; document.getElementById("nbaBar").style.width = (nba/30*100)+"%";
