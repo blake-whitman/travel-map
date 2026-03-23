@@ -60,19 +60,17 @@ Promise.all([
 
   let mlb=0, nfl=0, nba=0, nhl=0, mls=0, atp=0, parks=0, cities=0, sports=0;
 
-  // 🔥 PRE-SPLIT COUNTRIES (performance boost)
+  // 🔥 PRE-SPLIT COUNTRIES (NOW INCLUDES USA)
   const territoriesGeo = [];
   const otherCountriesGeo = [];
 
   countries.features.forEach(c => {
     const name = c.properties.ADMIN || c.properties.name;
 
-    if (name === "United States of America") return;
-
     if (territories.includes(name)) {
       territoriesGeo.push(c);
     } else {
-      otherCountriesGeo.push(c);
+      otherCountriesGeo.push(c); // includes USA now
     }
   });
 
@@ -114,24 +112,24 @@ Promise.all([
     });
 
     // =========================
-    // TERRITORIES (fast check first)
+    // TERRITORIES (fast check)
     // =========================
     for (let t of territoriesGeo) {
       if (turf.booleanPointInPolygon(point, t)) {
         const name = t.properties.ADMIN || t.properties.name;
         visitedTerritories.add(name);
-        return; // ✅ stop early (big perf win)
+        return;
       }
     }
 
     // =========================
-    // COUNTRIES
+    // COUNTRIES (includes USA)
     // =========================
     for (let c of otherCountriesGeo) {
       if (turf.booleanPointInPolygon(point, c)) {
         const name = c.properties.ADMIN || c.properties.name;
         visitedCountries.add(name);
-        return; // ✅ stop early
+        return;
       }
     }
 
@@ -153,13 +151,17 @@ Promise.all([
     style: f => {
       const cname = f.properties.ADMIN || f.properties.name;
 
+      // ✅ USA counted but NOT shaded
       if(cname === "United States of America") {
         return { fillOpacity: 0, stroke:false };
-      } else if(territories.includes(cname)) {
+      } 
+      else if(territories.includes(cname)) {
         return { fillColor: "#ff8c42", fillOpacity: 0.5, color: "#ff8c42", weight: 1 };
-      } else if(visitedCountries.has(cname)) {
+      } 
+      else if(visitedCountries.has(cname)) {
         return { fillColor: "#3fbf7f", fillOpacity: 0.45, color:"#3fbf7f", weight:1 };
-      } else {
+      } 
+      else {
         return { fillColor: "#444", fillOpacity: 0.03, color:"#555", weight:1 };
       }
     }
