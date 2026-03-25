@@ -47,7 +47,7 @@ const territories = ["Puerto Rico","Guam","American Samoa","Northern Mariana Isl
 
 // Load data
 Promise.all([
-  fetch("locations.geojson").then(r => r.json()),
+  fetch("locations_clean.json").then(r => r.json()),
   fetch("us-states.geojson").then(r => r.json()),
   fetch("countries.geojson").then(r => r.json())
 ]).then(([locations, states, countries]) => {
@@ -96,7 +96,8 @@ Promise.all([
 
     // Marker
     const m = L.marker([lat, lng], { icon: iconByCategory(cat) });
-    m.bindPopup(`<b>${f.properties.name}</b><br>${formatDescription(f.properties.description)}`);
+    const imgHtml = f.properties.image ? `<br><img src="${f.properties.image}" style="width:100px;border-radius:8px;margin-top:4px;">` : "";
+    m.bindPopup(`<b>${f.properties.name}</b><br>${formatDescription(f.properties.description)}${imgHtml}`);
     markers.addLayer(m);
 
     const point = turf.point([lng, lat]);
@@ -206,7 +207,8 @@ checkboxes.forEach(cb => {
       if(!active.includes(cat) && !(cat!=="city" && cat!=="national" && active.includes("sports"))) return;
 
       const m = L.marker([lat, lng], { icon: iconByCategory(cat) });
-      m.bindPopup(`<b>${f.properties.name}</b><br>${formatDescription(f.properties.description)}`);
+      const imgHtml = f.properties.image ? `<br><img src="${f.properties.image}" style="width:100px;border-radius:8px;margin-top:4px;">` : "";
+      m.bindPopup(`<b>${f.properties.name}</b><br>${formatDescription(f.properties.description)}${imgHtml}`);
       markers.addLayer(m);
     });
   });
