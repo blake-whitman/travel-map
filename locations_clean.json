@@ -8,12 +8,7 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "unknown",
-        "description": "ST II"
-      }
-    ],
+    "events": [],
     "images": []
   },
   {
@@ -25,12 +20,7 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "unknown",
-        "description": "ST 1"
-      }
-    ],
+    "events": [],
     "images": []
   },
   {
@@ -44,14 +34,15 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5NnwxXHIRlD9aQI2gGdmo25C5MpYrZ--0TvYsuwTPbdvtFtRtw2T-UA_Eh0nSlCxriSScJ-MrGo4SK-Q6Y9P9p8Lr2mGxVVjHJEkpatUsBagbXL3ZubfKLCtea_xblTz3ApceHqO9YKcSyLNpHGwYmQkuhOjjWPNehQ2JL43nvAc9E6GX18JqEss79Kk64styXZhGDPjwhkyAv1emRDxhsNStMg1yGS6PreOJRvQq4XyUOstx9gm7aMQM?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>4/14/23<br>3/13/25<br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6ZlhknepnHNQVVacOOaX3LFRfBS3I-bH2ZT4HRl6OZzf-GJUtUJX4-PIXxTTRtiRRjBh9yZOXuR68FAevcFQdta55lUxKtRjJi5dGiNoUqxSiyPWgl9gU7_FOERXImKAcXkfIeNCP9NbcDzJj0KOMxQzTYT0_7XhUMQQS4T3Zw_fpq6q0W3dKMRC5bNJ7bQvYy0Ybn71rBKDi-iIh1FDdUjnOltJqmKakjiNTYIFu8TVzHR0M5Tgmpc-I?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
+        "date": "2023-04-14",
+        "description": "Visited"
+      },
+      {
+        "date": "2025-03-13",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/Gateway_Arch_National_Park_1.jpg",
-      "images/Gateway_Arch_National_Park_2.jpg"
-    ]
+    "images": []
   },
   {
     "id": "cuyahoga_valley_national_park",
@@ -62,12 +53,7 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "unknown",
-        "description": "Aug 19-20 2025"
-      }
-    ],
+    "events": [],
     "images": []
   },
   {
@@ -81,13 +67,23 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5i1W2z2ekBdXEEX6e2s2j8ZUw0pMjb_fDMzOzERjgyQiE3_-o--P5Petbb0D-57J695WicvKZhedTuk02bUp3WHI1Do_TIKL0MntxjlVrMSPKTGolp_DYYbiPPWRNTahcnYWGotRIUk6WDahG_cbaTvyi4sAcnB8cQuNeOmd4hL7NRODft1AQgKfIZQ326ln1ASAXE0urrz-h2mkGCJsf09lGgsiU0NWk5D1dlLYuw2hxU5YU9IJ_aRuk?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>Nets vs Timberwolves - 1/25/24<br>Nets vs Pistons - 4/6/24<br>Nets vs Cavaliers - 12/16/24<br>Nets vs Raptors - 11/11/25"
+        "date": "2024-01-25",
+        "description": "Visited"
+      },
+      {
+        "date": "2024-04-06",
+        "description": "Visited"
+      },
+      {
+        "date": "2024-12-16",
+        "description": "Visited"
+      },
+      {
+        "date": "2025-11-11",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/Barclays_Center_1.jpg"
-    ]
+    "images": []
   },
   {
     "id": "madison_square_garden",
@@ -100,8 +96,8 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "Rangers vs Penguins - 4/1/24"
+        "date": "2024-04-01",
+        "description": "Visited"
       }
     ],
     "images": []
@@ -117,14 +113,31 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5hFFFS-kpQms_x1W-kJSWnQSBejjLbV-zY633nCev9BgtIu3iQ9YJGhOa5AGxzi6qm_kxh0UTjJ9ZqYVtegRZ_e8B7--_K9577QfPpETIgSjBENDS5QnajPcPgpGfWPcYV9qs_cSBwZFPnagk1cS-Pbn3p0_JfMLbpw68maxgj4jzRZ_3YXtl2jTzMNyUuUG5BD6H3ngR0_M_cdlG5Z9pmYDLE7GaLXXmETmreljOLZlQDacSX1MU46ME?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>Yankees vs Cubs - 7/9/23<br>Yankees vs Tigers - 5/4/24<br>Yankees vs Guardians - 8/22/24<br>Yankees vs Guardians - 6/4/25<br>Yankees vs Guardians - 6/5/25<br>Yankees vs Rays - 7/28/25<br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7VgCeRq2yvXdHgdWeMLTBuLJX_G4VLxhXRhXBv0AdtI1cdnX1A4pnnjrRqMwPg90VlTo1YCbXhrqw7jGjdW9l8qpEFZziXI7qozHXRuhKHHvB5EHo0YyzGDVH9XKPfGrWscSrudGs3HuRKyeUpb6dkChaSNObPAJQYjxHsr3jYIDFURWd73Jvjfg9AVjg62vJ56GM30agVTvqMtji2I24qWLZ7s1yUEmScg-3hNkYqR5rCfhyJ-1R8wLw?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
+        "date": "2023-07-09",
+        "description": "Visited"
+      },
+      {
+        "date": "2024-05-04",
+        "description": "Visited"
+      },
+      {
+        "date": "2024-08-22",
+        "description": "Visited"
+      },
+      {
+        "date": "2025-06-04",
+        "description": "Visited"
+      },
+      {
+        "date": "2025-06-05",
+        "description": "Visited"
+      },
+      {
+        "date": "2025-07-28",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/Yankee_Stadium_1.jpg",
-      "images/Yankee_Stadium_2.jpg"
-    ]
+    "images": []
   },
   {
     "id": "citi_field",
@@ -137,8 +150,12 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "New York City FC vs Colorado Rapids - 5/5/24<br>New York Mets vs Houston Astros - 6/30/24"
+        "date": "2024-05-05",
+        "description": "Visited"
+      },
+      {
+        "date": "2024-06-30",
+        "description": "Visited"
       }
     ],
     "images": []
@@ -154,8 +171,8 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "Browns vs Jets - 12/28/23"
+        "date": "2023-12-28",
+        "description": "Visited"
       }
     ],
     "images": []
@@ -169,12 +186,7 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "unknown",
-        "description": "2022 March Madness<br>Michigan vs Tennessee<br>St Peter’s vs Murray State"
-      }
-    ],
+    "events": [],
     "images": []
   },
   {
@@ -188,8 +200,8 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "Cardinals vs Pirates - 4/13/23"
+        "date": "2023-04-13",
+        "description": "Visited"
       }
     ],
     "images": []
@@ -203,12 +215,7 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "unknown",
-        "description": "ST III"
-      }
-    ],
+    "events": [],
     "images": []
   },
   {
@@ -222,15 +229,15 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6QgAR_n4y0cgzd8iRLqREw7tX4sdki-pzXTWThB34f-tcnt4CJYdwMXlMbDgqIXkS7OG2CYGZvny2-FuDm_Tt8mZO5ukS2DOAvDWLh5Caw8L-8WHhZ36agQeFXVpPOljdd2m6Whh1gSKKpnEslRI7E4dS5uyWmx-qKby4pehhAZzgVH9ewv4K9r-LEZgDo_Dsywp6qcAHiL0XgQ-X_o4e5nOcdLGAkGT1oIGEAlMNsnHf3jRJFwRkEo_g?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>Guardians vs Mariners - 6/18/24<br>Guardians vs Dodgers - 5/28/25<br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7w9aP-nV_kxytRRgD7vptya0TM88Ra3M0LcHHw8jj8JT88GopfyJfdDvtWMBAZhbZDOaVtVVT6xfEIRKPF9Di2tGBpcLQ00mHT4Q0zbhuOsBZOI9HG7OohKqR0zYgteNxwcrsF-GRNygZpgUmpBx1MDBSIL-g7n77SowILxwuYtbC9fXr7MTk6BtPafkp5f9s0NAQ30zUUeNhQ4CJ7IS2E4uRTMLc8qKQAcsTgzRyyt1gqVGWnAVWoTdk?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6vkQZxi412YRKsA7Co2_1r24yHh9VT_dWKsP5pLNV7PnopgllUnTq4fkePI7gvFG43DfVn6cjJRNg9KkOjF2ltgKSKowi06XJauDQS_Wy0QVWFCQt10sKTf7ba1SQSnUczHv49T7WdZGOD7LZcGDMY6QkZTK0ZJ9oR-VsrLQkUPl28kqI8BLRR4WfBRTXI6z17KNZYO7muvLMFXGNlk-wYFs1JqUBM0sSSMozEOI5snZX3p2P5dZEp5cs?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
+        "date": "2024-06-18",
+        "description": "Visited"
+      },
+      {
+        "date": "2025-05-28",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/Progressive_Field_1.jpg",
-      "images/Progressive_Field_2.jpg",
-      "images/Progressive_Field_3.jpg"
-    ]
+    "images": []
   },
   {
     "id": "metlife_stadium",
@@ -243,13 +250,15 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6NN-R7jklT_FlSgVUhrQc15HFjz6MHhlcphJjY9RRWSoQXk0w7omUqsaqft6wkftl4KooUVLslWXTkkF44WQv3yoIIxSP2LJ6zVfbZHTuyylGMIlp4HejEFfim3G3tE054ySbtt-L1fRr4BtmoLgDMv7Kc5ndCRPGaGDTln4qWebDYoBj-KiPxT6qcq2-f4IZ8n028ltKle54bM4grXPkQG_Lyp2IfNAZhJ26zrbWYeSHvwHSkvKNxFGc?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>New York Giants vs Detroit Lions - 8/8/2024<br>New York Jets vs Cleveland Browns - 11/9/2025"
+        "date": "2024-08-08",
+        "description": "Visited"
+      },
+      {
+        "date": "2025-11-09",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/MetLife_Stadium_1.jpg"
-    ]
+    "images": []
   },
   {
     "id": "usta_billie_jean_king_national_tennis_center",
@@ -262,20 +271,31 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X43JRHFn9qG4LOgCr4jLmYj8IkDuiUC7BbV66Tir4iq8JjAx_FtmtU5Qokj-Aeayif5VuEoC5jyXNKSqijim9U4JZA0tZOgLU2yTKLn3Van5V2L9ezkc3V2QmeklM3ITJCKMUH_O4hTpk_sO7IasCvbHFNDVeXuPfL400EpN9GTb-fTNIb1fHRr9HDXBCu7Wdzl1oojG2HClDqUbSPfN40Mce3fw4us8Pp3wq3sqT36ghmjWbfdgWKAmOM?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>Arthur Ashe Stadium<br>Carlos Alcaraz vs Li Tu - 8/27/24<br><br>Louis Armstrong Stadium<br>Jasmine Paolini vs Bianca Andreescu - 8/27/24<br>Tommy Paul vs Lorenzo Sonego - 8/27/24<br><br>Grandstand<br>Emma Raducanu vs Sofia Kenin - 8/27/24<br><br>Stadium 17<br>Stan Wawrinka vs Mattia Bellucci - 8/27/24<br><br>Court 6<br>Yulia Putintseva vs Linda Noskova - 8/27/24<br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6osi_z2u8I5f7GbgvuWbvJJm7xUILrnLjTT_7ALIH7NPSAal1Tbt1FV1RGo2waHpkt_OsA73H2i_b05Q5SBmOXoWFDLx1yBRMTt1vYGZBrrkSxSEOIiuJfrI8Y1OAiOWJVkYfU08ML-YzQJCxWVJ7GCrsbtb66NNN11Ls_5rcbGCRjlxLsxsjZ0vhbCBBVbygOqUm43laOqSj_2cs3Hp1pQLw8iyMgzm1KQp_TWcL6G1N7Ja_zZB47rsc?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5uKw89K-PSPjQ_oYVXsQ5RwgtPe1En30WJL5BUixfMUUIc5nxGprS7ZVvao3zwZS4hC9gxUpeC4Ji46KGggcXbgvqHcIovhqS8TwMt050nixDDK6VNDAdFz0RjD0DUu1LkvUGBA0tId5wlfHroBl1XHiZa-qUmttQd8H-uBeQboePveg78EoGF3SygpUV4cwDPdU3ZCqYTn4H1DoNgVO2FYYOSqTKvc9JIm_BDDVSTM6vLduMcJEzZEt4?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6CPeeXXXmt5f61PfkzKYHdEAwXpLedTENBXE3LdSFYgHUmqtZu7R4_gLwEFxfeJDtOVFmnoG8pBNfTN27WgyiPJb9VJmeJY9b_yMuRKOhPnSQ7R0GneWXltGiZqmMGcRW2bZnGpf8kSjXlu6cFgVfgGgb6psgXJ_TAZMdyyQVLUFqXbtpx36GX8b7cfJeryl6xK38yKj6pAQ85dkIw0cZjqH6Pyi7Jp0OEtLUfbv8kBeJtry6ri3ik0p0?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6WW2FUVq6CupDLPZT9yMdbWhghLe7TedKSsL9-ewpR9_HmN0gkn3OjFWAydGfIg83oybS5tS_lnYwoY_pINHhQvTLcM5P5J2mLnlv4dr81TwpxekmmACOdB2vDFuoVmpwpTIRx-6swRfT8_Ab2R_kYZpScj0IjPKDxy-DBih6kKLx0seU_6QWh7uwDVeP7JtaJjIFjWT4-yDGokqVAVJZ0OqWzHRh8uQk5MvcKZZFC_2tfkR7v3OU9Hps?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5u22XGBqNYT9-kJKFTahmW4tAIsh39VjX-2Zjh6uyS-M0I0pQC9cwQZt21_JvPqGi9vxbhU5_csBM2Av-BbGMF_OLi8DF2JLLTvdaueu009vPHL4DVvqxzYb5bpSvjdXR9F5E_95klKZEgxMwrwMkttrLrZ96QLJBgiqW2vVPcMdArlB9y_VHz9PAYNSst8czxIdn1rXL-J7j28TI8aNCZ1SOQlzJI5wh265D5GaNGjSTEIWOC6_orCgk?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6c3mx5eT9bqEpSD_7YCMlJC-vu8B8jR2HNvEb90QH57M2QhFnIxDN9w5islg8vB0qzRLTNDCOarpWLj2de_tR_ytRH9TxI1ndgubtr3dumnNX8nmbnr-ATzFMmgSND_eTLoeRJvz1Si5KM0wKk80AEPghctj-MXTHSc3TTq7s2DBE4xrfoNAZkOq7fKubI6yPfS_DlOKq1ZnvrtNC732u9ScJjnsB3jjKdd8gGbpewnvH5c5e2BpHe5Bc?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X44XZzNpccWnVRyOzWYjDGfYu4AxesPuvLTE9YCFPhmpQbMnYeKA_pHi7wqJZ8YxDAyJQsr2OsjSsb9gLW7muij8wGzIo4jr8Ct_YvuuYwQYfbv2BEvT4B61YG4Yupg-NKXsxMp8mt3XyApRgze3XQwn3H-5MTI881MOYkuVlbe8RxW2-JND4Kspfi0BzmJyQqIWRkBagqHmV0MhWZ93PLu4geRDSzrKa_DTKmOd7ufGHbV5YjLkZN7SAI?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
+        "date": "2024-08-27",
+        "description": "Visited"
+      },
+      {
+        "date": "2024-08-27",
+        "description": "Visited"
+      },
+      {
+        "date": "2024-08-27",
+        "description": "Visited"
+      },
+      {
+        "date": "2024-08-27",
+        "description": "Visited"
+      },
+      {
+        "date": "2024-08-27",
+        "description": "Visited"
+      },
+      {
+        "date": "2024-08-27",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/USTA_Billie_Jean_King_National_Tennis_Center_1.jpg",
-      "images/USTA_Billie_Jean_King_National_Tennis_Center_2.jpg",
-      "images/USTA_Billie_Jean_King_National_Tennis_Center_3.jpg",
-      "images/USTA_Billie_Jean_King_National_Tennis_Center_4.jpg",
-      "images/USTA_Billie_Jean_King_National_Tennis_Center_5.jpg",
-      "images/USTA_Billie_Jean_King_National_Tennis_Center_6.jpg",
-      "images/USTA_Billie_Jean_King_National_Tennis_Center_7.jpg",
-      "images/USTA_Billie_Jean_King_National_Tennis_Center_8.jpg"
-    ]
+    "images": []
   },
   {
     "id": "upmc_park",
@@ -288,8 +308,8 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "Erie SeaWolves vs Bowie Baysox - June 11, 2023"
+        "date": "2023-06-11",
+        "description": "Visited"
       }
     ],
     "images": []
@@ -305,18 +325,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4cmFLEOiJMLZ737Bx_qDTeqmFFnFYgmhDe1Gb5sN8iJKCzrKxYMm578D2EPUIbY81APhHXPIuQSWqiG8m_WF0f81PB9v9tqkXM6FR9TSdQxBrLOknW3RhwGSjIkITQLBYjh1Fn78V7SIZpN-TDN5SdD7Evu0jk7rjB-DGgzZ0JSxIawwIqAx_thysfarnzU-dmt7do0mqEECPMxA87o8EOQVHIs8EXkmRFzMkQQ-QJ4C2OIiEaK8f6Wt4?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>Lake Erie Captains vs Wisconsin Timber Rattlers - 9/17/24<br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7QHdDilN3hSfZ8YnCQRFMACysfv1glRuDHvgqbh423vSmvZ7yISb2qSdN2UvVZV14iDHe3BB5rRL-NjGdbEOvVU4eZNGPVyZzbJ43c2pteJFL55wdexiVkV_ZsdOwDKGAcFugxXOTCrNo8uxrp3gZvSxZXCFbVIygR_Q_Ry0qfrzEvDT4Lcy_klLBLVb0G3ga9qG_xwmXgjzQPiV79qh5dyovejok125jsuOLbpuIkKgE4Fs87r4D8wkc?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6oLoD4S0w1uRfII4FlbVNjQKky5PSyZH5MVU-EVZjZQo_rPLiO3g4dqWCRPRLHOJGt26g1wZLukpJzXGI1zJzrvBAz4WwWFbiyPJhZ3AyxQmP3pKeZdNl3AZyYHMfq10Bn9zJ8Ntcav5LZTEl8AMXXQyyzPl4UchZCNKgp-kZih-Fq40mHCfdCH-pxL63Hgicuhdp7wy3AtFP1-oU1qzWYnvkIMLHY2hym8S4DtrNZU8OWn9PKN0O_umo?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5p9jHBYKo3K3YlaUMSdvWHmehX1Pa6DrD99YfJ8pe5AGNRHjlUjvWPMqWmm4SsfMiKWArxdEZ81VUFgZRImsK_E90NMi3uEOMgJtP66x3-GHLmbpiGAu4IfNp8278CgVhxkDWcZxVu9Zy9yDq6II9lAVxnoXwjPaQDTb0WkX7HMI1FOFroNHUzJ3xWQadtfIFo1Yy9CrPMe5G37PtYLqEfYf-0hb8OHBgP0pYdYv2vDQ_QWEWIvwojgYA?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4StAuOdfvY9IWYRN00VXsafL70NyUkdNvHlmorfYSW-ueVRGcDtbB8DNKXAxhgTHIrhrqW2d8yff5VbDh_tH8-tQhcNAblfleNdJ0i5jYJJCheB36-h43r2PE-souGvcXI1SHk4GQPlUX_dUPiKjDvD9F5W9zK_vzFwde7ptom31vNwLhytZKeO2USGlBKeknjakqjTqHBOlLp4JVKzNtMGNigM2a35cTJx9nE1kw9UGrT0unrFkqLKa0?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6CDYwr4UwI-GbiEM5gWHGcY97E9ja8HDM7L9mR0FdB8bal1CKkmuYJaiYQ-Mcq3PuxClQzyeXtvKi3AzbckLEgYQDcOtT5dveHlFjcfWvDM34WtIdrmHOGyVXaYZ4cMYMm5gSQ7zQkGyf73QGf1aN6w8UDR9pxAuDznrlRifUK-fZtIINsGbIXJ1BU5euBmuEplZ5mj1btSeKy9XCA8-nQFYB6CRs0EcHAvdKmvKX_zSbmWq8g_WuPebo?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
+        "date": "2024-09-17",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/Classic_Auto_Group_Park_1.jpg",
-      "images/Classic_Auto_Group_Park_2.jpg",
-      "images/Classic_Auto_Group_Park_3.jpg",
-      "images/Classic_Auto_Group_Park_4.jpg",
-      "images/Classic_Auto_Group_Park_5.jpg",
-      "images/Classic_Auto_Group_Park_6.jpg"
-    ]
+    "images": []
   },
   {
     "id": "ohio_stadium",
@@ -329,13 +342,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5DINMRWxkLos8IehiWtHT_HH7sB-RDvpNRmIqzWxL7B6_oQFq8xbTVRRLkwU8M5yKrNKY0l7yhLoVQ2DPC-1JKf1B5kAryV3eomvNilrr74gcEp9QN2qi27V8XwZXqOAPj8QrhtubZ49odgc3zlARe4rNaCM0cjaznf6PPbsun8ZPMDaqj5JPgDfvqgU17ZwOEQoqYzJ3G9J5MqTOieEwSwnmY3Lk06G1s-9NMRkb8sf5oE3dbBZWQRPc?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>Ohio State University vs Marshall University - 9/21/24"
+        "date": "2024-09-21",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/Ohio_Stadium_1.jpg"
-    ]
+    "images": []
   },
   {
     "id": "northwest_stadium",
@@ -348,15 +359,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4zHg18GXk-Q-Z6JdE6PNKmGRApuktVnbarGEOmADQRThRTLxSZ7PdiS4bZs1Wo8U3YWxlWJlN8ds0BV3FpmPJ21nRf0kjEuBPPVePTBK5AhqZJmBMVUpbgRwx_Lb84t2JEmebHHEXuu2aoZ4NGvb1mHz04feIietlaNGT-zYExtRlB0nTIf_ZjKaEms0hF9YrtEWvLGcd0qAl3lxV0RmC6isqAZ4M_F_P44LNM-mCsRNHXG1vNbjGrZVY?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>10/6/24 - Browns vs Commanders<br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4Okpy994lUXmte4YX1jWKE4VDYWW5FPHUZ_3iPmYhClMRcUm3UxzhNSdcW1m4pepPMILOq3WGM46IZk9x2sEKMj4c5uCT2rvGSYu2pIQFDgJmZysjb9UMVykrrIoA2OGYfp_snMhw4xTHBJN1t68I9Sdlnyiu7iTjmDN7h8Gys-8yW3XjPWDt9CiKUkTK5o0_g8vMtLQaOoPr30xNlKLoXB0E33e8Kh7EIfgQr_xgNDPYOPB9woKhdWhg?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5Z1gLkB-dcQtmOVkkwd06575wNXNbLpGwMszp_jWQrWPk4QYT-wLBLaI7enchpqMhVbpl07MpmFea_nJkVEbMskUVzWkuv0BgYdC5znx8nHWCbt-GgYzkJecHJ58JCgrRx3GDdzo-4hAykx00mmUlc9q_eyu2iSCBo38zIYK74nyQaMBxhaclkKnxx5sZskfBAuKiwOKDFGrsNWJddZGbmmbCbiRRmTsL1T5p1ouSt0NIRDUqYVGJYPH8?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
+        "date": "2024-10-06",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/Northwest_Stadium_1.jpg",
-      "images/Northwest_Stadium_2.jpg",
-      "images/Northwest_Stadium_3.jpg"
-    ]
+    "images": []
   },
   {
     "id": "stroh_center",
@@ -369,15 +376,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5Z0aZzk3d-Ip7zZavgrw88bBMQEglLK55nLKEW6UzdHKq_XUCMkvZWqZ8zp-b05ysDykKWs5DzPQ_kcWDaCowAFT0QiDa3fK0dikCP8qchJaMVLAUSIO0U_HfvsFmb-BGBHwD9PI-LO-OQCaEJMNDM7qr6dDwlPop_HPxD2duJORgrl42FOwi9nRNP4aVSb54fu2f8v6f86SsAZ7k-0g_8Q-iAXmBAmYhDkWjiRftv78n0FT2BzjLlkvs?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>BGSU vs St Thomas (MN) - 12/21/24<br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4wCgdln2toFZsXxIviuqC0UFHfrSzDVPBmNgn-y3MhXPFql0f9HFUrwuh1RWO2zS3JeAd0DZauylZ-fPG8FFhn5w0D5QOwdKxXNyWEqOQicltxQczRaV2L0mK7OxmFV4QHw6hxPAJ4z877aid92vCF9-Jvt4M7QN-iiEWfF9y5JXadC2wqfCJ3z4Nqs2_4zGHc2XRVtwHAGl0nVyjFBpTwyVPwYtNODyaWsqIOWLceItVRTmqli99wLcs?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5CX7oNLwj0pSfWhhylOBm-rfbTLpZYi69Dx3sm_9geyhNiF9O_nTc31M90vO4CHt88SkwgVM40Pi3Id0KzR7paEgk7NT1c7CWf0tkwaPuJ26MvZQDVohffCSZwdYs2rqnKm_HO4iIK56_HDTK8ta58BQVd3JueUNvqNa17LXmxx6Nnsdh2D-NP5NhJkohZ54UaT93cSVCXJsC_B6yWbufZfJl1NFUkrQRrusfOtxYmXRDEmCYS0DayCeg?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
+        "date": "2024-12-21",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/Stroh_Center_1.jpg",
-      "images/Stroh_Center_2.jpg",
-      "images/Stroh_Center_3.jpg"
-    ]
+    "images": []
   },
   {
     "id": "slater_family_ice_arena",
@@ -390,14 +393,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5CFAbn-30C4U8NhIFI6YEvuoHw64ns748-z8YbYHjRUkGI0TeV7KWhOLKdyxaPmjMeXV4zUt8at2TXmb7Sey2F89fU34YumSYopq08iO1x-M6PLFQFvTXLM04NltW9ZaAEOp-wCNyOFN9Dtd0HHnX7UNl0doWj5RXOXzaH21t5xCgWiFFcUJ35G18l_1kjtIu2rskC-zz7htl99eOBT7xni11gwQNTyq6XrQ45jdzK7v0NLj1IIbQ_r9U?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>BGSU vs RIT - 12/29/24<br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4eApLP9RTxfq32VuyDvIGqJPA7P_URQR7vRvlxiyIpbLyhGebSxsbuqB_PpUumV7GJ3UrQMQR1reaU6hMCEsFHEdoTAZLDPQrwm0dSUU895_MbL4CvNAzUZzvxnfKbYK8gkZ7Tk-XLMeglwYV_6Lswd02mTCj_5KLgAoGteoSah5JrMUPrcR9pmo1_OcDRizx9T9nfobc8BhcG7QPhh-yYCZQp5WJ2YwqeAQzRbeTfqZLm0YZ6Tmy9DJ0?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
+        "date": "2024-12-29",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/Slater_Family_Ice_Arena_1.jpg",
-      "images/Slater_Family_Ice_Arena_2.jpg"
-    ]
+    "images": []
   },
   {
     "id": "prudential_center",
@@ -410,15 +410,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5dMqZZgOkvlFaK3NRMe0sAFCxliIaoCDUSbZY5GKucZeW6Oea9wyut0NmD3K00Xl35ZixQtaDouECmY_ka_46xgdY9WPfzmCuml6Ebw_vyT_YuETi9CGcc6HQSRdHmpWAMD_V8FXMS6VXNrH3tiF_gUX4SPC-7_2XvD4tmeLxsS5kyA63k44e5TFsIK-jT3mBRTnlUrR7ui8DxPyNKPxQStPavz9vquOLYkSgBRdVCWhCWnZKhKfvz2x4?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>NJ Devils vs Philadelphia Flyers - 1/29/25<br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6agPmkunAPMP44E3APBDi8pABR2smUPxy0tFfLuDoTIDGTnb89jk5Ip7CmiHZIMHGlTOfpD3zW8Nu0aAmvzZ9Je80RZn4H9Fhef7syY9FuOOUX49XjAPXEPELZCEoC9a1tVNsnaDuZw9NseNLbtpGNIVoZ-KOOL-MB8llV-6cukv_EyuPVHSzoRz7baDEHshZL8ED5y-nJNLh1HrVQUo7zKzR4NhVLvYOzlmI7Lra-Z1pVIcxuyl0Rk7Q?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4tSBcCucmZfaJi0_NoQ3uk4C7W_oXFK4Keeh6phlBmqXvxmwU7BWnkRYGbMFYooY1msvsarXymfDKXMruwyZ1WrphOS_EwGZ3GR8elhWZgxn9IiWDPApihT-J2P5Lm6fhPUwAhZuhXo9IrSpI3cqXt9BYl2CptBJwX-LDBZB1Kr-qvSeT-c0f-MjOnbhT9bk796eVSt6frwUthRIwvqmSAKPVYW2ThLuq_dQjcGU6nQRd75mUIad_buPc?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
+        "date": "2025-01-29",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/Prudential_Center_1.jpg",
-      "images/Prudential_Center_2.jpg",
-      "images/Prudential_Center_3.jpg"
-    ]
+    "images": []
   },
   {
     "id": "rate_field",
@@ -431,17 +427,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X79DUVyKO3RYgz1SW_HENn4its9G-4IYt8_zI0rI3UjZDoRuIO0BkCaphugSYfLe8d73Hcb2-vgD2LQWDxjuyiCfvnZHpKrqLslaVb1hur61oMs8RK1G0m51f21ae2EyfFAJwGyH3YSRWHyg9fFCcD7yzi0ZJ96LWL6-JYJZNgw68hfu2nDpbP4YU08HsUxX7pTGo_d63abKbBeC0V34-DL2H0JF5jaj01cS0pMqrsNUR_GG8tO4J5lpRo?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>White Sox vs Astros - 5/2/25<br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4MoaISpP_3Ld_6x5PjsgRMXGlRJBJvwlyhFPQSUm4J6AopI2FRJ9CtE6es5bS2iZJbXeiXd8wHbqk8dVIaxKEAQSKWODt9aAnQ-VC1Pw0ES3Miet-v-oYHMY8mii73YaHwnb6pdwZ7Kr6Vj_-pHM0fgOux9X0Bh93gFDvmkGN608as_OE0L9vQXuht8a-JW90-3-6_-UHKTKEGXSg_mNTHifvym7yNY4B6EEmj7hPsZ_Y9fT89fBrQdok?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7MTmxDETyMbQVar71UcvRFIigWKY6MEgCIGjgiyGJe3CDk2KLoOuVMLi622kKdFafWwkuGYNNdbgnnTHFTlJtIuNp6IXwHaSCYEmGFk2PjcMt1Kz32kximNvvpOdkdfnieXO9hRm9KRIAHwhD4gB-B0SItsJEQ7OROVhob6MmpAxPsHOVbeQ1SRvtedHdVBgQ8WnVEszGnPhat6ZOKMSwGpjbR2wWQZbVa7LR4C2WE3hTPw0wHWp-rrTw?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6KOKxVYZhZ7mC9RJOY9QsdzK7Ph89RRDTO-lLCB572aLdML0deUbvKLy6uGQ_AEqKgBee2989ZW9I0H-WppMAX4LVPkCsqdsYF9EtC018VSyAeTmzGg_U-y444fJxuOccl5UKzpMFsS7MSl6CiwGhV0lS458zPxDxWRFEL6X6bXYd9rAZmjFIn7LLMvUhhgoK0ghzzYARdzdxw3S27YH_XR3OSQ24rTSptvHhdx3NrGH5ghDIbBaI15BQ?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6ZEE1UfK3v42f55vYF9StHDWcZQFkYpRLo82TUxYwsZJvawPtZsxs-t_LsZVi2pfDOr1ZHew7YQKudVjrBibCOSXXEy4sfs3P3hKB-5qC6scvTb6UtLtjcvdu7ZNh_yRCYw6tEehEcQSb0skAcoKDg4aAOM7nYvFs0YO5aVSiX_JWA7vS9NSRTIAdy3yZnhpU_WLz9OZlFSorGBWWWt8XcnljAFXNoLypzIYs4B3W1aVGhHK8fjUePVnc?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
+        "date": "2025-05-02",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/Rate_Field_1.jpg",
-      "images/Rate_Field_2.jpg",
-      "images/Rate_Field_3.jpg",
-      "images/Rate_Field_4.jpg",
-      "images/Rate_Field_5.jpg"
-    ]
+    "images": []
   },
   {
     "id": "soldier_field",
@@ -454,15 +444,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7Rqa1m3ciwSHM4m1PHSPgmO1b49mfpZ5ixZp2himQTgTsFg04fJLKyiA6gyEdVPMQzZvdt1lBF5w_4PJW_hzBDsz5TZe8OIZRKsgZ3yrfgv7KTIMjRnTqWvdRUA_eeU5qYiZWuxz1-O7vjiokL-TKgvu7isCbZ64k40lJO1cmFxLX00JCAVc2d1nvp8MU_AUgc7jnyvioRo9MdZ4je81-Wt8z26o7FcnldCHwoCkSUMHBVrjQyv9a1dPs?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>Chicago Fire FC vs Orlando City SC - 5/3/25<br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5CqfSSuvbrpJ3IKGamAvqJIhTb-8_EDUw3CB_afr4ZARIlQ1oyZge-AM0AdoqOpmTnHMJCGFb8SWJp27dfQT9rFamsCZwG6k5W2MzH5ouS6lVtzEYMJtXjlNbEYQvH4imf-msMJpRwnX9WPRBwgBljdHkIoomyhMYqrvIL81eJdr5W-0CZkg05qHSJ96vc9FnSbF5imkGIX9lYkm0fABPAQQS9kF96rFU7zuTjl0NhZJx8-S1Uy2x6eoo?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6c_y5UBQypjgxWAmSCT8W_mUFNYeKhECx6-knZEJu6YEcDyr4gGaNSaqMRG6obqYuNoyEsv9Ujg8-GRI52KmtMyPeCJQe-dfvTj0T2-RWJWLhPB0tiJ4D-6EMYcp3D9APhTKvpzHDNnyvb5kOwH-fIZ8E5f8yCMtgyuD6arYxIskTEIwhtxQCB8c8OOcp9Lt_7Q39IN1p9_cNyA5mICpmjkSpdkgSllJuNISg6XUBTlO_9H1zUvkdT2aI?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
+        "date": "2025-05-03",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/Soldier_Field_1.jpg",
-      "images/Soldier_Field_2.jpg",
-      "images/Soldier_Field_3.jpg"
-    ]
+    "images": []
   },
   {
     "id": "comerica_park",
@@ -475,14 +461,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4trX6pyc5zrsARqY6inqqOhha9hqLWjqLQyLe-OKU8CYiaqu62EfNRYdqVDb88OkGPWhcNW3bVI7P7FukzdsFKR75gJpY5gr1KvqeBrTp4PivtC7JaFF0QffOrzRxFfsibSalOcLJac7j5AaktpPmphMKcvu-_-M7ICgNdN47zErWw6d2toAXuCVXVVM99l13KhrLlld-8-a5ERRvs-LCAf3-I-KWpdHZ9_IEnLJgimiisHgdZc7euIR4?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>5/25/25 - Tigers vs Guardians<br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7n7-xFfgUjexta0NWMMtu1heM5ZsHfMakxfX5N517iVU1A5H44-79gHnrL9pUizmabTQ8MD1WqI3HmOcwNjGHHHXh1ZASXcpwfScdkBE3-wMTVix1lkCXMAUo5Ok3615-BoM75IOwRsa_2PSWBo36WHpPDDgokUEEX_FB5VndxdrYNKRd4--UpGt3a-4GYSLRUxEEs59j0GgUKi0Tf1iUo5B9uulPikg2YFCMZO4RLfTKHYEGYHjrA3sw?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
+        "date": "2025-05-25",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/Comerica_Park_1.jpg",
-      "images/Comerica_Park_2.jpg"
-    ]
+    "images": []
   },
   {
     "id": "fifth_third_field",
@@ -495,13 +478,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4_wrZNSBpHDPBhl6kbIHCvAgj5MRjK5d0LYKSbMdUu3o0x_N8cR5HEPpepd5yzcDF25sCWWDsYoK43XM_Y9SPfsWAuiqWF4FOOBPQrfae2mn8P-obJxzEeSX75i0WwnUMzOIQZLZl9uEAaTlB_fbVoIBvMsN3542NzZhU5tBwkVrDVNdTrpbexOYPUwvLZaGDrEUXJnkokfV0F9uN9eXdvDsB0_cdb755rp9QFw9lKuBeoCF3fJRGk7G8?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>Mud Hens vs Bats - 6/1/25"
+        "date": "2025-06-01",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/Fifth_Third_Field_1.jpg"
-    ]
+    "images": []
   },
   {
     "id": "maimonides_park",
@@ -514,15 +495,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4sqsEey_reZZI4V3FpWe5Se6os8_SDC0IM6awYyr1AAIxaRPzw2sDLfdoN3dB3VXXUw_BXrMZSG-PMvSFtnZjuadeQlZLfgFkgLNuPr3UUKYETHfv8A2rMmKhnnX6lfB7acmQak_ufQZQSbkajZqTDKBuDh2uQ0HGF87IdAyWM3LvGNCQ51gSkRjqml-d9y-ry-0plEOtv6_S5XCBy12r6o_MMzVxAsPLPneRXZlB8kIQrQ1-p47G9EZg?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>7/29/25 - Cyclones vs Jersey Shore BlueClaws<br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5Fa9D8zSKBxSRSWlNYpEv2v01J9996UolzOQFvlTlmYgU1jULp1eaq8MMGqAxSwyNZswsNraYuk3cYm06yBV0LqJXqp0xHOYXB-t8bWuA3xnRtctUCGZJ9Duq5D_Q3e_EaeQ9SFj6A-Xm0ROy3IOkRr7TPX01lVj-1i_PFhkrgw8UfkbSC5_Jr_Dk1j4Y-a4I__UHyw7yKoCJNKOoLuJDhdwWxwxds6vp8uf-gRxRg4tr4AGqYEkAHGds?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5acN9AcgjVPQJ2_EHUzq_ndqt1MMIGJ1VtginY8E1e1EXuvc1wAMrakmVFDJ8kVkhl8sa3VY6WSCfpWriie5JSbyckHxMeX0JnpVbas61MD21FVFA9nQNL5unem01j_86qRUmCfVACab-n668_kEyaJ2asvjIFN6Ip6rXagB2wG0VZD7zcFhD98s7ZB5KC3-ulEKCpDIALkO0ML7GLFqU-q-wek9rmtmO0pk0iONIWOWXmS_4-WHyCs0Y?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
+        "date": "2025-07-29",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/Maimonides_Park_1.jpg",
-      "images/Maimonides_Park_2.jpg",
-      "images/Maimonides_Park_3.jpg"
-    ]
+    "images": []
   },
   {
     "id": "canal_park",
@@ -535,13 +512,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6iCAaI5aG7N8eBE-XpZh_EIQ_qS7-cP7i53_TPWM8Q0yV_dAfaYglEk_sKeeoUdQIryaeunNn5NAW-zy6DzIctADuHeKnPqCYBqvoDf6rGg_8J4sYvj0tutnEoAJ_45jCHIF36YkBey2I7eM8rCsBE1N9oOt1tyHAgU0L92iPvDwy0UpHBviivLhIiyIwaSIwDZXN5RZQpoSxxXDerTkun-nFtVoItydmRqAmhvv59FA-iaEOieQGBd80?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>Akron RubberDucks vs New Hampshire Fisher Cats - 8/19/25"
+        "date": "2025-08-19",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/Canal_Park_1.jpg"
-    ]
+    "images": []
   },
   {
     "id": "lower_com_field",
@@ -554,14 +529,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5VQ1y92unsvxvwrdY2bo1oLOhs7wdJa9mTChdqzM0G8V4p3u6vif6_1DgJdhH8PshgbCEKGbezP--5rtKwI_8HLcm-dz0myOCh7dKohAzjTWCgpURFENy5nEG6mYuMbFFPeTtQ3dfBO_JJHxmIp53iZIbTgq9Stn0fYNiQExk-NUCD-6lGHuTPFdTtjXxGSldBgoMZIx72wTdSRlkRLelkGsv8zdBQXTAOwN4T42KPaW4gU45T9Kl_jeg?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>10/18/25 - Columbus Crew vs NY Red Bulls<br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6d0a40o1V6PdfFY5OCfnG1qyynpQrgS_XpEP93hz1dbKoQoLfZ3kJ8BtMb-fGPrbNGY50Ym-3EqNpWsZF03YG-MOjWB-uZ5J2yr20FKRhkE9jau4pziujf1tsR6npp5FcG8OxvLq39gZPXkIPOM3kXIVAaAb9NS3FtK15wQhkvJ2Kg7ZcFZjRKjUOAjFPue-AsHY_1mgAaBQnEV6GRuBgNCZMvErWwENPG3k5WXB8bzpz9MbX79tUp7VA?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
+        "date": "2025-10-18",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/Lower_com_Field_1.jpg",
-      "images/Lower_com_Field_2.jpg"
-    ]
+    "images": []
   },
   {
     "id": "sports_illustrated_stadium",
@@ -574,15 +546,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5GmD8TySMUQ3zg89R93Th0WI1kHWgs-4sA9upPcNj67NvXHrzMIEJ20tA6-ndduOaMId5DRviN8fJ-1bgllWtjFvov6V9Pi_Kav0D_r_fEjpOucQrupUIglfnN4QYzz2NggNlLThMe2ZUorgdoB7lOiDctP9CGmJl46GMz3hHgmGAcNJRTjJVEmidgIU4B_0KMx3Sb-vLbQ2sAOmWw3pzRHn-Tejf2E56YlkJf2eu-pqHqzy3z8XZj2gU?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>10/4/25 - NY Red Bulls vs FC Cincinnati<br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X61M8s1vhvuxs7Q9kIvr0O7gWq5JqwokSPSPyfDmXmNniY-VV8tXTuhH-gf3QGkjgMIXk5M7Ssn31gRGilX4peNdBztnx_bg9bxoAF5FZIXL4d-taN9lSgm4TmWGhyFCcIeveUn0h84a-4PGH6P-XSVVphpTW42KvLbz0Wwl4npVLS0mEmC3nGj7GZjOGMYZYB_w7zcbcasR6Sbuw_JQ24Y60Hzu2O0V8SOm3f9VFnZa6gUY3lSC8hvW6s?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6OsMNRy3iAnw97NaRbybX890uaw8KTHmj_eoWvMcZhWkQyYtBhIhDhVJpT29CwUNBlY6tmFVm21EIdoJisdPkb76NLFrDz_AdaU9OUy3NYknDxkKD3n_glkk-tjdUVBMKJfJ83bK1LyewiEUc670DN6VkYNKMbtnnN28WRfQheDOHPY8crcsOOZI0wcgXx9YkgPbeU1UQQUgojXWQgKse_Wwb9fJ5zv6YhCN4Uscg-4PbQOjhiPFQiRwE?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
+        "date": "2025-10-04",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/Sports_Illustrated_Stadium_1.jpg",
-      "images/Sports_Illustrated_Stadium_2.jpg",
-      "images/Sports_Illustrated_Stadium_3.jpg"
-    ]
+    "images": []
   },
   {
     "id": "rocket_arena",
@@ -595,15 +563,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5y_A4nFlREuQjuCytxuR0guyID82Klg5IAP6XN5A48CuWtfYqLr9o0MBBTT7tbz1pmH-RCtxPcQ61SGCpj7O0VVWHWSXKAYpCP4_FtB7c1XxNxHYkDUqnXniOIYOxtu7tOxsveV1VP_lLCCE6nNDLd0rPIBShG4tTfoMBK8LQmdSLnr0GuCQAZtQEdq9bTEkPdBS_gz6kq78CezX4EE3a3M1j0F4di0LfocHCyybuNgdmSrLL0GeEfBGg?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>12/23/25 - Cavaliers vs Pelicans<br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6ST800z0p3SJqsQCyH2AmI-nxGKYg0N-kkd-6Uoz8ffZCAUhnjFyp0eti2ChAKU4FKNHWtOqbeIRom-IDWtkYfzwwD6pQ16n56VIb7ZDCjxz86VF_KWC2yuyyCrwJbCRAN0-BjuBm9c55xl3PihNbzsNgWrwpKXJ6DUumcfQjXyQsoNGUC8XXCBSX9YAJf8-YI5U6JiE4aXX8oQtpY0LX3D7KeraiClnYUEiOpIXIsCmFdL7QzUkNth8k?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X79IeQdII9az5SFgomWQq9Pn--M52sr_qOWdXbvmSnxi7CoVA5OTDDfbr6p1E51e4u3lH7SBwkJaTynjWFUGsvB6EOdduiGKS_KUTa4P7u0zker5psmbZZa-oomm6ZXWCw8ff75MdeWp0LRgNSkNdKCALmkOuUS5bjvCVKBCFH54kB2O1rFO6Nimq2HGH4lPkokWYIDKcGJ9BySI8-CWwlp-tjQwgZngjQPGskt8cd5cKhx8rD6SP9ZsII?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
+        "date": "2025-12-23",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/Rocket_Arena_1.jpg",
-      "images/Rocket_Arena_2.jpg",
-      "images/Rocket_Arena_3.jpg"
-    ]
+    "images": []
   },
   {
     "id": "yanitelli_recreational_life_center",
@@ -616,14 +580,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X60Ur6O7-vGJUSA_YUzzAxgx4aeNz13qNvFpK3DIXQW-htPmUlxna2yds5mY8-FjkBdfP-_uA8DBQHeGK8BGtdzitgQDuCLUZG0OiKt6B6uSIfEd7CMe-BTTe4GayOL-k0aq-IfZI4d8gVm-Z3MkkToOdU9qA8lZzSNAK8wTjGKsua_DA9GsK6JUoRm6z-reuV767oV3LEncJefySK-iguEZ2mismTVotMBJwVq54cxEJMg3HXB6ZmVFeE?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>1/19/26 - Saint Peter's Peacocks vs Iona Gaels<br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4S8ZoGGJihQFjuVfXJJKlxVEzoIPLCx4WbFUtNiRBUYh9-svS0wUHSVhxrwBnqUjaMOooTYZusUE-HbMXvdOmE4WKm94tspl_H5p8HOMsBiFAklpBvGDdSCnEI_K-97z6P3ZV51a_-d6jJgBdq3oE_uOwYPUIYG8qt4GdIuqCcVcrzPonPOV3n1pdd8hBaq97XfB2nBrCSPtOe5OZwZrPRaGy_OsTSIwL_1OJ8yJvsYNKviVexj0RpUsk?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
+        "date": "2026-01-19",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/Yanitelli_Recreational_Life_Center_1.jpg",
-      "images/Yanitelli_Recreational_Life_Center_2.jpg"
-    ]
+    "images": []
   },
   {
     "id": "zootampa_at_lowry_park",
@@ -636,8 +597,8 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "March 11, 2024"
+        "date": "2024-03-11",
+        "description": "Visited"
       }
     ],
     "images": []
@@ -653,8 +614,8 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "March 13, 2024"
+        "date": "2024-03-13",
+        "description": "Visited"
       }
     ],
     "images": []
@@ -670,8 +631,8 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "8/10/2024"
+        "date": "2024-08-10",
+        "description": "Visited"
       }
     ],
     "images": []
@@ -687,8 +648,8 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "8/9/2024"
+        "date": "2024-08-09",
+        "description": "Visited"
       }
     ],
     "images": []
@@ -704,14 +665,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6NCjugUGxlOMvcZkwTyHxiolK1AVzOyZPJZ0NQqpXylAGMwXVW0NSycAPEJf5xLHlnOrEkx0rRPEadlZyd7EyE55wSbofJeUYqfostXvfsm6KBVgxe_Tm6upNg_Z82ZwqTsXRHIQ-J5K9wjDd1KV3QexziPba6tHbcdWXoSwehpO3ZXrQbPWQRSdXWiFLqp1AawYQfBmgqB-CPRhAZ7SAon4jXf6BUakbzLQ-9suCFMNzJuabUxJg1fsI?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>9/16/24<br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5rBRA5s-kVX0MUhW1qaEokKpH9tfnV6M8sZklBd7R6y9XX1dzTra_du7ugr3J2TegVH50fjBJcCQcTvqYlHlR-J_nw5Alsu012mc6x-vEydN9bWiFeMfqidDUU91qbxDl368Jrq8pSztXtjeTXXixejihMiEt5b9x4FD_2V4Ui3XsMco0l4dHU0DUGaoxpvOf4tPKk0-noIT29ocFRLKusFIFJtmUAcFmUiICykxJfwkpEsdn8K-F51T8?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
+        "date": "2024-09-16",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/Toledo_Zoo_1.jpg",
-      "images/Toledo_Zoo_2.jpg"
-    ]
+    "images": []
   },
   {
     "id": "saint_louis_zoo",
@@ -724,16 +682,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4GZh0dFwoh9iIno0VIIF1tUKjZBZCEQNlwZNQ_5_sDrQzr0Cfhpn-y6fjs9qZza6KHU4LXJbhLKJXcX2RNMXPeb1k6j9XPfA79UDT44k6f5iglb0GW9kEScbjR2FK06V1Hs1HOn6DBjiMJUePlcRBVLxHipkl1FOOeDaB8FvxYNMUI9i8cTMYOcprYrmAYx-7uTm_-inkZY-8wwbKWeXN4F_jVtVZZrWMKy6eEsyQi-3eZZ8p8Vud25XQ?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>3/14/25<br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5HcGKXbFsY6I-HQYbuNb2Vw3H0n6E6A78tz4FONFbCVW78FnxdHpebN5Lh_SJ-Y6yCtBgVrj9mZCpQRjv5LMtvQIqDF6Od_GoSs7hKEAfyURe5q7ly-toDP60BrNHg_ui6Gg0BYA2mLj4PgYtH1TECjS0Vy9kVgL-_3E4650QfQwUJRwSI6QIDu6soXwBpuNM4O-XA4GDR9jbgmusrYeq4hGlC92t7ft650qy6D7epg4VwJFlMhkLr-6o?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4t98vx4jo4dsUj-tQ1mWyZ6IcRBOibdUZS_t57bBtAZY4-ojUcCdwAhXxAMf1f8vrlgkEgD2dr0HsbWujZCm1mOBwy0M22FOpWgqtV8mULyPK746tTck0WjTAcjzlOQ1kAAoYTfy85OpianU9lmM_JmuR3phCSiMrzPavVSa5PR7JfiOF8eSZ04VcUB7I6EMX9fWwCAq75y38bjZBSBr3zIPR8_opCfL98OBidRCgvskXMp4sMd0FuqY4?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X722snwUWBm44O1Ivt1Aj8_CQdgIoFJ3uLKW6mjri5gg1lfaOgmBmLB2_mTArogF8wuUH3BP_pXpuyajlNvw9n2xha-ZO40b_NYnAjngLc5rf6_B5Wyef-Z8-uZx0L0b9EZkm-Jyn5IPesogT5YG5BJclAsj2vsfiEI5yqC9mn95o2lw-NnMAtsxQB4BGeDFmQe9H1-o7aE5wZ4EH16oGF3qtZQIb-9RbL1X-YWLYQ153penBkKqnZNY4I?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
+        "date": "2025-03-14",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/Saint_Louis_Zoo_1.jpg",
-      "images/Saint_Louis_Zoo_2.jpg",
-      "images/Saint_Louis_Zoo_3.jpg",
-      "images/Saint_Louis_Zoo_4.jpg"
-    ]
+    "images": []
   },
   {
     "id": "lincoln_park_zoo",
@@ -746,16 +699,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7NpuxT942SpiqmraxK-OVnVxcAajd3V-r626FU7cLCvLYsXEaqYvz36frrzMrol9ZfPZZ-VRFT1tw15xe6mE1ljQcUFp_EqyWBheES_bZPxiO3WtuLrNIogIHPF8SZf7Oyv41OSFL_IcGM0NFGfbnrhmUKHTAETePl0Go12QqxI60aXd9DnYiYmrrclBFPmIzMvYPODMDqUJ_yOtPwhH4FNccojjY_upkEVGpJI2GwYiNA0BlCN7ZSYP0?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>5/4/25<br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7OOmLyaY67XefgABGTA-eVaoKPZjr6g5Za5AEXpu5l1kgQ8wfiqB7lANkTcZCBgUvkpCJxsyCVUj4CuQV0la8nnGm0Q-6_YWAqAOmz9qhgVFwXe-1R5e6OlrQpS0pZpA8w7V0chBUoTdlZn9pohVjA034llEyarOCjwxnLALBVsNFRB8ed9_qqYJAziQWqpMtfT2GxJ5UjLHu7X5Y4wtkvcCucePgdAx10Gd0Mez5QV4tajfGipMtotN8?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5BFD5UBYUvZ23AuFNTM8fTgG18Sxd2PuB0fp8YFxlPAcRItk-dcZ-ZBBdX4b3HpfUGrkr9UD_HPzRCKGumY0jlNodpZtD-IPYZ0OQ6m4LyiKim23GEHoIU-FmAZI2AIVP1g1lk_hdc0CQ8ZSWhKF_YVAzov5wBm42ISQeqF7YSlhu_DCA0IC5XhfOyhoBHjPtIoYPwxlOaAlGMVILGUCk5kinm7Z_3j2V8YNlXCvZTcd6fTakHjRUiymY?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7ysGAOSKuV1VKaJ4I5t9hMTCY_WkIRMzfYO86SnxC4lkY9GlFqgRq416Tl61frMYz6XBDPwe-dRzCykFXNEL8D6xEjhYrP95-q1e8agmvq7NYdLpkqcFf6d91mrrEn0NC9-a31Bas9ogtkUh9fbfG0GbISoNWLWKGuiJodzRXSAfliDAOOABofEPArnhT3P76iZb7I5D31qFwXPx-Zr82W7ojpMdIOiTOss4C4bQWgmZUq82gfIPGbakc?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
+        "date": "2025-05-04",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/Lincoln_Park_Zoo_1.jpg",
-      "images/Lincoln_Park_Zoo_2.jpg",
-      "images/Lincoln_Park_Zoo_3.jpg",
-      "images/Lincoln_Park_Zoo_4.jpg"
-    ]
+    "images": []
   },
   {
     "id": "shedd_aquarium",
@@ -768,16 +716,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7BJnx14BdqhRPduqfhKIa4GxOec-xjpEf4nsx2TEMk1ELPASqlKz3scsZf-YhQRV4owy0TaO9KfUFgsL3xxuUfsIq2P65JPraowCiFu9Jxe9HZNhkLEwQNjgtqhVIrIDSN1G_28zx-ohlWE_QSr-FoILrVXLFR2kYqVgvfmVsnRInsp0JknWW21BbLnjCShVKawbkmxPzp-Z14zHYRPVUKlxfrM7xSXLAqpHCBmkNzfGnUe5m6GInG5YE?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>5/3/25<br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5wHAGnOsTQJv76sng2FD4wSxstRfukD1oy3HjyJZHHBkqk3rksmEW8mZuzEl2kf581LX5kdhBgrUGD4_JsTkTfX3FeKAiTegR_EkLNfZEPVIyxQs-PtelSzVTjWPwgaSFw95Wd_fmg3bPx2LUUM7AlX9JzUBfj5G4_MPbc5Z-ChN6kdChu_vQuooFNtDk73u3XoDTeoam7JLSZkfNix-D0-mlY1EgVN1f_Vf-VUIKdJoylOs2e_pUgbcs?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X74RNR0FlJuRphBOsOz9Nyv30i-4lxLAgPAHeGxv5B_BwvnEdYv4wLfHcOSYgHIPn9UAnPVBQ55J1EkjrTOW6SANZk0MVs1RnIA9QLiRirOfqE481zuQdTs-0qh6LJw_4sqXcZ2YeYU_0SBIEiFQRYIzWws9khKrablpfPJipRTz7xY-Q51gMJcC4ANzuYxjWIZxtelLn51rXHAIYho6qqZsa0eUHZFGwKnOG62NCyp1x_5oyNPOuDzooM?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7foJcxI5rV4cJRDzU-F1sr1poq0wdaMDw2JFy8JjlcD6Dp9OK1h7jeU1NMPXE34qT44npTGJT9UjYwZiNQj5uvKvRz5FE6qLhghdDAEo916FWRNiRDaZBGiubka6q-KpUNRahHkdAv9aCjI8Bx4vw5UPgp2pIlVys9O0JLd8VnXAkiiruzd9a0EqYnm5JQF0T9n-QeiawGGxYUpxfzZaV0NT4vT6KK-8tfpbY7YnAaqTSXAPMORIFafM0?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
+        "date": "2025-05-03",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/Shedd_Aquarium_1.jpg",
-      "images/Shedd_Aquarium_2.jpg",
-      "images/Shedd_Aquarium_3.jpg",
-      "images/Shedd_Aquarium_4.jpg"
-    ]
+    "images": []
   },
   {
     "id": "akron_zoo",
@@ -790,8 +733,8 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "8/19/25"
+        "date": "2025-08-19",
+        "description": "Visited"
       }
     ],
     "images": []
@@ -807,14 +750,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5TJQIz-4BXWqVVUzOe2QhHov80Xj2KWyFNpKtPe8bU8Jp8N5gu_gd0CHXxdysD_dlSPNHrgJwRA1cI0MMQUGiPBHjG2741AatILr9S5k3rLnX2YNN21Jt947_s2Sfu-Dqgy6HA5Z11ouibV4S8LG6puZ1zdJtmyOsYaGRE9Edey8jAByFrwV_b9wrbpBRBdPJCmPU1WDKpFG961BGgdsAmoR_akMfNUtvfLSj9Yrnz04AQf-gCiYsvGx0?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>1/25/26<br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7_fJwnPbDYwWDeWmWSwuyyREXejVrkZhcnQeZ5Ps7aU2ly2wc34X2gwHFp8l-DsfUulXwUtISYyjWj0NBXidjdzUj72ldEDuNg-Uz1_uqGVib08yVd9Nny575eRLRz8hCM9rOODgJZOgzhXovucIJyoq5cFBLuir86M_LKdtJa3t7Ndpv9bhGadE1Ja66Vzxo-4-sAHnQtSNrrzsElNn3j7V5lEPDFaVSOEfscegxZhnqmUhnPQftIqlY?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
+        "date": "2026-01-25",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/Shark_Reef_Aquarium_at_Mandalay_Bay_1.jpg",
-      "images/Shark_Reef_Aquarium_at_Mandalay_Bay_2.jpg"
-    ]
+    "images": []
   },
   {
     "id": "niagara_falls_state_park",
@@ -837,12 +777,7 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "unknown",
-        "description": "ST III"
-      }
-    ],
+    "events": [],
     "images": []
   },
   {
@@ -868,14 +803,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7RRug1kR1BS9UOpK6HHWU98MBJVghas_3On2P4zqjutd2LBU6HRq2GOrVVh-oZUBgHpKAGG0iDcAwBZ0pnZ7xSWzAeXYs0Eq9S8RcnCwquTVPHe_Kd3qprK-IhdZsVYrZ4todC-VvY49pwUN3p8TUFQyzuWCJ8TwWFk4eyrH-lmaECp3v3bzVlXotnnsVf0mWOShOXxBrn4CrEur4kcyxQjBEFrEMVNvkRg-1LGS71zy010VDoPZ85b7M?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>8/30/24<br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X41IUlrLTp5PPhQmPUl5CEtpmgmtTsnSIb1nNhTwKwqLxxFEVme6dgzCoMiIOipWpWAGSbdvm4oMj58gUUi-OuVwOmis6iqYSI1IhBT52_WsB7u4EmEMdBY3UVEczvItNkXOPOEp9OlO7CsTxg2GW-crXmY0lbtI91yHk1HEbJfHDeXNP0gE4vXvnY9r22OVlGIbzdeCxpSC2xjVT1KLM2tY6Q871Vu7-IbGbeBgaFuC58r8w59z0nNMaw?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
+        "date": "2024-08-30",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/Paterson_Great_Falls_National_Historical_Park_1.jpg",
-      "images/Paterson_Great_Falls_National_Historical_Park_2.jpg"
-    ]
+    "images": []
   },
   {
     "id": "bear_mountain_state_park",
@@ -888,15 +820,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5MkFt8HlIGgOEIi6WhhnTIeKYMTncY0USiw-136edKvJdxhFW5CdFnpFnYJUgb-1rx6SNGbjmsncaw63F2IpDSVR1MGmHm7HNsXTZSZF2yAjUj3U6_v42ArTRngIunTqkV54c70w4biDY2Lx0xQ-WP7eP8AICSqsRxUC0KoUprfVJ9PjjgHRfUiUSSFTS51x--AUN8iBm-PF25zZ_2LTTj46kg99CWkEmD0Tc00iie5aPZkz2vtPrc6Og?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>5/12/25<br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5IyXjmQNTelvcRSnSujTN0uxhPv2anaagasrwYWnZ4yrE2aa2f-ecXnULjjRGdgUV0P_hOUzDawjyUxCjILj6T_ijtWmR7GNuR0eyFWHs7RemPZU33Rn1e-C0cpVFawDqqcnLjQrhBD-1s3wrgMqhbGSRxOC6c8EgFHWPFmQ5ixBOOVwa2Hw_GS-gkvodHWB2uRmprNilbN2HiJsjH1YpgDpG-6qyqlqVDDQvT-iYZcp2O3BUAO7XjmDU?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6h1moTwNPv3_BfivyDPAFKkBR517hOl3iG0sRYj6HlVsetfAdCrf8T_bh6yqFyOP4EgpoWcc8J-NX92cYYeHJV5Rpa4jw7w7J4S8PWbxOLnFlhRE0HNyuQRn3aanCtj3G84x5Nx5nkTp9tGgotyjsyXlNuq-AresAfEuOkBN6j-Vi87ZTQw67G6-HfhTyQhPik9O42IUWP1-Ilf0lQNokoc6pNt6LBMuQDml3kq4QbX2S0qFZ1ax9hI6o?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
+        "date": "2025-05-12",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/Bear_Mountain_State_Park_1.jpg",
-      "images/Bear_Mountain_State_Park_2.jpg",
-      "images/Bear_Mountain_State_Park_3.jpg"
-    ]
+    "images": []
   },
   {
     "id": "hocking_hills_state_park",
@@ -907,16 +835,8 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6d5aJaoNGXa4lAX-tbDAqSZY1RhXRBRLUjmGUD-nbIGP4VK2TyUc_QdV-APMKCAIWE5fY5cuhpCfhcU9I3o728l_aZrrl2QIkWilDEnRfDzEbZ4Mw5bt-QhqbeuTlNlbnGUiawf1mpkgbYmvQOPM5QX_p24QDAWRlURzVjEemBWw6vetuV29id8k1KnHhyjMCge2u1TPSlIIykHF2rYo2thLzZJaeuaIKwHtUtGowf-P9cIr_fVXQK7u8?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X65TFuWiNiakJI7ZpJqc9hAMhA_ELmtl4TQThPakMx4swMeige19yhtSbVWe96kvzYNG9Vn2X3E1G4iVD0BHBxkbWrurG1PW6XawMPo0ll5H26X7lDNd3O5MBj8KuQdoJplVpmHRZkfko6s27z5D6UrHjyxb5I_oigG9Bcl72YB71eOEnt0lPtxB-6HU87UuthmfMwoRpKiXpKnszvos5bKKbtk_ksVM_EBtvgXQffEv339Qladz3DYhSg?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
-      }
-    ],
-    "images": [
-      "images/Hocking_Hills_State_Park_1.jpg",
-      "images/Hocking_Hills_State_Park_2.jpg"
-    ]
+    "events": [],
+    "images": []
   },
   {
     "id": "lake_placid_olympic_museum",
@@ -927,12 +847,7 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "unknown",
-        "description": "ST III"
-      }
-    ],
+    "events": [],
     "images": []
   },
   {
@@ -958,14 +873,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X782YnCEs_RL93aTuBsWURgPE9daHPlILXvYpkSm1diI6gRqMUskxjnLCZQDBMIoRxt0xlz1oAvYY1t0y_X_CldE8ANViIilxZHwmVjGHy3P-YdwDeborkmjigP0h0gLQdLGtWM_yeeiSdNAsq1VkZELDZfsAFxM7C18Hrb1949KPJeVNYno6FQg6kAVxbvoj_Kty78AEKCXBGIiC2cwK5gCvXJC2atqF-F8Deq8Kus6yrGOcgiQiv2aNE?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>ST 3.5 10/5/24<br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6Ohw5sA4gWNAXnkKWonGX1nJOrJ1boaxO9_CkmiIyjdfZdIK80ZnT6nWgHluP0A7YcP-wolBd8qGL6wOckdQPraa-1oz5tZ3QyJEZWablai1oX4_-_y4pqiuFaTmjfnOInjqpyyqVfh8BaIy-VTKrgk0Q42o7C_asvcfxvtK_j3mQ5pNw5YKbroZrt5U9gU6EMRzPtwr8KxuHg3_DU40C-Fw8b4KQ_PaQS5qCmdyZYMCNspy4wY_ivtW4?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
+        "date": "2024-10-05",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/National_Gallery_of_Art_1.jpg",
-      "images/National_Gallery_of_Art_2.jpg"
-    ]
+    "images": []
   },
   {
     "id": "national_archives_museum",
@@ -978,16 +890,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4XMmdfhnP7-1St6JCudU8ZTqInTQ1htCzhLG2RjOjkl2VcJICw-ft1G_zTcguNfOfHmFFGm3fIaBrKLT0l0KohkmSM0Y7-kIxevNhDc24nHSIkSU5V7i-HBVxCpNUChy5Y3wVWbqknf9if-jENQfPWiOCmV2A5jHdC_bH1K7pVJqJ88gP569mv1a2ZbLPeRUghiClWtMsGt6CTaLKJhSOBe3Ux-FhfekAbNXLb4ZkgDmaAZxlj1p8Ka-Q?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>ST 3.5 10/5/24<br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X62N_85M82j3No6x7L-r5OvUaoXLl_t4q8jrRKt2EEcvXDaA9OFqxMnqDCPsRgKGXASVFfqStGlGtLKfHazBm74oOxcRHtgoE8KUXxTCzMphCA2vrdXF8anS8HCffpalrtloNM-RV44LCkLWJgi0i3U3F1e8tzKyLx29NyyvauHpK2ok_bTQ7JalqD9npxZ9pzeDnSWpkLqsh5PV0rAExnPn7bCdmrM0ZOoTa36Vqekq0f20TLOhAAB700?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X50Y4fR6mCNS4DLWi_vQeNopUseCqNbWlAXygZ7YjXWJ5YO-TZTWm0aRpy_UtQxZp8tZXhcS2Yxm0HzMb71S6optSmI3l-pkn42qQRiblbb6pxY9zulyFtCjCfO7NsjPJoFcXyAyFmkfdXbsQKFvQvihWx3hR5s4OrDyHfTcncZ9Wo7NSGIJPMX3nAc3oTvRdtrF9Kj4bmHc3zpp8Yg9eWcfIx5fMjJgT-fiH12rPOgYKZHz9B3PrGxmPs?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7ngJvWLd79hZdZN5nOz6A-VUrX_gIbaC4J1rDvCedQhRG5pNaXS29dvMvN9OntyIGLjVDhmRJFjojotsJUbAcX9U8yg0cTgIV2YPmRHNRI8LrRnOvqaqMYRb_HvOuyfgEnLUnLty9dmKdHmJcQ8s40mVPEsr2n-GSh9L8DzhYZhrj9tA1lR6dwvJBmrK8YC-7zRA4luMuOP8yny3x2rlFvWPf72uY-KEV6ooOQ66DiLoQ0RhImd4Qtmkc?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
+        "date": "2024-10-05",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/National_Archives_Museum_1.jpg",
-      "images/National_Archives_Museum_2.jpg",
-      "images/National_Archives_Museum_3.jpg",
-      "images/National_Archives_Museum_4.jpg"
-    ]
+    "images": []
   },
   {
     "id": "smithsonian_national_museum_of_american_history",
@@ -1000,17 +907,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7dc1Wci2w79J7PB8UuJR33eE61AREvknQuSCpNs3KsHok3_-pivBij6j7pf-DtS-okmtl5EER6CbVKB2IiTHE3o4BdRR5cELv-WMOZx5PkZf2PheU9YoRdrYhoZEpRRXDKMKRCjqQdjW7bEoMCyUFjYx4kWdQ9DsPUHSxLPM7IatOBj1nShJqsMWd2ybZxTtTGX7xaRVimL3WhdX1tYGqQkoin5o6dpGIQsv4SNglv8InaSXJ0v6BnkKo?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>ST 3.5 10/5/24<br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4mnc5IgFvn3kPydZy4dYQrHkn_3yR16bGgSZkA6N_sWmGefCeNkJHFl53jtLXTppSqo6wzLTStLWQB7jgQkhPDkGJNl2zwUgzAPq4hwkBRclB9DF0XfDrhTrhUjujjj5ia8FY2PQnHVTkqp7Y3NshKxPBP3t_8ZobwQ5vazIy0sol54n-6U_BD5zpkOdAQpq7wzPg5Uh6XwbLVSgQUxhusXc8IfSp88SfdZW2p0Ha_xeMxSjJFxdpFYe4?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6Qk58w2EY7DIbr7v7F7QRnEpR3xHKwDu4q9Vlx50HoR5xpjRAyfJwr8KLxF9m3diRs-2Z7dF3rfw2m1E4DX6Cgfdyipqy5BDO6q805EGU82TcTK0E71W6CjH3GO_cM-cfWQsl_z_8NbxE1QjBm0t-ZaWoi3BXXb8oFlX_NCNP5lFdDyRWNemZKq1OxVuZEYkc2xV7Akn7jFbqpzT4whr_Pgk1KV3FULVT8aqECcItlaVxd4mMFiheIZRE?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7WGFHw2Tozg_BdJLqdjrAy-q0P9hiwjWXarSTdTgwS2Zp21fb1b2nWQr3wrFJ5dLd_VqJ2Uj00_oVzf5QI7m1fZYPJ5QdHrEZ21xwN75jqnpkda5EPWYY6LAPZzOIwojRnL_R11JQaevFg4lTegx2jAUagTOMLhhGj2XHZcoWru0opWAMjbKacQoQLwWZ_80BoeECzayk2kQEVz7WYvDQwsJbWOW0x0QcDotZ1VlXCGljRWnH4EcM5JFI?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7dfaHPsZAqarJdxVlWLFwaJvDuxLky5u7ioK4C-MzJG0mqkeXPE8HMf8eP5xDvS_9k9agLN89RAyYk7JMPivz7HP4tWw012SNsSgTGbkf1xxyeGivqFo-gj2OkOdZ6sDb7lewF3-oow72VK4WHpiIWRUDmA6HHpfF2cCSIwAPG8u1ompjoFNNsf8laXfZSOqDCHWJ3G2G_BqnZARdw5Bnswj4Dwc7JbpmH6e4qFxEad3TWcDHzTsCUn6Y?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
+        "date": "2024-10-05",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/Smithsonian_National_Museum_of_American_History_1.jpg",
-      "images/Smithsonian_National_Museum_of_American_History_2.jpg",
-      "images/Smithsonian_National_Museum_of_American_History_3.jpg",
-      "images/Smithsonian_National_Museum_of_American_History_4.jpg",
-      "images/Smithsonian_National_Museum_of_American_History_5.jpg"
-    ]
+    "images": []
   },
   {
     "id": "national_portrait_gallery",
@@ -1023,16 +924,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X75jzSUoFcxYUqOaBT6lo6ECtGJLy59b8Xmdhv61-15Y985lhWux5eaN8CvUPrqV_2SGQDL2jZeSUzhsAJJ_fzDqt6qFzSgNEsDeLi0CDs2-b8ZhaQbWDzkORBBWu1ZvwPbZas0DkU99ngsd1ceKni3EvUUKM_9DnpK39dAdZlNG5ZIxv1dbZNneTl6HfnejvRqevY4wenLaywzRL0iTqxvcxIO130ubqc2vQ4LOWgSlbKExqBLrkE7bdE?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>ST 3.5 10/4/24<br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X57WS_iLFhLOQKHUrQdnNWfHE31NJy_wEV1bQJ1kES_AlzGLyXz3wByPMuxiQwZZPEISwv3tS2U_OspD2J_TeOpFbWNrSyCQi-3rUtfG5vYcjXvAZAVkF2kOflA1dBuO2ygb3VyhQbY4FnpLr2FllIQGgf5iietc9-zUMyE7AjwZWpvwdGNLYS3I-qeXyp6_Qmvq3JLzmWcf15ogeb8DvWRK6ZvOW0-f26P5F3a281TYYRJ6U1bmHgZh9w?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5hIoa0aXBey_WXWi8DIRq5272Da-XUJUimlBc2vnCWDgTF_HLhmKoEmB4wBS6QBP4XMSCp-Di2L5Jlz77m_IVctHoJNDIz_qseyO3dxH-8D5FTKCIijkMcKkXk69HDxDgDKFEfLehNwb2EX-aOaFC3LrCuqlE-G0TfsTza3HmHLMng3fkVDZS3SUktqYG5rkpRWkf7-lMQPPu-D0hMX2NazS71U2UjozESl0cwujM8NWilZT0CnV86EHU?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5Jftc4EHMZlUEIKJe11r4xESTz_eM3rmrtH-pXMHz8yt7itk9S6VHcfRS5tU3vxcDWLsT3QFaeZwe1r-ZJIsxkmLqJYa0c1EcbrFFi0aixYTyIAfPxvj1IpzeSZn-8zdlKZDxTq271KmgTH6a-RIjdSZnX8mN5ygpvc7Pm9lFKUxlzYISZ-pLr5O3kQDl9t4nbWo3yXttrLtcrdowKDQdx9wBCovlm7AmlE46EsThzPm22R525V3Xi-R8?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
+        "date": "2024-10-04",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/National_Portrait_Gallery_1.jpg",
-      "images/National_Portrait_Gallery_2.jpg",
-      "images/National_Portrait_Gallery_3.jpg",
-      "images/National_Portrait_Gallery_4.jpg"
-    ]
+    "images": []
   },
   {
     "id": "library_of_congress",
@@ -1045,14 +941,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X69So2gjb7OgmrjCyw2OHhOLYnzPKfYW_UvDY5_FafoPuwROo_GZJQAEsLzJVubgEAVkYoGSxwZQKmFcIBHul2tc52XWOXnB8kkDIPVS0F1r0KnXlMbmt_ouvXyXwMLkbla7ha3zEyTZaGnAaRitjLldH8WwaBuDs4l7geJFh-FqIbwEYY6bzPeIO9zO4EKmMrzDUmh6sVUQ4JDVdrI2JxJakAKhBONAp73XlM2JVz0wB-KqSN7z_N0gdI?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>ST 3.5 10/4/24<br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X60SVQLWmB7kJgVPwFCxpQJdPDVP8VZTWKrjSJue816RkmlYPMgPXvnh2uWNVTDvCkCwjrixv6CPcHyxytznpu3EBVQuXhCpu4EpoAqStKmLZr8HJ89Smzs8jD6tzTr3dwNH5vc7wrZpQLs2kXotNclDyOmYTJodqN_-ikrwnbebYA_TDkEhlTdv1ntwR-2qm5LMdqiJbc83I10HhEGC65j72c_c6HfKAepIbquIk3Supi1yV4YTz_pavg?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
+        "date": "2024-10-04",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/Library_of_Congress_1.jpg",
-      "images/Library_of_Congress_2.jpg"
-    ]
+    "images": []
   },
   {
     "id": "supreme_court_of_the_united_states",
@@ -1065,15 +958,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6z0bFIy9GGSGuNwpQ5AZbSNa-5nx6WqPTwE2eM4YnRnIcej3Vt2vJXhp81ORM2GPYAD3kZZ2RE9y1Y5XBYI_a1GwpHjoe6p6T3QscTZw7q6aVTBrjWkdAoW1BzHb0pind1-6qPCxr2IMjEy7dzKor67uV619fzS4gjEWSKDRIclybRVt27CP71vG-iM03HMErEGJRLWgypQZ6VtRBDX0JnFqEUJ4COr-I1SF0Du7idw1pagrqKIV_dUeA?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>ST 3.5 10/4/24<br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7CGRoFybqjn82hOl2NOPX1NhR0sdGH0zWSoC4QcN4_77L106ONF-himchhpZgeD2U8iZGNc0Zatone2Hri_sCjNHKJluRpC_PSqXudBx1M8yAQvo061aDXzw199Rd_JVnnRgQxpADbwIJpXIVr39Nm2arWwgRVF_kYB_zbeHqNzwcGcBFQmI917QQWk3VgQoYSKb-Ec4q0LcvKC5pEwvSIX14rqHINsMCq6hJse8kpDB4eFRS5dgoMDE8?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5TgFXBHzbdR7QiqPUBVvWAZi8iWbx9knKrvHVPLK5ipPEg6xauqxqNwCs6YBPSzoR43WM1z6G7AQW6j1R1qg6K_E7iqqN-GtvbGvJD9Hx4gn2RRp_9NrUjDKl_oaWuS0p2pSIsTz3MbANAQ42z5ZpBVgaqqSNXrwZaJ1Egc8Ddg3nEzgNDQzUn2mBZj5PvtWTediiqz5l8JAQIaRNUQE3cPq6SclDlruoJEpsNu2c-5rFrmcsSOX38ZI8?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
+        "date": "2024-10-04",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/Supreme_Court_of_the_United_States_1.jpg",
-      "images/Supreme_Court_of_the_United_States_2.jpg",
-      "images/Supreme_Court_of_the_United_States_3.jpg"
-    ]
+    "images": []
   },
   {
     "id": "united_states_capitol",
@@ -1086,13 +975,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X46rwkrmm4nZKrRsh5JvPjqjMKscjSQYkWW9wMGY36VdMtOt_uqWcnzu436fBAaqJyfOgjeSQjAzZGZNLwGBNvebblL4BTvVJ6mfRSNW_WKyInHQmWxfZ5sVmAE1Wr8qGoa5zDBfe4ttrYigY0R8Sqo1qJri7dAoD9ksr_ZaWuPxp-Aj5gaGsYXGj8xSD1X7pAJs1l7nijtaWrlWR97beaZ8sFeD9-PGViAUxBy_DajOlPYeiUI-BCHyEA?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>ST 3.5 10/4/24"
+        "date": "2024-10-04",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/United_States_Capitol_1.jpg"
-    ]
+    "images": []
   },
   {
     "id": "the_white_house",
@@ -1105,13 +992,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7cCN7fvIY0sbxIHsU24FknxDqoXuzto1aws6ZQF9t_LtlI94wA62-X8ntBAH8xNeCUlXpuI1ZiG9MY6gMjeFzyESYCwc8Wn-oa5cLqTH7ygDF2Fp8o5GX9VLcqzq3z0jy7j0ukuiP3XFmOPJA14qiIshylriibMw9to4pQJ1NZQ0crgwQQ_X2OguoFkJeFnGyx6PvfVPqUfh6JJcAM_7YdqpwToOzMvyk15W4LoGuYGuzozPcv7qjPAAQ?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>ST 3.5 10/4/24"
+        "date": "2024-10-04",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/The_White_House_1.jpg"
-    ]
+    "images": []
   },
   {
     "id": "saint_louis_art_museum",
@@ -1124,14 +1009,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X4FwJDNxGxN0BH9wNYkFuw1qqYBkTjroV20LZwlhoMjRyLAoRW-gggVoZmsT0HTQEDI3ETZdnanz2_PfDd4DEaHOYY37q73ZCMNU3VL_s6mAm7gW4TqaRf1uTIRfvYUvwRwjAlz6FNpHqFK1enlmRfGy7g40KravAQsCL-gXrGUVh2kGklYHvvsSzphdm2gOhpJlJ8Yc7Ey9B_w_4DzdJ4dcEI4b29f6Le9sZppNRhlbX02_TaX8oEMDW4?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>3/14/25<br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X65hOcyyMDdDPmHXwG4lhXescCrqIAPhSmDdx7_5QTyQy3DudmO2t4yRM_BW_fDaYmNfwYP7n613t3YUdjNo3lN3bs38Yoa7V6SkeUuL5pT0wJ0QeFPBKivDlkpSrYSOXH1U7_yoKAIlASqwgBxbX6Ox58sNy9H3mgedK9d-Q8w8H9VTtSoMjiBELTPyiXkkx6jGQ2u_04WwuvMc6NqeZHo0yBSj9OvZ67pzZBDr8Id1BPDpuEZ1RrolMI?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
+        "date": "2025-03-14",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/Saint_Louis_Art_Museum_1.jpg",
-      "images/Saint_Louis_Art_Museum_2.jpg"
-    ]
+    "images": []
   },
   {
     "id": "missouri_history_museum",
@@ -1144,13 +1026,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7mFBkHtVXDFKCct-ZurPfAnwHXQh-BauAH3GJ_r3vNwLw13-OWpgAEo7M-PPkCvPStv6tqaKIInWtnquAzfhJuesjoQVBF_40KU6xE1kE2o_f-dQmYfsvqM5xQLZ_IkAq18uLNLVMnHcI1Larwo4UN7kdm5LjzwRc4c1NiUTrxoWt-49YqHcRW-SbrbnmDKAlxqSXQPojZ80VKlJPZmY4mtj9frOTpP9yLhV8eFRL0R4ZAvmVRNAeOWWI?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>3/13/25"
+        "date": "2025-03-13",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/Missouri_History_Museum_1.jpg"
-    ]
+    "images": []
   },
   {
     "id": "world_chess_hall_of_fame",
@@ -1163,13 +1043,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6hsiXe3YZLEpPcj5Ml1XXl07kvk-tjgfxpEx_Q45ryYIOQr0NJgBmgbgfsnTx1i2G-WDUEWciGGuqe5waodLiHp0qHdZdVbTrTuSHR3OTCxfHewKnYwOnlgO0qz_AX5Bon7PmQbYNkthCv2IdgvrDmSV7G2KnHJ69pEm68kezTlWZS1uMjciPQijxKTF-FFm_9uUiQvqXYivrKbLrvn-gFjsLsNAVmEumRiRbCCgy5Tfdc3jThNVVZIbU?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>3/14/25"
+        "date": "2025-03-14",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/World_Chess_Hall_of_Fame_1.jpg"
-    ]
+    "images": []
   },
   {
     "id": "the_museum_of_modern_art",
@@ -1218,16 +1096,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5CvYNYiOQI-ULxByO-1LyhQs3dvqJKW-9UKEmY3uIHBZZQ0vnJRmcP3Dvgzel9IIXCAezm0DVmT-OnJLHNqVVuNWFQ6tIH8OhaFfcLzqYE47ht5y2LmID5bFTxxWPB4tQfNxsefN4IfdBHw_d70xvF-0N-rRmvW-bINhka1daz8pXMnNtoVjkLbgLjg5frNEb7ZPaEAB52Q_FQSSIg_rWhHEJXxYAKd_PkBsfxTMYtTrNV5J_LGJ5AzHk?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>5/2/25<br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7BGKpQhnNMp-mzlqRphtUBwAOV3WcoU6bRXEe5H1QI2DOEdc1bL-WXcE_caLfCavdXX3DAqZ3mSL3Q4vC_iI49l5GhYUuoFZmVPIqwm1mCVR27RumTOs_8QGBSCRUWhJEtBnJ0PynOSzIlFE0nm6KH2zteHFYZYhvdzziHxyKbuqzbf5Je9I8hxlfmzNAuId74j8ACfV3PxzbR1tXymL1d6o4RGwVR__Zfve7RKeNWI8z0Vics6c_YmBM?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7DekKXBJ11lg9fngx8JzxtChu2zGLHxMAGhBfjnZPXR7-WKVdh6x7qTqjc2ZGZZNDqYA2iPdGisxynbNz8tm4sBHq5kPXNocf4GJp8matuU3eWoX0578k75ABzpgcB94LFYiPBC5PzgG1gnETdd57fjgp_UksjlK666pzOlExOa99Wj75iSLMWvJSgQHafvNJAikfaXWRoV3-otl4LylpcFmsT-L6UtWM16UySS2qBYmhTBJU5XXH4tok?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7N1lYTzFPXOAGfQiD2qEw0fyMzn3hzwp5SnypD3EwmSnAlfAn9JM1KfASXvRIhsM7pwuj-uFLgzmB2HSzTOfuyzEbDOph8xHx8Oqbvk5DCoDCm2Ml-fctGiqdCo4oIWuGuE7y3m-WhPzLlF9IhASrJHw0iKko84HWz1A4IcyXEhDwTIURwNhNeSw8vFnQGVgs-NnBlylPzZUBqroN8VzAgwfg6Vj93YpLafw5MRiXEg9KgcRfSmSIODq4?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
+        "date": "2025-05-02",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/The_Art_Institute_of_Chicago_1.jpg",
-      "images/The_Art_Institute_of_Chicago_2.jpg",
-      "images/The_Art_Institute_of_Chicago_3.jpg",
-      "images/The_Art_Institute_of_Chicago_4.jpg"
-    ]
+    "images": []
   },
   {
     "id": "field_museum",
@@ -1240,15 +1113,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7pUfIbwQ02b_NEPoZ0eV0l-1RNiWVsvWOMQfHsVlYpXplUsvVkf0xXoNyHum51e38ZGyVqUrvkdwak0kgES2N9qtp4ssRtK7U77RxeJkCNQErAQOKBU2yaj-ie4XWCDVX70Vk-e06reUA23ADy5apfu9OGsDdq1Of25nN721DTdSuldUI-fx2uL9TnrqGSnfxqmBg8Bsv0Cefil_9d3i9olcIE4TvdJNmIu3YC7MOPh-fXM1-kNan3gds?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>5/3/25<br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6R8rW1D55wGKUZTpGbCgxeymJZfIaiuyg3UJTsCQMrX0nO586fKUk0DPkn7b4-IzPR2DMBkgHYoAH2PrlER-B4KBmXLWeEuajQNre6e21NU6DpttuP2aFCtkchAfk-3uXoBcyBNryCO6eZlN7xweSnfXUYvwwrgkuP4LjpQWHAHbD2gdhXhqEq9mhnFKiKB6IGuQCm9fgtrV_SdvDbp-YGhkFw2SWW-wDd7u9uwI_HoM2wFxLS8aAvCb4?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X45VlSP9iJOBLENn9gZFcMjIaad04qRafcYWSk-E3ZyrbQpugZhpJ77Tor--8XolUo2i_lmKDl-0h94RCtFB3jDrapk7lJa3m9K1CB0TlYwJ_0UfPsp7ArS653nqTeM2vHoE28b6WbyZfDUXLekAgzxhqyToXtTRH1UJ9xPZSRuqL2LJ50e45OWl9J9UOnHKpJDJEu-Kslksa4xEbbyXebIF5OZOOOR28Fx2OJ0_noBTJZQIq0CNeJbrqM?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
+        "date": "2025-05-03",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/Field_Museum_1.jpg",
-      "images/Field_Museum_2.jpg",
-      "images/Field_Museum_3.jpg"
-    ]
+    "images": []
   },
   {
     "id": "stony_man_mountain_summit",
@@ -1369,8 +1238,8 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "6/17/24"
+        "date": "2024-06-17",
+        "description": "Visited"
       }
     ],
     "images": []
@@ -1384,12 +1253,7 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "unknown",
-        "description": "March 9-10, 2023"
-      }
-    ],
+    "events": [],
     "images": []
   },
   {
@@ -1401,12 +1265,7 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "unknown",
-        "description": "March 9-10, 2023"
-      }
-    ],
+    "events": [],
     "images": []
   },
   {
@@ -1420,8 +1279,8 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "March 12, 2023"
+        "date": "2023-03-12",
+        "description": "Visited"
       }
     ],
     "images": []
@@ -1437,8 +1296,8 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "March 11, 2024"
+        "date": "2024-03-11",
+        "description": "Visited"
       }
     ],
     "images": []
@@ -1454,15 +1313,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6oADGtPWDIhigrcNHS7wgYSdpmtA-6MPBiJxzRyahghXeWAgiOP1ls755SNZQdDUjuFkHVHb27xkOaH1jRRRoeOqGzBRTgaLSvt2FqZsaEtzUVDzBTq4GuCLWnaTZRTedHt1zxFsKLCHOtrJV4JPY_wTQPH-b0-afvabI38bmJjWFR9znthO_XRkHa8ELrQ2X2py9w9GVXALIv1WjciTOPt8aAdSeVvfWECB4qtdFs7HhwDFlCY6tfvsA?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>2/3/25 - ST V<br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6QRJBVeK4SxJvMy5ZxWNhK7-SkyYBJ8iQ7nhVpnMWIPpKbXSYdUJUnAG4SHd6V9syKeKvK-fa1b1UCFvyZIOxUlO5m-Vv89pwZJoS390550k1LW6RPL5ZVHB3aRuxlx_C8AzFti-QgrhNPlSk_ZR4xH7L-cGC0JruPV_4ThlmnMOsbA1f0Rjl97LoNuyBgHFevqpNTsUkTzNYS-P4CjxBh3V78sQkY2I5ukxmeqNlBqgANb5hY2ZrO2Sg?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5onKndfnjwumbdPYNYJXuFYQQ0XWC0h9d3A4J6rWu2KQIjNuE_uAxWGUxBFuJ2gpdXG1mLhYo9nRWkZBYROTipfXu9TP-tBZNb37a9Tg9llrkbG14Z2P19o__uszFdH5YR3A-CiRsFHPVjlCCZQ03OCYOt2v35Zitw1ifrsA8bWnVzNPqVYsQKLhcdKofO3hfSf5BsC2ZhbsZXezIn0rMMdufSQMaycOCRWZyXUu5VuSF3U3k9axGbrXQ?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
+        "date": "2025-02-03",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/Epcot_1.jpg",
-      "images/Epcot_2.jpg",
-      "images/Epcot_3.jpg"
-    ]
+    "images": []
   },
   {
     "id": "magic_kingdom_park",
@@ -1475,17 +1330,11 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "<img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X5qpZ8jl7U_pLpCQcaPNDrJRxXHy-OUbV100-vTIbjAhktLnrRKeo3OK5n0mFpSEe1KaaW3hnuRtV9k_-X7gmRayDhYqjFqzJGz9vWmnFQ7V6Eiwy75aPXu_DJGhIOVPidiJFlpZcFAfSRWREHKTDj9X5b8cw5gV6d9NWOKPS0vwKEJbFdVDRfK_U7JX6ahAutWxMv1DZ2kbLXYGvixGgQbbVfj4I49ckL1v1D32qd-HuOgqxRlnTknVXo?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br>2/2/25 - ST V<br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X44Y5zN-HkkCtc8x0PNldS4DpuiDAJUt3GHzwY21n0-z3Qbn1yEZ81ann9ikU9QKYDd3r4OPxAhW_UoP2cHPg0JJMVOihYqa44VwTVFewWuBZOvOMRpzC3YICGkIO4NAuBhYw7dWFR0o64g-uFZmHySCiLuDICQaBQPn-4tDFeNpo_vzvaGYd0N5ArDGeD9fHlbGGhSDkFM5oIwlXWkMjq6KTxhnbCacox1jUMlCV6TpcS0Ypy-D2mq_7I?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X7FyX2uxTmU3fx-0LSq4y4yjn_oTi1RyzAM1i4EfDTnjwJjYeqAPh2Pmg0P1vLqmmISH5JsIlXemdWZaYg7YG5j7qhn6j13p2K-TDwsiVGQMv5oOqcbDw4lXPuGSn9gqkyBDX2op1CP-OU50vRa1shxJW9p5NRb5iynGPRedmhEDleV4n-clo2VpDXEuZYXO4nJNqxHrJMZ2Yu3TLnoTmVxABZU3PCoydHluEnP2peSOloRE9P4LDS420s?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X6Ncc_sQrz9RmoSkU12p44NCjuov_-V0Ms1dAS5aQ43qj6ZTdqPAEhNXUAiFXabqwYK3AVTg6f8pHnGW6tOaC0k2kPWs67tjIh5Z8ezlFX0qila5FgSM7SDoyH8bEoFZ9rwYIxCkk6yXrYRjNa94GKE1bMNczktbdfxFjP1aSAvlBwj8RqZmtPd6AqLqqxr-lTVLTEKOhfyFxuR_e_T7tmGds-nMSknVUOb8i-jW8PueadaDvhSs8hten4?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" /><br><br><img src=\"https://mymaps.usercontent.google.com/hostedimage/m/*/3AL_Y2X40az_w9-0G0q-ZHEFDM12lSm4bCl5Gk-NpV0Gt3mRdOklpkYlBsverFe2Luhf5mfyZaw1P84tLRkijOabq6VmFoey69VpXVi3hPL70PONK9KIcZ3mLT-J3VNNHDvSuQS4CLdcI9pcf7o2IGgB6Q_s_5YfhAHyU_HiCrfjRM3B29kshh18-uk3BGQhq224J6UxQZDngUUITMogtoLvMcAdG4KcRm-uUenMN7ZaQAvnirn0WPJzzhquqgUU?authuser=0&fife=s16383\" height=\"200\" width=\"auto\" />"
+        "date": "2025-02-02",
+        "description": "Visited"
       }
     ],
-    "images": [
-      "images/Magic_Kingdom_Park_1.jpg",
-      "images/Magic_Kingdom_Park_2.jpg",
-      "images/Magic_Kingdom_Park_3.jpg",
-      "images/Magic_Kingdom_Park_4.jpg",
-      "images/Magic_Kingdom_Park_5.jpg"
-    ]
+    "images": []
   },
   {
     "id": "stanford_university",
@@ -1498,8 +1347,12 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "TreeHacks 2023 - 2/16/25-2/19/25"
+        "date": "2025-02-16",
+        "description": "Visited"
+      },
+      {
+        "date": "2025-02-19",
+        "description": "Visited"
       }
     ],
     "images": []
@@ -1515,8 +1368,12 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "HackKU 2023 - 4/14/25-4/16/25"
+        "date": "2025-04-14",
+        "description": "Visited"
+      },
+      {
+        "date": "2025-04-16",
+        "description": "Visited"
       }
     ],
     "images": []
@@ -1532,8 +1389,12 @@
     "level": null,
     "events": [
       {
-        "date": "unknown",
-        "description": "HRT Trip 2024 - 3/28/24-3/31/24"
+        "date": "2024-03-28",
+        "description": "Visited"
+      },
+      {
+        "date": "2024-03-31",
+        "description": "Visited"
       }
     ],
     "images": []
