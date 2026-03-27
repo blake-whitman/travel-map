@@ -1,53 +1,65 @@
-// convert_to_clean_json_safe.js
+// convert_geojson_to_clean_json.js
 const fs = require('fs');
 const path = require('path');
+const { JSDOM } = require('jsdom');
 
-const inputFile = path.join(__dirname, 'locations.geojson');
-const outputFile = path.join(__dirname, 'locations_clean.json');
-const imagesFolder = path.join(__dirname, 'images');
+const inputFile = 'locations.geojson';
+const outputFile = 'locations_clean.json';
+const imagesFolder = 'images';
 
-// Helper: find local images by location id
-function findLocalImages(id) {
-  if (!fs.existsSync(imagesFolder)) return [];
-  return fs.readdirSync(imagesFolder)
-    .filter(f => f.startsWith(id + "_") && /\.(jpg|jpeg|png|webp)$/i.test(f))
-    .map(f => path.join("images", f));
-}
+// Read GeoJSON
+const raw = fs.readFileSync(inputFile, 'utf-8');
+const geojson = JSON.parse(raw);
 
-// Load original GeoJSON
-const rawData = fs.readFileSync(inputFile, 'utf-8');
-const geojson = JSON.parse(rawData);
+const cleaned = geojson.features.map(feature => {
+  const props = feature.properties;
+  const [lng, lat] = feature.geometry.coordinates;
 
-if (!geojson.features || !Array.isArray(geojson.features)) {
-  console.error("Invalid GeoJSON: 'features' array missing");
-  process.exit(1);
-}
+  // Parse HTML description to extract events and ignore images
+  const dom = new JSDOM(props.description?.value || '');
+  const doc = dom.window.document;
 
-// Transform safely
-const cleaned = geojson.features.map(f => {
-  const id = f.properties.name.replace(/ /g, "_");
+  // Extract <br>-separated lines
+  const lines = Array.from(doc.body.childNodes)
+    .map(n => n.textContent.trim())
+    .filter(t => t && t !== ''); 
 
-  const events = (f.properties.events || []).map(e => ({
-    ...e, // keep all original fields
-    description: e.description
-      ? e.description.replace(/<img[^>]*>/gi, '').trim() // strip only <img> tags
-      : e.description // leave undefined if not present
-  }));
+  const events = [];
+  for (let line of lines) {
+    // Look for lines that match "Event - Name vs Name - MM/DD/YY"
+    const match = line.match(/^(.*?)(?: - )?(.*?)(?: - )?(\d{1,2}\/\d{1,2}\/\d{2,4})$/);
+    if (match) {
+      let [_, stadium, matchName, date] = match;
+      // Convert date to YYYY-MM-DD
+      const [m, d, y] = date.split('/');
+      const fullYear = y.length === 2 ? '20' + y : y;
+      events.push({
+        date: `${fullYear}-${m.padStart(2,'0')}-${d.padStart(2,'0')}`,
+        description: stadium ? `${stadium} - ${matchName}` : matchName
+      });
+    }
+  }
+
+  // Collect image paths from local images folder matching ID
+  const idSafe = feature.properties.name.replace(/[^\w]/g,'_');
+  const images = fs.readdirSync(imagesFolder)
+    .filter(f => f.startsWith(idSafe))
+    .map(f => path.join(imagesFolder, f));
 
   return {
-    id,
-    name: f.properties.name,
-    lat: f.geometry.coordinates[1],
-    lng: f.geometry.coordinates[0],
-    category: f.properties.category || "misc",
-    league: f.properties.league || null,
-    sport: f.properties.sport || null,
-    level: f.properties.level || null,
+    id: idSafe,
+    name: props.name,
+    lat,
+    lng,
+    category: props.category || 'misc',
+    league: props.league || null,
+    sport: props.sport || null,
+    level: props.level || null,
     events,
-    images: findLocalImages(id)
+    images
   };
 });
 
-// Write clean JSON
+// Write cleaned JSON
 fs.writeFileSync(outputFile, JSON.stringify(cleaned, null, 2), 'utf-8');
-console.log(`✅ Successfully wrote ${cleaned.length} locations to ${outputFile}`);
+console.log(`✅ Clean JSON written to ${outputFile}`);
