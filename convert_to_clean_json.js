@@ -1,54 +1,37 @@
-// convert_to_clean_json.js
+// convert_to_clean_json_safe.js
 const fs = require('fs');
 const path = require('path');
 
-// Paths
 const inputFile = path.join(__dirname, 'locations.geojson');
 const outputFile = path.join(__dirname, 'locations_clean.json');
 const imagesFolder = path.join(__dirname, 'images');
 
-// Helper: find images in images folder matching location id
+// Helper: find local images by location id
 function findLocalImages(id) {
   if (!fs.existsSync(imagesFolder)) return [];
   return fs.readdirSync(imagesFolder)
     .filter(f => f.startsWith(id + "_") && /\.(jpg|jpeg|png|webp)$/i.test(f))
-    .map(f => path.join("images", f)); // relative path for JSON
+    .map(f => path.join("images", f));
 }
 
-// Load GeoJSON
-let rawData;
-try {
-  rawData = fs.readFileSync(inputFile, 'utf-8');
-} catch (err) {
-  console.error("Error reading locations.geojson:", err);
-  process.exit(1);
-}
+// Load original GeoJSON
+const rawData = fs.readFileSync(inputFile, 'utf-8');
+const geojson = JSON.parse(rawData);
 
-let geojson;
-try {
-  geojson = JSON.parse(rawData);
-} catch (err) {
-  console.error("Error parsing JSON:", err);
-  process.exit(1);
-}
-
-// Check features exist
 if (!geojson.features || !Array.isArray(geojson.features)) {
   console.error("Invalid GeoJSON: 'features' array missing");
   process.exit(1);
 }
 
-// Transform each location
+// Transform safely
 const cleaned = geojson.features.map(f => {
-  // Generate a consistent id based on name (preserves casing)
   const id = f.properties.name.replace(/ /g, "_");
 
-  // Clean events: remove MyMaps HTML and "unknown" dates
   const events = (f.properties.events || []).map(e => ({
-    date: e.date && e.date.toLowerCase() !== 'unknown' ? e.date : null,
+    ...e, // keep all original fields
     description: e.description
-      ? e.description.replace(/<img[^>]*>/gi, '').trim() || "Visited"
-      : "Visited"
+      ? e.description.replace(/<img[^>]*>/gi, '').trim() // strip only <img> tags
+      : e.description // leave undefined if not present
   }));
 
   return {
@@ -61,15 +44,10 @@ const cleaned = geojson.features.map(f => {
     sport: f.properties.sport || null,
     level: f.properties.level || null,
     events,
-    images: findLocalImages(id) // ✅ auto-populates from images folder
+    images: findLocalImages(id)
   };
 });
 
-// Write output JSON
-try {
-  fs.writeFileSync(outputFile, JSON.stringify(cleaned, null, 2), 'utf-8');
-  console.log(`✅ Successfully wrote ${cleaned.length} locations to ${outputFile}`);
-} catch (err) {
-  console.error("Error writing cleaned JSON:", err);
-  process.exit(1);
-}
+// Write clean JSON
+fs.writeFileSync(outputFile, JSON.stringify(cleaned, null, 2), 'utf-8');
+console.log(`✅ Successfully wrote ${cleaned.length} locations to ${outputFile}`);
