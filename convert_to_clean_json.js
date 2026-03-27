@@ -1,18 +1,18 @@
 const fs = require("fs");
 
-// Load your existing JSON (already converted from GeoJSON)
-const raw = JSON.parse(fs.readFileSync("locations.json", "utf-8"));
+// Load GeoJSON
+const geo = JSON.parse(fs.readFileSync("locations.geojson", "utf-8"));
 
 function extractDates(text) {
   if (!text) return [];
 
   const dates = [];
 
-  // Match formats like 3/14/25 or 03/14/2025
+  // 3/14/25 or 03/14/2025
   const slashMatches = text.match(/\b\d{1,2}\/\d{1,2}\/\d{2,4}\b/g);
   if (slashMatches) dates.push(...slashMatches);
 
-  // Match formats like "March 12, 2023"
+  // March 12, 2023
   const longMatches = text.match(/\b(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},\s+\d{4}\b/g);
   if (longMatches) dates.push(...longMatches);
 
@@ -22,19 +22,14 @@ function extractDates(text) {
 function normalizeDate(dateStr) {
   if (!dateStr) return null;
 
-  // Handle MM/DD/YY or MM/DD/YYYY
   if (dateStr.includes("/")) {
-    const parts = dateStr.split("/");
-    let [m, d, y] = parts;
+    let [m, d, y] = dateStr.split("/");
 
-    if (y.length === 2) {
-      y = "20" + y; // assume 20xx
-    }
+    if (y.length === 2) y = "20" + y;
 
     return `${y}-${m.padStart(2, "0")}-${d.padStart(2, "0")}`;
   }
 
-  // Handle "March 12, 2023"
   const parsed = new Date(dateStr);
   if (!isNaN(parsed)) {
     return parsed.toISOString().split("T")[0];
@@ -43,61 +38,75 @@ function normalizeDate(dateStr) {
   return null;
 }
 
-function cleanEvents(events) {
-  if (!events || events.length === 0) return [];
+function extractTextDescription(desc) {
+  if (!desc) return "";
 
-  const cleaned = [];
+  if (typeof desc === "string") return desc;
+  if (typeof desc === "object" && desc.value) return desc.value;
 
-  events.forEach(e => {
-    const desc = e.description || "";
-
-    // Extract dates from messy description
-    const foundDates = extractDates(desc);
-
-    if (foundDates.length > 0) {
-      foundDates.forEach(d => {
-        const normalized = normalizeDate(d);
-        if (normalized) {
-          cleaned.push({
-            date: normalized,
-            description: "Visited"
-          });
-        }
-      });
-    }
-  });
-
-  return cleaned;
+  return "";
 }
 
-function cleanImages(images) {
-  if (!images) return [];
+function cleanEvents(description) {
+  const text = extractTextDescription(description);
 
-  return images
-    .filter(img =>
-      img &&
-      !img.includes("mymaps.usercontent") &&
-      !img.includes("<img")
-    )
+  const foundDates = extractDates(text);
+
+  return foundDates
+    .map(d => normalizeDate(d))
+    .filter(Boolean)
+    .map(d => ({
+      date: d,
+      description: "Visited"
+    }));
+}
+
+function extractImages(feature) {
+  // Prefer gx_media_links if present
+  if (feature.properties.gx_media_links) {
+    return feature.properties.gx_media_links
+      .split(" ")
+      .filter(Boolean)
+      .filter(url => !url.includes("mymaps.usercontent")); // remove bad ones
+  }
+
+  return [];
+}
+
+function cleanLocalImages(images) {
+  return (images || [])
+    .filter(img => img && !img.includes("mymaps.usercontent"))
     .map(img => img.replace(/^\/+/, "")); // remove leading slash
 }
 
-const cleaned = raw.map(loc => ({
-  id: loc.id,
-  name: loc.name,
-  lat: loc.lat,
-  lng: loc.lng,
+const cleaned = geo.features.map(f => {
+  const [lng, lat] = f.geometry.coordinates;
 
-  category: loc.category || "misc",
-  league: loc.league || null,
-  sport: loc.sport || null,
-  level: loc.level || null,
+  return {
+    id: f.properties.name
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "_")
+      .replace(/^_|_$/g, ""),
 
-  events: cleanEvents(loc.events),
-  images: cleanImages(loc.images)
-}));
+    name: f.properties.name,
+
+    lat,
+    lng,
+
+    category: "misc",   // you will fix later
+    league: null,
+    sport: null,
+    level: null,
+
+    events: cleanEvents(f.properties.description),
+
+    images: cleanLocalImages(
+      extractImages(f)
+    )
+  };
+});
 
 // Write output
 fs.writeFileSync("locations_clean.json", JSON.stringify(cleaned, null, 2));
 
-console.log("✅ locations_clean.json created successfully!");
+console.log("✅ locations_clean.json created from GeoJSON!");
