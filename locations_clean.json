@@ -1,6 +1,6 @@
 [
   {
-    "id": "shenandoah_national_park",
+    "id": "Shenandoah_National_Park",
     "name": "Shenandoah National Park",
     "lat": 38.4754706,
     "lng": -78.4534573,
@@ -12,7 +12,7 @@
     "images": []
   },
   {
-    "id": "great_smoky_mountains_national_park",
+    "id": "Great_Smoky_Mountains_National_Park",
     "name": "Great Smoky Mountains National Park",
     "lat": 35.6130503,
     "lng": -83.5531537,
@@ -24,7 +24,7 @@
     "images": []
   },
   {
-    "id": "gateway_arch_national_park",
+    "id": "Gateway_Arch_National_Park",
     "name": "Gateway Arch National Park",
     "lat": 38.6248848,
     "lng": -90.1858982,
@@ -45,7 +45,7 @@
     "images": []
   },
   {
-    "id": "cuyahoga_valley_national_park",
+    "id": "Cuyahoga_Valley_National_Park",
     "name": "Cuyahoga Valley National Park",
     "lat": 41.2808248,
     "lng": -81.567812,
@@ -57,7 +57,7 @@
     "images": []
   },
   {
-    "id": "barclays_center",
+    "id": "Barclays_Center",
     "name": "Barclays Center",
     "lat": 40.6826465,
     "lng": -73.9754156,
@@ -86,7 +86,7 @@
     "images": []
   },
   {
-    "id": "madison_square_garden",
+    "id": "Madison_Square_Garden",
     "name": "Madison Square Garden",
     "lat": 40.7505045,
     "lng": -73.9934387,
@@ -103,7 +103,7 @@
     "images": []
   },
   {
-    "id": "yankee_stadium",
+    "id": "Yankee_Stadium",
     "name": "Yankee Stadium",
     "lat": 40.8296426,
     "lng": -73.9261745,
@@ -140,7 +140,7 @@
     "images": []
   },
   {
-    "id": "citi_field",
+    "id": "Citi_Field",
     "name": "Citi Field",
     "lat": 40.7570877,
     "lng": -73.8458213,
@@ -161,7 +161,7 @@
     "images": []
   },
   {
-    "id": "cleveland_browns_stadium",
+    "id": "Cleveland_Browns_Stadium",
     "name": "Cleveland Browns Stadium",
     "lat": 41.5060535,
     "lng": -81.6995481,
@@ -178,7 +178,7 @@
     "images": []
   },
   {
-    "id": "gainbridge_fieldhouse",
+    "id": "Gainbridge_Fieldhouse",
     "name": "Gainbridge Fieldhouse",
     "lat": 39.7640434,
     "lng": -86.1555367,
@@ -190,7 +190,7 @@
     "images": []
   },
   {
-    "id": "busch_stadium",
+    "id": "Busch_Stadium",
     "name": "Busch Stadium",
     "lat": 38.6226188,
     "lng": -90.1928209,
@@ -207,7 +207,7 @@
     "images": []
   },
   {
-    "id": "doubleday_field",
+    "id": "Doubleday_Field",
     "name": "Doubleday Field",
     "lat": 42.6991497,
     "lng": -74.9269079,
@@ -219,7 +219,7 @@
     "images": []
   },
   {
-    "id": "progressive_field",
+    "id": "Progressive_Field",
     "name": "Progressive Field",
     "lat": 41.4958921,
     "lng": -81.6852949,
@@ -240,7 +240,7 @@
     "images": []
   },
   {
-    "id": "metlife_stadium",
+    "id": "MetLife_Stadium",
     "name": "MetLife Stadium",
     "lat": 40.8135064,
     "lng": -74.074457,
@@ -261,7 +261,7 @@
     "images": []
   },
   {
-    "id": "usta_billie_jean_king_national_tennis_center",
+    "id": "USTA_Billie_Jean_King_National_Tennis_Center",
     "name": "USTA Billie Jean King National Tennis Center",
     "lat": 40.7503676,
     "lng": -73.8456118,
@@ -298,7 +298,7 @@
     "images": []
   },
   {
-    "id": "upmc_park",
+    "id": "UPMC_Park",
     "name": "UPMC Park",
     "lat": 42.1273567,
     "lng": -80.0800819,
@@ -315,7 +315,7 @@
     "images": []
   },
   {
-    "id": "classic_auto_group_park",
+    "id": "Classic_Auto_Group_Park",
     "name": "Classic Auto Group Park",
     "lat": 41.641007,
     "lng": -81.4358712,
@@ -332,7 +332,7 @@
     "images": []
   },
   {
-    "id": "ohio_stadium",
+    "id": "Ohio_Stadium",
     "name": "Ohio Stadium",
     "lat": 40.0022328,
     "lng": -83.0196892,
@@ -349,7 +349,7 @@
     "images": []
   },
   {
-    "id": "northwest_stadium",
+    "id": "Northwest_Stadium",
     "name": "Northwest Stadium",
     "lat": 38.9081324,
     "lng": -76.8639884,
@@ -366,7 +366,7 @@
     "images": []
   },
   {
-    "id": "stroh_center",
+    "id": "Stroh_Center",
     "name": "Stroh Center",
     "lat": 41.3752336,
     "lng": -83.6262187,
@@ -383,7 +383,7 @@
     "images": []
   },
   {
-    "id": "slater_family_ice_arena",
+    "id": "Slater_Family_Ice_Arena",
     "name": "Slater Family Ice Arena",
     "lat": 41.3790243,
     "lng": -83.6277666,
@@ -400,7 +400,7 @@
     "images": []
   },
   {
-    "id": "prudential_center",
+    "id": "Prudential_Center",
     "name": "Prudential Center",
     "lat": 40.733537,
     "lng": -74.1710659,
@@ -417,7 +417,7 @@
     "images": []
   },
   {
-    "id": "rate_field",
+    "id": "Rate_Field",
     "name": "Rate Field",
     "lat": 41.8299301,
     "lng": -87.6337254,
@@ -434,7 +434,7 @@
     "images": []
   },
   {
-    "id": "soldier_field",
+    "id": "Soldier_Field",
     "name": "Soldier Field",
     "lat": 41.8623132,
     "lng": -87.6166884,
@@ -451,7 +451,7 @@
     "images": []
   },
   {
-    "id": "comerica_park",
+    "id": "Comerica_Park",
     "name": "Comerica Park",
     "lat": 42.3393053,
     "lng": -83.0488724,
@@ -468,7 +468,7 @@
     "images": []
   },
   {
-    "id": "fifth_third_field",
+    "id": "Fifth_Third_Field",
     "name": "Fifth Third Field",
     "lat": 41.6485687,
     "lng": -83.5386609,
@@ -485,7 +485,7 @@
     "images": []
   },
   {
-    "id": "maimonides_park",
+    "id": "Maimonides_Park",
     "name": "Maimonides Park",
     "lat": 40.5746915,
     "lng": -73.9844176,
@@ -502,7 +502,7 @@
     "images": []
   },
   {
-    "id": "canal_park",
+    "id": "Canal_Park",
     "name": "Canal Park",
     "lat": 41.0781226,
     "lng": -81.522228,
@@ -519,7 +519,7 @@
     "images": []
   },
   {
-    "id": "lower_com_field",
+    "id": "Lower.com_Field",
     "name": "Lower.com Field",
     "lat": 39.9684078,
     "lng": -83.0169305,
@@ -536,7 +536,7 @@
     "images": []
   },
   {
-    "id": "sports_illustrated_stadium",
+    "id": "Sports_Illustrated_Stadium",
     "name": "Sports Illustrated Stadium",
     "lat": 40.7368436,
     "lng": -74.1502355,
@@ -553,7 +553,7 @@
     "images": []
   },
   {
-    "id": "rocket_arena",
+    "id": "Rocket_Arena",
     "name": "Rocket Arena",
     "lat": 41.4965474,
     "lng": -81.6880574,
@@ -570,7 +570,7 @@
     "images": []
   },
   {
-    "id": "yanitelli_recreational_life_center",
+    "id": "Yanitelli_Recreational_Life_Center",
     "name": "Yanitelli Recreational Life Center",
     "lat": 40.7277258,
     "lng": -74.073102,
@@ -587,7 +587,7 @@
     "images": []
   },
   {
-    "id": "zootampa_at_lowry_park",
+    "id": "ZooTampa_at_Lowry_Park",
     "name": "ZooTampa at Lowry Park",
     "lat": 28.0138361,
     "lng": -82.4699672,
@@ -604,7 +604,7 @@
     "images": []
   },
   {
-    "id": "the_florida_aquarium",
+    "id": "The_Florida_Aquarium",
     "name": "The Florida Aquarium",
     "lat": 27.943972,
     "lng": -82.4448747,
@@ -621,7 +621,7 @@
     "images": []
   },
   {
-    "id": "bronx_zoo",
+    "id": "Bronx_Zoo",
     "name": "Bronx Zoo",
     "lat": 40.8501415,
     "lng": -73.8767217,
@@ -638,7 +638,7 @@
     "images": []
   },
   {
-    "id": "new_york_aquarium",
+    "id": "New_York_Aquarium",
     "name": "New York Aquarium",
     "lat": 40.5740506,
     "lng": -73.9759251,
@@ -655,7 +655,7 @@
     "images": []
   },
   {
-    "id": "toledo_zoo",
+    "id": "Toledo_Zoo",
     "name": "Toledo Zoo",
     "lat": 41.6216435,
     "lng": -83.5825426,
@@ -672,7 +672,7 @@
     "images": []
   },
   {
-    "id": "saint_louis_zoo",
+    "id": "Saint_Louis_Zoo",
     "name": "Saint Louis Zoo",
     "lat": 38.6349169,
     "lng": -90.2909775,
@@ -689,7 +689,7 @@
     "images": []
   },
   {
-    "id": "lincoln_park_zoo",
+    "id": "Lincoln_Park_Zoo",
     "name": "Lincoln Park Zoo",
     "lat": 41.921703,
     "lng": -87.6336403,
@@ -706,7 +706,7 @@
     "images": []
   },
   {
-    "id": "shedd_aquarium",
+    "id": "Shedd_Aquarium",
     "name": "Shedd Aquarium",
     "lat": 41.8675726,
     "lng": -87.614038,
@@ -723,7 +723,7 @@
     "images": []
   },
   {
-    "id": "akron_zoo",
+    "id": "Akron_Zoo",
     "name": "Akron Zoo",
     "lat": 41.078555,
     "lng": -81.5414397,
@@ -740,7 +740,7 @@
     "images": []
   },
   {
-    "id": "shark_reef_aquarium_at_mandalay_bay",
+    "id": "Shark_Reef_Aquarium_at_Mandalay_Bay",
     "name": "Shark Reef Aquarium at Mandalay Bay",
     "lat": 36.0887734,
     "lng": -115.1764706,
@@ -757,7 +757,7 @@
     "images": []
   },
   {
-    "id": "niagara_falls_state_park",
+    "id": "Niagara_Falls_State_Park",
     "name": "Niagara Falls State Park",
     "lat": 43.0837193,
     "lng": -79.0650351,
@@ -769,7 +769,7 @@
     "images": []
   },
   {
-    "id": "adirondack_mountains",
+    "id": "Adirondack_Mountains",
     "name": "Adirondack Mountains",
     "lat": 44.1247154,
     "lng": -73.8693043,
@@ -781,7 +781,7 @@
     "images": []
   },
   {
-    "id": "liberty_state_park",
+    "id": "Liberty_State_Park",
     "name": "Liberty State Park",
     "lat": 40.7082213,
     "lng": -74.0349253,
@@ -793,7 +793,7 @@
     "images": []
   },
   {
-    "id": "paterson_great_falls_national_historical_park",
+    "id": "Paterson_Great_Falls_National_Historical_Park",
     "name": "Paterson Great Falls National Historical Park",
     "lat": 40.9177347,
     "lng": -74.1797924,
@@ -810,7 +810,7 @@
     "images": []
   },
   {
-    "id": "bear_mountain_state_park",
+    "id": "Bear_Mountain_State_Park",
     "name": "Bear Mountain State Park",
     "lat": 41.2930083,
     "lng": -74.0001088,
@@ -827,7 +827,7 @@
     "images": []
   },
   {
-    "id": "hocking_hills_state_park",
+    "id": "Hocking_Hills_State_Park",
     "name": "Hocking Hills State Park",
     "lat": 39.4334877,
     "lng": -82.5482126,
@@ -839,7 +839,7 @@
     "images": []
   },
   {
-    "id": "lake_placid_olympic_museum",
+    "id": "Lake_Placid_Olympic_Museum",
     "name": "Lake Placid Olympic Museum",
     "lat": 44.2837327,
     "lng": -73.9850425,
@@ -851,7 +851,7 @@
     "images": []
   },
   {
-    "id": "national_baseball_hall_of_fame_and_museum",
+    "id": "National_Baseball_Hall_of_Fame_and_Museum",
     "name": "National Baseball Hall of Fame and Museum",
     "lat": 42.6999368,
     "lng": -74.9232137,
@@ -863,7 +863,7 @@
     "images": []
   },
   {
-    "id": "national_gallery_of_art",
+    "id": "National_Gallery_of_Art",
     "name": "National Gallery of Art",
     "lat": 38.891298,
     "lng": -77.019965,
@@ -880,7 +880,7 @@
     "images": []
   },
   {
-    "id": "national_archives_museum",
+    "id": "National_Archives_Museum",
     "name": "National Archives Museum",
     "lat": 38.8924797,
     "lng": -77.0229382,
@@ -897,7 +897,7 @@
     "images": []
   },
   {
-    "id": "smithsonian_national_museum_of_american_history",
+    "id": "Smithsonian_National_Museum_of_American_History",
     "name": "Smithsonian National Museum of American History",
     "lat": 38.8912793,
     "lng": -77.0300509,
@@ -914,7 +914,7 @@
     "images": []
   },
   {
-    "id": "national_portrait_gallery",
+    "id": "National_Portrait_Gallery",
     "name": "National Portrait Gallery",
     "lat": 38.8978267,
     "lng": -77.023019,
@@ -931,7 +931,7 @@
     "images": []
   },
   {
-    "id": "library_of_congress",
+    "id": "Library_of_Congress",
     "name": "Library of Congress",
     "lat": 38.888684,
     "lng": -77.004719,
@@ -948,7 +948,7 @@
     "images": []
   },
   {
-    "id": "supreme_court_of_the_united_states",
+    "id": "Supreme_Court_of_the_United_States",
     "name": "Supreme Court of the United States",
     "lat": 38.8906424,
     "lng": -77.0044398,
@@ -965,7 +965,7 @@
     "images": []
   },
   {
-    "id": "united_states_capitol",
+    "id": "United_States_Capitol",
     "name": "United States Capitol",
     "lat": 38.8899389,
     "lng": -77.0090505,
@@ -982,7 +982,7 @@
     "images": []
   },
   {
-    "id": "the_white_house",
+    "id": "The_White_House",
     "name": "The White House",
     "lat": 38.8976763,
     "lng": -77.0365298,
@@ -999,7 +999,7 @@
     "images": []
   },
   {
-    "id": "saint_louis_art_museum",
+    "id": "Saint_Louis_Art_Museum",
     "name": "Saint Louis Art Museum",
     "lat": 38.6393062,
     "lng": -90.2944911,
@@ -1016,7 +1016,7 @@
     "images": []
   },
   {
-    "id": "missouri_history_museum",
+    "id": "Missouri_History_Museum",
     "name": "Missouri History Museum",
     "lat": 38.6452478,
     "lng": -90.2857383,
@@ -1033,7 +1033,7 @@
     "images": []
   },
   {
-    "id": "world_chess_hall_of_fame",
+    "id": "World_Chess_Hall_of_Fame",
     "name": "World Chess Hall of Fame",
     "lat": 38.6444755,
     "lng": -90.2610933,
@@ -1050,7 +1050,7 @@
     "images": []
   },
   {
-    "id": "the_museum_of_modern_art",
+    "id": "The_Museum_of_Modern_Art",
     "name": "The Museum of Modern Art",
     "lat": 40.7614327,
     "lng": -73.9776216,
@@ -1062,7 +1062,7 @@
     "images": []
   },
   {
-    "id": "the_morgan_library_museum",
+    "id": "The_Morgan_Library_&_Museum",
     "name": "The Morgan Library & Museum",
     "lat": 40.7492258,
     "lng": -73.9813971,
@@ -1074,7 +1074,7 @@
     "images": []
   },
   {
-    "id": "american_museum_of_natural_history",
+    "id": "American_Museum_of_Natural_History",
     "name": "American Museum of Natural History",
     "lat": 40.7813241,
     "lng": -73.9739882,
@@ -1086,7 +1086,7 @@
     "images": []
   },
   {
-    "id": "the_art_institute_of_chicago",
+    "id": "The_Art_Institute_of_Chicago",
     "name": "The Art Institute of Chicago",
     "lat": 41.8796031,
     "lng": -87.6223504,
@@ -1103,7 +1103,7 @@
     "images": []
   },
   {
-    "id": "field_museum",
+    "id": "Field_Museum",
     "name": "Field Museum",
     "lat": 41.866261,
     "lng": -87.6169805,
@@ -1120,7 +1120,7 @@
     "images": []
   },
   {
-    "id": "stony_man_mountain_summit",
+    "id": "Stony_Man_Mountain_Summit",
     "name": "Stony Man Mountain Summit",
     "lat": 38.5984809,
     "lng": -78.3736522,
@@ -1132,7 +1132,7 @@
     "images": []
   },
   {
-    "id": "marys_rock_summit",
+    "id": "Marys_Rock_Summit",
     "name": "Marys Rock Summit",
     "lat": 38.6499001,
     "lng": -78.3174363,
@@ -1144,7 +1144,7 @@
     "images": []
   },
   {
-    "id": "bearfence_mountain",
+    "id": "Bearfence_Mountain",
     "name": "Bearfence Mountain",
     "lat": 38.4496119,
     "lng": -78.465774,
@@ -1156,7 +1156,7 @@
     "images": []
   },
   {
-    "id": "old_rag_mountain_summit",
+    "id": "Old_Rag_Mountain_Summit",
     "name": "Old Rag Mountain Summit",
     "lat": 38.5519143,
     "lng": -78.315031,
@@ -1168,7 +1168,7 @@
     "images": []
   },
   {
-    "id": "mount_le_conte",
+    "id": "Mount_Le_Conte",
     "name": "Mount Le Conte",
     "lat": 35.6542611,
     "lng": -83.4368267,
@@ -1180,7 +1180,7 @@
     "images": []
   },
   {
-    "id": "charlies_bunion",
+    "id": "Charlies_Bunion",
     "name": "Charlies Bunion",
     "lat": 35.6393159,
     "lng": -83.3717643,
@@ -1192,7 +1192,7 @@
     "images": []
   },
   {
-    "id": "algonquin_peak",
+    "id": "Algonquin_Peak",
     "name": "Algonquin Peak",
     "lat": 44.1436635,
     "lng": -73.9865357,
@@ -1204,7 +1204,7 @@
     "images": []
   },
   {
-    "id": "wright_peak",
+    "id": "Wright_Peak",
     "name": "Wright Peak",
     "lat": 44.151641,
     "lng": -73.9795052,
@@ -1216,7 +1216,7 @@
     "images": []
   },
   {
-    "id": "mount_colden",
+    "id": "Mount_Colden",
     "name": "Mount Colden",
     "lat": 44.1271085,
     "lng": -73.9599012,
@@ -1228,7 +1228,7 @@
     "images": []
   },
   {
-    "id": "cedar_point",
+    "id": "Cedar_Point",
     "name": "Cedar Point",
     "lat": 41.4807905,
     "lng": -82.6834453,
@@ -1245,7 +1245,7 @@
     "images": []
   },
   {
-    "id": "universal_islands_of_adventure",
+    "id": "Universal_Islands_of_Adventure",
     "name": "Universal Islands of Adventure",
     "lat": 28.4716879,
     "lng": -81.4701971,
@@ -1257,7 +1257,7 @@
     "images": []
   },
   {
-    "id": "universal_studios_florida",
+    "id": "Universal_Studios_Florida",
     "name": "Universal Studios Florida",
     "lat": 28.4793754,
     "lng": -81.4685422,
@@ -1269,7 +1269,7 @@
     "images": []
   },
   {
-    "id": "disney_s_animal_kingdom_theme_park",
+    "id": "Disney's_Animal_Kingdom_Theme_Park",
     "name": "Disney's Animal Kingdom Theme Park",
     "lat": 28.3574423,
     "lng": -81.5905788,
@@ -1286,7 +1286,7 @@
     "images": []
   },
   {
-    "id": "disney_s_hollywood_studios",
+    "id": "Disney's_Hollywood_Studios",
     "name": "Disney's Hollywood Studios",
     "lat": 28.3580628,
     "lng": -81.5590975,
@@ -1303,7 +1303,7 @@
     "images": []
   },
   {
-    "id": "epcot",
+    "id": "Epcot",
     "name": "Epcot",
     "lat": 28.3764687,
     "lng": -81.5494034,
@@ -1320,7 +1320,7 @@
     "images": []
   },
   {
-    "id": "magic_kingdom_park",
+    "id": "Magic_Kingdom_Park",
     "name": "Magic Kingdom Park",
     "lat": 28.2012177,
     "lng": -81.5831307,
@@ -1337,7 +1337,7 @@
     "images": []
   },
   {
-    "id": "stanford_university",
+    "id": "Stanford_University",
     "name": "Stanford University",
     "lat": 37.4232786,
     "lng": -122.1673565,
@@ -1358,7 +1358,7 @@
     "images": []
   },
   {
-    "id": "university_of_kansas",
+    "id": "University_of_Kansas",
     "name": "University of Kansas",
     "lat": 38.9572995,
     "lng": -95.2526087,
@@ -1379,7 +1379,7 @@
     "images": []
   },
   {
-    "id": "r_o_grande_puerto_rico",
+    "id": "Río_Grande,_Puerto_Rico",
     "name": "Río Grande, Puerto Rico",
     "lat": 18.4179512,
     "lng": -65.7933158,
