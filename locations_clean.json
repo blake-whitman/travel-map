@@ -32,7 +32,16 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2023-04-14",
+        "description": ""
+      },
+      {
+        "date": "2025-03-13",
+        "description": ""
+      }
+    ],
     "images": [
       "images/Gateway_Arch_National_Park_1.jpg",
       "images/Gateway_Arch_National_Park_2.jpg"
@@ -59,7 +68,24 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2024-01-25",
+        "description": "Nets vs Timberwolves"
+      },
+      {
+        "date": "2024-04-06",
+        "description": "Nets vs Pistons"
+      },
+      {
+        "date": "2024-12-16",
+        "description": "Nets vs Cavaliers"
+      },
+      {
+        "date": "2025-11-11",
+        "description": "Nets vs Raptors"
+      }
+    ],
     "images": [
       "images/Barclays_Center_1.jpg"
     ]
@@ -85,7 +111,32 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2023-07-09",
+        "description": "Yankees vs Cubs"
+      },
+      {
+        "date": "2024-05-04",
+        "description": "Yankees vs Tigers"
+      },
+      {
+        "date": "2024-08-22",
+        "description": "Yankees vs Guardians"
+      },
+      {
+        "date": "2025-06-04",
+        "description": "Yankees vs Guardians"
+      },
+      {
+        "date": "2025-06-05",
+        "description": "Yankees vs Guardians"
+      },
+      {
+        "date": "2025-07-28",
+        "description": "Yankees vs Rays"
+      }
+    ],
     "images": [
       "images/Yankee_Stadium_1.jpg",
       "images/Yankee_Stadium_2.jpg"
@@ -100,7 +151,16 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2024-05-05",
+        "description": "New York City FC vs Colorado Rapids"
+      },
+      {
+        "date": "2024-06-30",
+        "description": "New York Mets vs Houston Astros"
+      }
+    ],
     "images": []
   },
   {
@@ -160,7 +220,16 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2024-06-18",
+        "description": "Guardians vs Mariners"
+      },
+      {
+        "date": "2025-05-28",
+        "description": "Guardians vs Dodgers"
+      }
+    ],
     "images": [
       "images/Progressive_Field_1.jpg",
       "images/Progressive_Field_2.jpg",
@@ -176,7 +245,16 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2024-08-08",
+        "description": "New York Giants vs Detroit Lions"
+      },
+      {
+        "date": "2025-11-09",
+        "description": "New York Jets vs Cleveland Browns"
+      }
+    ],
     "images": [
       "images/MetLife_Stadium_1.jpg"
     ]
@@ -190,7 +268,32 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2024-08-27",
+        "description": "Carlos Alcaraz vs Li Tu"
+      },
+      {
+        "date": "2024-08-27",
+        "description": "Jasmine Paolini vs Bianca Andreescu"
+      },
+      {
+        "date": "2024-08-27",
+        "description": "Tommy Paul vs Lorenzo Sonego"
+      },
+      {
+        "date": "2024-08-27",
+        "description": "Emma Raducanu vs Sofia Kenin"
+      },
+      {
+        "date": "2024-08-27",
+        "description": "Stan Wawrinka vs Mattia Bellucci"
+      },
+      {
+        "date": "2024-08-27",
+        "description": "Yulia Putintseva vs Linda Noskova"
+      }
+    ],
     "images": [
       "images/USTA_Billie_Jean_King_National_Tennis_Center_1.jpg",
       "images/USTA_Billie_Jean_King_National_Tennis_Center_2.jpg",
@@ -223,7 +326,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2024-09-17",
+        "description": "Lake Erie Captains vs Wisconsin Timber Rattlers"
+      }
+    ],
     "images": [
       "images/Classic_Auto_Group_Park_1.jpg",
       "images/Classic_Auto_Group_Park_2.jpg",
@@ -242,7 +350,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2024-09-21",
+        "description": "Ohio State University vs Marshall University"
+      }
+    ],
     "images": [
       "images/Ohio_Stadium_1.jpg"
     ]
@@ -272,7 +385,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2024-12-21",
+        "description": "BGSU vs St Thomas (MN)"
+      }
+    ],
     "images": [
       "images/Stroh_Center_1.jpg",
       "images/Stroh_Center_2.jpg",
@@ -288,7 +406,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2024-12-29",
+        "description": "BGSU vs RIT"
+      }
+    ],
     "images": [
       "images/Slater_Family_Ice_Arena_1.jpg",
       "images/Slater_Family_Ice_Arena_2.jpg"
@@ -303,7 +426,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2025-01-29",
+        "description": "NJ Devils vs Philadelphia Flyers"
+      }
+    ],
     "images": [
       "images/Prudential_Center_1.jpg",
       "images/Prudential_Center_2.jpg",
@@ -319,7 +447,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2025-05-02",
+        "description": "White Sox vs Astros"
+      }
+    ],
     "images": [
       "images/Rate_Field_1.jpg",
       "images/Rate_Field_2.jpg",
@@ -337,7 +470,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2025-05-03",
+        "description": "Chicago Fire FC vs Orlando City SC"
+      }
+    ],
     "images": [
       "images/Soldier_Field_1.jpg",
       "images/Soldier_Field_2.jpg",
@@ -368,7 +506,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2025-06-01",
+        "description": "Mud Hens vs Bats"
+      }
+    ],
     "images": [
       "images/Fifth_Third_Field_1.jpg"
     ]
@@ -398,13 +541,18 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2025-08-19",
+        "description": "Akron RubberDucks vs New Hampshire Fisher Cats"
+      }
+    ],
     "images": [
       "images/Canal_Park_1.jpg"
     ]
   },
   {
-    "id": "Lower.com_Field",
+    "id": "Lower_com_Field",
     "name": "Lower.com Field",
     "lat": 39.9684078,
     "lng": -83.0169305,
@@ -413,7 +561,10 @@
     "sport": null,
     "level": null,
     "events": [],
-    "images": []
+    "images": [
+      "images/Lower_com_Field_1.jpg",
+      "images/Lower_com_Field_2.jpg"
+    ]
   },
   {
     "id": "Sports_Illustrated_Stadium",
@@ -519,7 +670,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2024-09-16",
+        "description": ""
+      }
+    ],
     "images": [
       "images/Toledo_Zoo_1.jpg",
       "images/Toledo_Zoo_2.jpg"
@@ -534,7 +690,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2025-03-14",
+        "description": ""
+      }
+    ],
     "images": [
       "images/Saint_Louis_Zoo_1.jpg",
       "images/Saint_Louis_Zoo_2.jpg",
@@ -551,7 +712,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2025-05-04",
+        "description": ""
+      }
+    ],
     "images": [
       "images/Lincoln_Park_Zoo_1.jpg",
       "images/Lincoln_Park_Zoo_2.jpg",
@@ -568,7 +734,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2025-05-03",
+        "description": ""
+      }
+    ],
     "images": [
       "images/Shedd_Aquarium_1.jpg",
       "images/Shedd_Aquarium_2.jpg",
@@ -597,7 +768,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2026-01-25",
+        "description": ""
+      }
+    ],
     "images": [
       "images/Shark_Reef_Aquarium_at_Mandalay_Bay_1.jpg",
       "images/Shark_Reef_Aquarium_at_Mandalay_Bay_2.jpg"
@@ -648,7 +824,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2024-08-30",
+        "description": ""
+      }
+    ],
     "images": [
       "images/Paterson_Great_Falls_National_Historical_Park_1.jpg",
       "images/Paterson_Great_Falls_National_Historical_Park_2.jpg"
@@ -663,7 +844,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2025-05-12",
+        "description": ""
+      }
+    ],
     "images": [
       "images/Bear_Mountain_State_Park_1.jpg",
       "images/Bear_Mountain_State_Park_2.jpg",
@@ -718,7 +904,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2024-10-05",
+        "description": "ST 3.5 "
+      }
+    ],
     "images": [
       "images/National_Gallery_of_Art_1.jpg",
       "images/National_Gallery_of_Art_2.jpg"
@@ -733,7 +924,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2024-10-05",
+        "description": "ST 3.5 "
+      }
+    ],
     "images": [
       "images/National_Archives_Museum_1.jpg",
       "images/National_Archives_Museum_2.jpg",
@@ -750,7 +946,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2024-10-05",
+        "description": "ST 3.5 "
+      }
+    ],
     "images": [
       "images/Smithsonian_National_Museum_of_American_History_1.jpg",
       "images/Smithsonian_National_Museum_of_American_History_2.jpg",
@@ -768,7 +969,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2024-10-04",
+        "description": "ST 3.5 "
+      }
+    ],
     "images": [
       "images/National_Portrait_Gallery_1.jpg",
       "images/National_Portrait_Gallery_2.jpg",
@@ -785,7 +991,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2024-10-04",
+        "description": "ST 3.5 "
+      }
+    ],
     "images": [
       "images/Library_of_Congress_1.jpg",
       "images/Library_of_Congress_2.jpg"
@@ -800,7 +1011,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2024-10-04",
+        "description": "ST 3.5 "
+      }
+    ],
     "images": [
       "images/Supreme_Court_of_the_United_States_1.jpg",
       "images/Supreme_Court_of_the_United_States_2.jpg",
@@ -816,7 +1032,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2024-10-04",
+        "description": "ST 3.5 "
+      }
+    ],
     "images": [
       "images/United_States_Capitol_1.jpg"
     ]
@@ -830,7 +1051,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2024-10-04",
+        "description": "ST 3.5 "
+      }
+    ],
     "images": [
       "images/The_White_House_1.jpg"
     ]
@@ -844,7 +1070,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2025-03-14",
+        "description": ""
+      }
+    ],
     "images": [
       "images/Saint_Louis_Art_Museum_1.jpg",
       "images/Saint_Louis_Art_Museum_2.jpg"
@@ -859,7 +1090,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2025-03-13",
+        "description": ""
+      }
+    ],
     "images": [
       "images/Missouri_History_Museum_1.jpg"
     ]
@@ -873,7 +1109,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2025-03-14",
+        "description": ""
+      }
+    ],
     "images": [
       "images/World_Chess_Hall_of_Fame_1.jpg"
     ]
@@ -891,7 +1132,7 @@
     "images": []
   },
   {
-    "id": "The_Morgan_Library_&_Museum",
+    "id": "The_Morgan_Library___Museum",
     "name": "The Morgan Library & Museum",
     "lat": 40.7492258,
     "lng": -73.9813971,
@@ -923,7 +1164,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2025-05-02",
+        "description": ""
+      }
+    ],
     "images": [
       "images/The_Art_Institute_of_Chicago_1.jpg",
       "images/The_Art_Institute_of_Chicago_2.jpg",
@@ -940,7 +1186,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2025-05-03",
+        "description": ""
+      }
+    ],
     "images": [
       "images/Field_Museum_1.jpg",
       "images/Field_Museum_2.jpg",
@@ -1092,7 +1343,7 @@
     "images": []
   },
   {
-    "id": "Disney's_Animal_Kingdom_Theme_Park",
+    "id": "Disney_s_Animal_Kingdom_Theme_Park",
     "name": "Disney's Animal Kingdom Theme Park",
     "lat": 28.3574423,
     "lng": -81.5905788,
@@ -1104,7 +1355,7 @@
     "images": []
   },
   {
-    "id": "Disney's_Hollywood_Studios",
+    "id": "Disney_s_Hollywood_Studios",
     "name": "Disney's Hollywood Studios",
     "lat": 28.3580628,
     "lng": -81.5590975,
@@ -1174,7 +1425,7 @@
     "images": []
   },
   {
-    "id": "Río_Grande,_Puerto_Rico",
+    "id": "R_o_Grande__Puerto_Rico",
     "name": "Río Grande, Puerto Rico",
     "lat": 18.4179512,
     "lng": -65.7933158,
