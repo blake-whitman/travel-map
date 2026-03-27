@@ -49,8 +49,8 @@
       }
     ],
     "images": [
-      "/images/Gateway_Arch_National_Park_1.jpg",
-      "/images/Gateway_Arch_National_Park_2.jpg"
+      "images/Gateway_Arch_National_Park_1.jpg",
+      "images/Gateway_Arch_National_Park_2.jpg"
     ]
   },
   {
@@ -86,7 +86,7 @@
       }
     ],
     "images": [
-      "/images/Barclays_Center_1.jpg"
+      "images/Barclays_Center_1.jpg"
     ]
   },
   {
@@ -122,8 +122,8 @@
       }
     ],
     "images": [
-      "/images/Yankee_Stadium_1.jpg",
-      "/images/Yankee_Stadium_2.jpg"
+      "images/Yankee_Stadium_1.jpg",
+      "images/Yankee_Stadium_2.jpg"
     ]
   },
   {
@@ -227,9 +227,9 @@
       }
     ],
     "images": [
-      "/images/Progressive_Field_1.jpg",
-      "/images/Progressive_Field_2.jpg",
-      "/images/Progressive_Field_3.jpg"
+      "images/Progressive_Field_1.jpg",
+      "images/Progressive_Field_2.jpg",
+      "images/Progressive_Field_3.jpg"
     ]
   },
   {
@@ -248,7 +248,7 @@
       }
     ],
     "images": [
-      "/images/MetLife_Stadium_1.jpg"
+      "images/MetLife_Stadium_1.jpg"
     ]
   },
   {
@@ -267,14 +267,14 @@
       }
     ],
     "images": [
-      "/images/USTA_Billie_Jean_King_National_Tennis_Center_1.jpg",
-      "/images/USTA_Billie_Jean_King_National_Tennis_Center_2.jpg",
-      "/images/USTA_Billie_Jean_King_National_Tennis_Center_3.jpg",
-      "/images/USTA_Billie_Jean_King_National_Tennis_Center_4.jpg",
-      "/images/USTA_Billie_Jean_King_National_Tennis_Center_5.jpg",
-      "/images/USTA_Billie_Jean_King_National_Tennis_Center_6.jpg",
-      "/images/USTA_Billie_Jean_King_National_Tennis_Center_7.jpg",
-      "/images/USTA_Billie_Jean_King_National_Tennis_Center_8.jpg"
+      "images/USTA_Billie_Jean_King_National_Tennis_Center_1.jpg",
+      "images/USTA_Billie_Jean_King_National_Tennis_Center_2.jpg",
+      "images/USTA_Billie_Jean_King_National_Tennis_Center_3.jpg",
+      "images/USTA_Billie_Jean_King_National_Tennis_Center_4.jpg",
+      "images/USTA_Billie_Jean_King_National_Tennis_Center_5.jpg",
+      "images/USTA_Billie_Jean_King_National_Tennis_Center_6.jpg",
+      "images/USTA_Billie_Jean_King_National_Tennis_Center_7.jpg",
+      "images/USTA_Billie_Jean_King_National_Tennis_Center_8.jpg"
     ]
   },
   {
@@ -310,12 +310,12 @@
       }
     ],
     "images": [
-      "/images/Classic_Auto_Group_Park_1.jpg",
-      "/images/Classic_Auto_Group_Park_2.jpg",
-      "/images/Classic_Auto_Group_Park_3.jpg",
-      "/images/Classic_Auto_Group_Park_4.jpg",
-      "/images/Classic_Auto_Group_Park_5.jpg",
-      "/images/Classic_Auto_Group_Park_6.jpg"
+      "images/Classic_Auto_Group_Park_1.jpg",
+      "images/Classic_Auto_Group_Park_2.jpg",
+      "images/Classic_Auto_Group_Park_3.jpg",
+      "images/Classic_Auto_Group_Park_4.jpg",
+      "images/Classic_Auto_Group_Park_5.jpg",
+      "images/Classic_Auto_Group_Park_6.jpg"
     ]
   },
   {
@@ -334,7 +334,7 @@
       }
     ],
     "images": [
-      "/images/Ohio_Stadium_1.jpg"
+      "images/Ohio_Stadium_1.jpg"
     ]
   },
   {
@@ -353,9 +353,9 @@
       }
     ],
     "images": [
-      "/images/Northwest_Stadium_1.jpg",
-      "/images/Northwest_Stadium_2.jpg",
-      "/images/Northwest_Stadium_3.jpg"
+      "images/Northwest_Stadium_1.jpg",
+      "images/Northwest_Stadium_2.jpg",
+      "images/Northwest_Stadium_3.jpg"
     ]
   },
   {
@@ -374,9 +374,9 @@
       }
     ],
     "images": [
-      "/images/Stroh_Center_1.jpg",
-      "/images/Stroh_Center_2.jpg",
-      "/images/Stroh_Center_3.jpg"
+      "images/Stroh_Center_1.jpg",
+      "images/Stroh_Center_2.jpg",
+      "images/Stroh_Center_3.jpg"
     ]
   },
   {
@@ -395,8 +395,8 @@
       }
     ],
     "images": [
-      "/images/Slater_Family_Ice_Arena_1.jpg",
-      "/images/Slater_Family_Ice_Arena_2.jpg"
+      "images/Slater_Family_Ice_Arena_1.jpg",
+      "images/Slater_Family_Ice_Arena_2.jpg"
     ]
   },
   {
@@ -415,9 +415,9 @@
       }
     ],
     "images": [
-      "/images/Prudential_Center_1.jpg",
-      "/images/Prudential_Center_2.jpg",
-      "/images/Prudential_Center_3.jpg"
+      "images/Prudential_Center_1.jpg",
+      "images/Prudential_Center_2.jpg",
+      "images/Prudential_Center_3.jpg"
     ]
   },
   {
@@ -436,11 +436,11 @@
       }
     ],
     "images": [
-      "/images/Rate_Field_1.jpg",
-      "/images/Rate_Field_2.jpg",
-      "/images/Rate_Field_3.jpg",
-      "/images/Rate_Field_4.jpg",
-      "/images/Rate_Field_5.jpg"
+      "images/Rate_Field_1.jpg",
+      "images/Rate_Field_2.jpg",
+      "images/Rate_Field_3.jpg",
+      "images/Rate_Field_4.jpg",
+      "images/Rate_Field_5.jpg"
     ]
   },
   {
@@ -459,9 +459,9 @@
       }
     ],
     "images": [
-      "/images/Soldier_Field_1.jpg",
-      "/images/Soldier_Field_2.jpg",
-      "/images/Soldier_Field_3.jpg"
+      "images/Soldier_Field_1.jpg",
+      "images/Soldier_Field_2.jpg",
+      "images/Soldier_Field_3.jpg"
     ]
   },
   {
@@ -480,8 +480,8 @@
       }
     ],
     "images": [
-      "/images/Comerica_Park_1.jpg",
-      "/images/Comerica_Park_2.jpg"
+      "images/Comerica_Park_1.jpg",
+      "images/Comerica_Park_2.jpg"
     ]
   },
   {
@@ -500,7 +500,7 @@
       }
     ],
     "images": [
-      "/images/Fifth_Third_Field_1.jpg"
+      "images/Fifth_Third_Field_1.jpg"
     ]
   },
   {
@@ -519,9 +519,9 @@
       }
     ],
     "images": [
-      "/images/Maimonides_Park_1.jpg",
-      "/images/Maimonides_Park_2.jpg",
-      "/images/Maimonides_Park_3.jpg"
+      "images/Maimonides_Park_1.jpg",
+      "images/Maimonides_Park_2.jpg",
+      "images/Maimonides_Park_3.jpg"
     ]
   },
   {
@@ -540,7 +540,7 @@
       }
     ],
     "images": [
-      "/images/Canal_Park_1.jpg"
+      "images/Canal_Park_1.jpg"
     ]
   },
   {
@@ -559,8 +559,8 @@
       }
     ],
     "images": [
-      "/images/Lower_com_Field_1.jpg",
-      "/images/Lower_com_Field_2.jpg"
+      "images/Lower_com_Field_1.jpg",
+      "images/Lower_com_Field_2.jpg"
     ]
   },
   {
@@ -579,9 +579,9 @@
       }
     ],
     "images": [
-      "/images/Sports_Illustrated_Stadium_1.jpg",
-      "/images/Sports_Illustrated_Stadium_2.jpg",
-      "/images/Sports_Illustrated_Stadium_3.jpg"
+      "images/Sports_Illustrated_Stadium_1.jpg",
+      "images/Sports_Illustrated_Stadium_2.jpg",
+      "images/Sports_Illustrated_Stadium_3.jpg"
     ]
   },
   {
@@ -600,9 +600,9 @@
       }
     ],
     "images": [
-      "/images/Rocket_Arena_1.jpg",
-      "/images/Rocket_Arena_2.jpg",
-      "/images/Rocket_Arena_3.jpg"
+      "images/Rocket_Arena_1.jpg",
+      "images/Rocket_Arena_2.jpg",
+      "images/Rocket_Arena_3.jpg"
     ]
   },
   {
@@ -621,8 +621,8 @@
       }
     ],
     "images": [
-      "/images/Yanitelli_Recreational_Life_Center_1.jpg",
-      "/images/Yanitelli_Recreational_Life_Center_2.jpg"
+      "images/Yanitelli_Recreational_Life_Center_1.jpg",
+      "images/Yanitelli_Recreational_Life_Center_2.jpg"
     ]
   },
   {
@@ -709,8 +709,8 @@
       }
     ],
     "images": [
-      "/images/Toledo_Zoo_1.jpg",
-      "/images/Toledo_Zoo_2.jpg"
+      "images/Toledo_Zoo_1.jpg",
+      "images/Toledo_Zoo_2.jpg"
     ]
   },
   {
@@ -729,10 +729,10 @@
       }
     ],
     "images": [
-      "/images/Saint_Louis_Zoo_1.jpg",
-      "/images/Saint_Louis_Zoo_2.jpg",
-      "/images/Saint_Louis_Zoo_3.jpg",
-      "/images/Saint_Louis_Zoo_4.jpg"
+      "images/Saint_Louis_Zoo_1.jpg",
+      "images/Saint_Louis_Zoo_2.jpg",
+      "images/Saint_Louis_Zoo_3.jpg",
+      "images/Saint_Louis_Zoo_4.jpg"
     ]
   },
   {
@@ -751,10 +751,10 @@
       }
     ],
     "images": [
-      "/images/Lincoln_Park_Zoo_1.jpg",
-      "/images/Lincoln_Park_Zoo_2.jpg",
-      "/images/Lincoln_Park_Zoo_3.jpg",
-      "/images/Lincoln_Park_Zoo_4.jpg"
+      "images/Lincoln_Park_Zoo_1.jpg",
+      "images/Lincoln_Park_Zoo_2.jpg",
+      "images/Lincoln_Park_Zoo_3.jpg",
+      "images/Lincoln_Park_Zoo_4.jpg"
     ]
   },
   {
@@ -773,10 +773,10 @@
       }
     ],
     "images": [
-      "/images/Shedd_Aquarium_1.jpg",
-      "/images/Shedd_Aquarium_2.jpg",
-      "/images/Shedd_Aquarium_3.jpg",
-      "/images/Shedd_Aquarium_4.jpg"
+      "images/Shedd_Aquarium_1.jpg",
+      "images/Shedd_Aquarium_2.jpg",
+      "images/Shedd_Aquarium_3.jpg",
+      "images/Shedd_Aquarium_4.jpg"
     ]
   },
   {
@@ -812,8 +812,8 @@
       }
     ],
     "images": [
-      "/images/Shark_Reef_Aquarium_at_Mandalay_Bay_1.jpg",
-      "/images/Shark_Reef_Aquarium_at_Mandalay_Bay_2.jpg"
+      "images/Shark_Reef_Aquarium_at_Mandalay_Bay_1.jpg",
+      "images/Shark_Reef_Aquarium_at_Mandalay_Bay_2.jpg"
     ]
   },
   {
@@ -873,8 +873,8 @@
       }
     ],
     "images": [
-      "/images/Paterson_Great_Falls_National_Historical_Park_1.jpg",
-      "/images/Paterson_Great_Falls_National_Historical_Park_2.jpg"
+      "images/Paterson_Great_Falls_National_Historical_Park_1.jpg",
+      "images/Paterson_Great_Falls_National_Historical_Park_2.jpg"
     ]
   },
   {
@@ -893,9 +893,9 @@
       }
     ],
     "images": [
-      "/images/Bear_Mountain_State_Park_1.jpg",
-      "/images/Bear_Mountain_State_Park_2.jpg",
-      "/images/Bear_Mountain_State_Park_3.jpg"
+      "images/Bear_Mountain_State_Park_1.jpg",
+      "images/Bear_Mountain_State_Park_2.jpg",
+      "images/Bear_Mountain_State_Park_3.jpg"
     ]
   },
   {
@@ -914,8 +914,8 @@
       }
     ],
     "images": [
-      "/images/Hocking_Hills_State_Park_1.jpg",
-      "/images/Hocking_Hills_State_Park_2.jpg"
+      "images/Hocking_Hills_State_Park_1.jpg",
+      "images/Hocking_Hills_State_Park_2.jpg"
     ]
   },
   {
@@ -963,8 +963,8 @@
       }
     ],
     "images": [
-      "/images/National_Gallery_of_Art_1.jpg",
-      "/images/National_Gallery_of_Art_2.jpg"
+      "images/National_Gallery_of_Art_1.jpg",
+      "images/National_Gallery_of_Art_2.jpg"
     ]
   },
   {
@@ -983,10 +983,10 @@
       }
     ],
     "images": [
-      "/images/National_Archives_Museum_1.jpg",
-      "/images/National_Archives_Museum_2.jpg",
-      "/images/National_Archives_Museum_3.jpg",
-      "/images/National_Archives_Museum_4.jpg"
+      "images/National_Archives_Museum_1.jpg",
+      "images/National_Archives_Museum_2.jpg",
+      "images/National_Archives_Museum_3.jpg",
+      "images/National_Archives_Museum_4.jpg"
     ]
   },
   {
@@ -1005,11 +1005,11 @@
       }
     ],
     "images": [
-      "/images/Smithsonian_National_Museum_of_American_History_1.jpg",
-      "/images/Smithsonian_National_Museum_of_American_History_2.jpg",
-      "/images/Smithsonian_National_Museum_of_American_History_3.jpg",
-      "/images/Smithsonian_National_Museum_of_American_History_4.jpg",
-      "/images/Smithsonian_National_Museum_of_American_History_5.jpg"
+      "images/Smithsonian_National_Museum_of_American_History_1.jpg",
+      "images/Smithsonian_National_Museum_of_American_History_2.jpg",
+      "images/Smithsonian_National_Museum_of_American_History_3.jpg",
+      "images/Smithsonian_National_Museum_of_American_History_4.jpg",
+      "images/Smithsonian_National_Museum_of_American_History_5.jpg"
     ]
   },
   {
@@ -1028,10 +1028,10 @@
       }
     ],
     "images": [
-      "/images/National_Portrait_Gallery_1.jpg",
-      "/images/National_Portrait_Gallery_2.jpg",
-      "/images/National_Portrait_Gallery_3.jpg",
-      "/images/National_Portrait_Gallery_4.jpg"
+      "images/National_Portrait_Gallery_1.jpg",
+      "images/National_Portrait_Gallery_2.jpg",
+      "images/National_Portrait_Gallery_3.jpg",
+      "images/National_Portrait_Gallery_4.jpg"
     ]
   },
   {
@@ -1050,8 +1050,8 @@
       }
     ],
     "images": [
-      "/images/Library_of_Congress_1.jpg",
-      "/images/Library_of_Congress_2.jpg"
+      "images/Library_of_Congress_1.jpg",
+      "images/Library_of_Congress_2.jpg"
     ]
   },
   {
@@ -1070,9 +1070,9 @@
       }
     ],
     "images": [
-      "/images/Supreme_Court_of_the_United_States_1.jpg",
-      "/images/Supreme_Court_of_the_United_States_2.jpg",
-      "/images/Supreme_Court_of_the_United_States_3.jpg"
+      "images/Supreme_Court_of_the_United_States_1.jpg",
+      "images/Supreme_Court_of_the_United_States_2.jpg",
+      "images/Supreme_Court_of_the_United_States_3.jpg"
     ]
   },
   {
@@ -1091,7 +1091,7 @@
       }
     ],
     "images": [
-      "/images/United_States_Capitol_1.jpg"
+      "images/United_States_Capitol_1.jpg"
     ]
   },
   {
@@ -1110,7 +1110,7 @@
       }
     ],
     "images": [
-      "/images/The_White_House_1.jpg"
+      "images/The_White_House_1.jpg"
     ]
   },
   {
@@ -1129,8 +1129,8 @@
       }
     ],
     "images": [
-      "/images/Saint_Louis_Art_Museum_1.jpg",
-      "/images/Saint_Louis_Art_Museum_2.jpg"
+      "images/Saint_Louis_Art_Museum_1.jpg",
+      "images/Saint_Louis_Art_Museum_2.jpg"
     ]
   },
   {
@@ -1149,7 +1149,7 @@
       }
     ],
     "images": [
-      "/images/Missouri_History_Museum_1.jpg"
+      "images/Missouri_History_Museum_1.jpg"
     ]
   },
   {
@@ -1168,7 +1168,7 @@
       }
     ],
     "images": [
-      "/images/World_Chess_Hall_of_Fame_1.jpg"
+      "images/World_Chess_Hall_of_Fame_1.jpg"
     ]
   },
   {
@@ -1223,10 +1223,10 @@
       }
     ],
     "images": [
-      "/images/The_Art_Institute_of_Chicago_1.jpg",
-      "/images/The_Art_Institute_of_Chicago_2.jpg",
-      "/images/The_Art_Institute_of_Chicago_3.jpg",
-      "/images/The_Art_Institute_of_Chicago_4.jpg"
+      "images/The_Art_Institute_of_Chicago_1.jpg",
+      "images/The_Art_Institute_of_Chicago_2.jpg",
+      "images/The_Art_Institute_of_Chicago_3.jpg",
+      "images/The_Art_Institute_of_Chicago_4.jpg"
     ]
   },
   {
@@ -1245,9 +1245,9 @@
       }
     ],
     "images": [
-      "/images/Field_Museum_1.jpg",
-      "/images/Field_Museum_2.jpg",
-      "/images/Field_Museum_3.jpg"
+      "images/Field_Museum_1.jpg",
+      "images/Field_Museum_2.jpg",
+      "images/Field_Museum_3.jpg"
     ]
   },
   {
@@ -1459,9 +1459,9 @@
       }
     ],
     "images": [
-      "/images/Epcot_1.jpg",
-      "/images/Epcot_2.jpg",
-      "/images/Epcot_3.jpg"
+      "images/Epcot_1.jpg",
+      "images/Epcot_2.jpg",
+      "images/Epcot_3.jpg"
     ]
   },
   {
@@ -1480,11 +1480,11 @@
       }
     ],
     "images": [
-      "/images/Magic_Kingdom_Park_1.jpg",
-      "/images/Magic_Kingdom_Park_2.jpg",
-      "/images/Magic_Kingdom_Park_3.jpg",
-      "/images/Magic_Kingdom_Park_4.jpg",
-      "/images/Magic_Kingdom_Park_5.jpg"
+      "images/Magic_Kingdom_Park_1.jpg",
+      "images/Magic_Kingdom_Park_2.jpg",
+      "images/Magic_Kingdom_Park_3.jpg",
+      "images/Magic_Kingdom_Park_4.jpg",
+      "images/Magic_Kingdom_Park_5.jpg"
     ]
   },
   {
