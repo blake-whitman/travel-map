@@ -105,12 +105,11 @@ Promise.all([
   // PROCESS LOCATIONS (NEW JSON)
   // =========================
   locations.forEach(loc => {
-
     const lat = loc.lat;
     const lng = loc.lng;
     const cat = loc.category || "misc";
 
-    // Counts
+    // Count by category
     if(cat==="national") parks++;
     else if(cat==="city") cities++;
     else sports++;
@@ -122,17 +121,17 @@ Promise.all([
     if(cat==="mls") mls++;
     if(cat==="tennis") atp++;
 
-    // EVENTS
+    // Render events
     const eventsHTML = (loc.events || []).map(e =>
       `<div>${e.date} - ${e.description}</div>`
     ).join("");
 
-    // IMAGES
+    // Render images
     const imagesHTML = (loc.images || []).map(img =>
       `<img src="${img}" style="width:150px;border-radius:8px;margin-top:6px;">`
     ).join("");
 
-    // MARKER
+    // Create marker
     const m = L.marker([lat, lng], { icon: iconByCategory(cat) });
 
     m.bindPopup(`
@@ -158,7 +157,7 @@ Promise.all([
       if (turf.booleanPointInPolygon(point, t)) {
         const name = t.properties.ADMIN || t.properties.name;
         visitedTerritories.add(name);
-        return;
+        break;
       }
     }
 
@@ -167,10 +166,9 @@ Promise.all([
       if (turf.booleanPointInPolygon(point, c)) {
         const name = c.properties.ADMIN || c.properties.name;
         visitedCountries.add(name);
-        return;
+        break;
       }
     }
-
   });
 
   // =========================
@@ -233,15 +231,13 @@ Promise.all([
 
   document.getElementById("atpCount").innerText = atp;
   document.getElementById("atpBar").style.width = (atp/59*100)+"%";
-
 });
 
 // =========================
-// FILTERS (UPDATED)
+// FILTERS (UPDATED FOR CLEAN JSON)
 // =========================
 checkboxes.forEach(cb => {
   cb.addEventListener("change", () => {
-
     markers.clearLayers();
 
     const active = Array.from(checkboxes)
@@ -249,11 +245,11 @@ checkboxes.forEach(cb => {
       .map(c => c.value);
 
     locationsData.forEach(loc => {
-
       const lat = loc.lat;
       const lng = loc.lng;
       const cat = loc.category || "misc";
 
+      // Filter logic
       if(!active.includes(cat) &&
          !(cat !== "city" && cat !== "national" && active.includes("sports")))
         return;
@@ -267,7 +263,6 @@ checkboxes.forEach(cb => {
       ).join("");
 
       const m = L.marker([lat, lng], { icon: iconByCategory(cat) });
-
       m.bindPopup(`
         <b>${loc.name}</b><br>
         ${eventsHTML}
@@ -307,5 +302,4 @@ toggleBtn.addEventListener("click", () => {
     toggleBtn.style.right = "10px";
     toggleBtn.style.left = "auto";
   }
-
 });
