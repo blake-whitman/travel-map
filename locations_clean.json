@@ -32,17 +32,11 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2023-04-14",
-        "description": "Visited"
-      },
-      {
-        "date": "2025-03-13",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/Gateway_Arch_National_Park_1.jpg",
+      "images/Gateway_Arch_National_Park_2.jpg"
+    ]
   },
   {
     "id": "Cuyahoga_Valley_National_Park",
@@ -65,25 +59,10 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2024-01-25",
-        "description": "Visited"
-      },
-      {
-        "date": "2024-04-06",
-        "description": "Visited"
-      },
-      {
-        "date": "2024-12-16",
-        "description": "Visited"
-      },
-      {
-        "date": "2025-11-11",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/Barclays_Center_1.jpg"
+    ]
   },
   {
     "id": "Madison_Square_Garden",
@@ -94,12 +73,7 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2024-04-01",
-        "description": "Visited"
-      }
-    ],
+    "events": [],
     "images": []
   },
   {
@@ -111,33 +85,11 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2023-07-09",
-        "description": "Visited"
-      },
-      {
-        "date": "2024-05-04",
-        "description": "Visited"
-      },
-      {
-        "date": "2024-08-22",
-        "description": "Visited"
-      },
-      {
-        "date": "2025-06-04",
-        "description": "Visited"
-      },
-      {
-        "date": "2025-06-05",
-        "description": "Visited"
-      },
-      {
-        "date": "2025-07-28",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/Yankee_Stadium_1.jpg",
+      "images/Yankee_Stadium_2.jpg"
+    ]
   },
   {
     "id": "Citi_Field",
@@ -148,16 +100,7 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2024-05-05",
-        "description": "Visited"
-      },
-      {
-        "date": "2024-06-30",
-        "description": "Visited"
-      }
-    ],
+    "events": [],
     "images": []
   },
   {
@@ -169,12 +112,7 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2023-12-28",
-        "description": "Visited"
-      }
-    ],
+    "events": [],
     "images": []
   },
   {
@@ -198,12 +136,7 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2023-04-13",
-        "description": "Visited"
-      }
-    ],
+    "events": [],
     "images": []
   },
   {
@@ -227,17 +160,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2024-06-18",
-        "description": "Visited"
-      },
-      {
-        "date": "2025-05-28",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/Progressive_Field_1.jpg",
+      "images/Progressive_Field_2.jpg",
+      "images/Progressive_Field_3.jpg"
+    ]
   },
   {
     "id": "MetLife_Stadium",
@@ -248,17 +176,10 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2024-08-08",
-        "description": "Visited"
-      },
-      {
-        "date": "2025-11-09",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/MetLife_Stadium_1.jpg"
+    ]
   },
   {
     "id": "USTA_Billie_Jean_King_National_Tennis_Center",
@@ -269,33 +190,17 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2024-08-27",
-        "description": "Visited"
-      },
-      {
-        "date": "2024-08-27",
-        "description": "Visited"
-      },
-      {
-        "date": "2024-08-27",
-        "description": "Visited"
-      },
-      {
-        "date": "2024-08-27",
-        "description": "Visited"
-      },
-      {
-        "date": "2024-08-27",
-        "description": "Visited"
-      },
-      {
-        "date": "2024-08-27",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/USTA_Billie_Jean_King_National_Tennis_Center_1.jpg",
+      "images/USTA_Billie_Jean_King_National_Tennis_Center_2.jpg",
+      "images/USTA_Billie_Jean_King_National_Tennis_Center_3.jpg",
+      "images/USTA_Billie_Jean_King_National_Tennis_Center_4.jpg",
+      "images/USTA_Billie_Jean_King_National_Tennis_Center_5.jpg",
+      "images/USTA_Billie_Jean_King_National_Tennis_Center_6.jpg",
+      "images/USTA_Billie_Jean_King_National_Tennis_Center_7.jpg",
+      "images/USTA_Billie_Jean_King_National_Tennis_Center_8.jpg"
+    ]
   },
   {
     "id": "UPMC_Park",
@@ -306,12 +211,7 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2023-06-11",
-        "description": "Visited"
-      }
-    ],
+    "events": [],
     "images": []
   },
   {
@@ -323,13 +223,15 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2024-09-17",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/Classic_Auto_Group_Park_1.jpg",
+      "images/Classic_Auto_Group_Park_2.jpg",
+      "images/Classic_Auto_Group_Park_3.jpg",
+      "images/Classic_Auto_Group_Park_4.jpg",
+      "images/Classic_Auto_Group_Park_5.jpg",
+      "images/Classic_Auto_Group_Park_6.jpg"
+    ]
   },
   {
     "id": "Ohio_Stadium",
@@ -340,13 +242,10 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2024-09-21",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/Ohio_Stadium_1.jpg"
+    ]
   },
   {
     "id": "Northwest_Stadium",
@@ -357,13 +256,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2024-10-06",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/Northwest_Stadium_1.jpg",
+      "images/Northwest_Stadium_2.jpg",
+      "images/Northwest_Stadium_3.jpg"
+    ]
   },
   {
     "id": "Stroh_Center",
@@ -374,13 +272,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2024-12-21",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/Stroh_Center_1.jpg",
+      "images/Stroh_Center_2.jpg",
+      "images/Stroh_Center_3.jpg"
+    ]
   },
   {
     "id": "Slater_Family_Ice_Arena",
@@ -391,13 +288,11 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2024-12-29",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/Slater_Family_Ice_Arena_1.jpg",
+      "images/Slater_Family_Ice_Arena_2.jpg"
+    ]
   },
   {
     "id": "Prudential_Center",
@@ -408,13 +303,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2025-01-29",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/Prudential_Center_1.jpg",
+      "images/Prudential_Center_2.jpg",
+      "images/Prudential_Center_3.jpg"
+    ]
   },
   {
     "id": "Rate_Field",
@@ -425,13 +319,14 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2025-05-02",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/Rate_Field_1.jpg",
+      "images/Rate_Field_2.jpg",
+      "images/Rate_Field_3.jpg",
+      "images/Rate_Field_4.jpg",
+      "images/Rate_Field_5.jpg"
+    ]
   },
   {
     "id": "Soldier_Field",
@@ -442,13 +337,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2025-05-03",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/Soldier_Field_1.jpg",
+      "images/Soldier_Field_2.jpg",
+      "images/Soldier_Field_3.jpg"
+    ]
   },
   {
     "id": "Comerica_Park",
@@ -459,13 +353,11 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2025-05-25",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/Comerica_Park_1.jpg",
+      "images/Comerica_Park_2.jpg"
+    ]
   },
   {
     "id": "Fifth_Third_Field",
@@ -476,13 +368,10 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2025-06-01",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/Fifth_Third_Field_1.jpg"
+    ]
   },
   {
     "id": "Maimonides_Park",
@@ -493,13 +382,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2025-07-29",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/Maimonides_Park_1.jpg",
+      "images/Maimonides_Park_2.jpg",
+      "images/Maimonides_Park_3.jpg"
+    ]
   },
   {
     "id": "Canal_Park",
@@ -510,13 +398,10 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2025-08-19",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/Canal_Park_1.jpg"
+    ]
   },
   {
     "id": "Lower.com_Field",
@@ -527,12 +412,7 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2025-10-18",
-        "description": "Visited"
-      }
-    ],
+    "events": [],
     "images": []
   },
   {
@@ -544,13 +424,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2025-10-04",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/Sports_Illustrated_Stadium_1.jpg",
+      "images/Sports_Illustrated_Stadium_2.jpg",
+      "images/Sports_Illustrated_Stadium_3.jpg"
+    ]
   },
   {
     "id": "Rocket_Arena",
@@ -561,13 +440,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2025-12-23",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/Rocket_Arena_1.jpg",
+      "images/Rocket_Arena_2.jpg",
+      "images/Rocket_Arena_3.jpg"
+    ]
   },
   {
     "id": "Yanitelli_Recreational_Life_Center",
@@ -578,13 +456,11 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2026-01-19",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/Yanitelli_Recreational_Life_Center_1.jpg",
+      "images/Yanitelli_Recreational_Life_Center_2.jpg"
+    ]
   },
   {
     "id": "ZooTampa_at_Lowry_Park",
@@ -595,12 +471,7 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2024-03-11",
-        "description": "Visited"
-      }
-    ],
+    "events": [],
     "images": []
   },
   {
@@ -612,12 +483,7 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2024-03-13",
-        "description": "Visited"
-      }
-    ],
+    "events": [],
     "images": []
   },
   {
@@ -629,12 +495,7 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2024-08-10",
-        "description": "Visited"
-      }
-    ],
+    "events": [],
     "images": []
   },
   {
@@ -646,12 +507,7 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2024-08-09",
-        "description": "Visited"
-      }
-    ],
+    "events": [],
     "images": []
   },
   {
@@ -663,13 +519,11 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2024-09-16",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/Toledo_Zoo_1.jpg",
+      "images/Toledo_Zoo_2.jpg"
+    ]
   },
   {
     "id": "Saint_Louis_Zoo",
@@ -680,13 +534,13 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2025-03-14",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/Saint_Louis_Zoo_1.jpg",
+      "images/Saint_Louis_Zoo_2.jpg",
+      "images/Saint_Louis_Zoo_3.jpg",
+      "images/Saint_Louis_Zoo_4.jpg"
+    ]
   },
   {
     "id": "Lincoln_Park_Zoo",
@@ -697,13 +551,13 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2025-05-04",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/Lincoln_Park_Zoo_1.jpg",
+      "images/Lincoln_Park_Zoo_2.jpg",
+      "images/Lincoln_Park_Zoo_3.jpg",
+      "images/Lincoln_Park_Zoo_4.jpg"
+    ]
   },
   {
     "id": "Shedd_Aquarium",
@@ -714,13 +568,13 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2025-05-03",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/Shedd_Aquarium_1.jpg",
+      "images/Shedd_Aquarium_2.jpg",
+      "images/Shedd_Aquarium_3.jpg",
+      "images/Shedd_Aquarium_4.jpg"
+    ]
   },
   {
     "id": "Akron_Zoo",
@@ -731,12 +585,7 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2025-08-19",
-        "description": "Visited"
-      }
-    ],
+    "events": [],
     "images": []
   },
   {
@@ -748,13 +597,11 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2026-01-25",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/Shark_Reef_Aquarium_at_Mandalay_Bay_1.jpg",
+      "images/Shark_Reef_Aquarium_at_Mandalay_Bay_2.jpg"
+    ]
   },
   {
     "id": "Niagara_Falls_State_Park",
@@ -801,13 +648,11 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2024-08-30",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/Paterson_Great_Falls_National_Historical_Park_1.jpg",
+      "images/Paterson_Great_Falls_National_Historical_Park_2.jpg"
+    ]
   },
   {
     "id": "Bear_Mountain_State_Park",
@@ -818,13 +663,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2025-05-12",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/Bear_Mountain_State_Park_1.jpg",
+      "images/Bear_Mountain_State_Park_2.jpg",
+      "images/Bear_Mountain_State_Park_3.jpg"
+    ]
   },
   {
     "id": "Hocking_Hills_State_Park",
@@ -836,7 +680,10 @@
     "sport": null,
     "level": null,
     "events": [],
-    "images": []
+    "images": [
+      "images/Hocking_Hills_State_Park_1.jpg",
+      "images/Hocking_Hills_State_Park_2.jpg"
+    ]
   },
   {
     "id": "Lake_Placid_Olympic_Museum",
@@ -871,13 +718,11 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2024-10-05",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/National_Gallery_of_Art_1.jpg",
+      "images/National_Gallery_of_Art_2.jpg"
+    ]
   },
   {
     "id": "National_Archives_Museum",
@@ -888,13 +733,13 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2024-10-05",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/National_Archives_Museum_1.jpg",
+      "images/National_Archives_Museum_2.jpg",
+      "images/National_Archives_Museum_3.jpg",
+      "images/National_Archives_Museum_4.jpg"
+    ]
   },
   {
     "id": "Smithsonian_National_Museum_of_American_History",
@@ -905,13 +750,14 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2024-10-05",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/Smithsonian_National_Museum_of_American_History_1.jpg",
+      "images/Smithsonian_National_Museum_of_American_History_2.jpg",
+      "images/Smithsonian_National_Museum_of_American_History_3.jpg",
+      "images/Smithsonian_National_Museum_of_American_History_4.jpg",
+      "images/Smithsonian_National_Museum_of_American_History_5.jpg"
+    ]
   },
   {
     "id": "National_Portrait_Gallery",
@@ -922,13 +768,13 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2024-10-04",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/National_Portrait_Gallery_1.jpg",
+      "images/National_Portrait_Gallery_2.jpg",
+      "images/National_Portrait_Gallery_3.jpg",
+      "images/National_Portrait_Gallery_4.jpg"
+    ]
   },
   {
     "id": "Library_of_Congress",
@@ -939,13 +785,11 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2024-10-04",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/Library_of_Congress_1.jpg",
+      "images/Library_of_Congress_2.jpg"
+    ]
   },
   {
     "id": "Supreme_Court_of_the_United_States",
@@ -956,13 +800,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2024-10-04",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/Supreme_Court_of_the_United_States_1.jpg",
+      "images/Supreme_Court_of_the_United_States_2.jpg",
+      "images/Supreme_Court_of_the_United_States_3.jpg"
+    ]
   },
   {
     "id": "United_States_Capitol",
@@ -973,13 +816,10 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2024-10-04",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/United_States_Capitol_1.jpg"
+    ]
   },
   {
     "id": "The_White_House",
@@ -990,13 +830,10 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2024-10-04",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/The_White_House_1.jpg"
+    ]
   },
   {
     "id": "Saint_Louis_Art_Museum",
@@ -1007,13 +844,11 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2025-03-14",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/Saint_Louis_Art_Museum_1.jpg",
+      "images/Saint_Louis_Art_Museum_2.jpg"
+    ]
   },
   {
     "id": "Missouri_History_Museum",
@@ -1024,13 +859,10 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2025-03-13",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/Missouri_History_Museum_1.jpg"
+    ]
   },
   {
     "id": "World_Chess_Hall_of_Fame",
@@ -1041,13 +873,10 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2025-03-14",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/World_Chess_Hall_of_Fame_1.jpg"
+    ]
   },
   {
     "id": "The_Museum_of_Modern_Art",
@@ -1094,13 +923,13 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2025-05-02",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/The_Art_Institute_of_Chicago_1.jpg",
+      "images/The_Art_Institute_of_Chicago_2.jpg",
+      "images/The_Art_Institute_of_Chicago_3.jpg",
+      "images/The_Art_Institute_of_Chicago_4.jpg"
+    ]
   },
   {
     "id": "Field_Museum",
@@ -1111,13 +940,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2025-05-03",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/Field_Museum_1.jpg",
+      "images/Field_Museum_2.jpg",
+      "images/Field_Museum_3.jpg"
+    ]
   },
   {
     "id": "Stony_Man_Mountain_Summit",
@@ -1236,12 +1064,7 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2024-06-17",
-        "description": "Visited"
-      }
-    ],
+    "events": [],
     "images": []
   },
   {
@@ -1277,12 +1100,7 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2023-03-12",
-        "description": "Visited"
-      }
-    ],
+    "events": [],
     "images": []
   },
   {
@@ -1294,12 +1112,7 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2024-03-11",
-        "description": "Visited"
-      }
-    ],
+    "events": [],
     "images": []
   },
   {
@@ -1311,13 +1124,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2025-02-03",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/Epcot_1.jpg",
+      "images/Epcot_2.jpg",
+      "images/Epcot_3.jpg"
+    ]
   },
   {
     "id": "Magic_Kingdom_Park",
@@ -1328,13 +1140,14 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2025-02-02",
-        "description": "Visited"
-      }
-    ],
-    "images": []
+    "events": [],
+    "images": [
+      "images/Magic_Kingdom_Park_1.jpg",
+      "images/Magic_Kingdom_Park_2.jpg",
+      "images/Magic_Kingdom_Park_3.jpg",
+      "images/Magic_Kingdom_Park_4.jpg",
+      "images/Magic_Kingdom_Park_5.jpg"
+    ]
   },
   {
     "id": "Stanford_University",
@@ -1345,16 +1158,7 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2025-02-16",
-        "description": "Visited"
-      },
-      {
-        "date": "2025-02-19",
-        "description": "Visited"
-      }
-    ],
+    "events": [],
     "images": []
   },
   {
@@ -1366,16 +1170,7 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2025-04-14",
-        "description": "Visited"
-      },
-      {
-        "date": "2025-04-16",
-        "description": "Visited"
-      }
-    ],
+    "events": [],
     "images": []
   },
   {
@@ -1387,16 +1182,7 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [
-      {
-        "date": "2024-03-28",
-        "description": "Visited"
-      },
-      {
-        "date": "2024-03-31",
-        "description": "Visited"
-      }
-    ],
+    "events": [],
     "images": []
   }
 ]
