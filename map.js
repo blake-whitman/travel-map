@@ -86,6 +86,7 @@ Promise.all([
 
   let mlb=0, nfl=0, nba=0, nhl=0, mls=0, atp=0;
   let parks=0, cities=0, sports=0;
+  let disney = 0, universal = 0, zoo=0;
 
   // Split countries
   const territoriesGeo = [];
@@ -120,6 +121,9 @@ Promise.all([
     if(cat==="nhl") nhl++;
     if(cat==="mls") mls++;
     if(cat==="tennis") atp++;
+    if (cat === "disney") disney++;
+    if (cat === "universal") universal++;
+    if (cat === "zoo") zoo++;
 
     // Render events
     const eventsHTML = (loc.events || []).map(e =>
@@ -213,6 +217,15 @@ Promise.all([
 
   document.getElementById("parksCount").innerText = parks;
   document.getElementById("parksBar").style.width = (parks/63*100) + "%";
+
+  document.getElementById("disneyCount").innerText = disney;
+  document.getElementById("disneyBar").style.width = (disney/12*100) + "%";
+
+  document.getElementById("universalCount").innerText = universal;
+  document.getElementById("universalBar").style.width = (universal/7*100) + "%";
+
+  document.getElementById("zooCount").innerText = zoo;
+  document.getElementById("zooBar").style.width = (zoo/240*100) + "%";
 
   document.getElementById("mlbCount").innerText = mlb;
   document.getElementById("mlbBar").style.width = (mlb/30*100)+"%";
