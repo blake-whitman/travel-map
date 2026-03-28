@@ -164,6 +164,27 @@
     "images": []
   },
   {
+    "id": "American_Airlines_Center",
+    "name": "American Airlines Center",
+    "lat": 32.7905802,
+    "lng": -96.8102601,
+    "category": "nba",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-03-23",
+        "description": "Dallas Mavericks vs Golden State Warriors"
+      },
+      {
+        "date": "2026-03-24",
+        "description": "Dallas Stars vs New Jersey Devils"
+      }
+    ],
+    "images": []
+  },
+  {
     "id": "Cleveland_Browns_Stadium",
     "name": "Cleveland Browns Stadium",
     "lat": 41.5060535,
