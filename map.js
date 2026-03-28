@@ -111,9 +111,11 @@ Promise.all([
     const cat = loc.category || "misc";
 
     // Count by category
-    if(cat==="national") parks++;
-    else if(cat==="city") cities++;
-    else sports++;
+    const sportsCategories = ["mlb","nfl","nba","nhl","mls","tennis"];
+
+    if (cat === "national") parks++;
+    else if (cat === "city") cities++;
+    else if (sportsCategories.includes(cat)) sports++;
 
     if(cat==="mlb") mlb++;
     if(cat==="nfl") nfl++;
