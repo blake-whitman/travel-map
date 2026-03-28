@@ -111,18 +111,18 @@ Promise.all([
     const cat = loc.category || "misc";
 
     // Count by category
-    const sportsCategories = ["mlb","nfl","nba","nhl","mls","tennis"];
+    const sportsCategories = ["mlb","nfl","nba","nhl","mls","tennis","ncaa_football","ncaa_basketball","milb","ncaa_hockey"];
 
     if (cat === "national") parks++;
     else if (cat === "city") cities++;
     else if (sportsCategories.includes(cat)) sports++;
 
-    if(cat==="mlb") mlb++;
-    if(cat==="nfl") nfl++;
-    if(cat==="nba") nba++;
-    if(cat==="nhl") nhl++;
-    if(cat==="mls") mls++;
-    if(cat==="tennis") atp++;
+    if (loc.league?.includes("nba")) nba++;
+    if (loc.league?.includes("nhl")) nhl++;
+    if (loc.league?.includes("mlb")) mlb++;
+    if (loc.league?.includes("nfl")) nfl++;
+    if (loc.league?.includes("mls")) mls++;
+    if (loc.league?.includes("atp")) atp++;
     if (cat === "disney") disney++;
     if (cat === "universal") universal++;
     if (cat === "zoo") zoo++;
