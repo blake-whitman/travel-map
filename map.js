@@ -61,9 +61,19 @@ function iconByCategory(loc) {
 }
 
 function createMarker(loc) {
+  let iconEmoji = iconByCategory(loc);
+
+  // Override for city: if it's in a city bucket but not a league/theme park
+  const isCity = cityBuckets.some(bucket => {
+    return turf.distance(turf.point(bucket), turf.point([loc.lat, loc.lng]), { units: 'kilometers' }) < 10;
+  });
+  if (isCity && !loc.league?.length && loc.category !== "national" && loc.category !== "disney" && loc.category !== "universal") {
+    iconEmoji = "🏙";
+  }
+
   return L.marker([loc.lat, loc.lng], {
     icon: L.divIcon({
-      html: iconByCategory(loc),
+      html: iconEmoji,
       className: "emoji-marker",
       iconSize: [26, 26]
     })
@@ -237,8 +247,26 @@ checkboxes.forEach(cb => {
       const cat = loc.category || "misc";
 
       let show = false;
+
+      // Normal category match
       if (active.includes(cat)) show = true;
-      else if (cat !== "city" && cat !== "national" && loc.league?.length && active.includes("sports")) show = true;
+
+      // Sports filter
+      else if (cat !== "city" && cat !== "national" && loc.league?.length && active.includes("sports")) {
+        show = true;
+      }
+
+      // City filter (special handling)
+      else if (active.includes("city")) {
+        // Check if this location belongs to any city bucket
+        const lat = loc.lat;
+        const lng = loc.lng;
+        const isCity = cityBuckets.some(bucket => {
+          const dist = turf.distance(turf.point(bucket), turf.point([lat, lng]), { units: 'kilometers' });
+          return dist < 10;
+        });
+        if (isCity) show = true;
+      }
 
       if (!show) return;
 
