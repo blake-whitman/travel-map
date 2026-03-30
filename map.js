@@ -40,31 +40,23 @@ const territories = [
 ];
 
 // =========================
-// ICONS (NEW CATEGORY SYSTEM)
+// ICONS
 // =========================
 function iconByCategory(loc) {
-  // Prioritize league icons
-  if (loc.league?.includes("nba")) return "🏀";
-  if (loc.league?.includes("ncaa_basketball")) return "🏀";
+  if (loc.league?.includes("nba") || loc.league?.includes("ncaa_basketball")) return "🏀";
   if (loc.league?.includes("mlb")) return "⚾";
-  if (loc.league?.includes("nfl")) return "🏈";
-  if (loc.league?.includes("ncaa_football")) return "🏈";
-  if (loc.league?.includes("nhl")) return "🏒";
-  if (loc.league?.includes("ncaa_hockey")) return "🏒";
+  if (loc.league?.includes("nfl") || loc.league?.includes("ncaa_football")) return "🏈";
+  if (loc.league?.includes("nhl") || loc.league?.includes("ncaa_hockey")) return "🏒";
   if (loc.league?.includes("mls")) return "⚽";
   if (loc.league?.includes("atp")) return "🎾";
 
-  // Theme parks
   if (loc.category === "disney") return "🏰";
   if (loc.category === "universal") return "🎢";
-
-  // Other categories
   if (loc.category === "city") return "🏙";
   if (loc.category === "national") return "🌲";
   if (loc.category === "airport") return "✈";
   if (loc.category === "zoo") return "🦁";
 
-  // Default
   return "📍";
 }
 
@@ -86,7 +78,6 @@ Promise.all([
   fetch("us-states.geojson").then(r => r.json()),
   fetch("countries.geojson").then(r => r.json())
 ]).then(([locations, states, countries]) => {
-
   locationsData = locations;
 
   const visitedStates = new Set();
@@ -94,43 +85,41 @@ Promise.all([
   const visitedTerritories = new Set();
 
   let mlb=0, nfl=0, nba=0, nhl=0, mls=0, atp=0;
-  let parks=0, cities=0, sports=0;
+  let parks=0, sports=0;
   let disney = 0, universal = 0, zoo=0;
 
-  // Split countries
   const territoriesGeo = [];
   const otherCountriesGeo = [];
 
   countries.features.forEach(c => {
     const name = c.properties.ADMIN || c.properties.name;
-
-    if (territories.includes(name)) {
-      territoriesGeo.push(c);
-    } else {
-      otherCountriesGeo.push(c);
-    }
+    if (territories.includes(name)) territoriesGeo.push(c);
+    else otherCountriesGeo.push(c);
   });
 
   // =========================
-  // PROCESS LOCATIONS (NEW JSON)
+  // PROCESS LOCATIONS
   // =========================
   const cityBuckets = [];
-  
+
   locations.forEach(loc => {
     const lat = loc.lat;
     const lng = loc.lng;
     const cat = loc.category || "misc";
 
-    const point = [lat, lng];
-    // Check if this point is close to an existing bucket
+    // City cluster (unique cities)
+    const cityPoint = [lat, lng];
     const exists = cityBuckets.some(bucket => {
-      const dist = turf.distance(turf.point(bucket), turf.point(point), { units: 'kilometers' });
-      return dist < 10; // within 10 km => same city
+      const dist = turf.distance(turf.point(bucket), turf.point(cityPoint), { units: 'kilometers' });
+      return dist < 10;
     });
-    if (!exists) cityBuckets.push(point);
+    if (!exists) cityBuckets.push(cityPoint);
 
+    // Counts
     if (cat === "national") parks++;
-    else if (cat === "city") cities++;
+    else if (cat === "disney") disney++;
+    else if (cat === "universal") universal++;
+    else if (cat === "zoo") zoo++;
     else if (loc.league && loc.league.length) sports++;
 
     if (loc.league?.includes("nba")) nba++;
@@ -139,58 +128,36 @@ Promise.all([
     if (loc.league?.includes("nfl")) nfl++;
     if (loc.league?.includes("mls")) mls++;
     if (loc.league?.includes("atp")) atp++;
-    if (cat === "disney") disney++;
-    if (cat === "universal") universal++;
-    if (cat === "zoo") zoo++;
 
-    // Render events
-    const eventsHTML = (loc.events || []).map(e =>
-      `<div>${e.date} - ${e.description}</div>`
-    ).join("");
+    // Marker
+    const m = createMarker(loc);
 
-    // Render images
-    const imagesHTML = (loc.images || []).map(img =>
-      `<img src="${img}" style="width:150px;border-radius:8px;margin-top:6px;">`
-    ).join("");
+    const eventsHTML = (loc.events || []).map(e => `<div>${e.date} - ${e.description}</div>`).join("");
+    const imagesHTML = (loc.images || []).map(img => `<img src="${img}" style="width:150px;border-radius:8px;margin-top:6px;">`).join("");
 
-    // Create marker
-    const m = L.marker([lat, lng], { icon: iconByCategory(cat) });
-
-    m.bindPopup(`
-      <b>${loc.name}</b><br>
-      ${eventsHTML}
-      ${imagesHTML}
-    `);
-
+    m.bindPopup(`<b>${loc.name}</b><br>${eventsHTML}${imagesHTML}`);
     markers.addLayer(m);
 
-    const point = turf.point([lng, lat]);
+    // Turf point for polygons
+    const turfPoint = turf.point([lng, lat]);
 
-    // STATES
     states.features.forEach(state => {
-      if(!territories.includes(state.properties.NAME) &&
-         turf.booleanPointInPolygon(point, state)) {
+      if (!territories.includes(state.properties.NAME) && turf.booleanPointInPolygon(turfPoint, state)) {
         visitedStates.add(state.properties.NAME);
       }
     });
 
-    // TERRITORIES
-    for (let t of territoriesGeo) {
-      if (turf.booleanPointInPolygon(point, t)) {
-        const name = t.properties.ADMIN || t.properties.name;
-        visitedTerritories.add(name);
-        break;
+    territoriesGeo.forEach(t => {
+      if (turf.booleanPointInPolygon(turfPoint, t)) {
+        visitedTerritories.add(t.properties.ADMIN || t.properties.name);
       }
-    }
+    });
 
-    // COUNTRIES
-    for (let c of otherCountriesGeo) {
-      if (turf.booleanPointInPolygon(point, c)) {
-        const name = c.properties.ADMIN || c.properties.name;
-        visitedCountries.add(name);
-        break;
+    otherCountriesGeo.forEach(c => {
+      if (turf.booleanPointInPolygon(turfPoint, c)) {
+        visitedCountries.add(c.properties.ADMIN || c.properties.name);
       }
-    }
+    });
   });
 
   // =========================
@@ -208,19 +175,10 @@ Promise.all([
   L.geoJSON(countries, {
     style: f => {
       const cname = f.properties.ADMIN || f.properties.name;
-
-      if(cname === "United States of America") {
-        return { fillOpacity: 0, stroke:false };
-      } 
-      else if(territories.includes(cname)) {
-        return { fillColor:"#ff8c42", fillOpacity:0.5, color:"#ff8c42", weight:1 };
-      } 
-      else if(visitedCountries.has(cname)) {
-        return { fillColor:"#3fbf7f", fillOpacity:0.45, color:"#3fbf7f", weight:1 };
-      } 
-      else {
-        return { fillColor:"#444", fillOpacity:0.03, color:"#555", weight:1 };
-      }
+      if(cname === "United States of America") return { fillOpacity:0, stroke:false };
+      else if(territories.includes(cname)) return { fillColor:"#ff8c42", fillOpacity:0.5, color:"#ff8c42", weight:1 };
+      else if(visitedCountries.has(cname)) return { fillColor:"#3fbf7f", fillOpacity:0.45, color:"#3fbf7f", weight:1 };
+      else return { fillColor:"#444", fillOpacity:0.03, color:"#555", weight:1 };
     }
   }).addTo(map);
 
@@ -265,7 +223,7 @@ Promise.all([
 });
 
 // =========================
-// FILTERS (UPDATED FOR CLEAN JSON)
+// FILTERS
 // =========================
 checkboxes.forEach(cb => {
   cb.addEventListener("change", () => {
@@ -278,19 +236,14 @@ checkboxes.forEach(cb => {
     locationsData.forEach(loc => {
       const cat = loc.category || "misc";
 
-      // Determine if location should be shown
       let show = false;
-
-      if (active.includes(cat)) show = true;            // category matches
-      else if (cat !== "city" && cat !== "national" && loc.league?.length && active.includes("sports")) {
-        show = true;                                   // any league matches sports filter
-      }
+      if (active.includes(cat)) show = true;
+      else if (cat !== "city" && cat !== "national" && loc.league?.length && active.includes("sports")) show = true;
 
       if (!show) return;
 
       const m = createMarker(loc);
 
-      // Popup content
       const eventsHTML = (loc.events || []).map(e => `<div>${e.date} - ${e.description}</div>`).join("");
       const imagesHTML = (loc.images || []).map(img => `<img src="${img}" style="width:150px;border-radius:8px;margin-top:6px;">`).join("");
 
@@ -301,28 +254,24 @@ checkboxes.forEach(cb => {
 });
 
 // =========================
-// PANEL TOGGLE (UNCHANGED)
+// PANEL TOGGLE
 // =========================
 const toggleBtn = document.getElementById("panel-toggle");
 const panel = document.getElementById("control-panel");
 const wrapper = document.getElementById("control-panel-wrapper");
 
 toggleBtn.addEventListener("click", () => {
-
   const collapsed = wrapper.classList.toggle("collapsed");
 
   if (collapsed) {
     document.body.appendChild(toggleBtn);
-
     toggleBtn.style.position = "fixed";
     toggleBtn.style.top = "130px";
     toggleBtn.style.left = "10px";
     toggleBtn.style.right = "auto";
     toggleBtn.style.zIndex = "2000";
-
   } else {
     panel.appendChild(toggleBtn);
-
     toggleBtn.style.position = "absolute";
     toggleBtn.style.top = "10px";
     toggleBtn.style.right = "10px";
