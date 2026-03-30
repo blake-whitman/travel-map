@@ -67,7 +67,7 @@ function createMarker(loc) {
   const isCity = cityBuckets.some(bucket => {
     return turf.distance(turf.point(bucket), turf.point([loc.lat, loc.lng]), { units: 'kilometers' }) < 10;
   });
-  if (isCity && !loc.league?.length && loc.category !== "national" && loc.category !== "disney" && loc.category !== "universal") {
+  if (isCity && !loc.league?.length && loc.category !== "national" && loc.category !== "disney" && loc.category !== "zoo" && loc.category !== "universal") {
     iconEmoji = "🏙";
   }
 
