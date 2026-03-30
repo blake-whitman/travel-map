@@ -42,30 +42,39 @@ const territories = [
 // =========================
 // ICONS (NEW CATEGORY SYSTEM)
 // =========================
-function iconByCategory(cat) {
-  const icons = {
-    city: "🏙",
-    national: "🌲",
+function iconByCategory(loc) {
+  // Prioritize league icons
+  if (loc.league?.includes("nba")) return "🏀";
+  if (loc.league?.includes("ncaa_basketball")) return "🏀";
+  if (loc.league?.includes("mlb")) return "⚾";
+  if (loc.league?.includes("nfl")) return "🏈";
+  if (loc.league?.includes("ncaa_football")) return "🏈";
+  if (loc.league?.includes("nhl")) return "🏒";
+  if (loc.league?.includes("ncaa_hockey")) return "🏒";
+  if (loc.league?.includes("mls")) return "⚽";
+  if (loc.league?.includes("atp")) return "🎾";
 
-    mlb: "⚾",
-    nfl: "🏈",
-    nba: "🏀",
-    nhl: "🏒",
-    mls: "⚽",
-    tennis: "🎾",
+  // Theme parks
+  if (loc.category === "disney") return "🏰";
+  if (loc.category === "universal") return "🎢";
 
-    milb: "⚾",
-    ncaa_football: "🏈",
-    ncaa_basketball: "🏀",
+  // Other categories
+  if (loc.category === "city") return "🏙";
+  if (loc.category === "national") return "🌲";
+  if (loc.category === "airport") return "✈";
+  if (loc.category === "zoo") return "🦁";
 
-    airport: "✈",
-    misc: "📍"
-  };
+  // Default
+  return "📍";
+}
 
-  return L.divIcon({
-    html: icons[cat] || "📍",
-    className: "emoji-marker",
-    iconSize: [26, 26]
+function createMarker(loc) {
+  return L.marker([loc.lat, loc.lng], {
+    icon: L.divIcon({
+      html: iconByCategory(loc),
+      className: "emoji-marker",
+      iconSize: [26, 26]
+    })
   });
 }
 
@@ -110,12 +119,10 @@ Promise.all([
     const lng = loc.lng;
     const cat = loc.category || "misc";
 
-    // Count by category
-    const sportsCategories = ["mlb","nfl","nba","nhl","mls","tennis","ncaa_football","ncaa_basketball","milb","ncaa_hockey"];
 
     if (cat === "national") parks++;
     else if (cat === "city") cities++;
-    else if (sportsCategories.includes(cat)) sports++;
+    else if (loc.league && loc.league.length) sports++;
 
     if (loc.league?.includes("nba")) nba++;
     if (loc.league?.includes("nhl")) nhl++;
@@ -260,30 +267,25 @@ checkboxes.forEach(cb => {
       .map(c => c.value);
 
     locationsData.forEach(loc => {
-      const lat = loc.lat;
-      const lng = loc.lng;
       const cat = loc.category || "misc";
 
-      // Filter logic
-      if(!active.includes(cat) &&
-         !(cat !== "city" && cat !== "national" && active.includes("sports")))
-        return;
+      // Determine if location should be shown
+      let show = false;
 
-      const eventsHTML = (loc.events || []).map(e =>
-        `<div>${e.date} - ${e.description}</div>`
-      ).join("");
+      if (active.includes(cat)) show = true;            // category matches
+      else if (cat !== "city" && cat !== "national" && loc.league?.length && active.includes("sports")) {
+        show = true;                                   // any league matches sports filter
+      }
 
-      const imagesHTML = (loc.images || []).map(img =>
-        `<img src="${img}" style="width:150px;border-radius:8px;margin-top:6px;">`
-      ).join("");
+      if (!show) return;
 
-      const m = L.marker([lat, lng], { icon: iconByCategory(cat) });
-      m.bindPopup(`
-        <b>${loc.name}</b><br>
-        ${eventsHTML}
-        ${imagesHTML}
-      `);
+      const m = createMarker(loc);
 
+      // Popup content
+      const eventsHTML = (loc.events || []).map(e => `<div>${e.date} - ${e.description}</div>`).join("");
+      const imagesHTML = (loc.images || []).map(img => `<img src="${img}" style="width:150px;border-radius:8px;margin-top:6px;">`).join("");
+
+      m.bindPopup(`<b>${loc.name}</b><br>${eventsHTML}${imagesHTML}`);
       markers.addLayer(m);
     });
   });
