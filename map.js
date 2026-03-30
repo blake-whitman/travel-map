@@ -114,11 +114,20 @@ Promise.all([
   // =========================
   // PROCESS LOCATIONS (NEW JSON)
   // =========================
+  const cityBuckets = [];
+  
   locations.forEach(loc => {
     const lat = loc.lat;
     const lng = loc.lng;
     const cat = loc.category || "misc";
 
+    const point = [lat, lng];
+    // Check if this point is close to an existing bucket
+    const exists = cityBuckets.some(bucket => {
+      const dist = turf.distance(turf.point(bucket), turf.point(point), { units: 'kilometers' });
+      return dist < 10; // within 10 km => same city
+    });
+    if (!exists) cityBuckets.push(point);
 
     if (cat === "national") parks++;
     else if (cat === "city") cities++;
@@ -218,7 +227,7 @@ Promise.all([
   // =========================
   // UPDATE UI
   // =========================
-  document.getElementById("citiesVisited").innerText = cities;
+  document.getElementById("citiesVisited").innerText = cityBuckets.length;
   document.getElementById("sportsVisited").innerText = sports;
   document.getElementById("statesVisited").innerText = visitedStates.size;
   document.getElementById("countriesVisited").innerText = visitedCountries.size;
