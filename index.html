@@ -19,7 +19,7 @@
 
 <header>
   <div class="header-left">
-    <h1>Blake’s Travel Map</h1>
+    <h1>Travel Map</h1>
     <p>Tracking my travels across the USA</p>
   </div>
   <div class="header-right">
@@ -170,7 +170,13 @@
       <span>✈ Airports</span>
     </label>
 
-  </div>
+    <select id="cityFilter">
+      <option value="all">All Cities</option>
+    </select>
+
+    <input type="range" id="yearSlider" min="2015" max="2026" step="1" value="2026">
+      <div id="yearLabel">Up to: 2026</div>
+    </div>
 
 </div>
 
