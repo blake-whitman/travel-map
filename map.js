@@ -26,6 +26,7 @@ map.addLayer(markers);
 // GLOBAL DATA
 // =========================
 let locationsData;
+let cityBuckets = [];
 
 // Filters
 const checkboxes = document.querySelectorAll(".filter");
@@ -110,15 +111,13 @@ Promise.all([
   // =========================
   // PROCESS LOCATIONS
   // =========================
-  const cityBuckets = [];
-
   locations.forEach(loc => {
     const lat = loc.lat;
     const lng = loc.lng;
     const cat = loc.category || "misc";
 
     // City cluster (unique cities)
-    const cityPoint = [lat, lng];
+    const cityPoint = [lng, lat];
     const exists = cityBuckets.some(bucket => {
       const dist = turf.distance(turf.point(bucket), turf.point(cityPoint), { units: 'kilometers' });
       return dist < 10;
@@ -262,7 +261,7 @@ checkboxes.forEach(cb => {
         const lat = loc.lat;
         const lng = loc.lng;
         const isCity = cityBuckets.some(bucket => {
-          const dist = turf.distance(turf.point(bucket), turf.point([lat, lng]), { units: 'kilometers' });
+          const dist = turf.distance(turf.point(bucket), turf.point([lng, lat]), { units: 'kilometers' });
           return dist < 10;
         });
         if (isCity) show = true;
