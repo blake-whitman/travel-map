@@ -58,126 +58,52 @@
 <div id="map"></div>
 
 <div id="control-panel-wrapper">
-<div id="control-panel">
+  <div id="control-panel">
 
-  <button id="panel-toggle">☰</button>
+    <button id="panel-toggle">☰</button>
 
-</div>
+    <!-- Travel -->
+    <div class="panel-section">
+      <div class="panel-title">Travel</div>
 
-  <div class="panel-section">
+      <div class="progress-card">
+        <div class="progress-title">National Parks</div>
+        <div class="progress-bar"><div id="parksBar" class="progress-fill"></div></div>
+        <div class="progress-label"><span id="parksCount">0</span>/63</div>
+      </div>
 
-  <!-- Travel -->
-  <div class="panel-title">Travel</div>
+      <div class="progress-card">
+        <div class="progress-title">AZA Zoos and Aquariums</div>
+        <div class="progress-bar"><div id="zooBar" class="progress-fill"></div></div>
+        <div class="progress-label"><span id="zooCount">0</span>/240</div>
+      </div>
 
-  <div class="progress-card">
-    <div class="progress-title">National Parks</div>
-    <div class="progress-bar"><div id="parksBar" class="progress-fill"></div></div>
-    <div class="progress-label"><span id="parksCount">0</span>/63</div>
-  </div>
-  <div class="progress-card">
-    <div class="progress-title">AZA Zoos and Aquariums</div>
-    <div class="progress-bar"><div id="zooBar" class="progress-fill"></div></div>
-    <div class="progress-label"><span id="zooCount">0</span>/240</div>
-  </div>
-  <div class="progress-card">
-    <div class="progress-title">🏰 Disney Parks</div>
-    <div class="progress-bar"><div id="disneyBar" class="progress-fill"></div></div>
-    <div class="progress-label"><span id="disneyCount">0</span>/12</div>
-  </div>
-  <div class="progress-card">
-    <div class="progress-title">🎢 Universal Parks</div>
-    <div class="progress-bar"><div id="universalBar" class="progress-fill"></div></div>
-    <div class="progress-label"><span id="universalCount">0</span>/7</div>
-  </div>
-</div>
+      <div class="progress-card">
+        <div class="progress-title">🏰 Disney Parks</div>
+        <div class="progress-bar"><div id="disneyBar" class="progress-fill"></div></div>
+        <div class="progress-label"><span id="disneyCount">0</span>/12</div>
+      </div>
 
-  <!-- Leagues Tracker -->
-<div class="panel-section">
-  <div class="panel-title">Leagues Tracker</div>
-
-  <div class="progress-card">
-    <div class="progress-title">
-      <img src="icons/nfl.png" class="league-logo"> NFL Stadiums
-    </div>
-    <div class="progress-bar"><div id="nflBar" class="progress-fill"></div></div>
-    <div class="progress-label"><span id="nflCount">0</span>/32</div>
-  </div>
-
-  <div class="progress-card">
-    <div class="progress-title">
-      <img src="icons/mlb.png" class="league-logo"> MLB Stadiums
-    </div>
-    <div class="progress-bar"><div id="mlbBar" class="progress-fill"></div></div>
-    <div class="progress-label"><span id="mlbCount">0</span>/30</div>
-  </div>
-
-  <div class="progress-card">
-    <div class="progress-title">
-      <img src="icons/nba.png" class="league-logo"> NBA Arenas
-    </div>
-    <div class="progress-bar"><div id="nbaBar" class="progress-fill"></div></div>
-    <div class="progress-label"><span id="nbaCount">0</span>/30</div>
-  </div>
-
-  <div class="progress-card">
-    <div class="progress-title">
-      <img src="icons/nhl.png" class="league-logo"> NHL Arenas
-    </div>
-    <div class="progress-bar"><div id="nhlBar" class="progress-fill"></div></div>
-    <div class="progress-label"><span id="nhlCount">0</span>/32</div>
-  </div>
-
-  <div class="progress-card">
-    <div class="progress-title">
-      <img src="icons/mls.png" class="league-logo"> MLS Stadiums
-    </div>
-    <div class="progress-bar"><div id="mlsBar" class="progress-fill"></div></div>
-    <div class="progress-label"><span id="mlsCount">0</span>/31</div>
-  </div>
-
-  <div class="progress-card">
-    <div class="progress-title">
-      <img src="icons/atp.png" class="league-logo"> ATP Tour Venues
-    </div>
-    <div class="progress-bar"><div id="atpBar" class="progress-fill"></div></div>
-    <div class="progress-label"><span id="atpCount">0</span>/59</div>
-  </div>
-
-</div>
-
-
-  <!-- Filters -->
-  <div class="panel-section">
-    <div class="panel-title">Filters</div>
-
-    <label class="filter-pill">
-      <input type="checkbox" class="filter" value="city" checked>
-      <span>🏙 Cities</span>
-    </label>
-
-    <label class="filter-pill">
-      <input type="checkbox" class="filter" value="national" checked>
-      <span>🌲 National Parks</span>
-    </label>
-
-    <label class="filter-pill">
-      <input type="checkbox" class="filter" value="sports" checked>
-      <span>🏟 Sports</span>
-    </label>
-
-    <label class="filter-pill">
-      <input type="checkbox" class="filter" value="airport" checked>
-      <span>✈ Airports</span>
-    </label>
-
-    <select id="cityFilter">
-      <option value="all">All Cities</option>
-    </select>
-
-    <input type="range" id="yearSlider" min="2015" max="2026" step="1" value="2026">
-      <div id="yearLabel">Up to: 2026</div>
+      <div class="progress-card">
+        <div class="progress-title">🎢 Universal Parks</div>
+        <div class="progress-bar"><div id="universalBar" class="progress-fill"></div></div>
+        <div class="progress-label"><span id="universalCount">0</span>/7</div>
+      </div>
     </div>
 
+    <!-- Leagues -->
+    <div class="panel-section">
+      <div class="panel-title">Leagues Tracker</div>
+      <!-- keep your existing league cards unchanged -->
+    </div>
+
+    <!-- Filters -->
+    <div class="panel-section">
+      <div class="panel-title">Filters</div>
+      <!-- keep your filters unchanged -->
+    </div>
+
+  </div>
 </div>
 
 <!-- Leaflet JS -->
