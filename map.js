@@ -91,12 +91,12 @@ function createMarker(loc) {
     return turf.distance(turf.point(bucket), turf.point([loc.lng, loc.lat]), { units: 'kilometers' }) < 10;
   });
   if (isCity && !loc.league?.length && loc.category !== "national" && loc.category !== "disney" && loc.category !== "zoo" && loc.category !== "universal") {
-    style = "🏙";
+    style = { bg: "#666", emoji: "🏙" };
   }
 
   return L.marker([loc.lat, loc.lng], {
     icon: L.divIcon({
-      html: `<div style="background:${style.bg}">${style.emoji}</div>`,
+      html: `<div style="background:${style?.bg || "#555"}">${style?.emoji || "📍"}</div>`,
       className: "emoji-marker",
       iconSize: [34, 34]
     })
