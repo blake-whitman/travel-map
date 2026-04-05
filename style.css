@@ -5,6 +5,80 @@ body {
   color: #f0f0f0;
 }
 
+/* HEADER UPGRADE */
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 12px 20px;
+
+  background: rgba(20,20,20,0.75);
+  backdrop-filter: blur(14px);
+
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Left section */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  font-size: 28px;
+  background: linear-gradient(135deg, #4da3ff, #6f5cff);
+  padding: 6px 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.header-left h1 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.header-left p {
+  font-size: 12px;
+  margin: 0;
+  color: #aaa;
+}
+
+/* Center stats */
+.header-center {
+  display: flex;
+  gap: 30px;
+}
+
+.header-stat {
+  text-align: center;
+}
+
+.header-stat span {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #4da3ff;
+}
+
+.header-stat label {
+  font-size: 11px;
+  color: #888;
+}
+
+/* Right profile */
+.header-right img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.15);
+}
+
 header {
   display: flex;
   justify-content: space-between;
