@@ -61,22 +61,44 @@ function iconByCategory(loc) {
   return "📍";
 }
 
+function getMarkerStyle(loc) {
+  // SPORTS (most important distinction)
+  if (loc.league?.includes("nba") || loc.league?.includes("ncaa_basketball")) return { bg: "#ff9f43", emoji: "🏀" };
+  if (loc.league?.includes("mlb")) return { bg: "#ff4d4d", emoji: "⚾" };
+  if (loc.league?.includes("nfl") || loc.league?.includes("ncaa_football")) return { bg: "#4da3ff", emoji: "🏈" };
+  if (loc.league?.includes("nhl") || loc.league?.includes("ncaa_hockey")) return { bg: "#9b59b6", emoji: "🏒" };
+  if (loc.league?.includes("mls")) return { bg: "#27ae60", emoji: "⚽" };
+  if (loc.league?.includes("atp")) return { bg: "#f1c40f", emoji: "🎾" };
+
+  // TRAVEL
+  if (loc.category === "national") return { bg: "#2ecc71", emoji: "🌲" };
+  if (loc.category === "airport") return { bg: "#3498db", emoji: "✈" };
+  if (loc.category === "zoo") return { bg: "#e67e22", emoji: "🦁" };
+  if (loc.category === "disney") return { bg: "#ff66cc", emoji: "🏰" };
+  if (loc.category === "universal") return { bg: "#9b59b6", emoji: "🎢" };
+
+  // CITY DEFAULT
+  if (loc.category === "city") return { bg: "#666", emoji: "🏙" };
+
+  return { bg: "#555", emoji: "📍" };
+}
+
 function createMarker(loc) {
-  let iconEmoji = iconByCategory(loc);
+  let style = getMarkerStyle(loc);
 
   // Override for city: if it's in a city bucket but not a league/theme park
   const isCity = cityBuckets.some(bucket => {
     return turf.distance(turf.point(bucket), turf.point([loc.lng, loc.lat]), { units: 'kilometers' }) < 10;
   });
   if (isCity && !loc.league?.length && loc.category !== "national" && loc.category !== "disney" && loc.category !== "zoo" && loc.category !== "universal") {
-    iconEmoji = "🏙";
+    style = "🏙";
   }
 
   return L.marker([loc.lat, loc.lng], {
     icon: L.divIcon({
-      html: iconEmoji,
+      html: `<div style="background:${style.bg}">${style.emoji}</div>`,
       className: "emoji-marker",
-      iconSize: [26, 26]
+      iconSize: [34, 34]
     })
   });
 }
