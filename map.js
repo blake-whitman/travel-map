@@ -15,12 +15,27 @@ L.tileLayer(
 
 // Marker cluster
 const markers = L.markerClusterGroup({
-  maxClusterRadius: 25,
-  disableClusteringAtZoom: 8,
+  maxClusterRadius: 35,
+  disableClusteringAtZoom: 9,
   zoomToBoundsOnClick: true,
-  spiderfyOnMaxZoom: true
+  spiderfyOnMaxZoom: true,
+
+  iconCreateFunction: function(cluster) {
+    const count = cluster.getChildCount();
+
+    let size = "small";
+    if (count > 25) size = "medium";
+    if (count > 75) size = "large";
+
+    return L.divIcon({
+      html: `<div class="cluster-marker ${size}">
+               <span>${count}</span>
+             </div>`,
+      className: "custom-cluster",
+      iconSize: L.point(40, 40)
+    });
+  }
 });
-map.addLayer(markers);
 
 // =========================
 // GLOBAL DATA
