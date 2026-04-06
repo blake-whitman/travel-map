@@ -327,10 +327,13 @@ toggleBtn.addEventListener("click", () => {
     toggleBtn.style.position = "fixed";
     toggleBtn.style.top = "130px";
     toggleBtn.style.left = "10px";
+    toggleBtn.style.right = "auto";
+    toggleBtn.style.zIndex = "2000";
   } else {
     panel.appendChild(toggleBtn);
     toggleBtn.style.position = "absolute";
     toggleBtn.style.top = "10px";
     toggleBtn.style.right = "10px";
+    toggleBtn.style.left = "auto";
   }
 });
