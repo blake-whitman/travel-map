@@ -297,42 +297,48 @@ checkboxes.forEach(cb => {
 
     locationsData.forEach(loc => {
   const cat = loc.category || "misc";
+  const active = Array.from(checkboxes)
+    .filter(c => c.checked)
+    .map(c => c.value);
 
-  let show = false;
+  // =========================
+  // HARD EXCLUSIONS FIRST
+  // =========================
 
-  // CATEGORY MATCH (parks, zoo, disney, etc.)
-  if (active.includes(cat)) {
-    show = true;
-  }
+  // If sports filter is OFF → remove ALL sports
+  if (!active.includes("sports") && loc.league?.length) return;
 
-  // SPORTS MASTER FILTER
-  if (!show && active.includes("sports") && loc.league?.length) {
-    show = true;
-  }
+  // If national parks OFF → remove parks
+  if (!active.includes("national") && cat === "national") return;
 
-  // INDIVIDUAL LEAGUES
-  if (!show && loc.league?.length) {
-    for (const league of loc.league) {
-      if (active.includes(league)) {
-        show = true;
-        break;
-      }
-    }
-  }
+  // If zoo OFF
+  // if (!active.includes("zoo") && cat === "zoo") return;
 
-  // CITY LOGIC (your existing working logic)
-  if (!show && active.includes("city")) {
-    const isCity = cityBuckets.some(bucket => {
-      return turf.distance(
-        turf.point(bucket),
-        turf.point([loc.lng, loc.lat]),
-        { units: 'kilometers' }
-      ) < 10;
-    });
-    if (isCity) show = true;
-  }
+  // If disney OFF
+  // if (!active.includes("disney") && cat === "disney") return;
 
-  if (!show) return;
+  // If universal OFF
+  // if (!active.includes("universal") && cat === "universal") return;
+
+  // If city OFF → remove city-only markers
+  if (!active.includes("city") && cat === "city") return;
+
+  // =========================
+  // OPTIONAL: league-specific filters
+  // =========================
+
+  // If you want league-level control (mlb/nfl/etc)
+  // const leagueFilters = ["mlb","nfl","nba","nhl","mls","atp"];
+  // const activeLeagues = active.filter(a => leagueFilters.includes(a));
+
+  /*if (loc.league?.length && activeLeagues.length > 0) {
+    const match = loc.league.some(l => activeLeagues.includes(l));
+    if (!match) return;
+  }*/
+
+  // =========================
+  // PASSED ALL FILTERS → SHOW
+  // =========================
 
   const m = createMarker(loc);
 
