@@ -296,40 +296,57 @@ checkboxes.forEach(cb => {
       .map(c => c.value);
 
     locationsData.forEach(loc => {
-      const cat = loc.category || "misc";
+  const cat = loc.category || "misc";
 
-      let show = false;
+  let show = false;
 
-      // Normal category match
-      if (active.includes(cat)) show = true;
+  // CATEGORY MATCH (parks, zoo, disney, etc.)
+  if (active.includes(cat)) {
+    show = true;
+  }
 
-      // Sports filter
-      else if (cat !== "city" && cat !== "national" && loc.league?.length && active.includes("sports")) {
+  // SPORTS MASTER FILTER
+  if (!show && active.includes("sports") && loc.league?.length) {
+    show = true;
+  }
+
+  // INDIVIDUAL LEAGUES
+  if (!show && loc.league?.length) {
+    for (const league of loc.league) {
+      if (active.includes(league)) {
         show = true;
+        break;
       }
+    }
+  }
 
-      // City filter (special handling)
-      else if (active.includes("city")) {
-        // Check if this location belongs to any city bucket
-        const lat = loc.lat;
-        const lng = loc.lng;
-        const isCity = cityBuckets.some(bucket => {
-          const dist = turf.distance(turf.point(bucket), turf.point([lng, lat]), { units: 'kilometers' });
-          return dist < 10;
-        });
-        if (isCity) show = true;
-      }
-
-      if (!show) return;
-
-      const m = createMarker(loc);
-
-      const eventsHTML = (loc.events || []).map(e => `<div>${e.date} - ${e.description}</div>`).join("");
-      const imagesHTML = (loc.images || []).map(img => `<img src="${img}" style="width:150px;border-radius:8px;margin-top:6px;">`).join("");
-
-      m.bindPopup(`<b>${loc.name}</b><br>${eventsHTML}${imagesHTML}`);
-      markers.addLayer(m);
+  // CITY LOGIC (your existing working logic)
+  if (!show && active.includes("city")) {
+    const isCity = cityBuckets.some(bucket => {
+      return turf.distance(
+        turf.point(bucket),
+        turf.point([loc.lng, loc.lat]),
+        { units: 'kilometers' }
+      ) < 10;
     });
+    if (isCity) show = true;
+  }
+
+  if (!show) return;
+
+  const m = createMarker(loc);
+
+  const eventsHTML = (loc.events || [])
+    .map(e => `<div>${e.date} - ${e.description}</div>`)
+    .join("");
+
+  const imagesHTML = (loc.images || [])
+    .map(img => `<img src="${img}" style="width:150px;border-radius:8px;margin-top:6px;">`)
+    .join("");
+
+  m.bindPopup(`<b>${loc.name}</b><br>${eventsHTML}${imagesHTML}`);
+  markers.addLayer(m);
+});
   });
 });
 
