@@ -387,6 +387,10 @@ body {
   background: linear-gradient(135deg, #ff4d4d, #ff9f43);
 }
 
+.cluster-marker span {
+  pointer-events: none;
+}
+
 /* Hover effect */
 .cluster-marker:hover {
   transform: scale(1.15);
