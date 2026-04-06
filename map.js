@@ -13,7 +13,9 @@ L.tileLayer(
   { attribution: '&copy; OpenStreetMap & Carto' }
 ).addTo(map);
 
-// Marker cluster
+// =========================
+// MARKER CLUSTER
+// =========================
 const markers = L.markerClusterGroup({
   maxClusterRadius: 35,
   disableClusteringAtZoom: 9,
@@ -22,8 +24,9 @@ const markers = L.markerClusterGroup({
 
   iconCreateFunction: function(cluster) {
     const count = cluster.getChildCount();
+
     let displayCount = count;
-    if (count > 999) displayCount = (count/1000).toFixed(1) + "k";
+    if (count > 999) displayCount = (count / 1000).toFixed(1) + "k";
     else if (count > 99) displayCount = "100+";
 
     let sizeClass = "small";
@@ -43,22 +46,22 @@ const markers = L.markerClusterGroup({
                <span>${displayCount}</span>
              </div>`,
       className: "custom-cluster",
-      iconSize: L.point(sizePx, sizePx) // ✅ CRITICAL FIX
+      iconSize: L.point(sizePx, sizePx)
     });
   }
 });
+
 map.addLayer(markers);
 
 // =========================
 // GLOBAL DATA
 // =========================
-let locationsData;
+let locationsData = [];
+let flatLocations = [];   // 🔥 FIXED DATASET
 let cityBuckets = [];
 
-// Filters
 const checkboxes = document.querySelectorAll(".filter");
 
-// US territories
 const territories = [
   "Puerto Rico",
   "Guam",
@@ -68,61 +71,75 @@ const territories = [
 ];
 
 // =========================
-// ICONS
+// MARKER STYLE
 // =========================
-function iconByCategory(loc) {
-  if (loc.league?.includes("nba") || loc.league?.includes("ncaa_basketball")) return "🏀";
-  if (loc.league?.includes("mlb")) return "⚾";
-  if (loc.league?.includes("nfl") || loc.league?.includes("ncaa_football")) return "🏈";
-  if (loc.league?.includes("nhl") || loc.league?.includes("ncaa_hockey")) return "🏒";
-  if (loc.league?.includes("mls")) return "⚽";
-  if (loc.league?.includes("atp")) return "🎾";
-
-  if (loc.category === "disney") return "🏰";
-  if (loc.category === "universal") return "🎢";
-  if (loc.category === "city") return "🏙";
-  if (loc.category === "national") return "🌲";
-  if (loc.category === "airport") return "✈";
-  if (loc.category === "zoo") return "🦁";
-
-  return "📍";
-}
-
 function getMarkerStyle(loc) {
-  // SPORTS (most important distinction)
-  if (loc.league?.includes("nba") || loc.league?.includes("ncaa_basketball")) return { bg: "#ff9f43", emoji: "🏀" };
+  if (loc.league?.includes("nba")) return { bg: "#ff9f43", emoji: "🏀" };
   if (loc.league?.includes("mlb")) return { bg: "#ff4d4d", emoji: "⚾" };
-  if (loc.league?.includes("nfl") || loc.league?.includes("ncaa_football")) return { bg: "#4da3ff", emoji: "🏈" };
-  if (loc.league?.includes("nhl") || loc.league?.includes("ncaa_hockey")) return { bg: "#9b59b6", emoji: "🏒" };
+  if (loc.league?.includes("nfl")) return { bg: "#4da3ff", emoji: "🏈" };
+  if (loc.league?.includes("nhl")) return { bg: "#9b59b6", emoji: "🏒" };
   if (loc.league?.includes("mls")) return { bg: "#27ae60", emoji: "⚽" };
   if (loc.league?.includes("atp")) return { bg: "#f1c40f", emoji: "🎾" };
 
-  // TRAVEL
   if (loc.category === "national") return { bg: "#2ecc71", emoji: "🌲" };
   if (loc.category === "airport") return { bg: "#3498db", emoji: "✈" };
   if (loc.category === "zoo") return { bg: "#e67e22", emoji: "🦁" };
   if (loc.category === "disney") return { bg: "#ff66cc", emoji: "🏰" };
   if (loc.category === "universal") return { bg: "#9b59b6", emoji: "🎢" };
-
-  // CITY DEFAULT
   if (loc.category === "city") return { bg: "#666", emoji: "🏙" };
 
   return { bg: "#555", emoji: "📍" };
 }
 
+// =========================
+// CREATE MARKER
+// =========================
 function createMarker(loc) {
-  let style = getMarkerStyle(loc);
+  const style = getMarkerStyle(loc);
 
   return L.marker([loc.lat, loc.lng], {
     icon: L.divIcon({
       html: `
-  <div class="marker-pin" style="background:${style.bg || "#555"}">
-    ${style.emoji || "📍"}
-  </div>
-`,
+        <div class="marker-pin" style="background:${style.bg}">
+          ${style.emoji}
+        </div>
+      `,
       className: "emoji-marker",
       iconSize: [34, 34]
     })
+  });
+}
+
+// =========================
+// 🔥 RENDER FUNCTION (USES FLAT DATA)
+// =========================
+function renderMarkers() {
+  markers.clearLayers();
+
+  const active = Array.from(checkboxes)
+    .filter(c => c.checked)
+    .map(c => c.value);
+
+  flatLocations.forEach(loc => {
+    const cat = loc.category || "misc";
+
+    // FILTER RULES
+    if (!active.includes("sports") && loc.league?.length) return;
+    if (!active.includes("national") && cat === "national") return;
+    if (!active.includes("city") && cat === "city") return;
+
+    const m = createMarker(loc);
+
+    const eventsHTML = (loc.events || [])
+      .map(e => `<div>${e.date} - ${e.description}</div>`)
+      .join("");
+
+    const imagesHTML = (loc.images || [])
+      .map(img => `<img src="${img}" style="width:150px;border-radius:8px;margin-top:6px;">`)
+      .join("");
+
+    m.bindPopup(`<b>${loc.name}</b><br>${eventsHTML}${imagesHTML}`);
+    markers.addLayer(m);
   });
 }
 
@@ -134,6 +151,7 @@ Promise.all([
   fetch("us-states.geojson").then(r => r.json()),
   fetch("countries.geojson").then(r => r.json())
 ]).then(([locations, states, countries]) => {
+
   locationsData = locations;
 
   const visitedStates = new Set();
@@ -142,7 +160,7 @@ Promise.all([
 
   let mlb=0, nfl=0, nba=0, nhl=0, mls=0, atp=0;
   let parks=0, sports=0;
-  let disney = 0, universal = 0, zoo=0;
+  let disney=0, universal=0, zoo=0;
 
   const territoriesGeo = [];
   const otherCountriesGeo = [];
@@ -154,27 +172,28 @@ Promise.all([
   });
 
   // =========================
-  // PROCESS LOCATIONS
+  // PROCESS + FLATTEN DATA
   // =========================
+  flatLocations = [];
+
   locations.forEach(loc => {
     const lat = loc.lat;
     const lng = loc.lng;
     const cat = loc.category || "misc";
 
-    // City cluster (unique cities)
+    // CITY BUCKETS
     const cityPoint = [lng, lat];
-    const exists = cityBuckets.some(bucket => {
-      const dist = turf.distance(turf.point(bucket), turf.point(cityPoint), { units: 'kilometers' });
-      return dist < 10;
-    });
+    const exists = cityBuckets.some(bucket =>
+      turf.distance(turf.point(bucket), turf.point(cityPoint), { units: 'kilometers' }) < 10
+    );
     if (!exists) cityBuckets.push(cityPoint);
 
-    // Counts
+    // COUNTS
     if (cat === "national") parks++;
     else if (cat === "disney") disney++;
     else if (cat === "universal") universal++;
     else if (cat === "zoo") zoo++;
-    else if (loc.league && loc.league.length) sports++;
+    else if (loc.league?.length) sports++;
 
     if (loc.league?.includes("nba")) nba++;
     if (loc.league?.includes("nhl")) nhl++;
@@ -183,57 +202,28 @@ Promise.all([
     if (loc.league?.includes("mls")) mls++;
     if (loc.league?.includes("atp")) atp++;
 
-    // Marker
-    // If multiple leagues → create one marker per league
-if (loc.league && loc.league.length > 0) {
-  loc.league.forEach((league, i) => {
+    // 🔥 FLATTEN MULTI-LEAGUE
+    if (loc.league?.length) {
+      loc.league.forEach((league, i) => {
+        const offset = 0.0008 * i;
 
-    // slight offset so they don’t overlap perfectly
-    const offset = 0.0008 * i;
+        flatLocations.push({
+          ...loc,
+          league: [league],
+          lat: loc.lat + offset,
+          lng: loc.lng + offset
+        });
+      });
+    } else {
+      flatLocations.push(loc);
+    }
 
-    const fakeLoc = {
-      ...loc,
-      league: [league], // isolate ONE league
-      lat: loc.lat + offset,
-      lng: loc.lng + offset
-    };
-
-    const m = createMarker(fakeLoc);
-
-    const eventsHTML = (loc.events || [])
-      .map(e => `<div>${e.date} - ${e.description}</div>`)
-      .join("");
-
-    const imagesHTML = (loc.images || [])
-      .map(img => `<img src="${img}" style="width:150px;border-radius:8px;margin-top:6px;">`)
-      .join("");
-
-    m.bindPopup(`<b>${loc.name}</b><br>${eventsHTML}${imagesHTML}`);
-
-    markers.addLayer(m);
-  });
-
-} else {
-  const m = createMarker(loc);
-
-  const eventsHTML = (loc.events || [])
-    .map(e => `<div>${e.date} - ${e.description}</div>`)
-    .join("");
-
-  const imagesHTML = (loc.images || [])
-    .map(img => `<img src="${img}" style="width:150px;border-radius:8px;margin-top:6px;">`)
-    .join("");
-
-  m.bindPopup(`<b>${loc.name}</b><br>${eventsHTML}${imagesHTML}`);
-
-  markers.addLayer(m);
-}
-
-    // Turf point for polygons
+    // GEO TRACKING
     const turfPoint = turf.point([lng, lat]);
 
     states.features.forEach(state => {
-      if (!territories.includes(state.properties.NAME) && turf.booleanPointInPolygon(turfPoint, state)) {
+      if (!territories.includes(state.properties.NAME) &&
+          turf.booleanPointInPolygon(turfPoint, state)) {
         visitedStates.add(state.properties.NAME);
       }
     });
@@ -252,7 +242,7 @@ if (loc.league && loc.league.length > 0) {
   });
 
   // =========================
-  // DRAW STATES
+  // DRAW MAP
   // =========================
   L.geoJSON(states, {
     style: f => visitedStates.has(f.properties.NAME)
@@ -260,9 +250,6 @@ if (loc.league && loc.league.length > 0) {
       : { fillColor:"#444", fillOpacity:0.1, color:"#555", weight:1 }
   }).addTo(map);
 
-  // =========================
-  // DRAW COUNTRIES
-  // =========================
   L.geoJSON(countries, {
     style: f => {
       const cname = f.properties.ADMIN || f.properties.name;
@@ -274,7 +261,7 @@ if (loc.league && loc.league.length > 0) {
   }).addTo(map);
 
   // =========================
-  // UPDATE UI
+  // UI
   // =========================
   document.getElementById("citiesVisited").innerText = cityBuckets.length;
   document.getElementById("sportsVisited").innerText = sports;
@@ -282,107 +269,17 @@ if (loc.league && loc.league.length > 0) {
   document.getElementById("countriesVisited").innerText = visitedCountries.size;
   document.getElementById("territoriesVisited").innerText = visitedTerritories.size;
 
-  document.getElementById("parksCount").innerText = parks;
-  document.getElementById("parksBar").style.width = (parks/63*100) + "%";
-
-  document.getElementById("disneyCount").innerText = disney;
-  document.getElementById("disneyBar").style.width = (disney/12*100) + "%";
-
-  document.getElementById("universalCount").innerText = universal;
-  document.getElementById("universalBar").style.width = (universal/7*100) + "%";
-
-  document.getElementById("zooCount").innerText = zoo;
-  document.getElementById("zooBar").style.width = (zoo/240*100) + "%";
-
-  document.getElementById("mlbCount").innerText = mlb;
-  document.getElementById("mlbBar").style.width = (mlb/30*100)+"%";
-
-  document.getElementById("nflCount").innerText = nfl;
-  document.getElementById("nflBar").style.width = (nfl/32*100)+"%";
-
-  document.getElementById("nbaCount").innerText = nba;
-  document.getElementById("nbaBar").style.width = (nba/30*100)+"%";
-
-  document.getElementById("nhlCount").innerText = nhl;
-  document.getElementById("nhlBar").style.width = (nhl/32*100)+"%";
-
-  document.getElementById("mlsCount").innerText = mls;
-  document.getElementById("mlsBar").style.width = (mls/31*100)+"%";
-
-  document.getElementById("atpCount").innerText = atp;
-  document.getElementById("atpBar").style.width = (atp/59*100)+"%";
+  // =========================
+  // INITIAL RENDER
+  // =========================
+  renderMarkers();
 });
 
 // =========================
 // FILTERS
 // =========================
 checkboxes.forEach(cb => {
-  cb.addEventListener("change", () => {
-    markers.clearLayers();
-
-    const active = Array.from(checkboxes)
-      .filter(c => c.checked)
-      .map(c => c.value);
-
-    locationsData.forEach(loc => {
-  const cat = loc.category || "misc";
-  const active = Array.from(checkboxes)
-    .filter(c => c.checked)
-    .map(c => c.value);
-
-  // =========================
-  // HARD EXCLUSIONS FIRST
-  // =========================
-
-  // If sports filter is OFF → remove ALL sports
-  if (!active.includes("sports") && loc.league?.length) return;
-
-  // If national parks OFF → remove parks
-  if (!active.includes("national") && cat === "national") return;
-
-  // If zoo OFF
-  // if (!active.includes("zoo") && cat === "zoo") return;
-
-  // If disney OFF
-  // if (!active.includes("disney") && cat === "disney") return;
-
-  // If universal OFF
-  // if (!active.includes("universal") && cat === "universal") return;
-
-  // If city OFF → remove city-only markers
-  if (!active.includes("city") && cat === "city") return;
-
-  // =========================
-  // OPTIONAL: league-specific filters
-  // =========================
-
-  // If you want league-level control (mlb/nfl/etc)
-  // const leagueFilters = ["mlb","nfl","nba","nhl","mls","atp"];
-  // const activeLeagues = active.filter(a => leagueFilters.includes(a));
-
-  /*if (loc.league?.length && activeLeagues.length > 0) {
-    const match = loc.league.some(l => activeLeagues.includes(l));
-    if (!match) return;
-  }*/
-
-  // =========================
-  // PASSED ALL FILTERS → SHOW
-  // =========================
-
-  const m = createMarker(loc);
-
-  const eventsHTML = (loc.events || [])
-    .map(e => `<div>${e.date} - ${e.description}</div>`)
-    .join("");
-
-  const imagesHTML = (loc.images || [])
-    .map(img => `<img src="${img}" style="width:150px;border-radius:8px;margin-top:6px;">`)
-    .join("");
-
-  m.bindPopup(`<b>${loc.name}</b><br>${eventsHTML}${imagesHTML}`);
-  markers.addLayer(m);
-});
-  });
+  cb.addEventListener("change", renderMarkers);
 });
 
 // =========================
@@ -400,13 +297,10 @@ toggleBtn.addEventListener("click", () => {
     toggleBtn.style.position = "fixed";
     toggleBtn.style.top = "130px";
     toggleBtn.style.left = "10px";
-    toggleBtn.style.right = "auto";
-    toggleBtn.style.zIndex = "2000";
   } else {
     panel.appendChild(toggleBtn);
     toggleBtn.style.position = "absolute";
     toggleBtn.style.top = "10px";
     toggleBtn.style.right = "10px";
-    toggleBtn.style.left = "auto";
   }
 });
