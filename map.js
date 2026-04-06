@@ -21,32 +21,33 @@ const markers = L.markerClusterGroup({
   spiderfyOnMaxZoom: true,
 
   iconCreateFunction: function(cluster) {
-  const count = cluster.getChildCount();
-  let displayCount = count;
-  if (count > 999) displayCount = (count/1000).toFixed(1) + "k";
-  else if (count > 99) displayCount = "100+";
+    const count = cluster.getChildCount();
+    let displayCount = count;
+    if (count > 999) displayCount = (count/1000).toFixed(1) + "k";
+    else if (count > 99) displayCount = "100+";
 
-  let sizeClass = "small";
-  let sizePx = 38;
+    let sizeClass = "small";
+    let sizePx = 38;
 
-  if (count > 25) {
-    sizeClass = "medium";
-    sizePx = 48;
-  }
-  if (count > 75) {
-    sizeClass = "large";
-    sizePx = 58;
-  }
+    if (count > 25) {
+      sizeClass = "medium";
+      sizePx = 48;
+    }
+    if (count > 75) {
+      sizeClass = "large";
+      sizePx = 58;
+    }
 
-  return L.divIcon({
-    html: `<div class="cluster-marker ${sizeClass}">
-             <span>${displayCount}</span>
-           </div>`,
-    className: "custom-cluster",
-    iconSize: L.point(sizePx, sizePx) // ✅ CRITICAL FIX
-  });
+    return L.divIcon({
+      html: `<div class="cluster-marker ${sizeClass}">
+               <span>${displayCount}</span>
+             </div>`,
+      className: "custom-cluster",
+      iconSize: L.point(sizePx, sizePx) // ✅ CRITICAL FIX
+    });
   }
 });
+map.addLayer(markers);
 
 // =========================
 // GLOBAL DATA
