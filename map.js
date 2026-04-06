@@ -113,14 +113,6 @@ function getMarkerStyle(loc) {
 function createMarker(loc) {
   let style = getMarkerStyle(loc);
 
-  // Override for city: if it's in a city bucket but not a league/theme park
-  const isCity = cityBuckets.some(bucket => {
-    return turf.distance(turf.point(bucket), turf.point([loc.lng, loc.lat]), { units: 'kilometers' }) < 10;
-  });
-  if (isCity && !loc.league?.length && loc.category !== "national" && loc.category !== "disney" && loc.category !== "zoo" && loc.category !== "universal") {
-    style = { bg: "#666", emoji: "🏙" };
-  }
-
   return L.marker([loc.lat, loc.lng], {
     icon: L.divIcon({
       html: `
@@ -216,7 +208,7 @@ if (loc.league && loc.league.length > 0) {
       .map(img => `<img src="${img}" style="width:150px;border-radius:8px;margin-top:6px;">`)
       .join("");
 
-    m.bindPopup(`<b>${loc.name}</b><br>${league.toUpperCase()}<br>${eventsHTML}${imagesHTML}`);
+    m.bindPopup(`<b>${loc.name}</b><br>${eventsHTML}${imagesHTML}`);
 
     markers.addLayer(m);
   });
