@@ -58,6 +58,12 @@ body {
 
 .header-stat {
   text-align: center;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.header-stat:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
 }
 
 .header-stat span {
@@ -107,74 +113,6 @@ body {
   border: 2px solid rgba(255,255,255,0.15);
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2rem;
-}
-
-header p {
-  margin: 0;
-  font-size: 1rem;
-}
-
-header img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.stats {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 20px;
-}
-
-.stat-card {
-  background: #111;
-  border-radius: 12px;
-  padding: 18px 26px;
-  min-width: 120px;
-  text-align: center;
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.05), 0 10px 25px rgba(0,0,0,0.5);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.stat-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.1), 0 15px 30px rgba(0,0,0,0.7);
-}
-
-.stat-number {
-  font-size: 32px;
-  font-weight: 700;
-  color: #4da3ff;
-}
-
-.stat-label {
-  font-size: 13px;
-  letter-spacing: 1px;
-  color: #aaa;
-}
-
-.stat-sub {
-  font-size: 11px;
-  color: #777;
-  margin-top: 4px;
-}
-
-.filters {
-  padding: 0.5rem 1rem;
-}
-
 .emoji-marker {
   display: flex;
   align-items: center;
@@ -190,8 +128,13 @@ header img {
 
   color: white;
 
-  box-shadow: 0 6px 16px rgba(0,0,0,0.6);
-  border: 1px solid rgba(255,255,255,0.15);
+  background-clip: padding-box;
+
+  box-shadow:
+    0 6px 16px rgba(0,0,0,0.6),
+    inset 0 0 6px rgba(255,255,255,0.15);
+
+  border: 1px solid rgba(255,255,255,0.2);
 
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
@@ -202,16 +145,8 @@ header img {
 }
 
 #map {
-  height: calc(100vh - 80px);
+  height: calc(100vh - var(--header-height, 90px));
   width: 100%;
-}
-
-.progress-section {
-  max-width: 900px;
-  margin: 20px auto 40px auto;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
 }
 
 .progress-card {
@@ -240,7 +175,7 @@ header img {
 .progress-fill {
   height: 100%;
   width: 0%;
-  background: #4da3ff;
+  background: linear-gradient(90deg, #4da3ff, #6f5cff);
   border-radius: 6px;
   transition: width 1s ease;
 }
@@ -285,6 +220,10 @@ header img {
   color: #aaa;
   margin-bottom: 10px;
   letter-spacing: .5px;
+}
+
+.panel-section {
+  margin-bottom: 18px;
 }
 
 .filter-pill {
