@@ -72,6 +72,33 @@ body {
   color: #888;
 }
 
+.custom-marker {
+  background: none;
+  border: none;
+}
+
+.marker-pin {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(135deg, var(--bg1), var(--bg2));
+
+  font-size: 18px;
+  color: white;
+
+  /* THIS is what makes it look "filled" */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  border: 2px solid rgba(255,255,255,0.15);
+
+  /* Prevent weird clipping */
+  overflow: hidden;
+}
+
 /* Right profile */
 .header-right img {
   width: 42px;
