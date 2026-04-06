@@ -96,7 +96,11 @@ function createMarker(loc) {
 
   return L.marker([loc.lat, loc.lng], {
     icon: L.divIcon({
-      html: `<div style="background:${style.bg || "#555"}">${style.emoji || "📍"}</div>`,
+      html: `
+  <div class="marker-pin" style="background:${style.bg || "#555"}">
+    ${style.emoji || "📍"}
+  </div>
+`,
       className: "emoji-marker",
       iconSize: [34, 34]
     })
