@@ -192,13 +192,50 @@ Promise.all([
     if (loc.league?.includes("atp")) atp++;
 
     // Marker
-    const m = createMarker(loc);
+    // If multiple leagues → create one marker per league
+if (loc.league && loc.league.length > 0) {
+  loc.league.forEach((league, i) => {
 
-    const eventsHTML = (loc.events || []).map(e => `<div>${e.date} - ${e.description}</div>`).join("");
-    const imagesHTML = (loc.images || []).map(img => `<img src="${img}" style="width:150px;border-radius:8px;margin-top:6px;">`).join("");
+    // slight offset so they don’t overlap perfectly
+    const offset = 0.0008 * i;
 
-    m.bindPopup(`<b>${loc.name}</b><br>${eventsHTML}${imagesHTML}`);
+    const fakeLoc = {
+      ...loc,
+      league: [league], // isolate ONE league
+      lat: loc.lat + offset,
+      lng: loc.lng + offset
+    };
+
+    const m = createMarker(fakeLoc);
+
+    const eventsHTML = (loc.events || [])
+      .map(e => `<div>${e.date} - ${e.description}</div>`)
+      .join("");
+
+    const imagesHTML = (loc.images || [])
+      .map(img => `<img src="${img}" style="width:150px;border-radius:8px;margin-top:6px;">`)
+      .join("");
+
+    m.bindPopup(`<b>${loc.name}</b><br>${league.toUpperCase()}<br>${eventsHTML}${imagesHTML}`);
+
     markers.addLayer(m);
+  });
+
+} else {
+  const m = createMarker(loc);
+
+  const eventsHTML = (loc.events || [])
+    .map(e => `<div>${e.date} - ${e.description}</div>`)
+    .join("");
+
+  const imagesHTML = (loc.images || [])
+    .map(img => `<img src="${img}" style="width:150px;border-radius:8px;margin-top:6px;">`)
+    .join("");
+
+  m.bindPopup(`<b>${loc.name}</b><br>${eventsHTML}${imagesHTML}`);
+
+  markers.addLayer(m);
+}
 
     // Turf point for polygons
     const turfPoint = turf.point([lng, lat]);
