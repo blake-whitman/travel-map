@@ -1,4 +1,5 @@
-[
+{
+  "locations": [
   {
     "id": "Shenandoah_National_Park",
     "name": "Shenandoah National Park",
@@ -1554,4 +1555,12 @@
     "events": [],
     "images": []
   }
-]
+],
+  "flights": [
+    {
+      "from": "EWR",
+      "to": "LAS",
+      "date": "2026-01-24"
+    }
+  ]
+}
