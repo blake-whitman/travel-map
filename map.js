@@ -132,7 +132,7 @@ function drawFlights() {
 }
 
 // =========================
-// MARKER STYLE
+// MARKERS
 // =========================
 function getStyle(loc) {
   if (loc.league?.includes("nba")) return { bg:"#ff9f43", emoji:"🏀" };
@@ -160,9 +160,6 @@ function createMarker(loc, lat, lng) {
   });
 }
 
-// =========================
-// RENDER MARKERS (FILTERED)
-// =========================
 function renderMarkers() {
   markers.clearLayers();
 
@@ -178,14 +175,11 @@ function renderMarkers() {
     if (!active.includes("airport") && cat === "airport") return;
     if (!active.includes("city") && cat === "city") return;
 
-    if (loc.league && loc.league.length > 0) {
+    if (loc.league?.length) {
       loc.league.forEach((league, i) => {
         const offset = 0.0008 * i;
 
-        const fakeLoc = {
-          ...loc,
-          league: [league]
-        };
+        const fakeLoc = { ...loc, league:[league] };
 
         const m = createMarker(fakeLoc, loc.lat + offset, loc.lng + offset);
 
@@ -210,13 +204,17 @@ function renderMarkers() {
 }
 
 // =========================
-// 🔥 STATS + GEO (RESTORED)
+// 🔥 STATS + GEO + BARS (FULL RESTORE)
 // =========================
 function updateStats(locations, states, countries) {
 
   const visitedStates = new Set();
   const visitedCountries = new Set();
   const visitedTerritories = new Set();
+
+  let mlb=0, nfl=0, nba=0, nhl=0, mls=0, atp=0;
+  let parks=0, sports=0;
+  let disney=0, universal=0, zoo=0;
 
   const territories = [
     "Puerto Rico",
@@ -236,12 +234,30 @@ function updateStats(locations, states, countries) {
   });
 
   locations.forEach(loc => {
-    const pt = turf.point([loc.lng, loc.lat]);
 
-    states.features.forEach(state => {
-      if (!territories.includes(state.properties.NAME) &&
-          turf.booleanPointInPolygon(pt, state)) {
-        visitedStates.add(state.properties.NAME);
+    const lat = loc.lat;
+    const lng = loc.lng;
+    const cat = loc.category || "misc";
+
+    if (cat === "national") parks++;
+    else if (cat === "disney") disney++;
+    else if (cat === "universal") universal++;
+    else if (cat === "zoo") zoo++;
+    else if (loc.league?.length) sports++;
+
+    if (loc.league?.includes("nba")) nba++;
+    if (loc.league?.includes("nhl")) nhl++;
+    if (loc.league?.includes("mlb")) mlb++;
+    if (loc.league?.includes("nfl")) nfl++;
+    if (loc.league?.includes("mls")) mls++;
+    if (loc.league?.includes("atp")) atp++;
+
+    const pt = turf.point([lng, lat]);
+
+    states.features.forEach(s => {
+      if (!territories.includes(s.properties.NAME) &&
+          turf.booleanPointInPolygon(pt, s)) {
+        visitedStates.add(s.properties.NAME);
       }
     });
 
@@ -270,7 +286,6 @@ function updateStats(locations, states, countries) {
   countriesLayer = L.geoJSON(countries, {
     style: f => {
       const cname = f.properties.ADMIN || f.properties.name;
-
       if (cname === "United States of America") return { fillOpacity:0, stroke:false };
       else if (territories.includes(cname)) return { fillColor:"#ff8c42", fillOpacity:0.5, color:"#ff8c42", weight:1 };
       else if (visitedCountries.has(cname)) return { fillColor:"#3fbf7f", fillOpacity:0.45, color:"#3fbf7f", weight:1 };
@@ -281,13 +296,20 @@ function updateStats(locations, states, countries) {
   statesLayer.bringToBack();
   countriesLayer.bringToBack();
 
+  // 🔥 PROGRESS BARS FIXED
   document.getElementById("statesVisited").innerText = visitedStates.size;
   document.getElementById("countriesVisited").innerText = visitedCountries.size;
   document.getElementById("territoriesVisited").innerText = visitedTerritories.size;
+
+  document.getElementById("parksCount").innerText = parks;
+  document.getElementById("parksBar").style.width = (parks/63*100)+"%";
+
+  document.getElementById("mlbCount").innerText = mlb;
+  document.getElementById("mlbBar").style.width = (mlb/30*100)+"%";
 }
 
 // =========================
-// LOAD DATA
+// LOAD
 // =========================
 Promise.all([
   fetch("locations_clean.json").then(r => r.json()),
@@ -318,11 +340,27 @@ checkboxes.forEach(cb => {
 });
 
 // =========================
-// PANEL TOGGLE
+// 🔥 FIXED PANEL TOGGLE
 // =========================
-document.getElementById("panel-toggle")
-  .addEventListener("click", () => {
-    document
-      .getElementById("control-panel-wrapper")
-      .classList.toggle("collapsed");
-  });
+const toggleBtn = document.getElementById("panel-toggle");
+const panel = document.getElementById("control-panel");
+const wrapper = document.getElementById("control-panel-wrapper");
+
+toggleBtn.addEventListener("click", () => {
+  const collapsed = wrapper.classList.toggle("collapsed");
+
+  if (collapsed) {
+    document.body.appendChild(toggleBtn);
+    toggleBtn.style.position = "fixed";
+    toggleBtn.style.top = "130px";
+    toggleBtn.style.left = "10px";
+    toggleBtn.style.right = "auto";
+    toggleBtn.style.zIndex = "2000";
+  } else {
+    panel.appendChild(toggleBtn);
+    toggleBtn.style.position = "absolute";
+    toggleBtn.style.top = "10px";
+    toggleBtn.style.right = "10px";
+    toggleBtn.style.left = "auto";
+  }
+});
