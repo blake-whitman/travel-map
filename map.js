@@ -87,31 +87,62 @@ function drawFlights() {
   if (!active.includes("airport")) return;
 
   flightsData.forEach(f => {
-  const from = airports[f.from];
-  const to = airports[f.to];
-  if (!from || !to) return;
+    const from = airports[f.from];
+    const to = airports[f.to];
+    if (!from || !to) return;
 
-  const line = createGreatCircle(from, to);
+    const line = createGreatCircle(from, to);
 
-  const layer = L.geoJSON(line, {
-    style: {
+    const coords = line.geometry.coordinates.map(c => [c[1], c[0]]);
+
+    // =========================
+    // BASE LINE
+    // =========================
+    const base = L.polyline(coords, {
       color: "#6f5cff",
-      weight: 2.5,
-      opacity: 0.75
+      weight: 2,
+      opacity: 0.35
+    }).addTo(flightLayer);
+
+    // =========================
+    // MOVING DASH LAYER (FLOW EFFECT)
+    // =========================
+    const animated = L.polyline(coords, {
+      color: "#6f5cff",
+      weight: 3,
+      opacity: 0.9,
+      dashArray: "10, 20",
+      lineCap: "round"
+    }).addTo(flightLayer);
+
+    // animate dash offset
+    let offset = 0;
+
+    function animate() {
+      offset -= 1.2;
+      animated.setStyle({
+        dashOffset: offset
+      });
+
+      requestAnimationFrame(animate);
     }
-  }).addTo(flightLayer);
 
-  // 🔥 DIRECTION ARROWS
-  const coords = line.geometry.coordinates.map(c => [c[1], c[0]]);
+    animate();
 
-  L.polyline(coords, {
-    color: "transparent"
-  }).arrowheads({
-    size: "8px",
-    frequency: "endonly",
-    color: "#6f5cff"
-  }).addTo(flightLayer);
-});
+    // =========================
+    // ARROW (SUBTLE END INDICATOR)
+    // =========================
+    const arrowLine = L.polyline(coords, {
+      color: "transparent",
+      weight: 1
+    }).addTo(flightLayer);
+
+    arrowLine.arrowheads({
+      size: "7px",
+      frequency: "endonly",
+      color: "#6f5cff"
+    });
+  });
 }
 
 // =========================
