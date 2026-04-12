@@ -297,15 +297,41 @@ function updateStats(locations, states, countries) {
   countriesLayer.bringToBack();
 
   // 🔥 PROGRESS BARS FIXED
+  document.getElementById("citiesVisited").innerText = cityBuckets.length;
+  document.getElementById("sportsVisited").innerText = sports;
   document.getElementById("statesVisited").innerText = visitedStates.size;
   document.getElementById("countriesVisited").innerText = visitedCountries.size;
   document.getElementById("territoriesVisited").innerText = visitedTerritories.size;
 
   document.getElementById("parksCount").innerText = parks;
-  document.getElementById("parksBar").style.width = (parks/63*100)+"%";
+  document.getElementById("parksBar").style.width = (parks/63*100) + "%";
+
+  document.getElementById("disneyCount").innerText = disney;
+  document.getElementById("disneyBar").style.width = (disney/12*100) + "%";
+
+  document.getElementById("universalCount").innerText = universal;
+  document.getElementById("universalBar").style.width = (universal/7*100) + "%";
+
+  document.getElementById("zooCount").innerText = zoo;
+  document.getElementById("zooBar").style.width = (zoo/240*100) + "%";
 
   document.getElementById("mlbCount").innerText = mlb;
   document.getElementById("mlbBar").style.width = (mlb/30*100)+"%";
+
+  document.getElementById("nflCount").innerText = nfl;
+  document.getElementById("nflBar").style.width = (nfl/32*100)+"%";
+
+  document.getElementById("nbaCount").innerText = nba;
+  document.getElementById("nbaBar").style.width = (nba/30*100)+"%";
+
+  document.getElementById("nhlCount").innerText = nhl;
+  document.getElementById("nhlBar").style.width = (nhl/32*100)+"%";
+
+  document.getElementById("mlsCount").innerText = mls;
+  document.getElementById("mlsBar").style.width = (mls/31*100)+"%";
+
+  document.getElementById("atpCount").innerText = atp;
+  document.getElementById("atpBar").style.width = (atp/59*100)+"%";
 }
 
 // =========================
