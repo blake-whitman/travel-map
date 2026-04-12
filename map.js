@@ -12,6 +12,8 @@ L.tileLayer(
   { attribution: '&copy; OpenStreetMap & Carto' }
 ).addTo(map);
 
+L.polylineDecorator = L.polylineDecorator || null;
+
 // =========================
 // CLUSTERS
 // =========================
@@ -64,43 +66,12 @@ const airports = {
 // =========================
 // ARC FUNCTION
 // =========================
-function createArc(from, to) {
-  const latlngs = [];
-
-  const offsetX = to[0] - from[0];
-  const offsetY = to[1] - from[1];
-
-  const r = Math.sqrt(offsetX * offsetX + offsetY * offsetY);
-  const theta = Math.atan2(offsetY, offsetX);
-
-  const thetaOffset = Math.PI / 10;
-  const r2 = (r / 2) / Math.cos(thetaOffset);
-  const theta2 = theta + thetaOffset;
-
-  const midpoint = [
-    from[0] + r2 * Math.cos(theta2),
-    from[1] + r2 * Math.sin(theta2)
-  ];
-
-  const steps = 40;
-
-  for (let i = 0; i <= steps; i++) {
-    const t = i / steps;
-
-    const lat =
-      (1 - t) * (1 - t) * from[1] +
-      2 * (1 - t) * t * midpoint[1] +
-      t * t * to[1];
-
-    const lng =
-      (1 - t) * (1 - t) * from[0] +
-      2 * (1 - t) * t * midpoint[0] +
-      t * t * to[0];
-
-    latlngs.push([lat, lng]);
-  }
-
-  return latlngs;
+function createGreatCircle(from, to) {
+  return turf.greatCircle(
+    turf.point(from),
+    turf.point(to),
+    { npoints: 80 }
+  );
 }
 
 // =========================
@@ -116,19 +87,31 @@ function drawFlights() {
   if (!active.includes("airport")) return;
 
   flightsData.forEach(f => {
-    const from = airports[f.from];
-    const to = airports[f.to];
-    if (!from || !to) return;
+  const from = airports[f.from];
+  const to = airports[f.to];
+  if (!from || !to) return;
 
-    const arc = createArc(from, to);
+  const line = createGreatCircle(from, to);
 
-    L.polyline(arc, {
+  const layer = L.geoJSON(line, {
+    style: {
       color: "#6f5cff",
       weight: 2.5,
-      dashArray: "4, 8",
-      opacity: 0.8
-    }).addTo(flightLayer);
-  });
+      opacity: 0.75
+    }
+  }).addTo(flightLayer);
+
+  // 🔥 DIRECTION ARROWS
+  const coords = line.geometry.coordinates.map(c => [c[1], c[0]]);
+
+  L.polyline(coords, {
+    color: "transparent"
+  }).arrowheads({
+    size: "8px",
+    frequency: "endonly",
+    color: "#6f5cff"
+  }).addTo(flightLayer);
+});
 }
 
 // =========================
