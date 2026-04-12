@@ -42,6 +42,10 @@ map.addLayer(markers);
 let locationsData = [];
 let flightsData = [];
 let cityBuckets = [];
+
+let statesLayer;
+let countriesLayer;
+
 let flightLayer = L.layerGroup().addTo(map);
 
 const checkboxes = document.querySelectorAll(".filter");
@@ -58,7 +62,7 @@ const airports = {
 };
 
 // =========================
-// CURVED ARC FUNCTION
+// ARC FUNCTION
 // =========================
 function createArc(from, to) {
   const latlngs = [];
@@ -70,7 +74,6 @@ function createArc(from, to) {
   const theta = Math.atan2(offsetY, offsetX);
 
   const thetaOffset = Math.PI / 10;
-
   const r2 = (r / 2) / Math.cos(thetaOffset);
   const theta2 = theta + thetaOffset;
 
@@ -158,7 +161,7 @@ function createMarker(loc, lat, lng) {
 }
 
 // =========================
-// RENDER FUNCTION (🔥 KEY FIX)
+// RENDER MARKERS (FILTERED)
 // =========================
 function renderMarkers() {
   markers.clearLayers();
@@ -170,13 +173,11 @@ function renderMarkers() {
   locationsData.forEach(loc => {
     const cat = loc.category || "misc";
 
-    // HARD FILTERS
     if (!active.includes("sports") && loc.league?.length) return;
     if (!active.includes("national") && cat === "national") return;
     if (!active.includes("airport") && cat === "airport") return;
     if (!active.includes("city") && cat === "city") return;
 
-    // MULTI-LEAGUE FIX
     if (loc.league && loc.league.length > 0) {
       loc.league.forEach((league, i) => {
         const offset = 0.0008 * i;
@@ -192,7 +193,6 @@ function renderMarkers() {
           .map(e => `<div>${e.date} - ${e.description}</div>`).join("");
 
         m.bindPopup(`<b>${loc.name}</b><br>${eventsHTML}`);
-
         markers.addLayer(m);
       });
     } else {
@@ -202,12 +202,88 @@ function renderMarkers() {
         .map(e => `<div>${e.date} - ${e.description}</div>`).join("");
 
       m.bindPopup(`<b>${loc.name}</b><br>${eventsHTML}`);
-
       markers.addLayer(m);
     }
   });
 
-  drawFlights(); // 🔥 tie flights to filters
+  drawFlights();
+}
+
+// =========================
+// 🔥 STATS + GEO (RESTORED)
+// =========================
+function updateStats(locations, states, countries) {
+
+  const visitedStates = new Set();
+  const visitedCountries = new Set();
+  const visitedTerritories = new Set();
+
+  const territories = [
+    "Puerto Rico",
+    "Guam",
+    "American Samoa",
+    "Northern Mariana Islands",
+    "U.S. Virgin Islands"
+  ];
+
+  const territoriesGeo = [];
+  const otherCountriesGeo = [];
+
+  countries.features.forEach(c => {
+    const name = c.properties.ADMIN || c.properties.name;
+    if (territories.includes(name)) territoriesGeo.push(c);
+    else otherCountriesGeo.push(c);
+  });
+
+  locations.forEach(loc => {
+    const pt = turf.point([loc.lng, loc.lat]);
+
+    states.features.forEach(state => {
+      if (!territories.includes(state.properties.NAME) &&
+          turf.booleanPointInPolygon(pt, state)) {
+        visitedStates.add(state.properties.NAME);
+      }
+    });
+
+    territoriesGeo.forEach(t => {
+      if (turf.booleanPointInPolygon(pt, t)) {
+        visitedTerritories.add(t.properties.ADMIN || t.properties.name);
+      }
+    });
+
+    otherCountriesGeo.forEach(c => {
+      if (turf.booleanPointInPolygon(pt, c)) {
+        visitedCountries.add(c.properties.ADMIN || c.properties.name);
+      }
+    });
+  });
+
+  if (statesLayer) map.removeLayer(statesLayer);
+  if (countriesLayer) map.removeLayer(countriesLayer);
+
+  statesLayer = L.geoJSON(states, {
+    style: f => visitedStates.has(f.properties.NAME)
+      ? { fillColor:"#4da3ff", fillOpacity:0.5, color:"#4da3ff", weight:1 }
+      : { fillColor:"#444", fillOpacity:0.1, color:"#555", weight:1 }
+  }).addTo(map);
+
+  countriesLayer = L.geoJSON(countries, {
+    style: f => {
+      const cname = f.properties.ADMIN || f.properties.name;
+
+      if (cname === "United States of America") return { fillOpacity:0, stroke:false };
+      else if (territories.includes(cname)) return { fillColor:"#ff8c42", fillOpacity:0.5, color:"#ff8c42", weight:1 };
+      else if (visitedCountries.has(cname)) return { fillColor:"#3fbf7f", fillOpacity:0.45, color:"#3fbf7f", weight:1 };
+      else return { fillColor:"#444", fillOpacity:0.03, color:"#555", weight:1 };
+    }
+  }).addTo(map);
+
+  statesLayer.bringToBack();
+  countriesLayer.bringToBack();
+
+  document.getElementById("statesVisited").innerText = visitedStates.size;
+  document.getElementById("countriesVisited").innerText = visitedCountries.size;
+  document.getElementById("territoriesVisited").innerText = visitedTerritories.size;
 }
 
 // =========================
@@ -222,7 +298,6 @@ Promise.all([
   locationsData = data.locations;
   flightsData = data.flights || [];
 
-  // build city buckets
   locationsData.forEach(loc => {
     const point = [loc.lng, loc.lat];
     const exists = cityBuckets.some(b =>
@@ -231,18 +306,19 @@ Promise.all([
     if (!exists) cityBuckets.push(point);
   });
 
-  renderMarkers(); // 🔥 initial render
+  updateStats(locationsData, states, countries);
+  renderMarkers();
 });
 
 // =========================
-// FILTER LISTENERS
+// FILTERS
 // =========================
 checkboxes.forEach(cb => {
   cb.addEventListener("change", renderMarkers);
 });
 
 // =========================
-// PANEL TOGGLE (STABLE)
+// PANEL TOGGLE
 // =========================
 document.getElementById("panel-toggle")
   .addEventListener("click", () => {
