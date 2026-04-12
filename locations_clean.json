@@ -1592,6 +1592,40 @@
       }
     ],
     "images": []
+  },
+  {
+    "id": "OAK",
+    "name": "OAK",
+    "lat": 37.7190,
+    "lng": -122.2196,
+    "category": "airport",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2023-02-16",
+        "description": "TreeHacks 2023"
+      }
+    ],
+    "images": []
+  },
+  {
+    "id": "CMH",
+    "name": "CMH",
+    "lat": 39.9999,
+    "lng": -82.8872,
+    "category": "airport",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2023-02-16",
+        "description": "TreeHacks 2023"
+      }
+    ],
+    "images": []
   }
 ],
   "flights": [
@@ -1599,6 +1633,16 @@
       "from": "EWR",
       "to": "LAS",
       "date": "2026-01-24"
+    },
+    {
+      "from": "LAS",
+      "to": "OAK",
+      "date": "2023-02-16"
+    },
+    {
+      "from": "CMH",
+      "to": "LAS",
+      "date": "2023-02-16"
     }
   ]
 }
