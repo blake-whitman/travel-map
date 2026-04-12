@@ -1558,8 +1558,8 @@
   {
     "id": "LAS",
     "name": "LAS",
-    "lat": -115.1522,
-    "lng": 36.0801,
+    "lat": 36.0801,
+    "lng": -115.1522,
     "category": "airport",
     "league": null,
     "sport": null,
@@ -1579,8 +1579,8 @@
   {
     "id": "EWR",
     "name": "EWR",
-    "lat": -74.1745,
-    "lng": 40.6895
+    "lat": 40.6895,
+    "lng": -74.1745,
     "category": "airport",
     "league": null,
     "sport": null,
