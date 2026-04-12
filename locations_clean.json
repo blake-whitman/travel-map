@@ -1554,6 +1554,44 @@
     "level": null,
     "events": [],
     "images": []
+  },
+  {
+    "id": "LAS",
+    "name": "LAS",
+    "lat": -115.1522,
+    "lng": 36.0801,
+    "category": "airport",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2023-02-16",
+        "description": "TreeHacks 2023 layover"
+      },
+      {
+        "date": "2026-01-24",
+        "description": "Vegas family trip"
+      }
+    ],
+    "images": []
+  },
+  {
+    "id": "EWR",
+    "name": "EWR",
+    "lat": -74.1745,
+    "lng": 40.6895
+    "category": "airport",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-01-24",
+        "description": "Vegas family trip"
+      }
+    ],
+    "images": []
   }
 ],
   "flights": [
