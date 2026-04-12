@@ -8,7 +8,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2021-05-20",
+        "description": "ST II"
+      }
+    ],
     "images": []
   },
   {
@@ -20,7 +25,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2020-08-07",
+        "description": "ST I"
+      }
+    ],
     "images": []
   },
   {
@@ -56,7 +66,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2025-08-19",
+        "description": ""
+      }
+    ],
     "images": []
   },
   {
@@ -91,27 +106,37 @@
     ]
   },
   {
-    "id": "Madison_Square_Garden",
-    "name": "Madison Square Garden",
+    "id": "Little_Caesars_Arena",
+    "name": "Little Caesars Arena",
     "lat": 42.3419387,
     "lng": -83.0546987,
     "category": "sports",
     "league": ["nhl"],
     "sport": ["hockey"],
     "level": "pro",
-    "events": [],
+    "events": [
+      {
+        "date": "2026-03-21",
+        "description": "Detroit Red Wings vs Boston Bruins"
+      }
+    ],
     "images": []
   },
   {
-    "id": "Little_Caesars_Arena",
-    "name": "Little Caesars Arena",
+    "id": "Madison_Square_Garden",
+    "name": "Madison Square Garden",
     "lat": 40.7505045,
     "lng": -73.9934387,
     "category": "sports",
     "league": ["nhl"],
     "sport": ["hockey"],
     "level": "pro",
-    "events": [],
+    "events": [
+      {
+        "date": "2024-04-01",
+        "description": "New York Rangers vs Pittsburgh Penguins"
+      }
+    ],
     "images": []
   },
   {
