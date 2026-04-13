@@ -1728,6 +1728,40 @@
       }
     ],
     "images": []
+  },
+  {
+    "id": "MCO",
+    "name": "MCO",
+    "lat": 28.4244,
+    "lng": -81.3105,
+    "category": "airport",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2025-02-01",
+        "description": "ST V"
+      }
+    ],
+    "images": []
+  },
+  {
+    "id": "TPA",
+    "name": "TPA",
+    "lat": 27.9769,
+    "lng": -82.5303,
+    "category": "airport",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2024-03-12",
+        "description": "Tampa OSU Spring Break family trip"
+      }
+    ],
+    "images": []
   }
 ],
   "flights": [
@@ -1775,6 +1809,16 @@
       "from": "LGA",
       "to": "CLE",
       "date": "2025-08-18"
+    },
+    {
+      "from": "EWR",
+      "to": "MCO",
+      "date": "2025-02-01"
+    },
+    {
+      "from": "EWR",
+      "to": "TPA",
+      "date": "2024-03-12"
     }
   ]
 }
