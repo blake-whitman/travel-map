@@ -134,18 +134,29 @@ function drawFlights() {
     // =========================
     // ARROW (SUBTLE END INDICATOR)
     // =========================
-    const arrowLine = L.polyline(coords, {
-      color: "transparent",
-      weight: 1
-    }).addTo(flightLayer);
+    // get last segment direction
+  const last = coords[coords.length - 1];
+  const prev = coords[coords.length - 2];
 
-    arrowLine.arrowheads({
-      size: "7px",
-      frequency: "endonly",
-      color: "#6f5cff"
+  const angle = Math.atan2(
+    last[0] - prev[0],
+    last[1] - prev[1]
+  ) * (180 / Math.PI);
+
+  // create arrow marker
+  L.marker(last, {
+    icon: L.divIcon({
+      className: "flight-arrow",
+      html: `<div style="
+        transform: rotate(${angle}deg);
+        font-size: 14px;
+        color: #6f5cff;
+      ">➤</div>`,
+      iconSize: [14, 14]
+    })
+  }).addTo(flightLayer);
     });
-  });
-}
+  }
 
 // =========================
 // MARKERS
