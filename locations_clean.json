@@ -1677,6 +1677,40 @@
       }
     ],
     "images": []
+  },
+  {
+    "id": "JFK",
+    "name": "JFK",
+    "lat": 40.6413,
+    "lng": -73.7781,
+    "category": "airport",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2024-03-28",
+        "description": "HRT company trip"
+      }
+    ],
+    "images": []
+  },
+  {
+    "id": "SJU",
+    "name": "SJU",
+    "lat": 18.9992,
+    "lng": -65.8742,
+    "category": "airport",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2024-03-28",
+        "description": "HRT company trip"
+      }
+    ],
+    "images": []
   }
 ],
   "flights": [
@@ -1704,6 +1738,11 @@
       "from": "DFW",
       "to": "LGA",
       "date": "2026-03-25"
+    },
+    {
+      "from": "JFK",
+      "to": "SJU",
+      "date": "2024-03-28"
     }
   ]
 }
