@@ -14,8 +14,6 @@
 <!-- Leaflet CSS -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
 
-<script src="https://unpkg.com/leaflet-arrowheads@1.0.7/dist/leaflet-arrowheads.min.js"></script>
-
 <!-- MarkerCluster CSS -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css"/>
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css"/>
@@ -175,16 +173,19 @@
   </div>
 </div>
 
-<!-- Leaflet JS -->
+<!-- Leaflet JS FIRST -->
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
-<!-- MarkerCluster JS -->
+<!-- THEN plugin -->
+<script src="https://unpkg.com/leaflet-arrowheads@1.0.7/dist/leaflet-arrowheads.min.js"></script>
+
+<!-- THEN MarkerCluster -->
 <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
 
-<!-- Turf.js -->
+<!-- THEN Turf -->
 <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
 
-<!-- Map logic -->
+<!-- THEN your code -->
 <script src="map.js"></script>
 
 </body>
