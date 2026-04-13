@@ -1711,6 +1711,23 @@
       }
     ],
     "images": []
+  },
+  {
+    "id": "CLE",
+    "name": "CLE",
+    "lat": 41.4094,
+    "lng": -81.8547,
+    "category": "airport",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2025-08-18",
+        "description": "Cuyahoga Valley National Park trip"
+      }
+    ],
+    "images": []
   }
 ],
   "flights": [
@@ -1743,6 +1760,21 @@
       "from": "JFK",
       "to": "SJU",
       "date": "2024-03-28"
+    },
+    {
+      "from": "EWR",
+      "to": "DTW",
+      "date": "2026-03-14"
+    },
+    {
+      "from": "LGA",
+      "to": "DTW",
+      "date": "2025-12-17"
+    },
+    {
+      "from": "LGA",
+      "to": "CLE",
+      "date": "2025-08-18"
     }
   ]
 }
