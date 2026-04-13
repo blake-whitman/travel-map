@@ -1626,6 +1626,57 @@
       }
     ],
     "images": []
+  },
+  {
+    "id": "DTW",
+    "name": "DTW",
+    "lat": 42.2124,
+    "lng": -83.3534,
+    "category": "airport",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-03-22",
+        "description": "Dallas trip"
+      }
+    ],
+    "images": []
+  },
+  {
+    "id": "DFW",
+    "name": "DFW",
+    "lat": 32.8922,
+    "lng": -97.0391,
+    "category": "airport",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-03-22",
+        "description": "Dallas trip"
+      }
+    ],
+    "images": []
+  },
+  {
+    "id": "LGA",
+    "name": "LGA",
+    "lat": 40.7766,
+    "lng": -73.8742,
+    "category": "airport",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-03-25",
+        "description": "Dallas trip"
+      }
+    ],
+    "images": []
   }
 ],
   "flights": [
@@ -1643,6 +1694,16 @@
       "from": "CMH",
       "to": "LAS",
       "date": "2023-02-16"
+    },
+    {
+      "from": "DTW",
+      "to": "DFW",
+      "date": "2026-03-22"
+    },
+    {
+      "from": "DFW",
+      "to": "LGA",
+      "date": "2026-03-25"
     }
   ]
 }
