@@ -12,14 +12,13 @@ L.tileLayer(
   { attribution: '&copy; OpenStreetMap & Carto' }
 ).addTo(map);
 
-L.polylineDecorator = L.polylineDecorator || null;
-
 // =========================
-// CLUSTERS
+// CLUSTERS (tuned)
 // =========================
 const markers = L.markerClusterGroup({
-  maxClusterRadius: 35,
+  maxClusterRadius: 60,
   disableClusteringAtZoom: 9,
+  removeOutsideVisibleBounds: true,
   iconCreateFunction: function(cluster) {
     const count = cluster.getChildCount();
 
@@ -52,27 +51,9 @@ let flightLayer = L.layerGroup().addTo(map);
 
 const checkboxes = document.querySelectorAll(".filter");
 
-// ✅ FORCE AIRPORTS OFF ON LOAD
-checkboxes.forEach(cb => {
-  if (cb.value === "airport") cb.checked = false;
-});
-
-// =========================
-// GLOBAL ANIMATION (FIXES LAG)
-// =========================
-let animatedFlightLines = [];
-let globalDashOffset = 0;
-
-function animateFlights() {
-  globalDashOffset -= 1;
-
-  animatedFlightLines.forEach(line => {
-    line.setStyle({ dashOffset: globalDashOffset });
-  });
-
-  requestAnimationFrame(animateFlights);
-}
-animateFlights();
+// PERF FLAGS
+let statsComputed = false;
+const flightCache = {};
 
 // =========================
 // AIRPORT COORDS
@@ -94,22 +75,28 @@ const airports = {
 };
 
 // =========================
-// ARC FUNCTION
+// ARC FUNCTION (CACHED)
 // =========================
-function createGreatCircle(from, to) {
-  return turf.greatCircle(
+function getGreatCircle(from, to) {
+  const key = from.join(",") + "|" + to.join(",");
+  if (flightCache[key]) return flightCache[key];
+
+  const line = turf.greatCircle(
     turf.point(from),
     turf.point(to),
-    { npoints: 80 }
+    { npoints: 60 } // reduced from 80
   );
+
+  const coords = line.geometry.coordinates.map(c => [c[1], c[0]]);
+  flightCache[key] = coords;
+  return coords;
 }
 
 // =========================
-// DRAW FLIGHTS
+// DRAW FLIGHTS (NO ANIMATION)
 // =========================
 function drawFlights() {
   flightLayer.clearLayers();
-  animatedFlightLines = [];
 
   const active = Array.from(checkboxes)
     .filter(c => c.checked)
@@ -122,28 +109,16 @@ function drawFlights() {
     const to = airports[f.to];
     if (!from || !to) return;
 
-    const line = createGreatCircle(from, to);
-    const coords = line.geometry.coordinates.map(c => [c[1], c[0]]);
+    const coords = getGreatCircle(from, to);
 
-    // BASE LINE
+    // BASE LINE ONLY (no animation)
     L.polyline(coords, {
       color: "#6f5cff",
       weight: 2,
       opacity: 0.35
     }).addTo(flightLayer);
 
-    // ANIMATED LINE (GLOBAL LOOP)
-    const animated = L.polyline(coords, {
-      color: "#6f5cff",
-      weight: 3,
-      opacity: 0.9,
-      dashArray: "10, 20",
-      lineCap: "round"
-    }).addTo(flightLayer);
-
-    animatedFlightLines.push(animated);
-
-    // DIRECTION ARROW
+    // ARROW (same as your working version)
     const last = coords[coords.length - 1];
     const prev = coords[coords.length - 2];
 
@@ -195,14 +170,21 @@ function createMarker(loc, lat, lng) {
   });
 }
 
+// =========================
+// RENDER MARKERS (viewport optimized)
+// =========================
 function renderMarkers() {
   markers.clearLayers();
+
+  const bounds = map.getBounds();
 
   const active = Array.from(checkboxes)
     .filter(c => c.checked)
     .map(c => c.value);
 
   locationsData.forEach(loc => {
+    if (!bounds.contains([loc.lat, loc.lng])) return;
+
     const cat = loc.category || "misc";
 
     if (!active.includes("sports") && loc.league?.length) return;
@@ -238,9 +220,12 @@ function renderMarkers() {
 }
 
 // =========================
-// STATS + GEO + BARS (UNCHANGED)
+// 🔥 STATS + GEO + BARS (UNCHANGED LOGIC, RUN ONCE)
 // =========================
 function updateStats(locations, states, countries) {
+
+  if (statsComputed) return;
+  statsComputed = true;
 
   const visitedStates = new Set();
   const visitedCountries = new Set();
@@ -251,8 +236,11 @@ function updateStats(locations, states, countries) {
   let disney=0, universal=0, zoo=0;
 
   const territories = [
-    "Puerto Rico","Guam","American Samoa",
-    "Northern Mariana Islands","U.S. Virgin Islands"
+    "Puerto Rico",
+    "Guam",
+    "American Samoa",
+    "Northern Mariana Islands",
+    "U.S. Virgin Islands"
   ];
 
   const territoriesGeo = [];
@@ -266,7 +254,8 @@ function updateStats(locations, states, countries) {
 
   locations.forEach(loc => {
 
-    const pt = turf.point([loc.lng, loc.lat]);
+    const lat = loc.lat;
+    const lng = loc.lng;
     const cat = loc.category || "misc";
 
     if (cat === "national") parks++;
@@ -281,6 +270,8 @@ function updateStats(locations, states, countries) {
     if (loc.league?.includes("nfl")) nfl++;
     if (loc.league?.includes("mls")) mls++;
     if (loc.league?.includes("atp")) atp++;
+
+    const pt = turf.point([lng, lat]);
 
     states.features.forEach(s => {
       if (!territories.includes(s.properties.NAME) &&
@@ -324,6 +315,7 @@ function updateStats(locations, states, countries) {
   statesLayer.bringToBack();
   countriesLayer.bringToBack();
 
+  // PROGRESS BARS (UNCHANGED)
   document.getElementById("citiesVisited").innerText = cityBuckets.length;
   document.getElementById("sportsVisited").innerText = sports;
   document.getElementById("statesVisited").innerText = visitedStates.size;
@@ -332,22 +324,31 @@ function updateStats(locations, states, countries) {
 
   document.getElementById("parksCount").innerText = parks;
   document.getElementById("parksBar").style.width = (parks/63*100) + "%";
+
   document.getElementById("disneyCount").innerText = disney;
   document.getElementById("disneyBar").style.width = (disney/12*100) + "%";
+
   document.getElementById("universalCount").innerText = universal;
   document.getElementById("universalBar").style.width = (universal/7*100) + "%";
+
   document.getElementById("zooCount").innerText = zoo;
   document.getElementById("zooBar").style.width = (zoo/240*100) + "%";
+
   document.getElementById("mlbCount").innerText = mlb;
   document.getElementById("mlbBar").style.width = (mlb/30*100)+"%";
+
   document.getElementById("nflCount").innerText = nfl;
   document.getElementById("nflBar").style.width = (nfl/32*100)+"%";
+
   document.getElementById("nbaCount").innerText = nba;
   document.getElementById("nbaBar").style.width = (nba/30*100)+"%";
+
   document.getElementById("nhlCount").innerText = nhl;
   document.getElementById("nhlBar").style.width = (nhl/32*100)+"%";
+
   document.getElementById("mlsCount").innerText = mls;
   document.getElementById("mlsBar").style.width = (mls/31*100)+"%";
+
   document.getElementById("atpCount").innerText = atp;
   document.getElementById("atpBar").style.width = (atp/59*100)+"%";
 }
@@ -373,7 +374,8 @@ Promise.all([
   });
 
   updateStats(locationsData, states, countries);
-  renderMarkers();
+
+  setTimeout(() => renderMarkers(), 0);
 });
 
 // =========================
@@ -381,6 +383,15 @@ Promise.all([
 // =========================
 checkboxes.forEach(cb => {
   cb.addEventListener("change", renderMarkers);
+});
+
+// =========================
+// DEBOUNCED MAP MOVE
+// =========================
+let renderTimeout;
+map.on("moveend", () => {
+  clearTimeout(renderTimeout);
+  renderTimeout = setTimeout(renderMarkers, 120);
 });
 
 // =========================
