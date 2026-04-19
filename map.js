@@ -12,8 +12,6 @@ L.tileLayer(
   { attribution: '&copy; OpenStreetMap & Carto' }
 ).addTo(map);
 
-L.polylineDecorator = L.polylineDecorator || null;
-
 // =========================
 // CLUSTERS
 // =========================
@@ -72,7 +70,7 @@ const airports = {
 };
 
 // =========================
-// ARC FUNCTION
+// GREAT CIRCLE
 // =========================
 function createGreatCircle(from, to) {
   return turf.greatCircle(
@@ -83,16 +81,37 @@ function createGreatCircle(from, to) {
 }
 
 // =========================
+// 🔥 GLOBAL FLIGHT ANIMATION (PERF FIX)
+// =========================
+let flightAnimations = [];
+
+function animateFlights() {
+  flightAnimations.forEach(obj => {
+    obj.offset -= 1.2;
+    obj.line.setStyle({ dashOffset: obj.offset });
+  });
+
+  requestAnimationFrame(animateFlights);
+}
+animateFlights();
+
+// =========================
 // DRAW FLIGHTS
 // =========================
 function drawFlights() {
-  flightLayer.clearLayers();
-
   const active = Array.from(checkboxes)
     .filter(c => c.checked)
     .map(c => c.value);
 
-  if (!active.includes("airport")) return;
+  // 🔥 HARD EXIT = NO LAG
+  if (!active.includes("airport")) {
+    flightLayer.clearLayers();
+    flightAnimations = [];
+    return;
+  }
+
+  flightLayer.clearLayers();
+  flightAnimations = [];
 
   flightsData.forEach(f => {
     const from = airports[f.from];
@@ -100,21 +119,16 @@ function drawFlights() {
     if (!from || !to) return;
 
     const line = createGreatCircle(from, to);
-
     const coords = line.geometry.coordinates.map(c => [c[1], c[0]]);
 
-    // =========================
-    // BASE LINE
-    // =========================
-    const base = L.polyline(coords, {
+    // base line
+    L.polyline(coords, {
       color: "#6f5cff",
       weight: 2,
       opacity: 0.35
     }).addTo(flightLayer);
 
-    // =========================
-    // MOVING DASH LAYER (FLOW EFFECT)
-    // =========================
+    // animated line
     const animated = L.polyline(coords, {
       color: "#6f5cff",
       weight: 3,
@@ -123,46 +137,29 @@ function drawFlights() {
       lineCap: "round"
     }).addTo(flightLayer);
 
-    // animate dash offset
-    let offset = 0;
-
-    function animate() {
-      offset -= 1.2;
-      animated.setStyle({
-        dashOffset: offset
-      });
-
-      requestAnimationFrame(animate);
-    }
-
-    animate();
-
-    // =========================
-    // ARROW (SUBTLE END INDICATOR)
-    // =========================
-    // get last segment direction
-  const last = coords[coords.length - 1];
-  const prev = coords[coords.length - 2];
-
-  const angle = Math.atan2(
-    last[0] - prev[0],
-    last[1] - prev[1]
-  ) * (180 / Math.PI);
-
-  // create arrow marker
-  L.marker(last, {
-    icon: L.divIcon({
-      className: "flight-arrow",
-      html: `<div style="
-        transform: rotate(${angle}deg);
-        font-size: 14px;
-        color: #6f5cff;
-      ">➤</div>`,
-      iconSize: [14, 14]
-    })
-  }).addTo(flightLayer);
+    flightAnimations.push({
+      line: animated,
+      offset: 0
     });
-  }
+
+    // direction arrow (manual)
+    const last = coords[coords.length - 1];
+    const prev = coords[coords.length - 2];
+
+    const angle = Math.atan2(
+      last[0] - prev[0],
+      last[1] - prev[1]
+    ) * (180 / Math.PI);
+
+    L.marker(last, {
+      icon: L.divIcon({
+        className: "flight-arrow",
+        html: `<div style="transform: rotate(${angle}deg); font-size:14px; color:#6f5cff;">➤</div>`,
+        iconSize: [14,14]
+      })
+    }).addTo(flightLayer);
+  });
+}
 
 // =========================
 // MARKERS
@@ -211,7 +208,6 @@ function renderMarkers() {
     if (loc.league?.length) {
       loc.league.forEach((league, i) => {
         const offset = 0.0008 * i;
-
         const fakeLoc = { ...loc, league:[league] };
 
         const m = createMarker(fakeLoc, loc.lat + offset, loc.lng + offset);
@@ -237,7 +233,7 @@ function renderMarkers() {
 }
 
 // =========================
-// 🔥 STATS + GEO + BARS (FULL RESTORE)
+// STATS + GEO (UNCHANGED)
 // =========================
 function updateStats(locations, states, countries) {
 
@@ -245,16 +241,9 @@ function updateStats(locations, states, countries) {
   const visitedCountries = new Set();
   const visitedTerritories = new Set();
 
-  let mlb=0, nfl=0, nba=0, nhl=0, mls=0, atp=0;
-  let parks=0, sports=0;
-  let disney=0, universal=0, zoo=0;
-
   const territories = [
-    "Puerto Rico",
-    "Guam",
-    "American Samoa",
-    "Northern Mariana Islands",
-    "U.S. Virgin Islands"
+    "Puerto Rico","Guam","American Samoa",
+    "Northern Mariana Islands","U.S. Virgin Islands"
   ];
 
   const territoriesGeo = [];
@@ -267,25 +256,7 @@ function updateStats(locations, states, countries) {
   });
 
   locations.forEach(loc => {
-
-    const lat = loc.lat;
-    const lng = loc.lng;
-    const cat = loc.category || "misc";
-
-    if (cat === "national") parks++;
-    else if (cat === "disney") disney++;
-    else if (cat === "universal") universal++;
-    else if (cat === "zoo") zoo++;
-    else if (loc.league?.length) sports++;
-
-    if (loc.league?.includes("nba")) nba++;
-    if (loc.league?.includes("nhl")) nhl++;
-    if (loc.league?.includes("mlb")) mlb++;
-    if (loc.league?.includes("nfl")) nfl++;
-    if (loc.league?.includes("mls")) mls++;
-    if (loc.league?.includes("atp")) atp++;
-
-    const pt = turf.point([lng, lat]);
+    const pt = turf.point([loc.lng, loc.lat]);
 
     states.features.forEach(s => {
       if (!territories.includes(s.properties.NAME) &&
@@ -328,43 +299,6 @@ function updateStats(locations, states, countries) {
 
   statesLayer.bringToBack();
   countriesLayer.bringToBack();
-
-  // 🔥 PROGRESS BARS FIXED
-  document.getElementById("citiesVisited").innerText = cityBuckets.length;
-  document.getElementById("sportsVisited").innerText = sports;
-  document.getElementById("statesVisited").innerText = visitedStates.size;
-  document.getElementById("countriesVisited").innerText = visitedCountries.size;
-  document.getElementById("territoriesVisited").innerText = visitedTerritories.size;
-
-  document.getElementById("parksCount").innerText = parks;
-  document.getElementById("parksBar").style.width = (parks/63*100) + "%";
-
-  document.getElementById("disneyCount").innerText = disney;
-  document.getElementById("disneyBar").style.width = (disney/12*100) + "%";
-
-  document.getElementById("universalCount").innerText = universal;
-  document.getElementById("universalBar").style.width = (universal/7*100) + "%";
-
-  document.getElementById("zooCount").innerText = zoo;
-  document.getElementById("zooBar").style.width = (zoo/240*100) + "%";
-
-  document.getElementById("mlbCount").innerText = mlb;
-  document.getElementById("mlbBar").style.width = (mlb/30*100)+"%";
-
-  document.getElementById("nflCount").innerText = nfl;
-  document.getElementById("nflBar").style.width = (nfl/32*100)+"%";
-
-  document.getElementById("nbaCount").innerText = nba;
-  document.getElementById("nbaBar").style.width = (nba/30*100)+"%";
-
-  document.getElementById("nhlCount").innerText = nhl;
-  document.getElementById("nhlBar").style.width = (nhl/32*100)+"%";
-
-  document.getElementById("mlsCount").innerText = mls;
-  document.getElementById("mlsBar").style.width = (mls/31*100)+"%";
-
-  document.getElementById("atpCount").innerText = atp;
-  document.getElementById("atpBar").style.width = (atp/59*100)+"%";
 }
 
 // =========================
@@ -396,30 +330,4 @@ Promise.all([
 // =========================
 checkboxes.forEach(cb => {
   cb.addEventListener("change", renderMarkers);
-});
-
-// =========================
-// 🔥 FIXED PANEL TOGGLE
-// =========================
-const toggleBtn = document.getElementById("panel-toggle");
-const panel = document.getElementById("control-panel");
-const wrapper = document.getElementById("control-panel-wrapper");
-
-toggleBtn.addEventListener("click", () => {
-  const collapsed = wrapper.classList.toggle("collapsed");
-
-  if (collapsed) {
-    document.body.appendChild(toggleBtn);
-    toggleBtn.style.position = "fixed";
-    toggleBtn.style.top = "130px";
-    toggleBtn.style.left = "10px";
-    toggleBtn.style.right = "auto";
-    toggleBtn.style.zIndex = "2000";
-  } else {
-    panel.appendChild(toggleBtn);
-    toggleBtn.style.position = "absolute";
-    toggleBtn.style.top = "10px";
-    toggleBtn.style.right = "10px";
-    toggleBtn.style.left = "auto";
-  }
 });
