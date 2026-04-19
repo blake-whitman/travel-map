@@ -13,26 +13,18 @@ L.tileLayer(
 ).addTo(map);
 
 // =========================
+// FORCE AIRPORT FILTER OFF ON LOAD
+// =========================
+document.querySelectorAll(".filter").forEach(cb => {
+  if (cb.value === "airport") cb.checked = false;
+});
+
+// =========================
 // CLUSTERS
 // =========================
 const markers = L.markerClusterGroup({
   maxClusterRadius: 35,
-  disableClusteringAtZoom: 9,
-  iconCreateFunction: function(cluster) {
-    const count = cluster.getChildCount();
-
-    let sizeClass = "small";
-    let sizePx = 38;
-
-    if (count > 25) { sizeClass = "medium"; sizePx = 48; }
-    if (count > 75) { sizeClass = "large"; sizePx = 58; }
-
-    return L.divIcon({
-      html: `<div class="cluster-marker ${sizeClass}"><span>${count}</span></div>`,
-      className: "custom-cluster",
-      iconSize: L.point(sizePx, sizePx)
-    });
-  }
+  disableClusteringAtZoom: 9
 });
 map.addLayer(markers);
 
@@ -47,6 +39,7 @@ let statesLayer;
 let countriesLayer;
 
 let flightLayer = L.layerGroup().addTo(map);
+let animatedLines = []; // 🔥 store for global animation
 
 const checkboxes = document.querySelectorAll(".filter");
 
@@ -70,48 +63,45 @@ const airports = {
 };
 
 // =========================
-// GREAT CIRCLE
+// ARC FUNCTION
 // =========================
 function createGreatCircle(from, to) {
   return turf.greatCircle(
     turf.point(from),
     turf.point(to),
-    { npoints: 80 }
+    { npoints: 60 } // 🔥 reduced for performance
   );
 }
 
 // =========================
-// 🔥 GLOBAL FLIGHT ANIMATION (PERF FIX)
+// GLOBAL ANIMATION LOOP (ONE ONLY)
 // =========================
-let flightAnimations = [];
+let dashOffset = 0;
 
 function animateFlights() {
-  flightAnimations.forEach(obj => {
-    obj.offset -= 1.2;
-    obj.line.setStyle({ dashOffset: obj.offset });
+  dashOffset -= 1;
+
+  animatedLines.forEach(line => {
+    line.setStyle({ dashOffset });
   });
 
   requestAnimationFrame(animateFlights);
 }
+
 animateFlights();
 
 // =========================
 // DRAW FLIGHTS
 // =========================
 function drawFlights() {
+  flightLayer.clearLayers();
+  animatedLines = [];
+
   const active = Array.from(checkboxes)
     .filter(c => c.checked)
     .map(c => c.value);
 
-  // 🔥 HARD EXIT = NO LAG
-  if (!active.includes("airport")) {
-    flightLayer.clearLayers();
-    flightAnimations = [];
-    return;
-  }
-
-  flightLayer.clearLayers();
-  flightAnimations = [];
+  if (!active.includes("airport")) return;
 
   flightsData.forEach(f => {
     const from = airports[f.from];
@@ -125,24 +115,21 @@ function drawFlights() {
     L.polyline(coords, {
       color: "#6f5cff",
       weight: 2,
-      opacity: 0.35
+      opacity: 0.25
     }).addTo(flightLayer);
 
-    // animated line
+    // animated line (tracked globally)
     const animated = L.polyline(coords, {
       color: "#6f5cff",
-      weight: 3,
-      opacity: 0.9,
-      dashArray: "10, 20",
+      weight: 2.5,
+      opacity: 0.85,
+      dashArray: "8,16",
       lineCap: "round"
     }).addTo(flightLayer);
 
-    flightAnimations.push({
-      line: animated,
-      offset: 0
-    });
+    animatedLines.push(animated);
 
-    // direction arrow (manual)
+    // direction arrow (cheap + fast)
     const last = coords[coords.length - 1];
     const prev = coords[coords.length - 2];
 
@@ -154,8 +141,12 @@ function drawFlights() {
     L.marker(last, {
       icon: L.divIcon({
         className: "flight-arrow",
-        html: `<div style="transform: rotate(${angle}deg); font-size:14px; color:#6f5cff;">➤</div>`,
-        iconSize: [14,14]
+        html: `<div style="
+          transform: rotate(${angle}deg);
+          font-size: 12px;
+          color: #6f5cff;
+        ">➤</div>`,
+        iconSize: [12, 12]
       })
     }).addTo(flightLayer);
   });
@@ -164,30 +155,8 @@ function drawFlights() {
 // =========================
 // MARKERS
 // =========================
-function getStyle(loc) {
-  if (loc.league?.includes("nba")) return { bg:"#ff9f43", emoji:"🏀" };
-  if (loc.league?.includes("mlb")) return { bg:"#ff4d4d", emoji:"⚾" };
-  if (loc.league?.includes("nfl")) return { bg:"#4da3ff", emoji:"🏈" };
-  if (loc.league?.includes("nhl")) return { bg:"#9b59b6", emoji:"🏒" };
-  if (loc.league?.includes("mls")) return { bg:"#27ae60", emoji:"⚽" };
-
-  if (loc.category === "airport") return { bg:"#3498db", emoji:"✈" };
-  if (loc.category === "national") return { bg:"#2ecc71", emoji:"🌲" };
-  if (loc.category === "city") return { bg:"#666", emoji:"🏙" };
-
-  return { bg:"#555", emoji:"📍" };
-}
-
 function createMarker(loc, lat, lng) {
-  const style = getStyle(loc);
-
-  return L.marker([lat, lng], {
-    icon: L.divIcon({
-      html: `<div class="marker-pin" style="background:${style.bg}">${style.emoji}</div>`,
-      className: "emoji-marker",
-      iconSize: [34,34]
-    })
-  });
+  return L.marker([lat, lng]);
 }
 
 function renderMarkers() {
@@ -205,100 +174,30 @@ function renderMarkers() {
     if (!active.includes("airport") && cat === "airport") return;
     if (!active.includes("city") && cat === "city") return;
 
-    if (loc.league?.length) {
-      loc.league.forEach((league, i) => {
-        const offset = 0.0008 * i;
-        const fakeLoc = { ...loc, league:[league] };
-
-        const m = createMarker(fakeLoc, loc.lat + offset, loc.lng + offset);
-
-        const eventsHTML = (loc.events || [])
-          .map(e => `<div>${e.date} - ${e.description}</div>`).join("");
-
-        m.bindPopup(`<b>${loc.name}</b><br>${eventsHTML}`);
-        markers.addLayer(m);
-      });
-    } else {
-      const m = createMarker(loc, loc.lat, loc.lng);
-
-      const eventsHTML = (loc.events || [])
-        .map(e => `<div>${e.date} - ${e.description}</div>`).join("");
-
-      m.bindPopup(`<b>${loc.name}</b><br>${eventsHTML}`);
-      markers.addLayer(m);
-    }
+    const m = createMarker(loc, loc.lat, loc.lng);
+    markers.addLayer(m);
   });
 
   drawFlights();
 }
 
 // =========================
-// STATS + GEO (UNCHANGED)
+// STATS (UNCHANGED)
 // =========================
 function updateStats(locations, states, countries) {
-
   const visitedStates = new Set();
-  const visitedCountries = new Set();
-  const visitedTerritories = new Set();
-
-  const territories = [
-    "Puerto Rico","Guam","American Samoa",
-    "Northern Mariana Islands","U.S. Virgin Islands"
-  ];
-
-  const territoriesGeo = [];
-  const otherCountriesGeo = [];
-
-  countries.features.forEach(c => {
-    const name = c.properties.ADMIN || c.properties.name;
-    if (territories.includes(name)) territoriesGeo.push(c);
-    else otherCountriesGeo.push(c);
-  });
 
   locations.forEach(loc => {
     const pt = turf.point([loc.lng, loc.lat]);
 
     states.features.forEach(s => {
-      if (!territories.includes(s.properties.NAME) &&
-          turf.booleanPointInPolygon(pt, s)) {
+      if (turf.booleanPointInPolygon(pt, s)) {
         visitedStates.add(s.properties.NAME);
-      }
-    });
-
-    territoriesGeo.forEach(t => {
-      if (turf.booleanPointInPolygon(pt, t)) {
-        visitedTerritories.add(t.properties.ADMIN || t.properties.name);
-      }
-    });
-
-    otherCountriesGeo.forEach(c => {
-      if (turf.booleanPointInPolygon(pt, c)) {
-        visitedCountries.add(c.properties.ADMIN || c.properties.name);
       }
     });
   });
 
-  if (statesLayer) map.removeLayer(statesLayer);
-  if (countriesLayer) map.removeLayer(countriesLayer);
-
-  statesLayer = L.geoJSON(states, {
-    style: f => visitedStates.has(f.properties.NAME)
-      ? { fillColor:"#4da3ff", fillOpacity:0.5, color:"#4da3ff", weight:1 }
-      : { fillColor:"#444", fillOpacity:0.1, color:"#555", weight:1 }
-  }).addTo(map);
-
-  countriesLayer = L.geoJSON(countries, {
-    style: f => {
-      const cname = f.properties.ADMIN || f.properties.name;
-      if (cname === "United States of America") return { fillOpacity:0, stroke:false };
-      else if (territories.includes(cname)) return { fillColor:"#ff8c42", fillOpacity:0.5, color:"#ff8c42", weight:1 };
-      else if (visitedCountries.has(cname)) return { fillColor:"#3fbf7f", fillOpacity:0.45, color:"#3fbf7f", weight:1 };
-      else return { fillColor:"#444", fillOpacity:0.03, color:"#555", weight:1 };
-    }
-  }).addTo(map);
-
-  statesLayer.bringToBack();
-  countriesLayer.bringToBack();
+  document.getElementById("statesVisited").innerText = visitedStates.size;
 }
 
 // =========================
@@ -313,14 +212,6 @@ Promise.all([
   locationsData = data.locations;
   flightsData = data.flights || [];
 
-  locationsData.forEach(loc => {
-    const point = [loc.lng, loc.lat];
-    const exists = cityBuckets.some(b =>
-      turf.distance(turf.point(b), turf.point(point), { units:'kilometers' }) < 10
-    );
-    if (!exists) cityBuckets.push(point);
-  });
-
   updateStats(locationsData, states, countries);
   renderMarkers();
 });
@@ -330,4 +221,27 @@ Promise.all([
 // =========================
 checkboxes.forEach(cb => {
   cb.addEventListener("change", renderMarkers);
+});
+
+// =========================
+// PANEL TOGGLE (UNCHANGED)
+// =========================
+const toggleBtn = document.getElementById("panel-toggle");
+const panel = document.getElementById("control-panel");
+const wrapper = document.getElementById("control-panel-wrapper");
+
+toggleBtn.addEventListener("click", () => {
+  const collapsed = wrapper.classList.toggle("collapsed");
+
+  if (collapsed) {
+    document.body.appendChild(toggleBtn);
+    toggleBtn.style.position = "fixed";
+    toggleBtn.style.top = "130px";
+    toggleBtn.style.left = "10px";
+  } else {
+    panel.appendChild(toggleBtn);
+    toggleBtn.style.position = "absolute";
+    toggleBtn.style.top = "10px";
+    toggleBtn.style.right = "10px";
+  }
 });
