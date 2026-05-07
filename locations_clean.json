@@ -141,6 +141,23 @@
     "images": []
   },
   {
+    "id": "Crypto.com_Arena",
+    "name": "Crypto.com Arena",
+    "lat": 34.04299,
+    "lng": -118.2671,
+    "category": "sports",
+    "league": ["nba"],
+    "sport": ["basketball"],
+    "level": "pro",
+    "events": [
+      {
+        "date": "2026-04-29",
+        "description": "Los Angeles Lakers vs Houston Rockets"
+      }
+    ],
+    "images": []
+  },
+  {
     "id": "Yankee_Stadium",
     "name": "Yankee Stadium",
     "lat": 40.8296426,
@@ -1438,6 +1455,18 @@
     "images": []
   },
   {
+    "id": "Six_Flags_Magic_Mountain",
+    "name": "Six Flags Magic Mountain",
+    "lat": 34.427,
+    "lng": -118.597,
+    "category": "misc",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [],
+    "images": []
+  },
+  {
     "id": "Universal_Islands_of_Adventure",
     "name": "Universal Islands of Adventure",
     "lat": 28.4716879,
@@ -1518,6 +1547,30 @@
       "images/Magic_Kingdom_Park_4.jpg",
       "images/Magic_Kingdom_Park_5.jpg"
     ]
+  },
+  {
+    "id": "Disneyland",
+    "name": "Disneyland",
+    "lat": 33.8121,
+    "lng": -117.9190,
+    "category": "disney",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [],
+    "images": []
+  },
+  {
+    "id": "Disney_California_Adventure",
+    "name": "Disney California Adventure",
+    "lat": 33.8062,
+    "lng": -117.9199,
+    "category": "disney",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [],
+    "images": []
   },
   {
     "id": "Stanford_University",
