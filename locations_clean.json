@@ -1815,6 +1815,23 @@
       }
     ],
     "images": []
+  },
+  {
+    "id": "LAX",
+    "name": "LAX",
+    "lat": 33.9416,
+    "lng": -118.4085,
+    "category": "airport",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-04-28",
+        "description": "ST VI"
+      }
+    ],
+    "images": []
   }
 ],
   "flights": [
@@ -1872,6 +1889,11 @@
       "from": "EWR",
       "to": "TPA",
       "date": "2024-03-12"
+    },
+    {
+      "from": "EWR",
+      "to": "LAX",
+      "date": "2026-04-28"
     }
   ]
 }
