@@ -1832,6 +1832,40 @@
       }
     ],
     "images": []
+  },
+  {
+    "id": "FLL",
+    "name": "FLL",
+    "lat": 26.0725,
+    "lng": -80.1527,
+    "category": "airport",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-05-12",
+        "description": "Costa Rica trip"
+      }
+    ],
+    "images": []
+  },
+  {
+    "id": "SJO",
+    "name": "SJO",
+    "lat": 9.99388,
+    "lng": -84.20885,
+    "category": "airport",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-05-12",
+        "description": "Costa Rica trip"
+      }
+    ],
+    "images": []
   }
 ],
   "flights": [
@@ -1894,6 +1928,16 @@
       "from": "EWR",
       "to": "LAX",
       "date": "2026-04-28"
+    },
+    {
+      "from": "EWR",
+      "to": "FLL",
+      "date": "2026-05-12"
+    },
+    {
+      "from": "FLL",
+      "to": "SJO",
+      "date": "2026-05-12"
     }
   ]
 }
