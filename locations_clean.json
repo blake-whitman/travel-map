@@ -76,6 +76,23 @@
     "images": []
   },
   {
+    "id": "Manuel_Antonio_National_Park",
+    "name": "Manuel Antonio National Park",
+    "lat": 9.4282,
+    "lng": -84.1452,
+    "category": "misc",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-05-15",
+        "description": ""
+      }
+    ],
+    "images": []
+  },
+  {
     "id": "Barclays_Center",
     "name": "Barclays Center",
     "lat": 40.6826465,
@@ -738,6 +755,23 @@
     "images": []
   },
   {
+    "id": "Adventure_Aquarium",
+    "name": "Adventure Aquarium",
+    "lat": 39.945,
+    "lng": -75.131,
+    "category": "zoo",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-05-23",
+        "description": "Philadelphia Visit"
+      }
+    ],
+    "images": []
+  },
+  {
     "id": "Dallas_Zoo",
     "name": "Dallas Zoo",
     "lat": 32.7411468,
@@ -1050,6 +1084,40 @@
       "images/National_Gallery_of_Art_1.jpg",
       "images/National_Gallery_of_Art_2.jpg"
     ]
+  },
+  {
+    "id": "Museum_of_the_American_Revolution",
+    "name": "Museum of the American Revolution",
+    "lat": 39.9484,
+    "lng": -75.1458,
+    "category": "misc",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-05-23",
+        "description": "Philadelphia Visit"
+      }
+    ],
+    "images": []
+  },
+  {
+    "id": "Philadelphia_Museum_of_Art",
+    "name": "Philadelphia Museum of Art",
+    "lat": 39.9655,
+    "lng": -75.1811,
+    "category": "misc",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-05-23",
+        "description": "Philadelphia Visit"
+      }
+    ],
+    "images": []
   },
   {
     "id": "National_Archives_Museum",
@@ -1609,6 +1677,18 @@
     "images": []
   },
   {
+    "id": "Manuel_Antonio_Costa_Rica",
+    "name": "Manuel Antonio, Costa Rica",
+    "lat": 9.407636,
+    "lng": -84.158256,
+    "category": "misc",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [],
+    "images": []
+  },
+  {
     "id": "LAS",
     "name": "LAS",
     "lat": 36.0801,
@@ -1751,8 +1831,8 @@
   {
     "id": "SJU",
     "name": "SJU",
-    "lat": 18.9992,
-    "lng": -65.8742,
+    "lat": 18.4394,
+    "lng": -66.0022,
     "category": "airport",
     "league": null,
     "sport": null,
