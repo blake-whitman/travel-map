@@ -657,6 +657,18 @@
     ]
   },
   {
+    "id": "Michigan_International_Speedway",
+    "name": "Michigan International Speedway",
+    "lat": 42.0678,
+    "lng": -84.2448,
+    "category": "sports",
+    "league": ["nascar"],
+    "sport": ["drive"],
+    "level": "pro",
+    "events": [],
+    "images": []
+  },
+  {
     "id": "Lower_com_Field",
     "name": "Lower.com Field",
     "lat": 39.9684078,
