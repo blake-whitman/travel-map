@@ -152,6 +152,7 @@ function getStyle(loc) {
   if (loc.league?.includes("nfl")) return { bg:"#4da3ff", emoji:"🏈" };
   if (loc.league?.includes("nhl")) return { bg:"#9b59b6", emoji:"🏒" };
   if (loc.league?.includes("mls")) return { bg:"#27ae60", emoji:"⚽" };
+  if (loc.league?.includes("atp")) return { bg:"#3b82f6", emoji:"🎾" };
 
   if (loc.category === "airport") return { bg:"#3498db", emoji:"✈" };
   if (loc.category === "national") return { bg:"#2ecc71", emoji:"🌲" };
