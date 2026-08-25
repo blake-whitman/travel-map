@@ -305,6 +305,23 @@
     "images": []
   },
   {
+    "id": "Nationals_Park",
+    "name": "Nationals Park",
+    "lat": 38.873055,
+    "lng": -77.007996,
+    "category": "sports",
+    "league": ["mlb"],
+    "sport": ["baseball"],
+    "level": "pro",
+    "events": [
+      {
+        "date": "2026-07-29",
+        "description": "Nationals vs Blue Jays"
+      }
+    ],
+    "images": []
+  },
+  {
     "id": "Doubleday_Field",
     "name": "Doubleday Field",
     "lat": 42.6991497,
@@ -314,6 +331,23 @@
     "sport": null,
     "level": null,
     "events": [],
+    "images": []
+  },
+  {
+    "id": "SIUH_Community_Park",
+    "name": "SIUH Community Park",
+    "lat": 40.6452,
+    "lng": -74.0769,
+    "category": "sports",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-06-28",
+        "description": "Staten Island FerryHawks vs Long Island Ducks"
+      }
+    ],
     "images": []
   },
   {
@@ -358,6 +392,10 @@
       {
         "date": "2025-11-09",
         "description": "New York Jets vs Cleveland Browns"
+      },
+      {
+        "date": "2026-06-27",
+        "description": "2026 FIFA World Cup: England vs Panama"
       }
     ],
     "images": [
@@ -365,8 +403,94 @@
     ]
   },
   {
+    "id": "Rock_Creek_Park_Tennis_Center",
+    "name": "Mubadala DC Open",
+    "lat": 38.9544,
+    "lng": -77.0374,
+    "category": "sports",
+    "league": ["atp"],
+    "sport": ["tennis"],
+    "level": "pro",
+    "events": [
+      {
+        "date": "2026-07-30",
+        "description": "Jakub Mensik vs Brandon Nakashima"
+      },
+      {
+        "date": "2026-07-30",
+        "description": "Alex de Minaur vs Cruz Hewitt"
+      },
+      {
+        "date": "2026-07-30",
+        "description": "Jessica Pegula vs Magdalena Frech"
+      },
+      {
+        "date": "2026-07-30",
+        "description": "Alejandro Tabilo vs Terence Atmane"
+      },
+      {
+        "date": "2026-07-30",
+        "description": "Ben Shelton vs Ugo Humbert"
+      },
+      {
+        "date": "2026-07-30",
+        "description": "Elina Svitolina vs Polina Kudermetova"
+      }
+    ],
+    "images": []
+  },
+  {
+    "id": "Lindner_Family_Tennis_Center",
+    "name": "Cincinnati Open",
+    "lat": 39.350521,
+    "lng": -84.275139,
+    "category": "sports",
+    "league": ["atp"],
+    "sport": ["tennis"],
+    "level": "pro",
+    "events": [
+      {
+        "date": "2026-08-16",
+        "description": "Learnier Tien vs Sebastián Báez"
+      },
+      {
+        "date": "2026-08-16",
+        "description": "Iva Jovic vs Tamara Korpatsch"
+      },
+      {
+        "date": "2026-08-16",
+        "description": "Ben Shelton vs Jaime Faria"
+      },
+      {
+        "date": "2026-08-16",
+        "description": "Frances Tiafoe vs Lorenzo Sonego"
+      },
+      {
+        "date": "2026-08-16",
+        "description": "Elina Svitolina vs Tereza Valentová"
+      },
+      {
+        "date": "2026-08-17",
+        "description": "Iga Świątek vs Maria Sakkari"
+      },
+      {
+        "date": "2026-08-17",
+        "description": "Flavio Cobolli vs Alexander Blockx"
+      },
+      {
+        "date": "2026-08-17",
+        "description": "Arthur Fery vs Alex de Minaur"
+      },
+      {
+        "date": "2026-08-17",
+        "description": "Rafael Jodar vs Alejandro Tabilo"
+      }
+    ],
+    "images": []
+  },
+  {
     "id": "USTA_Billie_Jean_King_National_Tennis_Center",
-    "name": "USTA Billie Jean King National Tennis Center",
+    "name": "US Open",
     "lat": 40.7503676,
     "lng": -73.8456118,
     "category": "sports",
@@ -767,6 +891,40 @@
     "images": []
   },
   {
+    "id": "Prospect_Park_Zoo",
+    "name": "Prospect Park Zoo",
+    "lat": 40.6658,
+    "lng": -73.9644,
+    "category": "zoo",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-07-18",
+        "description": "JPMC Corporate Weekend"
+      }
+    ],
+    "images": []
+  },
+  {
+    "id": "Smithsonian_Zoo",
+    "name": "Smithsonian National Zoological Park",
+    "lat": 38.9297,
+    "lng": -77.0498,
+    "category": "zoo",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-08-02",
+        "description": "DC Open Trip"
+      }
+    ],
+    "images": []
+  },
+  {
     "id": "Adventure_Aquarium",
     "name": "Adventure Aquarium",
     "lat": 39.945,
@@ -1110,6 +1268,91 @@
       {
         "date": "2026-05-23",
         "description": "Philadelphia Visit"
+      }
+    ],
+    "images": []
+  },
+  {
+    "id": "National_Museum_of_Natural_History",
+    "name": "National Museum of Natural History",
+    "lat": 38.891014,
+    "lng": -77.026703,
+    "category": "misc",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-08-01",
+        "description": "DC Open Visit"
+      }
+    ],
+    "images": []
+  },
+  {
+    "id": "Ellis_Island_National_Museum_of_Immigration",
+    "name": "Ellis Island National Museum of Immigration",
+    "lat": 40.699460,
+    "lng": -74.040100,
+    "category": "misc",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-08-06",
+        "description": "Michelle Visit"
+      }
+    ],
+    "images": []
+  },
+  {
+    "id": "Statue_of_Liberty",
+    "name": "Statue of Liberty",
+    "lat": 40.6892,
+    "lng": -74.0445,
+    "category": "misc",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-08-06",
+        "description": "Michelle Visit"
+      }
+    ],
+    "images": []
+  },
+  {
+    "id": "Arlington_National_Cemetery",
+    "name": "Arlington National Cemetery",
+    "lat": 38.879,
+    "lng": -77.069,
+    "category": "misc",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-07-31",
+        "description": "DC Open Visit"
+      }
+    ],
+    "images": []
+  },
+  {
+    "id": "National_Museum_of_African_American_History_and_Culture",
+    "name": "National Museum of African American History and Culture",
+    "lat": 38.891068,
+    "lng": -77.032928,
+    "category": "misc",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-08-01",
+        "description": "DC Open Visit"
       }
     ],
     "images": []
