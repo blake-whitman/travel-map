@@ -8,8 +8,10 @@ const map = L.map('map', {
 }).setView([39.8283, -98.5795], 4);
 
 L.tileLayer(
-  'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
-  { attribution: '&copy; OpenStreetMap & Carto' }
+  'https://basemaps.cartocdn.com/rastertiles/dark_all/{z}/{x}/{y}.png?key=cb1_3zn9_1_ad1b402f328cc864709ef61c',
+  {
+    attribution: '&copy; OpenStreetMap & CARTO'
+  }
 ).addTo(map);
 
 // =========================
