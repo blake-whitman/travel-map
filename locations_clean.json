@@ -727,6 +727,23 @@
     ]
   },
   {
+    "id": "PNC_Park",
+    "name": "PNC Park",
+    "lat": 40.447,
+    "lng": -80.006,
+    "category": "sports",
+    "league": ["mlb"],
+    "sport": ["baseball"],
+    "level": "pro",
+    "events": [
+      {
+        "date": "2026-09-19",
+        "description": "Pittsburgh Pirates vs Kansas City Royals"
+      }
+    ],
+    "images": []
+  },
+  {
     "id": "Fifth_Third_Field",
     "name": "Fifth Third Field",
     "lat": 41.6485687,
@@ -888,6 +905,74 @@
     "sport": null,
     "level": null,
     "events": [],
+    "images": []
+  },
+  {
+    "id": "National_Aviary",
+    "name": "National Aviary",
+    "lat": 40.4533,
+    "lng": -80.01,
+    "category": "zoo",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-09-20",
+        "description": "Pittsburgh Trip"
+      }
+    ],
+    "images": []
+  },
+  {
+    "id": "SeaBase_Aquarium",
+    "name": "SeaBase Aquarium",
+    "lat": 28.3753,
+    "lng": -81.5509,
+    "category": "zoo",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-09-09",
+        "description": "Orlando Krasniewski Trip"
+      }
+    ],
+    "images": []
+  },
+  {
+    "id": "Mystic_Aquarium",
+    "name": "Mystic Aquarium",
+    "lat": 41.3733894,
+    "lng": -71.9526649,
+    "category": "zoo",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-09-07",
+        "description": "Mystic Trip"
+      }
+    ],
+    "images": []
+  },
+  {
+    "id": "Pittsburgh_Zoo",
+    "name": "Pittsburgh Zoo",
+    "lat": 40.484,
+    "lng": -79.918,
+    "category": "zoo",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-09-19",
+        "description": "Pittsburgh Trip"
+      }
+    ],
     "images": []
   },
   {
@@ -1156,6 +1241,23 @@
     "images": []
   },
   {
+    "id": "Point_State_Park",
+    "name": "Point State Park",
+    "lat": 40.44167,
+    "lng": -80.01194,
+    "category": "misc",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-09-19",
+        "description": "Pittsburgh Trip"
+      }
+    ],
+    "images": []
+  },
+  {
     "id": "Paterson_Great_Falls_National_Historical_Park",
     "name": "Paterson Great Falls National Historical Park",
     "lat": 40.9177347,
@@ -1268,6 +1370,23 @@
       {
         "date": "2026-05-23",
         "description": "Philadelphia Visit"
+      }
+    ],
+    "images": []
+  },
+  {
+    "id": "Mystic_Seaport_Museum",
+    "name": "Mystic Seaport Museum",
+    "lat": 41.36139,
+    "lng": -71.96444,
+    "category": "misc",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-09-07",
+        "description": "Mystic Trip"
       }
     ],
     "images": []
@@ -1822,7 +1941,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2026-09-10",
+        "description": "Orlando Krasniewski Trip"
+      }
+    ],
     "images": []
   },
   {
@@ -1834,7 +1958,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2026-09-11",
+        "description": "Orlando Krasniewski Trip"
+      }
+    ],
     "images": []
   },
   {
@@ -1846,7 +1975,16 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2026-09-09",
+        "description": "Orlando Krasniewski Trip"
+      },
+      {
+        "date": "2026-09-10",
+        "description": "Orlando Krasniewski Trip: DVC Moonlight Magic Night"
+      }
+    ],
     "images": [
       "images/Epcot_1.jpg",
       "images/Epcot_2.jpg",
@@ -1862,7 +2000,12 @@
     "league": null,
     "sport": null,
     "level": null,
-    "events": [],
+    "events": [
+      {
+        "date": "2026-09-12",
+        "description": "Orlando Krasniewski Trip"
+      }
+    ],
     "images": [
       "images/Magic_Kingdom_Park_1.jpg",
       "images/Magic_Kingdom_Park_2.jpg",
