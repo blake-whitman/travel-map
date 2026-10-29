@@ -236,6 +236,23 @@
     "images": []
   },
   {
+    "id": "Mercedes_Benz_Stadium ",
+    "name": "Mercedes-Benz Stadium",
+    "lat": 33.755489,
+    "lng": -84.401993,
+    "category": "sports",
+    "league": ["mls"],
+    "sport": ["soccer"],
+    "level": "pro",
+    "events": [
+      {
+        "date": "2026-10-17",
+        "description": "Atlanta United FC vs Inter Miami CF"
+      }
+    ],
+    "images": []
+  },
+  {
     "id": "American_Airlines_Center",
     "name": "American Airlines Center",
     "lat": 32.7905802,
@@ -925,6 +942,40 @@
     "images": []
   },
   {
+    "id": "Zoo_Atlanta",
+    "name": "Zoo Atlanta",
+    "lat": 33.7315,
+    "lng": -84.3710,
+    "category": "zoo",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-10-19",
+        "description": "Atlanta Family Trip"
+      }
+    ],
+    "images": []
+  },
+  {
+    "id": "Georgia_Aquarium",
+    "name": "Georgia Aquarium",
+    "lat": 33.763382,
+    "lng": -84.395110,
+    "category": "zoo",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-10-18",
+        "description": "Atlanta Family Trip"
+      }
+    ],
+    "images": []
+  },
+  {
     "id": "SeaBase_Aquarium",
     "name": "SeaBase Aquarium",
     "lat": 28.3753,
@@ -1370,6 +1421,57 @@
       {
         "date": "2026-05-23",
         "description": "Philadelphia Visit"
+      }
+    ],
+    "images": []
+  },
+  {
+    "id": "World_of_Coca_Cola",
+    "name": "World of Coca-Cola",
+    "lat": 33.762573,
+    "lng": -84.1392586458,
+    "category": "misc",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-10-17",
+        "description": "Atlanta Family Trip"
+      }
+    ],
+    "images": []
+  },
+  {
+    "id": "College_Football_Hall_of_Fame",
+    "name": "College Football Hall of Fame",
+    "lat": 33.7597,
+    "lng": -84.3950,
+    "category": "misc",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-10-17",
+        "description": "Atlanta Family Trip"
+      }
+    ],
+    "images": []
+  },
+  {
+    "id": "National_Center_for_Civil_and_Human_Rights",
+    "name": "National Center for Civil and Human Rights",
+    "lat": 33.7640,
+    "lng": -84.3931,
+    "category": "misc",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-10-18",
+        "description": "Atlanta Family Trip"
       }
     ],
     "images": []
@@ -2120,6 +2222,61 @@
       {
         "date": "2026-01-24",
         "description": "Vegas family trip"
+      }
+    ],
+    "images": []
+  },
+  {
+    "id": "PIT",
+    "name": "PIT",
+    "lat": 40.49140,
+    "lng": -80.23270,
+    "category": "airport",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-09-21",
+        "description": "Pittsburgh trip"
+      }
+    ],
+    "images": []
+  },
+  {
+    "id": "PHL",
+    "name": "PHL",
+    "lat": 39.8719,
+    "lng": -75.2411,
+    "category": "airport",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-10-20",
+        "description": "Atlanta Family trip"
+      }
+    ],
+    "images": []
+  },
+  {
+    "id": "ATL",
+    "name": "ATL",
+    "lat": 33.6367,
+    "lng": -84.4281,
+    "category": "airport",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-10-17",
+        "description": "Atlanta Family trip"
+      },
+      {
+        "date": "2026-10-20",
+        "description": "Atlanta Family trip"
       }
     ],
     "images": []
