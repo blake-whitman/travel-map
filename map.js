@@ -93,7 +93,7 @@ function getGreatCircle(from, to) {
   const line = turf.greatCircle(
     turf.point(from),
     turf.point(to),
-    { npoints: 60 } // reduced from 80
+    { npoints: 60 }
   );
 
   const coords = line.geometry.coordinates.map(c => [c[1], c[0]]);
@@ -230,7 +230,7 @@ function renderMarkers() {
 }
 
 // =========================
-// 🔥 STATS + GEO + BARS (UNCHANGED LOGIC, RUN ONCE)
+// STATS + GEO + BARS
 // =========================
 function updateStats(locations, states, countries) {
 
@@ -253,14 +253,39 @@ function updateStats(locations, states, countries) {
     "U.S. Virgin Islands"
   ];
 
+  // Precompute each feature's bounding box once.
+  // Reject points outside the box before running Turf's
+  // more expensive point-in-polygon test.
+  const stateFeatures = states.features
+    .filter(s => !territories.includes(s.properties.NAME))
+    .map(feature => ({
+      feature,
+      bounds: turf.bbox(feature)
+    }));
+
   const territoriesGeo = [];
   const otherCountriesGeo = [];
 
-  countries.features.forEach(c => {
-    const name = c.properties.ADMIN || c.properties.name;
-    if (territories.includes(name)) territoriesGeo.push(c);
-    else otherCountriesGeo.push(c);
+  countries.features.forEach(feature => {
+    const name = feature.properties.ADMIN || feature.properties.name;
+    const entry = {
+      feature,
+      bounds: turf.bbox(feature)
+    };
+
+    if (territories.includes(name)) {
+      territoriesGeo.push(entry);
+    } else {
+      otherCountriesGeo.push(entry);
+    }
   });
+
+  function isInsideBounds(lng, lat, bounds) {
+    return lng >= bounds[0] &&
+           lat >= bounds[1] &&
+           lng <= bounds[2] &&
+           lat <= bounds[3];
+  }
 
   locations.forEach(loc => {
 
@@ -283,22 +308,34 @@ function updateStats(locations, states, countries) {
 
     const pt = turf.point([lng, lat]);
 
-    states.features.forEach(s => {
-      if (!territories.includes(s.properties.NAME) &&
-          turf.booleanPointInPolygon(pt, s)) {
-        visitedStates.add(s.properties.NAME);
+    stateFeatures.forEach(({ feature, bounds }) => {
+      if (
+        isInsideBounds(lng, lat, bounds) &&
+        turf.booleanPointInPolygon(pt, feature)
+      ) {
+        visitedStates.add(feature.properties.NAME);
       }
     });
 
-    territoriesGeo.forEach(t => {
-      if (turf.booleanPointInPolygon(pt, t)) {
-        visitedTerritories.add(t.properties.ADMIN || t.properties.name);
+    territoriesGeo.forEach(({ feature, bounds }) => {
+      if (
+        isInsideBounds(lng, lat, bounds) &&
+        turf.booleanPointInPolygon(pt, feature)
+      ) {
+        visitedTerritories.add(
+          feature.properties.ADMIN || feature.properties.name
+        );
       }
     });
 
-    otherCountriesGeo.forEach(c => {
-      if (turf.booleanPointInPolygon(pt, c)) {
-        visitedCountries.add(c.properties.ADMIN || c.properties.name);
+    otherCountriesGeo.forEach(({ feature, bounds }) => {
+      if (
+        isInsideBounds(lng, lat, bounds) &&
+        turf.booleanPointInPolygon(pt, feature)
+      ) {
+        visitedCountries.add(
+          feature.properties.ADMIN || feature.properties.name
+        );
       }
     });
   });
@@ -308,24 +345,55 @@ function updateStats(locations, states, countries) {
 
   statesLayer = L.geoJSON(states, {
     style: f => visitedStates.has(f.properties.NAME)
-      ? { fillColor:"#4da3ff", fillOpacity:0.5, color:"#4da3ff", weight:1 }
-      : { fillColor:"#444", fillOpacity:0.1, color:"#555", weight:1 }
+      ? {
+          fillColor:"#4da3ff",
+          fillOpacity:0.5,
+          color:"#4da3ff",
+          weight:1
+        }
+      : {
+          fillColor:"#444",
+          fillOpacity:0.1,
+          color:"#555",
+          weight:1
+        }
   }).addTo(map);
 
   countriesLayer = L.geoJSON(countries, {
     style: f => {
       const cname = f.properties.ADMIN || f.properties.name;
-      if (cname === "United States of America") return { fillOpacity:0, stroke:false };
-      else if (territories.includes(cname)) return { fillColor:"#ff8c42", fillOpacity:0.5, color:"#ff8c42", weight:1 };
-      else if (visitedCountries.has(cname)) return { fillColor:"#3fbf7f", fillOpacity:0.45, color:"#3fbf7f", weight:1 };
-      else return { fillColor:"#444", fillOpacity:0.03, color:"#555", weight:1 };
+
+      if (cname === "United States of America") {
+        return { fillOpacity:0, stroke:false };
+      } else if (territories.includes(cname)) {
+        return {
+          fillColor:"#ff8c42",
+          fillOpacity:0.5,
+          color:"#ff8c42",
+          weight:1
+        };
+      } else if (visitedCountries.has(cname)) {
+        return {
+          fillColor:"#3fbf7f",
+          fillOpacity:0.45,
+          color:"#3fbf7f",
+          weight:1
+        };
+      } else {
+        return {
+          fillColor:"#444",
+          fillOpacity:0.03,
+          color:"#555",
+          weight:1
+        };
+      }
     }
   }).addTo(map);
 
   statesLayer.bringToBack();
   countriesLayer.bringToBack();
 
-  // PROGRESS BARS (UNCHANGED)
+  // PROGRESS BARS
   document.getElementById("citiesVisited").innerText = cityBuckets.length;
   document.getElementById("sportsVisited").innerText = sports;
   document.getElementById("statesVisited").innerText = visitedStates.size;
@@ -377,15 +445,24 @@ Promise.all([
 
   locationsData.forEach(loc => {
     const point = [loc.lng, loc.lat];
+
     const exists = cityBuckets.some(b =>
-      turf.distance(turf.point(b), turf.point(point), { units:'kilometers' }) < 10
+      turf.distance(
+        turf.point(b),
+        turf.point(point),
+        { units:'kilometers' }
+      ) < 10
     );
+
     if (!exists) cityBuckets.push(point);
   });
 
   updateStats(locationsData, states, countries);
 
   setTimeout(() => renderMarkers(), 0);
+
+}).catch(error => {
+  console.error("Travel Map failed to load:", error);
 });
 
 // =========================
@@ -399,13 +476,14 @@ checkboxes.forEach(cb => {
 // DEBOUNCED MAP MOVE
 // =========================
 let renderTimeout;
+
 map.on("moveend", () => {
   clearTimeout(renderTimeout);
   renderTimeout = setTimeout(renderMarkers, 120);
 });
 
 // =========================
-// PANEL TOGGLE (UNCHANGED)
+// PANEL TOGGLE
 // =========================
 const toggleBtn = document.getElementById("panel-toggle");
 const panel = document.getElementById("control-panel");
