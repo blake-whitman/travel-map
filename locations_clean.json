@@ -124,6 +124,41 @@
     ]
   },
   {
+    "id": "Smoothie_King_Center",
+    "name": "Smoothie King Center",
+    "lat": 29.949030,
+    "lng": -90.082298,
+    "category": "sports",
+    "league": ["nba"],
+    "sport": ["basketball"],
+    "level": "pro",
+    "events": [
+      {
+        "date": "2026-11-16",
+        "description": "New Orleans Pelicans vs Golden State Warriors"
+      }
+    ],
+    "images": []
+  },
+    29.951439, -90.081970
+  {
+    "id": "Caesars_Superdome",
+    "name": "Caesars Superdome",
+    "lat": 29.951439,
+    "lng": -90.081970,
+    "category": "sports",
+    "league": ["nfl"],
+    "sport": ["football"],
+    "level": "pro",
+    "events": [
+      {
+        "date": "2026-11-15",
+        "description": "New Orleans Saints vs Carolina Panthers"
+      }
+    ],
+    "images": []
+  },
+  {
     "id": "Little_Caesars_Arena",
     "name": "Little Caesars Arena",
     "lat": 42.3419387,
@@ -937,6 +972,40 @@
       {
         "date": "2026-09-20",
         "description": "Pittsburgh Trip"
+      }
+    ],
+    "images": []
+  },
+  {
+    "id": "Audubon_Zoo",
+    "name": "Audubon Zoo",
+    "lat": 29.9231,
+    "lng": -90.1322,
+    "category": "zoo",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-11-16",
+        "description": "New Orleans Trip"
+      }
+    ],
+    "images": []
+  },
+  {
+    "id": "Audubon_Aquarium_and_Insectarium",
+    "name": "Audubon Aquarium & Insectarium",
+    "lat": 29.9515,
+    "lng": -90.0637,
+    "category": "zoo",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-11-16",
+        "description": "New Orleans Trip"
       }
     ],
     "images": []
@@ -2501,6 +2570,44 @@
       }
     ],
     "images": []
+  },
+  {
+    "id": "MIA",
+    "name": "MIA",
+    "lat": 25.7933,
+    "lng": -80.2906,
+    "category": "airport",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-11-14",
+        "description": "New Orleans trip big ATC shutdown reroute"
+      }
+    ],
+    "images": []
+  },
+  {
+    "id": "MSY",
+    "name": "MSY",
+    "lat": 29.9933,
+    "lng": -90.2590,
+    "category": "airport",
+    "league": null,
+    "sport": null,
+    "level": null,
+    "events": [
+      {
+        "date": "2026-11-14",
+        "description": "New Orleans trip big ATC shutdown reroute"
+      },
+      {
+        "date": "2026-11-17",
+        "description": "New Orleans trip"
+      }
+    ],
+    "images": []
   }
 ],
   "flights": [
@@ -2588,6 +2695,21 @@
       "from": "FLL",
       "to": "SJO",
       "date": "2026-05-12"
+    },
+    {
+      "from": "MSY",
+      "to": "LGA",
+      "date": "2026-11-17"
+    },
+    {
+      "from": "LGA",
+      "to": "MIA",
+      "date": "2026-11-14"
+    },
+    {
+      "from": "MIA",
+      "to": "MSY",
+      "date": "2026-11-14"
     }
   ]
 }
